@@ -1,0 +1,89 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<form id="J_FormArticle" action="" method="post">
+<div class="formitems inline">  
+    <label class="fi-name"><span class="colorRed">*</span>标题：</label>  
+    <div class="form-controls">  
+        <input type="text" placeholder="" class="xlarge" name="title" id="title" value="{$article_data.title}">  
+		<span class="fi-help-text hide"></span>
+	</div>  
+</div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>所属栏目：</label>
+        <div class="form-controls">
+            <select name="sort_id" id="sort_id">
+                <option value="">--请选择--</option>
+                {html_options options=$article_category_options selected=$article_data.article_sort_id}
+            </select>
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+    <div class="formitems inline">
+    <label class="fi-name">作者：</label>  
+    <div class="form-controls">  
+        <input type="text" placeholder="" name="author" id="author" value="{$article_data.author}"> 
+    </div>  
+</div> 
+<div class="formitems inline">  
+    <label class="fi-name">来源：</label>  
+    <div class="form-controls">  
+        <input type="text" placeholder="" name="article_source" id="article_source" value="{$article_data.article_source}"> 
+    </div>  
+</div> 
+<div class="formitems inline">  
+    <label class="fi-name">排序：</label>  
+    <div class="form-controls">  
+        <input type="text" placeholder="" style="width:45px;" name="serial" id="serial" value="{$article_data.serial}"> 
+    </div>  
+</div>
+<div class="formitems inline">  
+    <label class="fi-name">显示：</label>  
+    <div class="form-controls">  
+        <div class="radio-group">  
+            <label><input type="radio" name="isuse" value="1"{if $article_data.isuse eq 1} checked="checked"{/if} />是</label>  
+            <label><input type="radio" name="isuse" value="0"{if $article_data.isuse eq 0} checked="checked"{/if} />否</label>   
+        </div>  
+    </div>  
+</div>
+
+    <div class="formitems inline">
+        <label class="fi-name"><!-- <span class="colorRed">*</span> -->资讯详情：</label>
+        <div class="form-controls">
+            <script id="service_providers_describe" name="contents" type="text/plain">{$article_data.contents}</script>
+            <span class="fi-help-text error"></span>
+        </div>
+    </div>
+<div class="formitems inline">  
+    <label class="fi-name"></label>  
+    <div class="form-controls">  
+		<input type="hidden" name="act" value="submit" />
+        <button type="submit" class="btn btn-blue"><i class="gicon-check white"></i>保存</button>  
+    </div>  
+</div> 
+</form>
+{/block} 
+
+{block name="js"}
+<!-- 编辑器 -->
+<link rel="stylesheet" href="__KD__/themes/default/default.css" />
+<script charset="utf-8" src="__KD__/kindeditor.js?version={$version}" > </script>
+<script charset="utf-8" src="__KD__/lang/zh_CN.js?version={$version}" > </script>
+<script type="text/javascript" src="__JS__/jquery/ajaxupload.3.5.js?version={$version}"></script>
+<script type="text/javascript" src="__ACPJS__/AcpArticle/article_save.js?version={$version}"></script>
+<script type="text/javascript" charset="utf-8" src="__UE__/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__UE__/ueditor.all.min.js"></script>
+<script>
+    UE.getEditor('service_providers_describe',{
+        initialFrameWidth : 600,
+        initialFrameHeight: 400,
+        autoHeightEnabled: false,
+        autoFloatEnabled:false
+    });
+</script>
+{/block} 
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpArticle/add_article.css"  type="text/css"/>
+{/block}

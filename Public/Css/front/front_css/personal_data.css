@@ -1,0 +1,123 @@
+html,body{
+    width:100%;
+    font-family: PingFangSC-Regular;
+    background: #F4F4F4;
+}
+.img-control{
+    width:2.25rem;
+    height:2.25rem;
+    margin-right:0.5rem;
+    border-radius:50%;
+    overflow: hidden;
+}
+.img-responsive{
+    width:100%;
+    height:100%;
+    display: block;
+}
+.style_show{
+    background: #F4F4F4;
+    height:0.5rem;
+}
+.list_content{
+    padding-left:0.75rem;
+    background: #fff;
+}
+.list_content .show_list{
+    width:100%;
+    height:2.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EFEFF4;
+    box-sizing: border-box;
+    padding-right:0.7rem;
+}
+.list_content .show_list.list_head{
+    height:3.3rem;
+}
+.list_content .show_list:last-child{
+    border-bottom: none;
+}
+.list_content .show_list .right_word{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.7rem;
+    color: #666666;
+}
+.left_word{
+    font-size: 0.8rem;
+    color: #323232;
+}
+.save{
+    display: block;
+    width:17.25rem;
+    height:2.2rem;
+    line-height:2.2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+    background: #F93B23;
+    border-radius: 0.2rem;
+    margin:1rem auto 0 auto;
+}
+#targetContainer{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    z-index:2;
+    display: none;
+}
+/*todo 模态框*/
+.modal{
+    position: fixed;
+    top:0;
+    background: #F4F4F4;
+    width:100%;
+    height:100%;
+    z-index:4;
+    display: none;
+}
+.modal .update_name{
+    margin-left:0.75rem;
+    margin-right:0.75rem;
+    width:calc(100% - 1.5rem);
+    border:none;
+    border-bottom:1px solid #F93B23;
+    margin-top:0.5rem;
+    height:1.5rem;
+    line-height:1.5rem;
+    background:#F4F4F4;
+}
+#birth_time{
+    height:2rem;
+    line-height:2rem;
+    width:50%;
+    text-align: right;
+    display: block;
+    padding-right:1rem;
+}
+.show_list .right_word .text_left{
+    margin-right:0.5rem;
+}
+.show_list.birth_control{
+    position: relative;
+}
+#birth_arrow{
+    position:absolute;
+    top:50%;
+    margin-top:-0.35rem;
+    right:0.75rem;
+}
+.header{
+    position:static;
+}
+.header_empty {
+    display: none;
+}
+.list_content .show_list .right_word.control_range{
+    width:50%;
+    justify-content: flex-end;
+}

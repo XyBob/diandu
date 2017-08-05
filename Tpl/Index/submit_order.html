@@ -1,0 +1,152 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/submit_order.css?version={$version}"/>
+<style></style>
+{/literal}
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" onclick="history.go(-1)">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>提交订单</h1>
+</div>
+<div class="main_content">
+    <a href="/Index/goods_address" class="address_link">
+        <div class="address_left">
+            <span class="img_new_add_small icon_dingwei"></span>
+            <span class="text">请填写您的收货地址</span>
+        </div>
+        <div class="icon_add_person icon_left_gray"></div>
+    </a>
+    <a class="address_link_modify" style="display: none">
+        <div class="address_detail_left">
+            <div class="top"><span class="name">收货人：谢天真</span><span class="tel">13733242777</span></div>
+            <div class="down">浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司</div>
+        </div>
+        <div class="icon_add_person icon_left_gray"></div>
+    </a>
+</div>
+<div class="line"></div>
+<div class="send_time" id="choose_send_time">
+    <div class="label">选择配送时间</div>
+    <div class="choose_time_link"><span class="blue" id="time_text">立即送出</span><span class="icon_add_person icon_left_gray"></span></div>
+</div>
+<div class="list_content">
+    <div class="name_content">
+        <span class="tips_icon icon_store"></span>
+        <span>黯然销魂饭</span>
+    </div>
+    <ul class="order_list">
+        <li class="order_list_detail">
+            <div class="label">黯然销魂饭</div>
+            <div class=""><span class="grey_number">X5</span><span class="label">¥110</span></div>
+        </li>
+        <li class="order_list_detail">
+            <div class="label">蜜汁猪扒饭</div>
+            <div class=""><span class="grey_number">X5</span><span class="label">¥110</span></div>
+        </li>
+        <li class="order_list_detail">
+            <div class="label_grey">餐盒费</div>
+            <div class=""><span class="label">¥110</span></div>
+        </li>
+        <li class="order_list_detail">
+            <div class="label_grey">配送费</div>
+            <div class=""><span class="label">¥110</span></div>
+        </li>
+        <li class="privilege">
+            <div class="left_control"><i class="icon_pic1 icon_pay3x"></i><span>满减优惠</span></div>
+            <div class="money label">- ¥30</div>
+        </li>
+        <li class="privilege">
+            <div class="left_control"><i class="icon_pic1 icon_ticket3x"></i><span>优惠券优惠</span></div>
+            <div class="money label">- ¥30</div>
+        </li>
+    </ul>
+</div>
+<textarea id="note" placeholder="备注"></textarea>
+<div class="footer_fixed">
+    <div class="privilege_info">¥185<span class="grey">（已优惠¥50）</span></div>
+    <div class="submit_order">提交订单</div>
+</div>
+<!--todo 选择送货的时间-->
+<div class="modal_choose">
+    <div class="content">
+        <div class="title">选择送达时间</div>
+        <div class="scroll_answer_list">
+            <ul class="answer_choose_list">
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">立即送出</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">11:00</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">12:30</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">11:00</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">12:30</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">11:00</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">12:30</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    /*todo 地址信息控制函数*/
+    $(document).on("input propertychange", "#note", function (e) {
+        var target = e.target;
+        // 保存初始高度，之后需要重新设置一下初始高度，避免只能增高不能减低。
+        var dh = $(target).attr('defaultHeight') || 0;
+        if (!dh) {
+            dh = target.clientHeight;
+            $(target).attr('defaultHeight', dh);
+        }
+        target.style.height = dh +'px';
+        var clientHeight = target.clientHeight;
+        var scrollHeight = target.scrollHeight;
+        if (clientHeight !== scrollHeight) { target.style.height = scrollHeight + 10 + "px";
+        }
+    });
+</script>
+<script>
+    $('#choose_send_time').on('click',function(){
+        $('.modal_choose').show().css('display','flex');
+        $('body').css('overflow','hidden');
+    });
+    $('.modal_choose').on('click',function(){
+        $(this).hide();
+        $('body').css('overflow','scroll');
+    });
+    $('.modal_choose .content').on('click',function(){
+        event.stopPropagation();/*todo 阻止冒泡*/
+    });
+    $('.scroll_answer_list .show_choose').on('click',function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        $('#time_text').html($(this).find('.name').html());
+    });
+</script>
+{/literal}
+{/block}

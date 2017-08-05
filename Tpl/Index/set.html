@@ -1,0 +1,99 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+	<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+	<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/set.css?version={$version}"/>
+	<style type="text/css">
+		.header{
+			position:static;
+			margin-bottom:0.5rem;
+		}
+	</style>
+{/block}
+{block name="content"}
+	<!--头部--> 
+	<div class="header">
+	    <div class="left_header native_back" id="current_page_arrow">
+	        <div class="icon_add_person icon_left_white"></div>
+	    </div>
+	    <h1>设置</h1>
+	</div>
+	<ul class="list_wrap mg_bot">
+		<li class="list mg_bot" >
+			<a href="/FrontUserCenter/change_password" class="native_go">
+				<span>修改密码</span>
+				<i class="icon_add_person icon_left_gray"></i>
+			</a>
+		</li>
+		<li class="list bot_line">
+			<a href="{$help_list_link}" class="native_go">
+				<span>查看帮助</span>
+				<i class="icon_add_person icon_left_gray"></i>
+			</a>
+		</li>
+		<li class="list bot_line">
+			<a href="{$notice_list_link}" class="native_go">
+				<span>公告</span>
+				<i class="icon_add_person icon_left_gray"></i>
+			</a>
+		</li>
+		<li class="list mg_bot">
+			<a href="{$news_list_link}" class="native_go">
+				<span>新闻资讯</span>
+				<i class="icon_add_person icon_left_gray"></i>
+			</a>
+		</li>
+		<li class="list bot_line">
+			<a href="{$feedback_link}" class="native_go">
+				<span>意见反馈</span>
+				<i class="icon_add_person icon_left_gray"></i>
+			</a>
+		</li>
+		<li class="list bot_line call_service">
+			<a href="javascript:;">
+				<span>拨打客服热线</span>
+				<i class="icon_add_person icon_left_gray"></i>
+			</a>
+		</li>
+		<li class="list">
+			<a href="{$about_diandu_link}" class="native_go">
+				<span>关于我们</span>
+				<i class="icon_add_person icon_left_gray"></i>
+			</a>
+		</li>
+	</ul>
+	<!--退出登录-->
+	<a href="javascript:;" onclick="logout();" class="quit_btn">退出登录</a>
+	<!--点击拨打客服-->
+	<div class="phone_bot_wrap">
+		<a href="tel:{$server_number}">呼叫{$server_number}</a>
+		<span class="cancel">取消</span>
+	</div>
+{/block}
+{block name="js"}
+{literal}
+	<script type="text/javascript">
+		if(is_wechat()){
+			$(".quit_btn").hide();
+		}else{
+			$(".quit_btn").show();
+		}
+		$("#current_page_arrow").on("click",function(){
+			history.go(-1);
+		});
+		//点击拨打客服
+		$(".call_service").on("click",function(){
+			$(".phone_bot_wrap").show();
+			$("body").css("overflow","hidden");
+		});
+		$(".phone_bot_wrap").on("click",function(){
+			$(this).hide();
+			$("body").css("overflow","scroll");
+		});
+
+		function logout(){
+			native_listen('logout',"");
+		}
+	</script>
+{/literal}
+{/block}

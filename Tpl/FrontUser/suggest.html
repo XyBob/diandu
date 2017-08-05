@@ -1,0 +1,124 @@
+﻿{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/set.css?version={$version}"/>
+<style type="text/css">
+	.header{
+		position:static;
+		margin-bottom:0.5rem;
+	}
+	.layermcont{
+		text-align:center;
+		color:#323232;
+	}
+	.layermchild  .layermbtn span{
+		color:#323232;
+	}
+</style>
+{/block}
+{block name="content"}
+<!--头部-->
+<div class="header">
+	<div class="left_header native_back" id="current_page_arrow">
+		<div class="icon_add_person icon_left_white"></div>
+	</div>
+	<h1>意见反馈</h1>
+</div>
+	<!--主内容-->
+<textarea class="feedback" placeholder="有什么意见或者好的建议统统告诉我们吧" id="suggest_msg"></textarea>
+<input type="hidden" id="whether_save" value="0">
+<!--提交-->
+<span class="feedback_btn" id="submit">提交</span>
+	<!--提示层-->
+<div id="tan_wrap"><div id="tan"></div></div>
+<!--todo 模态框提示-->
+<div class="modal_save">
+	<div class="main_content">
+		<div class="icon_add_person icon_shanchutishi main_icon"></div>
+		<p class="text_tips">还没有提交，确定离开吗?</p>
+		<div class="footer clearfix">
+			<div class="fl grey" id="leave">确定</div>
+			<div class="fl red" id="keep">取消</div>
+		</div>
+	</div>
+</div>
+{/block}
+{block name="js"}
+<script src="__JS__/front/bbc.districtdata.js?version={$version}"></script>
+<script>
+{literal}
+$(function()
+{
+	$("#submit").click(function(){
+            var addtime = Date.parse(new Date())/1000;
+            //验证表单
+            var message = $('#suggest_msg').val();
+            if (!message)
+            {
+                $("#tan").html('请填写您的建议');
+                tishi();
+                $('#message').focus();
+                return false;
+            }
+
+            //保存
+            $.ajax(
+                {
+                    url:"/FrontUser/save_suggest_info",
+                    type:"POST",
+                    data:{
+                        message: message,
+                        addtime:addtime,
+                    },
+                    timeout:10000,
+                    success:function(d){
+                        if(d) {
+                            if(d != 'failure')
+                            {
+                                $("#tan").html('恭喜您，信息提交成功');
+                                tishi();
+								setTimeout(jumppage,1500);
+                            }
+                            else
+                            {
+                                $("#tan").html('抱歉，信息提交失败');
+								$('#whether_save').val(0);
+                                tishi();
+                            }
+                        }
+                    }
+                });
+        function jumppage() {
+            history.go(-1);
+        }
+
+	});
+});
+{/literal}
+</script>
+</script>
+<script type="text/javascript">
+    $("#current_page_arrow").on("click",function(){
+    	var data=$('#suggest_msg').val();
+		if($('#whether_save').val()==0&&data){
+			$('.modal_save').show();
+		}
+		else{
+			history.go(-1);
+		}
+    });
+$('.modal_save').on('click',function(){
+	$(this).hide();
+});
+$('.modal_save .main_content').on('click',function(){
+	event.stopPropagation();/*todo 阻止冒泡*/
+});
+$('#leave').on('click',function(){
+	history.go(-1);
+});
+$('#keep').on('click',function(){
+	$('.modal_save').hide();
+});
+</script>
+{/block}

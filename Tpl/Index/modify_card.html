@@ -1,0 +1,121 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/add_card.css?version={$version}"/>
+<style></style>
+{/literal}
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>修改银行卡</h1>
+</div>
+<div class="header_empty"></div>
+<div class="title">
+    <div class="red_point"></div>
+    <div class="text_word">绑定银行卡的开户人，必须与实名认证身份相同</div>
+</div>
+<ul class="list_content">
+    <li class="contact_name base_data_list">
+        <label class="label_style">持卡人</label>
+        <input value="{$bank_card.realname}" class="input_matter" id="cardholder"/>
+    </li>
+    <li class="base_data_list">
+        <label class="label_style">银行</label>
+        <select class="select_matter active" id="bank">
+            <!--<option value="1" selected>中国建设银行</option>-->
+            <!--<option value="2">中国工商银行</option>-->
+            <option value="0">请选择持卡银行</option>
+            {foreach from=$bank_list item=bank}
+            <option value="{$bank.bank_id}" {if $bank.bank_id eq $bank_card.bank_id}selected{/if}>{$bank.bank_name}</option>
+            {/foreach}
+
+        </select>
+        <div class="right_choose">
+            <div class="icon_add_person icon_down_gray"></div>
+        </div>
+    </li>
+    <li class="contact_name base_data_list">
+        <label class="label_style">开户支行</label>
+        <input value="{$bank_card.opening_bank}" class="input_matter" id="bank_branch"/>
+    </li>
+    <li class="contact_name base_data_list">
+        <label class="label_style">卡号</label>
+        <input value="{$bank_card.account}" class="input_matter" id="card_number"/>
+    </li>
+</ul>
+<div class="bind" id="bind">修改</div>
+{/block}
+{block name="js"}
+<script src="/Public/Js/front/front_js/layer.js?version={$version}"></script>
+{literal}
+<script type="text/javascript">
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    /*todo 绑定按钮事件相关*/
+    $('#bind').on('click',function(){
+        var cardholder=$('#cardholder').val();
+        var bank=Number($('#bank').val());
+        var bank_branch=$('#bank_branch').val();
+        var card_number=$('#card_number').val();
+        var bank_reg = /^(\d{16,19})$/;
+        if (!cardholder){
+            show_alert('对不起，请填写持卡人姓名！');
+            $('#cardholder').focus();
+            return false;
+        }
+        if(!bank){
+            show_alert('对不起，请选择持卡银行！');
+            return false;
+        }
+        if(!bank_branch){
+            show_alert('对不起，请填写开户支行！');
+            $('#bank_branch').focus();
+            return false;
+        }
+        if(!card_number){
+            show_alert('对不起，请填写卡号！');
+            $('#card_number').focus();
+            return false;
+        }
+        if (!bank_reg.test(card_number)){
+            show_alert('对不起，请填写正确的银行卡号！');
+            $('#card_number').focus();
+            return false;
+        }
+        $.ajax({
+            url:"",
+            type:"POST",
+            data:{
+                realname: cardholder,
+                bank_id:bank,
+                opening_bank:bank_branch,
+                account:card_number
+            },
+            timeout:10000,
+            success:function(d){
+                console.log(d);
+                if(d) {
+                    if(d == 'success')
+                    {
+                        show_alert('修改成功！');
+                        window.location.href='/Index/my_account';
+                    }
+                    else
+                    {
+                        show_alert('对不起，请重新修改！');
+                    }
+                }
+            }
+        });
+    });
+</script>
+{/literal}
+{/block}

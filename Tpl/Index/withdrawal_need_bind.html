@@ -1,0 +1,37 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/withdrawal_need.css?version={$version}"/>
+<style></style>
+{/literal}
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>提现</h1>
+</div>
+<div class="header_empty"></div>
+<div class="title">
+    <div class="red_point"></div>
+    <div class="text_word">绑定银行卡的开户人，必须与实名认证身份相同</div>
+</div>
+<a class="add_bank" href="/Index/add_card.html?origin=withdrawal">
+    <div class="new_add_icon_img icon_tianjia"></div>
+    <div class="tips_title">添加银行卡</div>
+</a>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+</script>
+{/literal}
+{/block}

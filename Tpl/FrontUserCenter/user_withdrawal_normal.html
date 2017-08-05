@@ -1,0 +1,95 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/withdrawal_normal.css?version={$version}"/>
+<style>
+    .text_word{
+        padding-left:0.45rem;
+    }
+    .grey{
+        font-size: 0.7rem;
+        color: #999999;
+        height:1rem;
+    }
+</style>
+
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>提现</h1>
+</div>
+<div class="header_empty"></div>
+<div class="title">
+    <span style="font-size:0.8rem;color:#333;" class="left_money">当前余额:¥{$money}</span>
+</div>
+<div class="title">
+    <div class="word">¥</div>
+    <input class="text_word" placeholder="请输入提现金额" id="inp">
+</div>
+<div class="title tips_show">提现帐户</div>
+<div class="specific_bank">
+    <span class="bank_name">{$bank_name}</span>
+    <span class="icon_add_person icon_ceclet18x18"></span>
+</div>
+<p class="grey" style="width:100%;box-sizing:border-box;padding:0.5rem 0.75rem 0;">提现金额小于1000元0.5元/次;大于等于1000元免手续费;提现时间5:00-23:00;周一提现时间11:00-23:00;不分节假日</p>
+<div class="confirm_withdrawal">确认提现</div>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    var oInp = document.getElementById('inp');
+    oInp.onblur=function(){
+        if(isNaN(Number(oInp.value))){  //当输入不是数字的时候，Number后返回的值是NaN;然后用isNaN判断。
+            show_alert('对不起，请输入正确的数字！')
+        }
+        if(Number(oInp.value) <= 0){
+            show_alert('请输入大于0的数字！')
+        }
+    }
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    $('.confirm_withdrawal').on('click',function(){
+        var money=parseInt($('#inp').val());
+        if(money<1){
+            show_alert('提现金额不小于一块钱');
+            return;
+        }
+        var left_money=parseInt($('.left_money').val());
+        if(left_money<money){
+            show_alert('提现额不能大于余额');
+            return;
+        }
+        $.ajax({
+            url:"/FrontUserCenter/user_withdrawal",
+            type:"POST",
+            data:{
+                money: money,
+            },
+            dataType:'json',
+            timeout:10000,
+            success:function(data){
+                if(data) {
+                    if(data.code != -1)
+                    {
+                        //show_alert(data.msg);
+                        window.location.href='/Index/withdrawal_audit';
+                    }
+                    else
+                    {
+                        show_alert(data.msg);
+                    }
+                }
+            }
+        });
+    });
+</script>
+{/literal}
+{/block}

@@ -1,0 +1,407 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" style="text/css" href="__PUBLIC__/Css/front/swiper.3.1.2.min.css?version={$version}">
+	<link rel="stylesheet" style="text/css" href="__PUBLIC__/Css/front/front_css/shop_detail.css?version={$version}">
+	<link rel="stylesheet" style="text/css" href="__PUBLIC__/Css/front/front_css/near_shop.css?version={$version}">
+	<style type="text/css">
+		/*-获取成功的弹框-*/
+		.layermcont{
+			text-align:center;
+			color:#323232;
+		}
+		.layermchild  .layermbtn span{
+			color:#323232;
+		}
+		.near_recom{
+			width:100%;
+			height:2.9rem;
+			line-height:2.9rem;
+			font-size: 0.8rem;
+			color: #666666;
+			box-sizing:border-box;
+			padding-left:0.75rem;
+		}
+		.near_list_wrap .near_list{
+			background:#fff;
+			border-bottom:1px solid #F1F4F7;;
+		}
+		/*-隐藏收藏后的页码样式-*/
+		.detail_container .detail_pagination{
+			right:3.5rem;
+		}
+		/*--顶部返回按钮--*/
+		#current_page_arrow{
+			width:1.5rem;
+			height:1.5rem;
+			position:absolute;
+			left:0.5rem;
+			top:0.5rem;
+			display:flex;
+			display:-webkit-flex;
+			align-items:center;
+			-webkit-align-items:center;
+			justify-content:center;
+			-webkit-justify-content:center;
+			background:rgba(0,0,0,0.5);
+			z-index:999;
+			border-radius:50%;
+		}
+	</style>
+{/block}
+{block name="content"}
+	<!--轮播图-->
+	<div class="detail_banner_wrap">
+		<div class="left_header native_back" id="current_page_arrow">
+	        <div class="icon_add_person icon_left_white"></div>
+	    </div>
+		<div class="swiper-container detail_container">
+	        <div class="swiper-wrapper">
+				{foreach from=$evn_pic_arr key=key  item=one}
+	            <div class="swiper-slide detail_slide">
+	            	<img src="{$one}"/>
+				</div>
+				{/foreach}
+				<!--<div class="swiper-slide detail_slide">-->
+	            	<!--<img src="/Public/Images/testImg/test3.jpg"/>-->
+				<!--</div>-->
+			</div>
+			<div class="swiper-pagination detail_pagination"></div>
+		</div>
+		<!--收藏-->
+		<div class="like_btn_wrap circle_bg">
+			<span class="like_btn icon_pic1 icon_like3x icon_like_selected3x"></span>
+		</div>
+		<!--页码图片-->
+		<i class="icon_pic1 icon_detail_banner3x pagination_icon"></i>
+	</div>
+	<!--店名-->
+	<div class="detail_info_wrap">
+		<div class="title_wrap">
+			<h1 class="shop_name">{$business_info.business_name}</h1>
+			<div class="star_wrap clearfix">
+				<ul class="star fl">
+					{$a=5 - $business_info.stars}
+					{while $business_info.stars-->0}
+					<li class="fl icon_pic1 icon_star_full3x"></li>
+					{/while}
+					{while $a-->0}
+					<li class="fl icon_pic1 icon_star_blank3x"></li>
+					{/while}
+					<li class="fl score">{$business_info.star}</li>
+					<!--<li class="fl icon_pic1 icon_star_blank3x "></li>-->
+				</ul>
+				<span class="per_expense fl">人均&nbsp;:&nbsp;&nbsp;¥{$business_info.consumption}</span>
+			</div>
+			{if $business_info.business_classify_id!='25'&&$is_wechat==1}
+			<a href="/FrontMerchantOrder/buy_bill/business_id/{$business_info.business_id}" class="native_go pay_btn">买单</a>
+			{/if}
+		</div>
+		<div class="detail_info_bot">
+			<!--<a href="/Index/get_map/business_id/{$business_info.business_id}">-->
+			<a href="/Index/get_map/business_id/{$business_info.business_id}" id="map" class="address_icon native_go">
+				<i class="icon_pic1 icon_location3x"></i>
+			</a>
+			<a href="/Index/get_map/business_id/{$business_info.business_id}" id="maps" class="address_info native_go">{$business_info.address}</a>
+			<!--</a>-->
+			<a href="javascript:;" class="phone_wrap">
+				<i class="icon_pic1 icon_phone3x"></i>
+			</a>
+		</div>
+	</div>
+	<!--todo 外卖优惠的标题-->
+{if $business_info.is_out ==1 && $business_info.out_status == 1 && $business_info.is_open == 1}
+	<div class="preferential">
+		<div class="preferential_title">
+			<span class="preferential_img"></span>
+			<span>本店外送</span>
+			<!--{foreach from=$out_discount item=this}-->
+			<!--<span class="red">（满{$this.amount_limit}减{$this.num}）</span>-->
+			<!--{/foreach}-->
+		</div>
+		<a class="preferential_right" href="/FrontMerchant/take_out_shop/business_id/{$business_info.business_id}">进入门店</a>
+	</div>
+{/if}
+	<!--&lt;!&ndash;优惠&ndash;&gt;-->
+	<div class="favor_wrap">
+		{if $active_break}
+		<a class="native_go pay" href="/FrontMerchantOrder/buy_bill/business_id/{$business_info.business_id}">
+			<div class="pay_top">
+				<i class="icon_pic1 icon_pay3x"></i>
+
+				<span class="pay_words">买单</span>
+
+				<div class="pay_num">
+					已售&nbsp;
+					<span>{$in_cost_num}</span>
+					&nbsp;
+				</div>
+			</div>
+			{foreach from=$active_break item=this}
+			{if $this.scope eq 1 || $this.scope eq 0}
+			<span class="pay_favor">满{$this.amount_limit}减{$this.num}</span>
+			{/if}
+			{/foreach}
+		</a>
+		{/if}
+		{if $active_coupon}
+		{foreach from=$active_coupon item=coupon_item}
+		{if $coupon_item.scope eq 1}
+		<div class="ticket">
+			<div class="ticket_top">
+				<i class="icon_pic1 icon_ticket3x"></i>
+				<span class="ticket_words">买单立减</span>
+				<div class="ticket_num">
+					已领&nbsp;
+					<span class={$coupon_item.vouchers_id}>{$coupon_item.all_receive}</span>
+					&nbsp;张
+				</div>
+			</div>
+			<div class="ticket_bot">
+				<span class="ticket_favor">领券满{$coupon_item.amount_limit}元减{$coupon_item.num}元</span>
+
+				<!--<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="visibility: hidden">立即获取</span>-->
+				<!--<span class="ticket_have ticket_btn" style="visibility: visible">已获取</span>-->
+
+				{if $coupon_item.have==1}
+				<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="display: none">立即获取</span>
+				<span class="ticket_have ticket_btn" style="display: inline">已获取</span>
+				{else}
+				<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="display: inline">立即获取</span>
+				<span class="ticket_have ticket_btn" style="display: none">已获取</span>
+				{/if}
+				<!--<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="visibility: visible">立即获取</span>-->
+				<!--<span class="ticket_have ticket_btn" style="visibility: hidden">已获取</span>-->
+
+			</div>
+		</div>
+		{/if}
+		{/foreach}
+		{foreach from=$active_coupon item=coupon_item}
+		{if $coupon_item.scope eq 2}
+		<div class="ticket">
+			<div class="ticket_top">
+				<i class="icon_pic1 icon_ticket3x"></i>
+				<span class="ticket_words">外卖优惠券</span>
+				<div class="ticket_num">
+					已领&nbsp;
+					<span class={$coupon_item.vouchers_id}>{$coupon_item.all_receive}</span>
+					&nbsp;张
+				</div>
+			</div>
+			<div class="ticket_bot">
+				<span class="ticket_favor">领券满{$coupon_item.amount_limit}元减{$coupon_item.num}元</span>
+
+				<!--<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="visibility: hidden">立即获取</span>-->
+				<!--<span class="ticket_have ticket_btn" style="visibility: visible">已获取</span>-->
+
+				{if $coupon_item.have==1}
+				<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="display: none">立即获取</span>
+				<span class="ticket_have ticket_btn" style="display: inline">已获取</span>
+				{else}
+				<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="display: inline">立即获取</span>
+				<span class="ticket_have ticket_btn" style="display: none">已获取</span>
+				{/if}
+				<!--<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="visibility: visible">立即获取</span>-->
+				<!--<span class="ticket_have ticket_btn" style="visibility: hidden">已获取</span>-->
+
+			</div>
+		</div>
+		{/if}
+		{/foreach}
+		{foreach from=$active_coupon item=coupon_item}
+		{if $coupon_item.scope eq 0}
+		<div class="ticket">
+			<div class="ticket_top">
+				<i class="icon_pic1 icon_ticket3x"></i>
+				<span class="ticket_words">到店和外送立减</span>
+				<div class="ticket_num">
+					已领&nbsp;
+					<span class={$coupon_item.vouchers_id}>{$coupon_item.all_receive}</span>
+					&nbsp;张
+				</div>
+			</div>
+			<div class="ticket_bot">
+				<span class="ticket_favor">领券满{$coupon_item.amount_limit}元减{$coupon_item.num}元</span>
+
+				<!--<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="visibility: hidden">立即获取</span>-->
+				<!--<span class="ticket_have ticket_btn" style="visibility: visible">已获取</span>-->
+
+				{if $coupon_item.have==1}
+				<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="display: none">立即获取</span>
+				<span class="ticket_have ticket_btn" style="display: inline">已获取</span>
+				{else}
+				<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="display: inline">立即获取</span>
+				<span class="ticket_have ticket_btn" style="display: none">已获取</span>
+				{/if}
+				<!--<span class="ticket_get ticket_btn" id={$coupon_item.vouchers_id} style="visibility: visible">立即获取</span>-->
+				<!--<span class="ticket_have ticket_btn" style="visibility: hidden">已获取</span>-->
+
+			</div>
+		</div>
+		{/if}
+		{/foreach}
+		{/if}
+	</div>
+	<!--更多信息-->
+	<div class="more_detail">
+		<h6 class="more_detail_title">更多信息</h6>
+		<ul class="more_detail_list">
+			<!--<li>
+				<i></i>
+				<span>营业时间：10:00-22:00</span>
+			</li>-->
+			<li>
+				<i></i>
+				<span>{$business_info.desc}</span>
+			</li>
+
+		</ul>
+	</div>
+	<!--附近推荐-->
+{if !empty($bussiness_near_lists)}
+	<div class="near_shop">
+		<h6 class="near_recom">附近推荐</h6>
+		<div class="near_list_wrap">
+			{foreach from=$bussiness_near_lists item=one}
+			<a href="/Index/shop_detail/business_id/{$one.business_id}" class="near_list clearfix native_go">
+				<img src="{$one.sign_pic}" class="pic fl"/>
+				<div class="near_info fr">
+					<div class="info_head">
+						<h6 class="near_name">{$one.business_name}</h6>
+						<span class="near_distance">{if $one.distance>99.9}>{else}<{/if}&nbsp;{$one.distance}Km</span>
+					</div>
+					<p class="near_address">{$one.address}</p>
+					<ul class="star fl">
+						{$a=5 - $one.star}
+						{while $one.star-->0}
+						<li class="fl icon_pic1 icon_star_full3x"></li>
+						{/while}
+						{while $a-->0}
+						<span class="icon_pic1 icon_star_blank3x"></span>
+						{/while}
+						<!--<li class="fl icon_pic1 icon_star_full3x"></li>
+						<li class="fl icon_pic1 icon_star_full3x"></li>
+						<li class="fl icon_pic1 icon_star_full3x"></li>
+						<li class="fl icon_pic1 icon_star_full3x"></li>
+						<li class="fl icon_pic1 icon_star_full3x"></li>-->
+						<!--<li class="fl icon_pic1 icon_star_blank3x"></li>-->
+					</ul>
+					<p class="people_count">
+						<span class="count_val">{$one.customer_num}</span>
+						<span>人去过</span>
+					</p>
+				</div>
+			</a>
+			{foreachelse}
+			<div class="none_more">&nbsp;附近没有店铺了&nbsp;</div>
+			{/foreach}
+
+		</div>
+	</div>
+{/if}
+	<!--没有更多了-->
+	<div class="none_more">-&nbsp;已经到底了&nbsp;-</div>
+
+	<!--弹出电话-->
+	<div class="phone_bot_wrap">
+		<a href="tel:{$business_info.contact_number}">呼叫{$business_info.contact_number}</a>
+		<span class="cancel">取消</span>
+	</div>
+
+{/block}
+{block name="js"}
+
+<script type="text/javascript" src="__PUBLIC__/Js/front/swiper.min.js"></script>
+<script>
+		var lat={$lat};
+		var lng={$lng};
+
+</script>
+{literal}
+
+<script type="text/javascript">
+	//顶部返回按钮
+	if(!is_wechat()){
+		$(".index_header").css("paddingLeft","2rem");
+	}else{
+		$("#current_page_arrow").hide();
+	}
+	$("#current_page_arrow").on("click",function(){
+		history.go(-1);
+	});
+	new Swiper(".detail_container",{
+		pagination : '.swiper-pagination',
+		paginationType : 'fraction'
+	});
+	//点击收藏
+	$(".like_btn_wrap").on("click",function(){
+		$(this).find("span").toggleClass("active");
+	});
+	$(".phone_bot_wrap").on("click",function(){
+		$(this).hide();
+		$("body").css("overflow","scroll");
+	});
+	//点击电话图标
+	$(".phone_wrap").on("click",function(){
+		$(".phone_bot_wrap").show();
+		$("body").css("overflow","hidden");
+	});
+	
+	//点击立即获取
+	$(".ticket_get").on("click",function(){
+	    console.log($(this).attr('id'));
+	    var vouchersid = $(this).attr('id');
+	    $.ajax(
+        {
+            url:"/Index/get_voucher",
+			type:"POST",
+            data:{
+                voucherid:vouchersid
+        		},
+            timeout:10000,
+                success:function(data){
+				console.log(data);
+                if(data=="receive"){
+                    var ticketNum =  $('.'+vouchersid).text();
+                    $("body").css("overflow","hidden");
+                    ticketNum = Number(ticketNum) + 1;
+                    $('.'+vouchersid).text(ticketNum);
+                    $('#'+vouchersid).next().show();
+                    $('#'+vouchersid).hide();
+
+                    //$(".ticket_have").show();
+                    layer.open({
+                        content: '领取成功',
+                        title: false,
+                        btn: ['确定'],
+                    });
+				}
+				if(data=="received"){
+                    layer.open({
+                        content: '已经领取过了',
+                        title: false,
+                        btn: ['确定'],
+                    });
+				}
+				if(data=="login"){
+                    layer.open({
+                        content: '请先登录',
+                        title: false,
+                        btn: ['确定'],
+                    });
+				}
+
+        }
+        });
+
+	});
+	$(document).on("click",".layermmain,.laymshade",function(){
+		$("body").css("overflow","scroll");
+	});
+</script>
+
+{/literal}
+{/block}

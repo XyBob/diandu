@@ -1,0 +1,31 @@
+/*todo 头部*/
+header{
+    top:0;
+    width:100%;
+    background: #F93B23;
+    text-align: center;
+    height:2.2rem;
+    position:fixed;
+    z-index:3;
+}
+header h1{
+    width:100%;
+    height:100%;
+    line-height:2.2rem;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+}
+header .left_header{
+    position:absolute;
+    left:0.75rem;
+    top:0;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height:2.2rem;
+}
+.header_empty{
+    height:2.2rem;
+    width:100%;
+}

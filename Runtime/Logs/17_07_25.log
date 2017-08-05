@@ -1,0 +1,52 @@
+[ 2017-07-25T20:58:24+08:00 ] 127.0.0.1 /Public/Js/acp/acpcomm.js?version=201612002
+DEBUG: ----REQUEST_METHOD----:GET
+
+[ 2017-07-25T20:58:32+08:00 ] 127.0.0.1 /Public/Js/acp/acpcomm.js?version=201612002
+DEBUG: ----REQUEST_METHOD----:GET
+
+[ 2017-07-25T20:58:34+08:00 ] 127.0.0.1 /AcpOrder/get_delivered_order_list/mod_id/2
+DEBUG: ----REQUEST_METHOD----:GET
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.008327s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.008680s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.010493s ]
+SQL: SELECT * FROM `tp_users` LEFT JOIN  tp_users_group on tp_users.group_id = tp_users_group.group_id WHERE ( tp_users.user_id = 1 )  [ RunTime:0.015390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE ( isuse = 1 AND order_status = 2 ) LIMIT 1   [ RunTime:0.012969s ]
+SQL: SELECT * FROM `tp_order` WHERE ( isuse = 1 AND order_status = 2 ) ORDER BY  addtime DESC LIMIT 0, 10   [ RunTime:0.012782s ]
+SQL: SHOW COLUMNS FROM `tp_business` [ RunTime:0.008877s ]
+SQL: SELECT `business_name` FROM `tp_business` WHERE ( business_id = 83 ) LIMIT 1   [ RunTime:0.007782s ]
+SQL: SELECT `business_name` FROM `tp_business` WHERE ( business_id = 63 ) LIMIT 1   [ RunTime:0.011555s ]
+SQL: SELECT `business_name` FROM `tp_business` WHERE ( business_id = 83 ) LIMIT 1   [ RunTime:0.007417s ]
+SQL: SHOW COLUMNS FROM `tp_shipping_company` [ RunTime:0.008167s ]
+SQL: SELECT * FROM `tp_shipping_company` WHERE ( isuse=1 ) ORDER BY serial  [ RunTime:0.008472s ]
+
+[ 2017-07-25T20:58:34+08:00 ] 127.0.0.1 /Public/Js/acp/acpcomm.js?version=201612002
+DEBUG: ----REQUEST_METHOD----:GET
+
+[ 2017-07-25T20:58:36+08:00 ] 127.0.0.1 /AcpOrder/order_stat_by_day/mod_id/2
+DEBUG: ----REQUEST_METHOD----:GET
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.011880s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.011527s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.009900s ]
+SQL: SELECT * FROM `tp_users` LEFT JOIN  tp_users_group on tp_users.group_id = tp_users_group.group_id WHERE ( tp_users.user_id = 1 )  [ RunTime:0.009335s ]
+SQL: SELECT DATE_FORMAT(FROM_UNIXTIME(addtime),"%H") AS hour,SUM(pay_amount) AS total_amount FROM `tp_order` WHERE ( addtime >= 1500912000 AND addtime <= 1500998400 ) GROUP BY hour ORDER BY addtime DESC  [ RunTime:0.008994s ]
+
+[ 2017-07-25T20:58:36+08:00 ] 127.0.0.1 /Public/Js/acp/acpcomm.js?version=201612002
+DEBUG: ----REQUEST_METHOD----:GET
+
+[ 2017-07-25T20:58:47+08:00 ] 127.0.0.1 /AcpOrder/order_stat_by_month/mod_id/2
+DEBUG: ----REQUEST_METHOD----:GET
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.009042s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.011891s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.010112s ]
+SQL: SELECT * FROM `tp_users` LEFT JOIN  tp_users_group on tp_users.group_id = tp_users_group.group_id WHERE ( tp_users.user_id = 1 )  [ RunTime:0.009506s ]
+SQL: SELECT DATE_FORMAT(FROM_UNIXTIME(addtime),"%d") AS day,SUM(pay_amount) AS total_amount,SUM(pay_amount - express_fee) AS profit FROM `tp_order` WHERE ( addtime >= 1498838400 AND addtime <= 1501516799 ) GROUP BY day ORDER BY addtime DESC  [ RunTime:0.012519s ]
+
+[ 2017-07-25T20:58:47+08:00 ] 127.0.0.1 /Public/Js/acp/acpcomm.js?version=201612002
+DEBUG: ----REQUEST_METHOD----:GET
+
+[ 2017-07-25T20:58:59+08:00 ] 127.0.0.1 /Public/Js/acp/acpcomm.js?version=201612002
+DEBUG: ----REQUEST_METHOD----:GET
+
+[ 2017-07-25T20:59:02+08:00 ] 127.0.0.1 /Public/Js/acp/acpcomm.js?version=201612002
+DEBUG: ----REQUEST_METHOD----:GET
+

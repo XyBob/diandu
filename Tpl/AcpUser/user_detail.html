@@ -1,0 +1,128 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<div class="t-detail-top">
+	<div class="top-tit">
+		当前用户状态：{$user_info.is_enable}
+	</div>
+</div>
+<div class="t-detail-goods">
+    <div class="t-detail-goods-tit mag">基本信息：</div>
+    <div class="t-detail-goods-con t-buser">
+    	<table class="wxtables tables-form">  
+            <colgroup>  
+                <col width="10%">  
+                <col width="90%">   
+            </colgroup>  
+            <tbody>  
+                <tr>  
+                    <td class="tables-form-title">微信头像：</td>  
+					<td><img src="{$user_info.headimgurl}" style="width:50px;"></td> 
+                </tr>
+                <tr>  
+                    <td class="tables-form-title">推广二维码：</td>  
+					<td><img src="{$user_info.qr_code}" style="width:50px;"></td> 
+                </tr>
+                <tr>  
+                    <td class="tables-form-title">用户昵称：</td>
+					<td>{if $user_info.nickname}{$user_info.nickname}{else}--{/if}</td>   
+                </tr> 
+               <!-- <tr>
+                    <td class="tables-form-title">联系人：</td>  
+					<td>{if $user_info.realname}{$user_info.realname}{else}&#45;&#45;{/if}</td>
+                </tr>-->
+                <tr>
+                    <td class="tables-form-title">手机号：</td>  
+					<td>{if $user_info.username}{$user_info.mobile}{else}--{/if}</td>
+                </tr>
+                <!--<tr>
+                    <td class="tables-form-title">邮箱：</td>  
+					<td>{if $user_info.email}{$user_info.email}{else}&#45;&#45;{/if}</td>
+                </tr>-->
+                <tr>
+                    <td class="tables-form-title">注册时间：</td>
+					<td>{if $user_info.reg_time}{$user_info.reg_time|date_format:"%Y-%m-%d %H:%M:%S"}{else}--{/if}</td>
+                </tr>
+               <!-- <tr>
+                    <td class="tables-form-title">QQ：</td>  
+                    <td>{if $user_info.qq}{$user_info.qq}{else}&#45;&#45;{/if}</td>
+                </tr>-->
+                <tr>  
+                    <td class="tables-form-title">用户类型：</td>  
+                    <td>{if $user_info.role_type==2}商家{else if $user_info.role_type==3}普通用户{else if $user_info.role_type==4}代理{/if}</td>
+                </tr>
+                <tr>  
+                    <td class="tables-form-title">门店编号：</td>  
+                    <td>{if $user_info.store_sn}{$user_info.store_sn}{else}--{/if}</td>   
+                </tr>
+                <tr>  
+                    <td class="tables-form-title">大区：</td>  
+                    <td>{if $user_info.big_area_name}{$user_info.big_area_name}{else}--{/if}</td>   
+                </tr>
+                <tr>  
+                    <td class="tables-form-title">省市县：</td>  
+                    <td>{if $user_info.area_string}{$user_info.area_string}{else}--{/if}</td>   
+                </tr>
+            </tbody>  
+        </table>   
+    </div>
+
+	<div class="t-detail-goods-tit mag">财务信息：</div>
+    <div class="t-detail-goods-con t-buser">
+    	<table class="wxtables tables-form">  
+            <colgroup>  
+                <col width="10%">
+                <col width="90%">   
+            </colgroup>
+            <tbody>  
+                <tr>
+                    <td class="tables-form-title">用户等级：</td>  
+					<td>{if $user_info.rank_name}{$user_info.rank_name}{else}--{/if}</td>
+                </tr>
+                <tr>  
+					<td class="tables-form-title">钱包剩余：</td>
+					<td>{$user_info.left_money}</td>
+                </tr>  
+                <!-- <tr>  
+                    <td class="tables-form-title">已消费金额：</td>  
+					<td>{$user_info.consumed_money}</td> 
+                </tr> --> 
+                <tr>  
+                    <td class="tables-form-title">积分余额：</td>  
+                    <td>{$user_info.left_integral}</td> 
+                </tr>
+            </tbody>  
+        </table>   
+    </div>
+
+	<div class="t-detail-goods-tit mag">收货信息：</div>
+    <div class="t-detail-goods-con t-buser">
+    	<table class="wxtables tables-form">  
+            <colgroup>  
+                <col width="10%">
+                <col width="90%">
+            </colgroup>  
+            <tbody>  
+                <tr>  
+                    <td class="tables-form-title">收货地址：</td>  
+					<td>{$user_info.area_string}{$user_info.address}</td>   
+                </tr>  
+            </tbody>  
+        </table>   
+    </div>
+</div>
+{/block} 
+
+{block name="js"}
+{literal}
+<style>
+#jpops .fi-name{width:100px;}
+#jpops .form-controls{margin-left:100px;}
+</style>
+{/literal} 
+{/block} 
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpOrder/order_detail.css" type="text/css" />
+{/block} 

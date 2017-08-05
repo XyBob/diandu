@@ -1,0 +1,99 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/phone_check.css?version={$version}"/>
+<style>
+    body{
+        background:#fff;
+        padding-top:3rem;
+    }
+    .phone_check_form{
+        position:relative;
+    }
+    .forgot_password{
+        position:absolute;
+        bottom:-1.35rem;
+        right:0.75rem;
+        font-size: 0.7rem;
+        color: #7CC6F5;
+    }
+    .tips_text{
+        position:absolute;
+        bottom:6rem;
+        width:100%;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .tips_text .text{
+        margin:0 0.5rem;
+    }
+    .tips_text .line{
+        width:3rem;
+        height:1px;
+        background: #E1E1E1;
+    }
+    .footer_text{
+        position:absolute;
+        bottom:0.9rem;
+        width:100%;
+        text-align: center;
+        font-size: 0.6rem;
+        color: #B4B8B9;
+    }
+    .footer_text .blue{
+        color: #7DC8F7;
+    }
+    .WeChat{
+        position:absolute;
+        bottom:3.85rem;
+        width:1.85rem;
+        height:1.55rem;
+        background: url(/Public/Images/front/front_img/icon_login_wechat@3x.png) no-repeat;
+        background-size: 100% 100%;
+        left:calc((100% - 1.85rem)/2);
+    }
+</style>
+{/literal}
+{/block}
+{block name="content"}
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>登录</h1>
+</div>
+<form action="" method="post" class="phone_check_form">
+    <div class="phone_box check_box">
+        <i class="icon_pic1 icon_phonenumber3x"></i>
+        <input type="number" class="phone" id="phone" placeholder="输入手机号"  />
+    </div>
+    <div class="set_password_box check_box">
+        <i class="icon_pic1 icon_password3x"></i>
+        <input type="password" class="set_password" id="set_password" placeholder="输入密码"/>
+    </div>
+    <a class="forgot_password" href="">忘记密码？</a>
+</form>
+<!--底部完成按钮-->
+<span class="unfinish_btn check_ft_btn">完成</span>
+<a href="javascript:bind_mobile()" class="native_go finish_btn check_ft_btn">完成</a>
+<!--todo 登录提示信息-->
+<div class="tips_text">
+    <div class="line"></div>
+    <div class="text">用微信账号登录</div>
+    <div class="line"></div>
+</div>
+<!--todo 图片-->
+<div class="WeChat"></div>
+<p class="footer_text"><span>还没有账号？</span><span class="blue">点此注册</span></p>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+
+</script>
+{/literal}
+{/block}

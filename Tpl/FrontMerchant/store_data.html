@@ -1,0 +1,668 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/apply_for_businesses.css?version={$version}"/>
+<style>
+
+</style>
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" onclick="history.go(-1)">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>店铺资料</h1>
+</div>
+<div class="header_empty"></div>
+<!--todo 联系相关-->
+<form action="">
+    <h1 class="title_name">联系人信息</h1>
+    <div class="contact_relevant">
+        <div class="contact_name base_data_list">
+            <label class="label_style">联系人</label>
+            <input placeholder="请输入姓名" class="input_matter" id="person_name" value="{$business.contacts}"/>
+        </div>
+        <div class="contact_tel base_data_list">
+            <label class="label_style">联系电话</label>
+            <input placeholder="请输入手机号" class="input_matter" id="shop_tel" value="{$business.contact_number}"/>
+        </div>
+    </div>
+    <h1 class="title_name">店铺基本资料</h1>
+    <ul class="base_data">
+        <li class="base_data_list">
+            <label class="label_style">店铺名称</label>
+            <input placeholder="请输入店铺名称" class="input_matter" id="shop_name" value="{$business.business_name}"/>
+        </li>
+        <input type="hidden" name="status" value="{$business.status}"/>
+        <li class="base_data_list">
+            <label class="label_style">选择行业</label>
+
+            <select class="select_matter active" id="industry_choose" {if $is_edit}disabled{/if}>
+                <option value="0">点击选择行业</option>
+                {foreach from=$business_industry_list item=industry}
+                <option value="{$industry.industry_id}" min_rate="{$industry.rate*100}" {if $business.industry_id eq $industry.industry_id}selected{/if}>{$industry.industry_name}</option>
+                {/foreach}
+            </select>
+
+            <div class="right_choose">
+                <div class=" icon_add_person icon_left_gray"></div>
+            </div>
+        </li>
+        <li class="base_data_list">
+            <label class="label_style">店铺类型</label>
+            <select class="select_matter active" id="shop_type" {if $is_edit}disabled{/if}>
+                <option value="0">点击选择店铺类型</option>
+                {foreach from=$business_classify_list item=classify}
+                <option value="{$classify.business_classify_id}"  {if $business.business_classify_id eq $classify.business_classify_id}selected{/if}>{$classify.business_classify_name} </option>
+                {/foreach}
+            </select>
+            <div class="right_choose">
+                <div class=" icon_add_person icon_left_gray"></div>
+            </div>
+        </li>
+        <li class="base_data_list">
+            <label class="label_style">人均消费</label>
+            <input placeholder="请输入人均消费金额" class="input_matter" id="per_consume" value="{$business.consumption}"/>
+        </li>
+        <input type="hidden" id="address">
+        <li class="base_data_list">
+            <label class="label_style">所在省</label>
+            <select class="select_matter active" id="province_id" {if $is_edit}disabled{/if}>
+                <option value="0">选择省份</option>
+                {foreach from=$province_list item=province}
+                <option value="{$province.province_id}" {if $business.province_id eq $province.province_id}selected{/if}>{$province.province_name}</option>
+                {/foreach}
+            </select>
+            <div class="right_choose">
+                <div class=" icon_add_person icon_left_gray"></div>
+            </div>
+        </li>
+        <li class="base_data_list">
+            <label class="label_style">所在市</label>
+            <select class="select_matter active" id="city_id" {if $is_edit}disabled{/if}>
+                <option value="0">选择城市</option>
+                {foreach from=$city_list item=city}
+                <option value="{$city.city_id}" {if $business.city_id eq $city.city_id}selected{/if}>{$city.city_name}</option>
+                {/foreach}
+                <!--<option value="1" selected>商丘市</option>-->
+                <!--<option value="2">郑州市</option>-->
+            </select>
+            <div class="right_choose">
+                <div class="icon_add_person icon_left_gray"></div>
+            </div>
+        </li>
+        <li class="base_data_list">
+            <label class="label_style">所在区</label>
+            <select class="select_matter active" id="area_id" {if $is_edit}disabled{/if}>
+                <option value="0">选择区/县</option>
+                {foreach from=$area_list item=area}
+                <option value="{$area.area_id}" {if $business.area_id eq $area.area_id}selected{/if}>{$area.area_name}</option>
+                {/foreach}
+                <!--<option value="1" selected>高新区</option>-->
+                <!--<option value="2">金水区</option>-->
+            </select>
+            <div class="right_choose">
+                <div class=" icon_add_person icon_left_gray"></div>
+            </div>
+        </li>
+        <li class="base_data_list">
+            <label class="label_style">详细地址</label>
+            <textarea placeholder="请输入详细地址" class="input_matter_min" id="detail_address" data-longitude="{$business.longitude}"  data-latitude="{$business.latitude}">{$business.address}</textarea>
+            <a class="right_choose">
+                <div class=" icon_add_person icon_map_blue"></div>
+            </a>
+        </li>
+
+        <li style="padding-right:0.75rem;">
+            <div id="allmap"  style="height:  300px;width: 100%;" ></div>
+        </li>
+    </ul>
+    <h1 class="title_name">店铺介绍</h1>
+    <textarea class="shop_introduce" placeholder="具体介绍一下店铺的情况" id="shop_introduce" >{$business.desc}</textarea>
+    <h1 class="title_name">上传店招图片</h1>
+    <div class="ref_upload_photo clearfix">
+        <!--z-index 设置是为了响应点击事件，防止del事件不触发-->
+        {if $business.sign_pic neq ""}
+        <div class="add_img fl" style="z-index: 9999">
+            <img src="{$business.sign_pic}" class="img-responsive">
+            <div class="del_img" onclick="del(this)">
+                <a class="icon_add_person icon_shanchu_red" href="javascript:;"></a>
+            </div>
+        </div>
+        {/if}
+        <a href="javascript:;" {if $business.sign_pic neq ""}style="display:none;"{/if} class="add fl add_img_control" title="上传店招图片" id="add_upload">
+        <div class="icon_add_person icon_tianjia_pic"></div>
+        </a>
+        <input type="hidden" name="img_url " class="img_url" id="img_url" />
+    </div>
+    <h1 class="title_name">上传环境图片</h1>
+    <div class="ref_upload_photo clearfix ref_upload_photo_down">
+        {foreach from=$evn_pics item=evn_pic}
+        <div class="add_img fl" style="z-index: 9999">
+            <img src="{$evn_pic}" class="img-responsive">
+            <div class="del_img" onclick="del(this)">
+                <a class="icon_add_person icon_shanchu_red" href="javascript:;"></a>
+            </div>
+        </div>
+        {/foreach}
+        <a href="javascript:;" class="add fl out_border" {if count($evn_pics) eq 5}style="display:none;"{/if} title="上传环境图片" id="add_upload2">
+        <div class="icon_add_person icon_tianjia_pic"></div>
+        </a>
+        <input type="hidden" name="img_url " class="img_url" id="img_url2" />
+    </div>
+    <h1 class="title_name">添加营业执照</h1>
+    <div class="ref_upload_photo clearfix">
+        {if $business.license_pic neq ""}
+        <div class="add_img fl" style="z-index: 9999">
+            <img src="{$business.license_pic}" class="img-responsive">
+            <div class="del_img" onclick="del(this)">
+                <a class="icon_add_person icon_shanchu_red" href="javascript:;"></a>
+            </div>
+        </div>
+        {/if}
+        <a href="javascript:;" class="add fl add_img_control" {if $business.license_pic neq ""}style="display:none;"{/if} title="添加营业执照" id="add_upload3">
+        <div class="switch_on icon_add_person icon_tianjia_pic"></div>
+        </a>
+        <input type="hidden" name="img_url " class="img_url" id="img_url3" />
+    </div>
+    <!--todo 固定在底部的提交-->
+    <div class="footer_empty"></div>
+    <div class="footer_fixed">
+        <div class="submit" id="submit">确认保存</div>
+    </div>
+</form>
+<!--todo 模态框提示-->
+<div class="modal_tips" style="z-index: 10000">
+    <div class="modal_content">
+        <div class="icon_add_person icon_shanchutishi"></div>
+        <p class="text">让利比设置不得低于<span id="m_rate"></span><br/>请重新设置</p>
+        <div class="tips_text">我知道了</div>
+    </div>
+</div>
+<div class="modal_alert">
+    <div class="modal_content">
+        <div class="icon_add_person icon_shanchutishi"></div>
+        <p class="text"></p>
+        <div class="tips_text">我知道了</div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script src="/Public/Js/jquery/ajaxupload.3.5.js"></script>
+<!--<script src="/Public/Js/front/front_js/area.js"></script>-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BQLHGlffjbXC30bFDcpIQkHIkaxKBBe6&services=true"></script>
+{literal}
+<script type="text/javascript">
+    $('.modal_alert').on('click',function(){
+        $(this).hide();
+    });
+    function show_alert(text){
+        $('.modal_alert').show();
+        $('.modal_alert .text').html(text);
+    }
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    $('.select_matter').change(function(){
+        var val=Number($(this).val());
+        if(val>0){
+            $(this).addClass('active');
+        }
+        else{
+            $(this).removeClass('active');
+        }
+    });
+    var img_url_total=[];
+    function del(obj){
+        var obj_init = $(obj);
+        obj_init.parent().remove();
+        var length=$('#add_upload').parent().find('.add_img').length;
+        var length2=$('#add_upload2').parent().find('.add_img').length;
+        var length3=$('#add_upload3').parent().find('.add_img').length;
+        if(length<1){
+            $('#add_upload').show();
+        }
+        if(length2<5){
+            $('#add_upload2').show();
+        }
+        if(length3<1){
+            $('#add_upload3').show();
+        }
+    }
+    // todo 上传店招图片
+    new AjaxUpload("#add_upload", {
+        action: "/Global/upload_image",
+        name: "imgFile",
+        responseType: "json",
+        onSubmit: function(){
+            /*  alert('正在上传');*/
+        },
+        onChange: function(file, extension){
+            if (extension && /^(jpg|png|jpeg|gif)$/.test(extension)) {
+                return true;
+            }
+            else {
+                show_alert('暂不支持该图片格式！');
+                return false;
+            }
+        },
+        onComplete: function(file, response){
+            if (response.status === 0) {
+                show_alert(response.msg);
+            }
+            else if (response.status === 1) {
+                var html;
+                html='<div class="add_img fl"><img src="'+response.img_url+'" class="img-responsive"><div class="del_img" onclick="del(this)"><a class="icon_add_person icon_shanchu_red" href="javascript:;"></a> </div></div>';
+                $('#add_upload').before(html);
+                $('#add_upload').hide();
+                $('#add_upload').siblings('input[type="file"]').hide();
+                $('#img_url').val(response.img_url);
+            }
+        }
+    });
+    //todo 上传环境图片
+    new AjaxUpload("#add_upload2", {
+        action: "/Global/upload_image",
+        name: "imgFile",
+        responseType: "json",
+        onSubmit: function(){
+        },
+        onChange: function(file, extension){
+            if (extension && /^(jpg|png|jpeg|gif)$/.test(extension)) {
+                return true;
+            }
+            else {
+                show_alert('暂不支持该图片格式！');
+                return false;
+            }
+        },
+        onComplete: function(file, response){
+            if (response.status === 0) {
+                show_alert(response.msg);
+            }
+            else if (response.status === 1) {
+                var html;
+                html='<div class="add_img fl"><img src="'+response.img_url+'" class="img-responsive"><div class="del_img" onclick="del(this)"><a class="icon_add_person icon_shanchu_red" href="javascript:;"></a> </div></div>';
+                $('#add_upload2').before(html);
+                img_url_total.push(response.img_url);
+                console.log(img_url_total);
+                var length=$('#add_upload2').parent().find('.add_img').length;
+                if(length==5){
+                    $('#add_upload2').hide();
+                }
+            }
+        }
+    });
+    // todo 添加营业执照
+    new AjaxUpload("#add_upload3", {
+        action: "/Global/upload_image",
+        name: "imgFile",
+        responseType: "json",
+        onSubmit: function(){
+            /*  alert('正在上传');*/
+        },
+        onChange: function(file, extension){
+            if (extension && /^(jpg|png|jpeg|gif)$/.test(extension)) {
+                return true;
+            }
+            else {
+                show_alert('暂不支持该图片格式！');
+                return false;
+            }
+        },
+        onComplete: function(file, response){
+
+            console.log(response);
+            if (response.status === 0) {
+                show_alert(response.msg);
+            }
+            else if (response.status === 1) {
+                /*if($('.switch_on').is(":hidden")){
+                 $('#add_upload3 img').attr('src',response.img_url);
+                 }
+                 else{
+                 $('.switch_on').hide();
+                 var html;
+                 html='<img src="'+response.img_url+'" class="img-responsive">';
+                 $('#add_upload3').append(html);
+                 }*/
+                var html;
+                html='<div class="add_img fl"><img src="'+response.img_url+'" class="img-responsive"><div class="del_img" onclick="del(this)"><a class="icon_add_person icon_shanchu_red" href="javascript:;"></a> </div></div>';
+                $('#add_upload3').before(html);
+                $('#add_upload3').hide();
+                $('#add_upload3').siblings('input[type="file"]').hide();
+                $('#img_url3').val(response.img_url);
+            }
+        }
+    });
+    $('.modal_tips').on('click',function(){
+        $(this).hide();
+        document.body.classList.remove('bodyhide');
+    });
+    $('#submit').on('click',function(){
+        var person_name=$('#person_name').val();
+        var shop_tel=$('#shop_tel').val();
+        var shop_name=$('#shop_name').val();
+        var industry_choose=Number($('#industry_choose').val());
+        var shop_type=Number($('#shop_type').val());
+        var benefit_percent=$('#benefit_percent').val();
+        var per_consume=$('#per_consume').val();
+        var province_id = Number($('#province_id').val());
+        var city_id = Number($('#city_id').val());
+        var area_id = Number($('#area_id').val());
+        var detail_address = $('#detail_address').val();
+        var shop_introduce=$('#shop_introduce').val();
+        var sign_pic=$('#add_upload').parent().find('img').eq(0).attr('src');/*todo 上传店招图片*/
+        var evn_pics=$('#add_upload2').parent().find('img');/*todo  上传环境图片*/
+        var license_pic=$('#add_upload3').parent().find('img').eq(0).attr('src');/*todo 上传营业执照图片*/
+        var latitude = $("#detail_address").attr("data-latitude");
+        var longitude = $('#detail_address').attr("data-longitude");
+
+        var evn_pic = "";
+        for(var i=0;i<evn_pics.length;i++){
+            if(i!=0){
+                evn_pic+="," + evn_pics.eq(i).attr("src");
+            }else{
+                evn_pic+=evn_pics.eq(i).attr("src");
+            }
+        }
+
+        var tel_reg = /^1[34578]\d{9}$/gi;
+        if (!person_name){
+            show_alert('对不起，请填写姓名！');
+            $('#person_name').focus();
+            return false;
+        }
+        if(!shop_tel){
+            show_alert('对不起，请填写手机号码！');
+            $('#shop_tel').focus();
+            return false;
+        }
+        if (!tel_reg.test(shop_tel))
+        {
+            show_alert('对不起，请填写正确的手机号码！');
+            $('#shop_tel').focus();
+            return false;
+        }
+        if(!shop_name){
+            show_alert('对不起，请填写店铺名称！');
+            return false;
+        }
+        if(!industry_choose){
+            show_alert('对不起，请填写店铺所在行业！');
+            return false;
+        }
+        if(!shop_type){
+            show_alert('对不起，请填写店铺类型！');
+            return false;
+        }
+//        if(!benefit_percent){
+//            show_alert('对不起，请填写让利比！');
+//            return false;
+//        }
+//        if(benefit_percent){
+//            if(benefit_percent<0.6){
+//                 $('.modal_tips').show();
+//                 document.body.classList.add('bodyhide');
+//                return false;
+//            }
+//        }
+
+//        var min_rate = $("#industry_choose").find("option:selected").attr("min_rate");
+//        var old_rate = $("#benefit_percent").attr("old_rate");
+//        if(benefit_percent*1.0<min_rate){
+//            $('#m_rate').html(min_rate+"%");
+//            $('.modal_tips').show();
+//            document.body.classList.add('bodyhide');
+//            return false;
+//        }
+
+//        if(benefit_percent*1.0<old_rate){
+//            $('#m_rate').html("当前让利比例"+old_rate+"%");
+//            $('.modal_tips').show();
+//            document.body.classList.add('bodyhide');
+//            return false;
+//        }
+        if(!per_consume){
+            show_alert('对不起，请填写人均消费！');
+            return false;
+        }
+        if (!province_id)
+        {
+            show_alert('对不起，请选择省份！');
+            return false;
+        }
+        if (!city_id)
+        {
+            show_alert('对不起，请选择城市！');
+            return false;
+        }
+        if (!area_id)
+        {
+            show_alert('对不起，请选择区/县！');
+            return false;
+        }
+        if (!detail_address)
+        {
+            show_alert('对不起，请填写详细地址！');
+            $('#detail_address').focus();
+            return false;
+        }
+        if(latitude==""||longitude==""){
+            show_alert('请在地图上选择地址');
+            $('#detail_address').focus();
+            return false;
+        }
+        if(!shop_introduce){
+            show_alert('对不起，请填写店铺介绍信息！');
+            $('#shop_introduce').focus();
+            return false;
+        }
+
+        if(sign_pic==undefined||sign_pic=="") {
+            show_alert("请上传店招");
+            return;
+        }
+        if(evn_pic=="") {
+            show_alert("请上传环境图片");
+            return;
+        }
+        if(license_pic==undefined||license_pic=="") {
+            show_alert("请上传营业执照");
+            return;
+        }
+
+        $.ajax({
+            url:"",
+            type:"POST",
+            data:{
+                contacts: person_name,
+                contact_number: shop_tel,
+                business_name: shop_name,
+                industry_id:industry_choose,
+                business_classify_id:shop_type,
+                //rate:benefit_percent,
+                consumption:per_consume,
+                province_id: province_id,
+                city_id: city_id,
+                area_id: area_id,
+                address: detail_address,
+                desc:shop_introduce,
+                sign_pic:sign_pic,
+                evn_pic:evn_pic,
+                license_pic:license_pic,
+                latitude : latitude,
+                longitude : longitude
+            },
+            timeout:10000,
+            success:function(d){
+                //console.log(d);
+                if(d == 'success')
+                {
+                    window.history.go(-1);
+                }
+                else
+                {
+                    //console.log(d);
+                    show_alert(d);
+                }
+            }
+        });
+    });
+    /*todo textarea的高度自动控制*/
+    $("#detail_address").each(function(){
+        this.style.height = this.scrollHeight + "px";
+    });
+    $("#detail_address").on({
+        input:function(){
+            var _this = this;
+            this.style.height = this.scrollHeight + "px";
+            $(".detail_address_wrap").css({
+                "height":_this.style.height
+            });
+        },
+        propertychange:function(){
+            this.style.height = this.scrollHeight + "px";
+            $(".detail_address_wrap").css({
+                "height":_this.style.height
+            });
+        }
+    });
+    $(document).on("input propertychange", "#detail_address", function (e) {
+        var target = e.target;
+        // 保存初始高度，之后需要重新设置一下初始高度，避免只能增高不能减低。
+        var dh = $(target).attr('defaultHeight') || 0;
+        if (!dh) {
+            dh = target.clientHeight;
+            $(target).attr('defaultHeight', dh);
+        }
+        target.style.height = dh +'px';
+        var clientHeight = target.clientHeight;
+        var scrollHeight = target.scrollHeight;
+        if (clientHeight !== scrollHeight) { target.style.height = scrollHeight + 10 + "px";
+        }
+    });
+
+    function clearNoNum(obj){
+        obj.value = obj.value.replace(/[^\d.]/g,"");//清除"数字"和"."以外的字符
+        obj.value = obj.value.replace(/^\./g,"");//验证第一个字符是数字而不是
+        obj.value = obj.value.replace(/\.{2,}/g,".");//只保留第一个. 清除多余的
+        obj.value = obj.value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");
+        obj.value = obj.value.replace(/^(\-)*(\d+)\.(\d\d).*$/,'$1$2.$3');//只能输入两个小数
+    }
+
+</script>
+
+<!--百度地图-->
+<!--<script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>-->
+<script type="text/javascript">
+
+    //function getAddr() {
+    var myCity = new BMap.LocalCity();
+    myCity.get(myFun);
+    // }
+
+    function initMap(position) {
+        var map = new BMap.Map("allmap");    // 创建Map实例
+        //var point = new BMap.Point(116.331398,39.897445);
+        var icon = new BMap.Icon('/Public/Images/point.png', new BMap.Size(40, 40), {
+            anchor: new BMap.Size(20, 40)});
+
+        var latitude = $("#detail_address").attr("data-latitude");
+        var longitude = $('#detail_address').attr("data-longitude");
+        var address =  $('#detail_address').val();
+        if(latitude!=""&&longitude!=""){
+            var point = new BMap.Point(longitude,latitude);
+            var marker = new BMap.Marker(point,{icon:icon});
+            //加上label提示
+//            var label = new window.BMap.Label(address, { offset: new window.BMap.Size(20, -10) });
+//            marker.setLabel(label);
+            map.addOverlay(marker);
+            map.centerAndZoom(point, 15);
+        }else{
+            var marker = new BMap.Marker(position,{icon:icon});
+            map.addOverlay(marker);
+            map.centerAndZoom(position, 15);
+        }
+
+        map.addControl(new BMap.NavigationControl());   //添加地图类型控件
+//        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+//        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        map.disableDoubleClickZoom()
+
+        var geoc = new BMap.Geocoder();
+        //记录第一次点击的坐标
+        map.addEventListener("touchstart",function(e){
+            p_x = e.jb.x;
+            p_y = e.jb.y;
+
+            //console.log(e.offsetY);
+        });
+
+        map.addEventListener("touchend", function (e) {
+            //手指进行拖动了就不设置标注
+            if(Math.abs(p_x - e.jb.x)>5||Math.abs(p_y - e.jb.y)>5){
+                return;
+            }
+
+            var pt = e.point;
+            map.clearOverlays();
+            //alert('click');
+            var marker = new BMap.Marker(pt,{icon:icon});
+            map.addOverlay(marker);
+            geoc.getLocation(pt, function (rs) {
+                var addComp = rs.addressComponents;
+                console.log(addComp);
+                console.log(e.point.lng + "," + e.point.lat);
+
+                $('#detail_address').attr("data-longitude",e.point.lng);
+                $('#detail_address').attr("data-latitude",e.point.lat);
+                $('#detail_address').val('');
+                //$('#map_address').html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+                $('#detail_address').val(addComp.province + addComp.city  + addComp.district + addComp.street + addComp.streetNumber);
+
+            });
+        });
+    }
+
+    function myFun(result){
+        var cityName = result.name;
+        var geolocation = new BMap.Geolocation();
+        var gc = new BMap.Geocoder();
+        geolocation.getCurrentPosition(function(r){
+            if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                //alert('您的位置：'+r.point.lng+','+r.point.lat);
+                var pt = r.point;
+                initMap(pt);
+//                gc.getLocation(pt, function (rs) {
+//                    var addComp = rs.addressComponents;
+//
+//                    var province = addComp.province;
+//                    var city = addComp.city;
+//                    var area = addComp.district;
+//
+//                    if (province != "" && city != "" && area != "") {
+//                        // alert(province);
+//                        alert("当前定位城市:"+province+city+area);
+//                        window.location.href="/Index/home_index/area/"+area+"/lat/"+r.point.lat+"/lng/"+r.point.lng;
+//
+//                    }
+//                    //alert("当前定位城市:"+cityName);
+//                    //
+//                });
+            }
+            else {
+                alert('failed'+this.getStatus());
+            }
+        },{enableHighAccuracy: true})
+
+    }
+
+
+
+</script>
+{/literal}
+<script src="__JS__/front/bbc.districtdata.js?version={$version}"></script>
+{/block}

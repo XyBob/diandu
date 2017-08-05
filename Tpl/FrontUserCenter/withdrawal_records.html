@@ -1,0 +1,81 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/loading.css?version={$version}">
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/list_style.css?version={$version}">
+<style>
+    #load_wrapper{
+        top:2.2rem;
+    }
+    .total_none{
+		width:100%;
+		font-size:0.8rem;
+		line-height:3rem;
+		color:#999;
+		text-align:center;
+	}
+</style>
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<header>
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>提现记录</h1>
+</header>
+<div id="load_wrapper">
+    <div id="scroller" style="padding-bottom: 2.4rem;{if $account_list}display:block;{else}display:none;{/if}">
+        <ul class="main" id="new_list">
+            {foreach from=$account_list item=this}
+            <li>
+                <div class="header clearfix">
+                    <p class="fl">{date('Y-m-d  H:i:s',$this.addtime)}</p>
+                    <span class="fr">{if $this.change_type==AccountModel::DEPOSIT_APPLY}提现申请{else}提现拒绝{/if}</span>
+                </div>
+                <div class="cont">
+                    <h1>&yen;{if $this.amount_out!=0.00}-{$this.amount_out}{else}+{$this.amount_in}{/if}</h1>
+                    <div class="cont_top clearfix">
+                        <p class="fl">变动前金额:</p>
+                        <span class="fl">{$this.amount_before_pay}</span>
+                    </div>
+                    <div class="cont_top clearfix">
+                        <p class="fl">变动后金额:</p>
+                        <span class="fl">{$this.amount_after_pay}</span>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footer_cont">
+                        <p>备注:</p>
+                        <span>{if $this.remark}{$this.remark}{else}--{/if}</span>
+                    </div>
+                </div>
+            </li>
+            {/foreach}
+        </ul>
+        <div id="pullUp">
+            <span class="pullUpLabel">上拉加载...</span>
+        </div>
+    </div>
+    <p class="total_none" style="{if $account_list}display:none;{else}display:block;{/if}">暂无提现记录</p>
+</div>
+{/block}
+{block name="js"}
+<script type="text/javascript" src="/Public/Js/front/iscroll.js"></script>
+<script type="text/javascript" src="/Public/Js/front/front_js/item_list_withdrawal.js"></script>
+<script>
+    var firstRow='{$firstRow}';
+	firstRow = Number(firstRow);
+	var total='{$total}';
+	total = Number(total);
+</script>
+{literal}
+<script>
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+</script>
+{/literal}
+{/block}

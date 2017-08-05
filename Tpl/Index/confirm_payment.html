@@ -1,0 +1,132 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/confirm_payment.css?version={$version}"/>
+<style></style>
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>确认支付</h1>
+</div>
+<div class="header_empty"></div>
+<!--todo 主要内容-->
+<div class="style_show"></div>
+<div class="main_content">
+    <p><span>费用类型：</span><span class="name_style">商家入驻费</span></p>
+    <p class="down_p"><span>支付费用：</span><span class="red">¥{$business_apply_money}</span></p>
+</div>
+<div class="submit_pay" id="submit">微信支付</div>
+<div class="pay_loading">
+	<i></i>
+	<span>正在加载...</span>
+</div>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    var jsApiParameters='';
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    $('#submit').on('click',function(){
+        $(".pay_loading").css("display", "flex");
+        if(!is_wechat()){
+            mobile_wx_pay()
+        }else {
+            $.ajax({
+                url: "/index/confirm_payment",
+                type: "POST",
+                timeout: 10000,
+                success: function (data) {
+                    if (data) {
+                        console.log(data);
+                        if (data != 'failure') {
+                            if (data == 'has payed') {
+                                show_alert('您已经付过款了！');
+                                $(".pay_loading").hide();
+                                return false;
+                            }
+
+                            jsApiParameters = data;
+                            callpay();
+                            $(".pay_loading").hide();
+                        }
+                        else {
+                            show_alert('对不起，请重新支付！');
+                        }
+                    }
+                }
+            });
+        }
+    });
+
+    function mobile_wx_pay(){
+        //alert("in");
+        $.post('/index/confirm_payment_wxpay',{},function(d){
+            if(d)
+            {
+                //微信支付
+                var pay_param = d;
+                native_listen('wx_pay',{
+                    parameter : pay_param,
+                });
+            }else{
+                show_alert("支付失败");
+            }
+            $(".pay_loading").hide();
+        });
+
+    }
+
+    //调用微信JS api 支付
+    function jsApiCall()
+    {
+        //if (paying == false)
+        //{
+        paying = true;
+        WeixinJSBridge.invoke(
+                'getBrandWCPayRequest',
+                jQuery.parseJSON(jsApiParameters),
+                function(res)
+                {
+                    if (res.err_msg == "get_brand_wcpay_request:ok" )
+                    {
+                        location.href="/Index/payment_success";
+                    }
+                    else
+                    {
+                        paying = false;
+                      //  WeixinJSBridge.log(res.err_msg);
+                      //  alert(res.err_code);
+                       // alert(res.err_desc);
+                       // alert(res.err_msg);
+                    }
+                }
+        );
+        //}
+    }
+
+    function callpay()
+    {
+        if (typeof WeixinJSBridge == "undefined"){
+            if( document.addEventListener ){
+                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+            }else if (document.attachEvent){
+                document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+            }
+        }else{
+            jsApiCall();
+        }
+    }
+
+
+</script>
+{/literal}
+{/block}

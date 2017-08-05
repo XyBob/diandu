@@ -1,0 +1,82 @@
+html,body{
+    width:100%;
+    height:100%;
+    background: #fff;
+    overflow-x:hidden;
+}
+.header_right{
+    position:absolute;
+    top:0;
+    height:2.2rem;
+    right:0;
+    padding:0 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    color: #FFFFFF;
+}
+.list_content{
+    background: #F4F4F4;
+    padding-top:0.5rem;
+    margin-top:2.2rem;
+    overflow:hidden;
+}
+.list_content .list{
+    margin-bottom:0.5rem;
+    background: #fff;
+    padding:0.55rem 0.75rem 0.65rem;
+}
+.list_content .list h2{
+    font-size: 0.9rem;
+    color: #333333;
+    padding-bottom:0.2rem;
+}
+.list_content .list .text-right{
+    text-align:right;
+    font-size: 0.6rem;
+    color: #666666;
+}
+.list_content .list .describe{
+    font-size: 0.7rem;
+    color: #666666;
+    text-overflow:ellipsis;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    display:-webkit-box;
+    overflow:hidden;
+    line-height:1rem;
+    max-height:2rem;
+    margin-bottom:0.25rem;
+}
+.list_content .list .describe.add{
+    margin-bottom:0.5rem;
+}
+.list_content .label_tips{
+    width:100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list_content .label_tips .times{
+    font-size: 0.6rem;
+    color: #666666;
+}
+.list_content .list .control{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.list_content .list .control .prompt_btn{
+    width:5rem;
+    height:1.6rem;
+    line-height:1.6rem;
+    border: 1px solid #F93B23;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    color: #F93B23;
+    text-align: center;
+    box-sizing: border-box;
+}

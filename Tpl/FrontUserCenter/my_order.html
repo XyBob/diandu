@@ -1,0 +1,208 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/loading.css?version={$version}">
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/my_order.css?version={$version}"/>
+<style>
+    #load_wrapper{
+        top:4.4rem;
+    }
+    .no_content{
+        display: none;
+    }
+</style>
+{/block}
+{block name="content"}
+<header>
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>我的订单</h1>
+</header>
+<div class="switch_content clearfix">
+    <div class="fl active" data-id="take_out">
+        <div class="take_out">外卖订单</div>
+    </div>
+    <div class="fl" data-id="shop_consume">
+        <div class="shop_consume">到店消费</div>
+    </div>
+</div>
+<div id="load_wrapper">
+    <div id="scroller"  style="padding-bottom: 2.4rem;">
+        <!--todo 外卖订单列表-->
+        <div id="take_out" class="content active" style="{if !$take_out_order_list}display:none;{/if}">
+            <ul class="list_content">
+            {foreach from=$take_out_order_list item=this}
+            <a href="/FrontUserCenter/consumer_order_detail/order_id/{$this.order_id}">
+                <li class="list" >
+                    <div class="list_top">
+                        <div class="img_info">
+                            <div class="img_left"><img src="{$this.business_img}" class="img-responsive"></div>
+                            <div class="img_middle">
+                                <div class="the_top">
+                                    <div class="top_state">
+                                        <p class="name">{$this.business_name}</p>
+                                        <div class="img_right grey">{$this.order_status_name}</div>
+                                    </div>
+                                    <p class="time">{$this.addtime}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {if $this.item_num!=0}
+                    <div class="describe"><span class="describe_name">{$this.key_words}</span><span>等{$this.item_num}件商品</span></div>
+                    {/if}
+                    <div class="money">¥{$this.pay_amount}</div>
+                </li>
+            </a>
+            {/foreach}
+
+            </ul>
+            <!--<div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>-->
+        </div>
+        <!--todo 到店里消费-->
+        <div class="content consumption" id="shop_consume" style="{if !$in_store_order_list}display:none;{/if}">
+            <ul class="list_content" >
+                {foreach from=$in_store_order_list item=this}
+                <li class="list_shop">
+                    <div class="list_left">
+                        <div class="img_left_shop"><img src="{$this.business_img}" class="img-responsive"></div>
+                        <div class="img_right_shop">
+                            <span class="name">{$this.business_name}</span>
+                            <span class="time">{$this.addtime}</span>
+                        </div>
+                    </div>
+                    <div class="list_right blue">¥{$this.pay_amount}</div>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+        </div>
+    </div>
+</div>
+<div class="no_content no_take_out">
+    <div class="no_order"></div>
+    <p class="text-center">您还没相关的订单</p>
+</div>
+<div class="no_content no_shop_consume">
+    <div class="no_order"></div>
+    <p class="text-center">您还没相关的订单</p>
+</div>
+<!--底部导航栏-->
+<ul class="foot_nav">
+    <li>
+        <a href="/Index/home_index" class="native_go">
+            <i class="icon_pic1 icon_home3x icon_home_s3x"></i>
+            <span class="nav_name">首页</span>
+        </a>
+    </li>
+    <li id="take_out_footer">
+        <a href="/FrontMerchant/take_out_index" class="native_go">
+            <i class="img_new_add_small icon_waimai"></i>
+            <span class="nav_name">外 卖</span>
+        </a>
+    </li>
+    <li class="active">
+        <a href="/FrontUserCenter/my_order" class="native_go">
+            <i class="icon_pic1 Shape3x icon_order_s3x active"></i>
+            <span class="nav_name">订单</span>
+        </a>
+    </li>
+    <li>
+        <a href="/FrontUserCenter/person_center" class="native_go">
+            <i class="icon_pic1 icon_mine3x icon_mine_s3x"></i>
+            <span class="nav_name">我的</span>
+        </a>
+    </li>
+</ul>
+{/block}
+{block name="js"}
+<script type="text/javascript" src="/Public/Js/front/iscroll.js"></script>
+<script type="text/javascript" src="/Public/Js/front/front_js/my_order_list.js"></script>
+<script>
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    //底部导航栏
+    $(".foot_nav li").on("click",function(){
+        $(this).siblings().removeClass("active").find("i").removeClass("active");
+        $(this).addClass("active").find("i").addClass("active");
+        if($(this).attr('id')=='take_out_footer'){
+            $(this).find('i').addClass('icon_waimai_s');
+        }
+    })
+</script>
+<script>
+    var TakeOutFirstRow=parseInt('{$TakeOutFirstRow}');
+    var InStoreFirstRow=parseInt('{$InStoreFirstRow}');
+    var TakeOutOrderTotal=parseInt('{$take_out_order_total}');
+    var InStoreOrderTotal=parseInt('{$in_store_order_total}');
+</script>
+{literal}
+<script type="text/javascript">
+	var InStoreNum = 1; //默认页面显示4条数据              num可变
+	var TakeOutNum = 1;
+	if(TakeOutOrderTotal==0){
+		$("#pullUp").hide();
+	}else{
+		$("#pullUp").show();
+	}
+    $('.switch_content .fl').on('click',function(){
+    	setTimeout(function(){
+    		myScroll.refresh();
+    		$("#scroller").css({
+	    		"transform":"translate(0px, 0px)"
+	    	});
+    	},500);
+    	
+    	var index = $(this).index();
+    	if(index==0){
+    		if(TakeOutOrderTotal==0){
+    			$("#pullUp").hide();
+    		}else{
+    			$("#pullUp").show();
+    			if(TakeOutFirstRow*TakeOutNum>=TakeOutOrderTotal){
+    				$(".pullUpLabel").html("没有更多");
+    			}else{
+    				$(".pullUpLabel").html("上拉加载更多");
+    			}
+    		}
+    	}else{
+    		if(InStoreOrderTotal==0){
+    			$("#pullUp").hide();
+    		}else{
+    			$("#pullUp").show();
+    			if(InStoreFirstRow*InStoreNum>=InStoreOrderTotal){
+    				console.log(56);
+    				$(".pullUpLabel").html("没有更多");
+    			}else{
+    				$(".pullUpLabel").html("上拉加载更多");
+    			}
+    		}
+    	}
+        $(this).addClass('active').siblings('.fl').removeClass('active');
+        var target=$(this).data('id');
+        $('#'+target).addClass('active').siblings('.content').removeClass('active');
+        myScroll.refresh();
+        if($('#take_out').hasClass('active')){
+            $('.no_content.no_shop_consume').hide();
+            if($('#take_out .list_content:hidden')[0]){
+                $('.no_content.no_take_out').show();
+            }
+        }
+        if($('#shop_consume').hasClass('active')){
+            $('.no_content.no_take_out').hide();
+            if($('#shop_consume .list_content:hidden')[0]){
+                $('.no_content.no_shop_consume').show();
+            }
+        }
+    });
+</script>
+
+{/literal}
+{/block}

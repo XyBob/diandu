@@ -1,0 +1,234 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/front/front_css/person_center.css?version={$version}"/>
+<style>
+
+</style>
+{/literal}
+{/block}
+{block name="content"}
+<!--todo 顶部-->
+<div class="header_separate">
+    <h1>我的</h1>
+    <div class="header_right"><span class="one"></span><span class="icon_add_person icon_set_white native_go" onclick="location.href='/Index/set'"></span></div>
+</div>
+<!--<div class="header_empty"></div>-->
+<!--todo 个人资料-->
+<div class="person_information">
+    <a class="person_data native_go" href="/Index/personal_data">
+        <div class="date_exhibition">
+            <div class="head_portrait"><img src="/Public/Images/front/front_img/touxiang_01@3x.png" class="img-responsive"></div>
+            <div class="signature">小凌一定好运来</div>
+        </div>
+        <div class="icon_add_person icon_whiteright"></div>
+    </a>
+    <div class="money_detail">
+        <div class="one fl">
+            <span>¥100</span>
+            <span>余额</span>
+        </div>
+        <div class="two fl">
+            <span>¥100</span>
+            <span>消费余额</span>
+        </div>
+    </div>
+</div>
+<!--todo 资料列表-->
+<div class="data_list">
+    <a class="consumer_list common native_go" href="/Index/consum_order_list">
+        <div class="list_img">
+            <div class="icon_add_person icon_orderform"></div>
+        </div>
+        <div class="list_show_content">
+            <div class="list_show">
+                <span class="list_name">消费清单</span>
+                <span class="icon_add_person icon_left_gray"></span>
+            </div>
+        </div>
+    </a>
+    <a class="my_account common native_go" href="/Index/my_account">
+        <div class="list_img">
+            <div class="icon_add_person icon_me_money"></div>
+        </div>
+        <div class="list_show_content">
+            <div class="list_show">
+                <span class="list_name">我的账户</span>
+                <span class="icon_add_person icon_left_gray"></span>
+            </div>
+        </div>
+    </a>
+    <a class="recommend_store common native_go" href="/Index/my_recom_shop">
+        <div class="list_img">
+            <div class="icon_add_person icon_me_shop"></div>
+        </div>
+        <div class="list_show_content">
+            <div class="list_show">
+                <span class="list_name">我推荐的店铺</span>
+                <span class="icon_add_person icon_left_gray"></span>
+            </div>
+        </div>
+    </a>
+    <a class="recommend_person common native_go" href="/Index/my_recom_person">
+        <div class="list_img">
+            <div class="icon_add_person icon_me_person"></div>
+        </div>
+        <div class="list_show_content">
+            <div class="list_show">
+                <span class="list_name">我推荐的个人</span>
+                <span class="icon_add_person icon_left_gray"></span>
+            </div>
+        </div>
+    </a>
+    <a class="my_qr_code common native_go" href="/Index/my_qr_code">
+        <div class="list_img">
+            <div class="icon_add_person icon_qrcode"></div>
+        </div>
+        <div class="list_show_content">
+            <div class="list_show">
+                <span class="list_name">我的二维码</span>
+                <span class="icon_add_person icon_left_gray"></span>
+            </div>
+        </div>
+    </a>
+    <a class="invite_friend common" id="invite_friend">
+        <div class="list_img">
+            <div class="icon_add_person icon_fenxiang_orange"></div>
+        </div>
+        <div class="list_show_content">
+            <div class="list_show">
+                <span class="list_name">邀请朋友、分享</span>
+                <span class="icon_add_person icon_left_gray"></span>
+            </div>
+        </div>
+    </a>
+    {*if $status eq 1*}
+    <a class="my_shop common native_go" id="my_shop" href="/FrontMerchant/my_store">
+        <div class="list_img">
+            <div class="icon_add_person icon_me_shop_blue"></div>
+        </div>
+        <div class="list_show_content">
+            <div class="list_show">
+                <span class="list_name">我的店铺</span>
+                <span class="icon_add_person icon_left_gray"></span>
+            </div>
+        </div>
+    </a>
+    {*/if*}
+</div>
+<!--status 0没店铺，1申请通过，即有店铺，2申请未通过，3冻结，4审核中，5未付款-->
+<div class="apply_in_merchants" onclick="location.href='/Index/apply_for_businesses.html'">
+<span class="icon_add_person icon_me_shop_blue"></span>
+<span class="blue_text">申请成为商家</span>
+</div>
+{if $status eq 0 or $status eq 5}
+<!--todo 申请成为商家-->
+<!--<div class="apply_in_merchants" onclick="location.href='/Index/apply_for_businesses.html'">-->
+    <!--<span class="icon_add_person icon_me_shop_blue"></span>-->
+    <!--<span class="blue_text">申请成为商家</span>-->
+<!--</div>-->
+{elseif $status eq 4}
+<div class="apply_in_merchants">
+    <span class="icon_add_person icon_me_shop_blue"></span>
+    <span class="blue_text">审核中</span>
+</div>
+{elseif $status eq 2}
+<div class="apply_in_merchants" onclick="location.href='/Index/apply_for_businesses.html'">
+    <span class="icon_add_person icon_me_shop_blue"></span>
+    <span class="blue_text">审核未通过</span>
+</div>
+{/if}
+<!--底部导航栏-->
+<div class="footer_empty"></div>
+<ul class="foot_nav">
+	<li>
+		<a href="/Index/home_index" class="native_go">
+			<i class="icon_pic1 icon_home3x icon_home_s3x"></i>
+			<span class="nav_name">首页</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="native_go">
+			<i class="icon_pic1 Shape3x icon_order_s3x"></i>
+			<span class="nav_name">订单</span>
+		</a>
+	</li>
+	<li class="active">
+		<a href="/Index/person_center" class="native_go">
+			<i class="icon_pic1 icon_mine3x icon_mine_s3x active"></i>
+			<span class="nav_name">我的</span>
+		</a>
+	</li>
+</ul>
+<!--todo 邀请朋友分享的模态框-->
+<div class="modal" id="share">
+    <div class="content">
+        <div class="tips_btn">点击更多，分享赠送给好友哦</div>
+        <div class="tips_arrrow icon_add_person icon_jiantou_white"></div>
+        <div class="modal_content content_control">
+            <div class="del"></div>
+            <div class="img-control">
+                <img src="/Public/Images/front/front_img/touxiang_01@3x.png" class="img-responsive">
+            </div>
+            <p class="name text-center">人间四月</p>
+            <div class="qr">
+                <img src="/Public/Images/front/front_img/qr_code.jpg" class="img-responsive">
+            </div>
+            <p class="text_control">1、分享我的二维码给好友，邀请好友</p>
+            <p class="text_control last_p">注册，即可获得平台奖励。</p>
+        </div>
+    </div>
+    <div class="empty_content"></div>
+</div>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+	//底部导航栏
+	$(".foot_nav li").on("click",function(){
+		$(this).siblings().removeClass("active").find("i").removeClass("active");
+		$(this).addClass("active").find("i").addClass("active");
+	});
+    /*todo 分享的模态框控制函数*/
+    $('#invite_friend').on('click',function(){
+        $('#share').show();
+        document.body.classList.add('bodyhide');
+    });
+    /*todo 点击蒙版关闭模态框*/
+    $('#share').on('click',function(){
+        $(this).hide();
+        document.body.classList.remove('bodyhide');
+    });
+    /*todo 关闭模态框按钮*/
+    $('.modal_content .del').on('click',function(){
+        $('#share').hide();
+        document.body.classList.remove('bodyhide');
+    });
+    $('#share .content').on('click',function(){
+        event.stopPropagation();/*todo 阻止冒泡*/
+    });
+    function parseJson(param) {
+        var obj = {};
+        var keyvalue = [];
+        var key = "", value = "";
+        var paraString = param.split("&");
+        for (var i in paraString) {
+            keyvalue = paraString[i].split("=");
+            key = keyvalue[0];
+            value = keyvalue[1];
+            obj[key] = value;
+        }
+        return obj;
+    }
+    function pageConfig() {
+        if (location.href.split('?')[1] != null) {
+            return parseJson(decodeURIComponent(location.href.split('?')[1]));
+        }
+        else {
+            return false;
+        }
+    }
+</script>
+{/literal}
+{/block}

@@ -1,0 +1,6619 @@
+2017-07-17 09:03:02
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500858182 WHERE ( user_id = 62819 )
+2017-07-17 09:03:02
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 09:03:03
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500858183 WHERE ( user_id = 62819 )
+2017-07-17 09:03:03
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:00:36
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861636 WHERE ( user_id = 62819 )
+2017-07-17 10:00:36
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:00:36
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861636 WHERE ( user_id = 62819 )
+2017-07-17 10:00:36
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:00:39
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861639 WHERE ( user_id = 62819 )
+2017-07-17 10:00:39
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:00:40
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861640 WHERE ( user_id = 62819 )
+2017-07-17 10:00:40
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:00:43
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861643 WHERE ( user_id = 62819 )
+2017-07-17 10:00:43
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:00:44
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861644 WHERE ( user_id = 62819 )
+2017-07-17 10:00:44
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:00:47
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861647 WHERE ( user_id = 62819 )
+2017-07-17 10:00:47
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:00:50
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861650 WHERE ( user_id = 62819 )
+2017-07-17 10:00:50
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:00:54
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861654 WHERE ( user_id = 62819 )
+2017-07-17 10:00:54
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:00:54
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861654 WHERE ( user_id = 62819 )
+2017-07-17 10:00:54
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:00:55
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861655 WHERE ( user_id = 62819 )
+2017-07-17 10:00:55
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:01:02
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861662 WHERE ( user_id = 62819 )
+2017-07-17 10:01:02
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:01:05
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861665 WHERE ( user_id = 62819 )
+2017-07-17 10:01:05
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:01:06
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861666 WHERE ( user_id = 62819 )
+2017-07-17 10:01:06
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:01:06
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861666 WHERE ( user_id = 62819 )
+2017-07-17 10:01:06
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:01:54
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861714 WHERE ( user_id = 62819 )
+2017-07-17 10:01:54
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:01:57
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861717 WHERE ( user_id = 62819 )
+2017-07-17 10:01:57
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:01:58
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861718 WHERE ( user_id = 62819 )
+2017-07-17 10:01:58
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:01:58
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861718 WHERE ( user_id = 62819 )
+2017-07-17 10:01:58
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:02:05
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861725 WHERE ( user_id = 62819 )
+2017-07-17 10:02:05
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:02:07
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861727 WHERE ( user_id = 62819 )
+2017-07-17 10:02:07
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:02:08
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861728 WHERE ( user_id = 62819 )
+2017-07-17 10:02:08
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:02:09
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861729 WHERE ( user_id = 62819 )
+2017-07-17 10:02:09
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:02:14
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861734 WHERE ( user_id = 62819 )
+2017-07-17 10:02:14
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:02:15
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861735 WHERE ( user_id = 62819 )
+2017-07-17 10:02:15
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:02:15
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861735 WHERE ( user_id = 62819 )
+2017-07-17 10:02:15
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:02:53
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861773 WHERE ( user_id = 62819 )
+2017-07-17 10:02:53
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:02:53
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861773 WHERE ( user_id = 62819 )
+2017-07-17 10:02:53
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:04
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861784 WHERE ( user_id = 62819 )
+2017-07-17 10:03:04
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:06
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861786 WHERE ( user_id = 62819 )
+2017-07-17 10:03:06
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:06
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861786 WHERE ( user_id = 62819 )
+2017-07-17 10:03:06
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:07
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861787 WHERE ( user_id = 62819 )
+2017-07-17 10:03:07
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:13
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861793 WHERE ( user_id = 62819 )
+2017-07-17 10:03:13
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:15
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861795 WHERE ( user_id = 62819 )
+2017-07-17 10:03:15
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:15
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861795 WHERE ( user_id = 62819 )
+2017-07-17 10:03:15
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:16
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861796 WHERE ( user_id = 62819 )
+2017-07-17 10:03:16
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:20
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861800 WHERE ( user_id = 62819 )
+2017-07-17 10:03:20
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:21
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861801 WHERE ( user_id = 62819 )
+2017-07-17 10:03:21
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontOrderAction.class.php on line 6
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:22
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861802 WHERE ( user_id = 62819 )
+2017-07-17 10:03:22
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:23
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861803 WHERE ( user_id = 62819 )
+2017-07-17 10:03:23
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:03:23
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861803 WHERE ( user_id = 62819 )
+2017-07-17 10:03:23
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:06
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861846 WHERE ( user_id = 62819 )
+2017-07-17 10:04:06
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:09
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861849 WHERE ( user_id = 62819 )
+2017-07-17 10:04:09
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:10
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861850 WHERE ( user_id = 62819 )
+2017-07-17 10:04:10
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:12
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861852 WHERE ( user_id = 62819 )
+2017-07-17 10:04:12
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:17
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861857 WHERE ( user_id = 62819 )
+2017-07-17 10:04:17
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:18
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861858 WHERE ( user_id = 62819 )
+2017-07-17 10:04:18
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:19
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861859 WHERE ( user_id = 62819 )
+2017-07-17 10:04:19
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:20
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861860 WHERE ( user_id = 62819 )
+2017-07-17 10:04:20
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:25
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861865 WHERE ( user_id = 62819 )
+2017-07-17 10:04:25
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:26
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861866 WHERE ( user_id = 62819 )
+2017-07-17 10:04:26
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:27
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861867 WHERE ( user_id = 62819 )
+2017-07-17 10:04:27
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:27
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861867 WHERE ( user_id = 62819 )
+2017-07-17 10:04:27
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:33
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861873 WHERE ( user_id = 62819 )
+2017-07-17 10:04:33
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:34
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861874 WHERE ( user_id = 62819 )
+2017-07-17 10:04:34
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:34
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861874 WHERE ( user_id = 62819 )
+2017-07-17 10:04:34
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:35
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861875 WHERE ( user_id = 62819 )
+2017-07-17 10:04:35
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontOrderAction.class.php on line 6
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:36
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861876 WHERE ( user_id = 62819 )
+2017-07-17 10:04:36
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:37
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861877 WHERE ( user_id = 62819 )
+2017-07-17 10:04:37
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:38
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861878 WHERE ( user_id = 62819 )
+2017-07-17 10:04:38
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:04:46
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861886 WHERE ( user_id = 62819 )
+2017-07-17 10:04:46
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontOrderAction.class.php on line 6
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:05:33
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861933 WHERE ( user_id = 62819 )
+2017-07-17 10:05:33
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontOrderAction.class.php on line 6
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:05:33
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861933 WHERE ( user_id = 62819 )
+2017-07-17 10:05:33
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:05:34
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861934 WHERE ( user_id = 62819 )
+2017-07-17 10:05:34
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 10:05:35
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500861935 WHERE ( user_id = 62819 )
+2017-07-17 10:05:35
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 11:04:31
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500865471 WHERE ( user_id = 62819 )
+2017-07-17 11:04:31
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontOrderAction.class.php on line 6
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 11:04:32
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500865472 WHERE ( user_id = 62819 )
+2017-07-17 11:04:32
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 11:04:34
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500865474 WHERE ( user_id = 62819 )
+2017-07-17 11:04:34
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 11:04:34
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500865474 WHERE ( user_id = 62819 )
+2017-07-17 11:04:34
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 11:40:30
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500867630 WHERE ( user_id = 62819 )
+2017-07-17 11:40:30
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontOrderAction.class.php on line 6
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 11:40:30
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500867630 WHERE ( user_id = 62819 )
+2017-07-17 11:40:30
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 11:40:31
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500867631 WHERE ( user_id = 62819 )
+2017-07-17 11:40:31
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 11:40:32
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500867632 WHERE ( user_id = 62819 )
+2017-07-17 11:40:32
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 14:38:52
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500878332 WHERE ( user_id = 62819 )
+2017-07-17 14:38:52
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 14:38:52
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500878332 WHERE ( user_id = 62819 )
+2017-07-17 14:38:52
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:46:42
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886002 WHERE ( user_id = 62813 )
+2017-07-17 16:46:42
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:46:46
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886006 WHERE ( user_id = 62813 )
+2017-07-17 16:46:46
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:46:50
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886010 WHERE ( user_id = 62813 )
+2017-07-17 16:46:50
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:46:50
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886010 WHERE ( user_id = 62813 )
+2017-07-17 16:46:50
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:46:54
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886014 WHERE ( user_id = 62813 )
+2017-07-17 16:46:54
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:46:55
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886015 WHERE ( user_id = 62813 )
+2017-07-17 16:46:55
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:46:59
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886019 WHERE ( user_id = 62813 )
+2017-07-17 16:46:59
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:03
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886023 WHERE ( user_id = 62813 )
+2017-07-17 16:47:03
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:08
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886028 WHERE ( user_id = 62813 )
+2017-07-17 16:47:08
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:08
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886028 WHERE ( user_id = 62813 )
+2017-07-17 16:47:08
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:09
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886029 WHERE ( user_id = 62813 )
+2017-07-17 16:47:09
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:19
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886039 WHERE ( user_id = 62813 )
+2017-07-17 16:47:19
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:22
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886042 WHERE ( user_id = 62813 )
+2017-07-17 16:47:22
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:23
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886043 WHERE ( user_id = 62813 )
+2017-07-17 16:47:23
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:24
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886044 WHERE ( user_id = 62813 )
+2017-07-17 16:47:24
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:28
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886048 WHERE ( user_id = 62813 )
+2017-07-17 16:47:28
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:29
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886049 WHERE ( user_id = 62813 )
+2017-07-17 16:47:29
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:30
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886050 WHERE ( user_id = 62813 )
+2017-07-17 16:47:30
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:30
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886050 WHERE ( user_id = 62813 )
+2017-07-17 16:47:30
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:42
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886062 WHERE ( user_id = 62813 )
+2017-07-17 16:47:42
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:43
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886063 WHERE ( user_id = 62813 )
+2017-07-17 16:47:43
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:43
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886063 WHERE ( user_id = 62813 )
+2017-07-17 16:47:43
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:47:45
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886065 WHERE ( user_id = 62813 )
+2017-07-17 16:47:45
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:49:41
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886181 WHERE ( user_id = 62813 )
+2017-07-17 16:49:41
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:49:42
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886182 WHERE ( user_id = 62813 )
+2017-07-17 16:49:42
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:49:44
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886184 WHERE ( user_id = 62813 )
+2017-07-17 16:49:44
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:49:45
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886185 WHERE ( user_id = 62813 )
+2017-07-17 16:49:45
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:49:52
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886192 WHERE ( user_id = 62813 )
+2017-07-17 16:49:52
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:49:53
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886193 WHERE ( user_id = 62813 )
+2017-07-17 16:49:53
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:49:53
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886193 WHERE ( user_id = 62813 )
+2017-07-17 16:49:53
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:49:54
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886194 WHERE ( user_id = 62813 )
+2017-07-17 16:49:54
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:49:58
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886198 WHERE ( user_id = 62813 )
+2017-07-17 16:49:58
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:49:59
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886199 WHERE ( user_id = 62813 )
+2017-07-17 16:49:59
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:49:59
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886199 WHERE ( user_id = 62813 )
+2017-07-17 16:49:59
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:50:00
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886200 WHERE ( user_id = 62813 )
+2017-07-17 16:50:00
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:50:37
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886237 WHERE ( user_id = 62813 )
+2017-07-17 16:50:37
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:50:38
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886238 WHERE ( user_id = 62813 )
+2017-07-17 16:50:38
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:50:39
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886239 WHERE ( user_id = 62813 )
+2017-07-17 16:50:39
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:50:52
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886252 WHERE ( user_id = 62813 )
+2017-07-17 16:50:52
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontMerchantOrderAction.class.php on line 14
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:50:53
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886253 WHERE ( user_id = 62813 )
+2017-07-17 16:50:53
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontMerchantOrderAction.class.php on line 14
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:51:19
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886279 WHERE ( user_id = 62819 )
+2017-07-17 16:51:19
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:51:20
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886280 WHERE ( user_id = 62819 )
+2017-07-17 16:51:20
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:51:21
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886281 WHERE ( user_id = 62819 )
+2017-07-17 16:51:21
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:51:27
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886287 WHERE ( user_id = 62819 )
+2017-07-17 16:51:27
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontMerchantOrderAction.class.php on line 14
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:51:28
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886288 WHERE ( user_id = 62819 )
+2017-07-17 16:51:28
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontMerchantOrderAction.class.php on line 14
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:51:41
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886301 WHERE ( user_id = 62813 )
+2017-07-17 16:51:41
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:51:42
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886302 WHERE ( user_id = 62813 )
+2017-07-17 16:51:42
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:51:43
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886303 WHERE ( user_id = 62813 )
+2017-07-17 16:51:43
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:53:20
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886400 WHERE ( user_id = 62819 )
+2017-07-17 16:53:20
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:53:21
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886401 WHERE ( user_id = 62819 )
+2017-07-17 16:53:21
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:53:22
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886402 WHERE ( user_id = 62819 )
+2017-07-17 16:53:22
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:53:42
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886422 WHERE ( user_id = 62819 )
+2017-07-17 16:53:42
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:53:43
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886423 WHERE ( user_id = 62819 )
+2017-07-17 16:53:43
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:53:44
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886424 WHERE ( user_id = 62819 )
+2017-07-17 16:53:44
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:54:20
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886460 WHERE ( user_id = 62813 )
+2017-07-17 16:54:20
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:54:20
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886460 WHERE ( user_id = 62813 )
+2017-07-17 16:54:20
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:54:21
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886461 WHERE ( user_id = 62813 )
+2017-07-17 16:54:21
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:56:32
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886592 WHERE ( user_id = 62819 )
+2017-07-17 16:56:32
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:56:33
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886593 WHERE ( user_id = 62819 )
+2017-07-17 16:56:33
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:56:34
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500886594 WHERE ( user_id = 62819 )
+2017-07-17 16:56:34
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:56:55
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886615 WHERE ( user_id = 62813 )
+2017-07-17 16:56:55
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:56:56
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886616 WHERE ( user_id = 62813 )
+2017-07-17 16:56:56
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 16:56:56
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500886616 WHERE ( user_id = 62813 )
+2017-07-17 16:56:56
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:05:12
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887112 WHERE ( user_id = 62813 )
+2017-07-17 17:05:12
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:05:12
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887112 WHERE ( user_id = 62813 )
+2017-07-17 17:05:12
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:05:13
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887113 WHERE ( user_id = 62813 )
+2017-07-17 17:05:13
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:05:30
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887130 WHERE ( user_id = 62813 )
+2017-07-17 17:05:30
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:05:31
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887131 WHERE ( user_id = 62813 )
+2017-07-17 17:05:31
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:05:33
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887133 WHERE ( user_id = 62813 )
+2017-07-17 17:05:33
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:06:17
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887177 WHERE ( user_id = 62813 )
+2017-07-17 17:06:17
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:06:18
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887178 WHERE ( user_id = 62813 )
+2017-07-17 17:06:18
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:06:19
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887179 WHERE ( user_id = 62813 )
+2017-07-17 17:06:19
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:09:04
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887344 WHERE ( user_id = 62813 )
+2017-07-17 17:09:04
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:09:04
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887344 WHERE ( user_id = 62813 )
+2017-07-17 17:09:04
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:09:05
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887345 WHERE ( user_id = 62813 )
+2017-07-17 17:09:05
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:09:32
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887372 WHERE ( user_id = 62813 )
+2017-07-17 17:09:32
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:09:33
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887373 WHERE ( user_id = 62813 )
+2017-07-17 17:09:33
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:09:33
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887373 WHERE ( user_id = 62813 )
+2017-07-17 17:09:33
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:09:54
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500887394 WHERE ( user_id = 62819 )
+2017-07-17 17:09:54
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:09:55
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500887395 WHERE ( user_id = 62819 )
+2017-07-17 17:09:55
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:09:55
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500887395 WHERE ( user_id = 62819 )
+2017-07-17 17:09:55
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:15:58
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887758 WHERE ( user_id = 62813 )
+2017-07-17 17:15:58
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:15:59
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887758 WHERE ( user_id = 62813 )
+2017-07-17 17:15:59
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:15:59
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887759 WHERE ( user_id = 62813 )
+2017-07-17 17:15:59
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:16:09
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887769 WHERE ( user_id = 62813 )
+2017-07-17 17:16:09
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontMerchantOrderAction.class.php on line 14
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:16:11
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62813.jpg',`qr_code_expire_time`=1500887771 WHERE ( user_id = 62813 )
+2017-07-17 17:16:11
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\FrontMerchantOrderAction.class.php on line 14
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:16:18
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500887778 WHERE ( user_id = 62819 )
+2017-07-17 17:16:18
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\EmptyAction.class.php on line 5
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 127
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:16:19
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500887779 WHERE ( user_id = 62819 )
+2017-07-17 17:16:19
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+
+2017-07-17 17:16:23
+UPDATE `tp_users` SET `ticket`=null,`qr_code`='/Uploads/2017-07/2017-07-17/62819.jpg',`qr_code_expire_time`=1500887783 WHERE ( user_id = 62819 )
+2017-07-17 17:16:23
+C:\wamp\www\diandu\Lib\Model\UserModel.class.php on line 201
+show_debug_info
+
+C:\wamp\www\diandu\frame\Common\functions.php on line 1091
+saveUserInfo
+
+C:\wamp\www\diandu\Lib\Action\FrontAction.class.php on line 392
+get_qr_code
+
+C:\wamp\www\diandu\Lib\Action\IndexAction.class.php on line 12
+_initialize
+
+C:\wamp\www\diandu\frame\Lib\Core\Action.class.php on line 58
+_initialize
+
+C:\wamp\www\diandu\frame\Common\common.php on line 309
+__construct
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 110
+A
+
+C:\wamp\www\diandu\frame\Lib\Core\App.class.php on line 214
+exec
+
+C:\wamp\www\diandu\frame\Lib\Core\Think.class.php on line 39
+run
+
+C:\wamp\www\diandu\frame\Common\runtime.php on line 243
+start
+
+C:\wamp\www\diandu\frame\entrance.php on line 35
+require
+
+C:\wamp\www\diandu\index.php on line 26
+require
+
+

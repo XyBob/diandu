@@ -1,0 +1,245 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<script>
+    function no_pic(obj) {
+        obj.setAttribute("src", "/Public/Images/acp/nopicture.jpg");
+    }
+</script>
+
+<div class="tablesWrap">
+    <div class="tables-searchbox">
+        <form method="post">
+            <span class="tbs-txt">{$ITEM_NAME}名称：</span>
+            <input type="text" name="item_name" value="{$item_name}">
+
+            <span class="tbs-txt">{$ITEM_NAME}货号：</span>
+            <input type="text" class="mini" name="item_sn" value="{$item_sn}">
+
+            <!--
+            <span class="tbs-txt">销售量：</span>
+            <input type="text" style="width:60px;" name="start_sales_num" value="{$start_sales_num}">
+            <span class="tbs-txt">——</span>
+            <input type="text" style="width:60px;" name="end_sales_num" value="{$end_sales_num}">
+            -->
+
+           <!-- <select name="category_id">
+                <option value="0" selected="">-{$ITEM_NAME}分类-</option>
+                {foreach from=$arr_category item=row1}
+                <option value="1.{$row1.class_id}" {if "1."|cat:$row1.class_id EQ $category_id}selected{/if}>{$row1.class_name}</option>
+                {foreach from=$row1.sort_info item=row2}
+                <option value="2.{$row2.sort_id}" {if "2."|cat:$row2.sort_id EQ $category_id}selected{/if}>{$row2.sort_name}</option>
+                &lt;!&ndash;{foreach from=$row2.genre_info item=row3}
+                <option value="3.{$row3.class_genre_id}" {if "3."|cat:$row3.class_genre_id EQ $category_id}selected{/if}>{$row3.genre_name}</option>
+				{/foreach}&ndash;&gt;
+                {/foreach}
+                {/foreach}
+            </select>-->
+
+            <!--<select name="item_status">
+                <option value="0" selected="">-{$ITEM_NAME}状态-</option>
+                {foreach from=$arr_item_status item=row key=key}
+                <option value="{$key}" {if $key EQ $item_status}selected{/if}>{$row}</option>
+                {/foreach}
+            </select>-->
+
+            <div class="mgt10">
+                <button type="submit" class="btn"><i class="gicon-search"></i>搜索</button>
+            </div>
+
+        </form>
+    </div>
+    <!-- end tables-searchbox -->
+    <table class="wxtables">
+        <colgroup>
+            <col width="5%">
+            <col width="5%">
+            <col width="5%">
+            <col width="10%">
+            <col width="7%">
+            <col width="7%">
+            <col width="10%">
+        </colgroup>
+        <thead>
+        <tr>
+            <td>选择</td>
+            <td>编号</td>
+            <td>图片</td>
+            <td>{$ITEM_NAME}名称</td>
+            <td>货号</td>
+            <td>推荐价</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        {foreach from=$item_list item=item name=list}
+        <tr>
+            <td><input type="checkbox" class="checkbox" value="{$item.item_id}" name="checkIds[]"></td>
+            <td>{$smarty.foreach.list.iteration + $page->firstRow}.</td>
+            <td>
+                <div class="gallery">
+                    <div><a href="{$item.small_img}"><img src="{$item.base_pic}" style="width:70px;display:block;"/></a></div>
+                    <div class="clear"></div>
+                </div>
+                <!--<a href="{$item.link_item}" target="_blank"><img src="{$item.small_img}" alt="" width="50" height="50" onerror="no_pic(this);"></a>-->
+            </td>
+            <td>
+                <a href="{$item.link_item}" target="_blank">{$item.item_name}</a>
+            </td>
+            <td>{$item.item_sn}</td>
+            <td>{$item.mall_price}</td>
+            <td>
+                <a href="/McpItem/item_detail/item_id/{$item.item_id}" class="btn J_store" title="查看详情">查看详情</a>
+                <!--<a href="javascript:;" class="btn J_store add_to_my_store" title="添加到我的店铺"  item_id="{$item.item_id}">添加到我的店铺</a>-->
+                <a href="/McpItem/add_item/item_id/{$item.item_id}" class="btn J_store" title="添加到我的店铺"  item_id="{$item.item_id}">添加到我的店铺</a>
+                <input type="hidden" name="item_id" value="{$item.item_id}">
+            </td>
+        </tr>
+        {foreachelse}
+        <tr><td colspan="10">没有找到任何记录</td></tr>
+        {/foreach}
+        </tbody>
+    </table>
+    <!-- end wxtables -->
+    <div class="tables-btmctrl clearfix">
+
+        <div class="fr">
+            <div class="paginate">
+                {$show}
+            </div>
+            <!-- end paginate -->
+        </div>
+    </div>
+    <!-- end tables-btmctrl -->
+</div>
+<!-- end tablesWrap -->
+{/block}
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+<!--<script src="__MCPJS__/acp_item.js?version={$version}"></script>-->
+<!--<script src="__MCPJS__/McpItem/list_item.js?version={$version}"></script>-->
+<script src="__JS__/front/jquery.showLoading.min.js?version={$version}"></script>
+<script src="__JS__/clipboard.min.js"></script>
+<link rel="stylesheet" href="__CSS__/front/showLoading.css?version={$version}">
+<script>
+    var item_name = '{$ITEM_NAME}';
+    function copy_text(id)
+    {
+        var clipboard = new Clipboard('#' + id, {
+            text: function() {
+                return text;
+            }
+        });
+
+        clipboard.on('success', function(e) {
+            console.log(e);
+            alert('复制成功');
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+            alert('复制失败，请手动复制');
+        });
+    }
+    {literal}
+    $('.add_to_my_store').on('click',function(){
+        var tpl_item_id=$(this).attr('item_id');
+        console.log(tpl_item_id);
+        var html='<form id="deliver_form">' +
+                '<div class="formitems inline">'+
+                '<label class="fi-name"><span class="colorRed">*</span>库存：</label>'+
+                '<div class="form-controls">'+
+                '<input name="stock" id="stock" ><span class="fi-help-text"> </span>'+
+                '</div>' +
+                '</div>'+
+                '<div class="formitems inline">'+
+                '<label class="fi-name"><span class="colorRed">*</span>价钱：</label>'+
+                '<div class="form-controls">'+
+                '<input name="mall_price" id="mall_price">元<span class="fi-help-text"> </span>'+
+                '<input type="hidden" name="tpl_item_id" value="'+tpl_item_id+'">'+
+                '</div>' +
+                '</div>'+
+                '</form>';
+
+        $.jPops.custom({
+            title:"添加到我的店铺",
+            content:html,
+            okBtnTxt:"确定",
+            cancelBtnTxt:"取消",
+            callback:function(r)
+            {
+                if(r)
+                {
+
+                    $.validator.setDefaults(
+                            {
+                                //表单验证通过后的处理，异步提交表单
+                                submitHandler: function()
+                                {
+                                    $.post('/McpItem/add_to_my_store',$('#deliver_form').serialize(),function(data)
+                                    {
+                                        if (data == 'success')
+                                        {
+                                            alert('恭喜您，操作成功');
+                                            location.reload();
+                                        }
+                                        else
+                                        {
+                                            alert('对不起，操作失败');
+                                        }
+                                    })
+                                    acp.batchDeliverFormStatus = true;
+                                }
+                            });
+
+                    //表单验证规则
+                    $("#deliver_form").validate(
+                            {
+                                rules:
+                                {
+                                    stock:
+                                    {
+                                        required: true,
+                                        digits: true
+                                    },
+                                    mall_price:
+                                    {
+                                        required: true,
+                                        number:true
+                                    },
+                                },
+                                messages:
+                                {
+                                    stock:
+                                    {
+                                        required: "对不起，请输入库存",
+                                    },
+                                    mall_price:
+                                    {
+                                        required: "对不起，请填写正确的价格",
+                                    },
+                                },
+                                errorPlacement: acp.form_ShowError,//显示出错信息(这段代码必须加)
+                               // success:acp.form_HideError//验证成功隐藏错误信息(这段代码必须加)
+                            });
+
+                    //模拟提交表单
+                    $("#deliver_form").submit();
+                    return acp.batchDeliverFormStatus;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        });
+    });
+
+
+
+    {/literal}
+</script>
+
+{/block}

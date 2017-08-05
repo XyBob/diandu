@@ -1,0 +1,92 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/goods_address.css?version={$version}"/>
+<style>
+
+</style>
+{/block}
+{block name="content"}
+<header>
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>收货地址</h1>
+</header>
+<div class="header_empty"></div>
+<div class="no_address" style="display:none">
+    <div class="blank_address"></div>
+    <p class="address_tips">暂无收货地址</p>
+    <p class="more_tips">您可以新增收货地址以便收货</p>
+</div>
+<ul class="have_address">
+    {foreach from=$user_address_list item=this}
+    <li class="address_list">
+        <div class="header clearfix">
+            <span class="fl">{$this.realname}</span><span class="fr">{$this.mobile}</span>
+        </div>
+        <div class="describe">{$this.address}</div>
+        <div class="edit_control set_default" data-address_id="{$this.user_address_id}">
+            <div class="left_control">
+               <!-- <span class="icon_market icon_select_default  {if $this.is_default==1}icon_selected_b{/if}" ></span>
+                <span>默认地址</span>-->
+            </div>
+            <div class="right_control">
+                <div class="edit_switch" onclick="location.href='/FrontUserCenter/edit_goods_address/user_address_id/{$this.user_address_id}'">
+                    <span class="icon_market icon_edit"></span>
+                    <span>编辑</span>
+                </div>
+                <div class="del" data-address_id="{$this.user_address_id}">
+                    <span class="icon_market icon_delete_1"></span>
+                    <span>删除</span>
+                </div>
+            </div>
+        </div>
+    </li>
+    {/foreach}
+</ul>
+<div class="fixed_footer" onclick="location.href='/FrontUserCenter/add_new_goods_address'">新建收货地址</div>
+<!--todo 删除地址提示-->
+<div class="modal_del">
+    <div class="modal_content">
+        <div class="tips_icon icon_warning"></div>
+        <p class="warning">确定要删除该地址？</p>
+        <div class="operation">
+            <div class="cancel">取消</div>
+            <div class="sure_del">删除</div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script src="/Public/Js/front/front_js/goods_address_control.js"></script>
+{literal}
+<!--todo 返回箭头的控制-->
+<script>
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+/*    $('.set_default').on('click',function(){
+        var address_id=$(this).data('address_id');
+        console.log(address_id);
+        $.ajax({
+            url: "/FrontUserCenter/set_default_address", //URL
+            dataType: "json",
+            data: {"address_id":address_id},
+            type: "post",
+            success: function (data) {
+                if(data.code==1){
+                    $('.collect').children("i").toggleClass("active");
+                }
+
+            }
+        });
+    });*/
+
+    $(function(){
+
+    });
+</script>
+{/literal}
+{/block}

@@ -1,0 +1,155 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<div class="tablesWrap">
+    <!--<form   method="post" action="">-->
+        <!--<div class="tables-searchbox">-->
+            <!--<span class="tbs-txt">用户昵称：</span>-->
+            <!--<input type="text" name="nickname" value="{$nickname}">-->
+
+            <!--<span class="tbs-txt">持卡人姓名：</span>-->
+            <!--<input type="text" placeholder="" class="mini" name="bank_card_realname" value="{$bank_card_realname}">-->
+
+            <!--<span class="tbs-txt">卡号：</span>-->
+            <!--<input type="text" name="account" value="{$account}">-->
+            <!--<button class="btn" type="submit"><i class="gicon-search"></i>搜索</button>-->
+        <!--</div>-->
+    <!--</form>-->
+    <!-- end tables-searchbox -->
+    <table class="wxtables">
+        <colgroup>
+            <col width="15%">
+            <col width="15%">
+            <col width="15%">
+            <col width="20%">
+            <col width="20%">
+        </colgroup>
+        <thead>
+        <tr>
+            <td>银行卡号</td>
+            <td>持卡人姓名</td>
+            <td>银行类型</td>
+            <td>开户行名称</td>
+            <!--<td>预留手机号码</td>-->
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach from=$bank_card_info  item=this}
+        <tr>
+            <td>{$this.account}</td>
+            <td>{$this.realname}</td>
+            <td>{$this.bank_name}</td>
+            <td>
+                {$this.opening_bank}
+            </td>
+            <!--<td>-->
+            <!--{$this.bank_mobile}-->
+            <!--</td>-->
+            <td>
+                <a href="/McpFinance/edit_bank_info/bank_card_id/{$this.bank_card_id}" class="btn" title="编辑银行卡信息">编辑银行卡信息</a>
+            </td>
+
+        </tr>
+        {foreachelse}
+        <tr>
+            <td colspan="20" style="text-align:center">对不起,暂无您要查询的数据!</td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+    <!-- end wxtables -->
+    <div class="tables-btmctrl clearfix">
+        <div class="fr">
+            <div class="paginate">
+
+            </div>
+            <!-- end paginate -->
+        </div>
+    </div>
+    <!-- end tables-btmctrl -->
+</div>
+<!-- end tablesWrap -->
+{/block}
+
+{block name="js"}
+{literal}
+<script>
+    $(function() {
+
+        $(".j_form").click(function(){
+            var user_id = $(this).data('id');
+            $.jPops.custom({
+                title:"调整用户余额",
+                content:html,
+                callback:function(r){
+                    acp.popFormStatus=false;//弹窗表单验证状态
+                    if(r){
+                        $.validator.setDefaults({
+                            submitHandler: function() {
+                                acp.popFormStatus=true;//设置弹窗表单验证状态为通过
+                                var amount=$("#jpops #amount").val();
+                                var remark=$("#jpops #remark").val();
+                                var amount_type=$("#jpops").find("input[name='amount_type']:checked").val();
+
+                                $.ajax({
+                                    url : '/AcpFinance/set_amount',
+                                    type : 'POST',
+                                    dataType : 'JSON',
+                                    timeout : 1000,
+                                    data : {action : "set",user_id : user_id,amount_type : amount_type,amount : amount, remark : remark},
+                                    error : function() {
+                                        $.jPops.message({title:"操作提示",content: "操作失败请重试",timing:3000});
+                                    },
+                                    success : function(result) {
+                                        if(result.code == 200)
+                                        {
+                                            $.jPops.message({title:"操作提示",content: result.msg,timing:3000});
+                                            //刷新页面
+                                            setTimeout(function(){window.location.reload() },2000);
+                                        }
+                                        else
+                                        {
+                                            $.jPops.message({title:"操作提示",content: result.msg,timing:3000});
+                                        }
+                                    }
+                                });
+
+                            }
+                        });
+
+                        //表单验证规则
+                        $("#pop_demo").validate({
+                            rules: {
+                                amount: {required: true, check_float: true}
+                            },
+                            messages: {
+                                amount: {required: "请输入变动金额", check_float: "格式如: 99.00 或 99.99"}
+                            },
+                            errorPlacement: acp.form_ShowError,//显示出错信息(这段代码必须加)
+                            success:acp.form_HideError//验证成功隐藏错误信息(这段代码必须加)
+                        });
+
+                        //模拟提交表单
+                        $("#pop_demo").submit();
+
+                        return acp.popFormStatus;//通过表单验证状态确定是否关闭窗口
+                    }
+                    else{//点击取消按钮执行的事件
+                        return true;
+                    }
+                }
+
+            });
+        })
+    });
+
+</script>
+{/literal}
+{/block}
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpFinance/user_list.css" type="text/css" />
+{/block}

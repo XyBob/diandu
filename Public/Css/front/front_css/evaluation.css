@@ -1,0 +1,96 @@
+html,body{
+    width:100%;
+    background: #F3F3F3;
+    font-family: PingFangSC-Regular;
+    height:100%;
+}
+header{
+    position:absolute;
+}
+.evaluation_content{
+    padding:1rem 0 0 0.75rem;
+}
+.info_detail{
+    display: flex;
+    flex-direction: row;
+    border-bottom:1px solid #F1F4F7;
+    height:2.6rem;
+    flex-wrap: wrap;
+}
+.info_detail .img_wrapper{
+    width:2.6rem;
+    height:2.6rem;
+    margin-right:0.5rem;
+}
+.info_detail .info_show{
+    width:calc(100% - 3.1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #999999;
+    padding-right:0.75rem;
+    box-sizing: border-box;
+}
+.info_detail .info_show .name{
+    font-size: 0.8rem;
+    color: #333333;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width:80%;
+}
+.info_detail .info_show .grey{
+    font-size: 0.6rem;
+}
+.info_detail .info_show .money{
+    font-size: 0.7rem;
+}
+.info_detail .info_show .store_info,.info_detail .info_show .order_info{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.info_detail .info_show .order_info{
+    padding-bottom:0.5rem;
+}
+.img-responsive{
+    display: block;
+    width:100%;
+    height:100%;
+}
+.evaluation_content .star{
+    margin-left:3.1rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+    color: #999999;
+    align-items: center;
+}
+.evaluation_content .star .label{
+    margin-right:1rem;
+}
+.star_number{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.star_number span{
+    margin-right:0.35rem;
+}
+.submit{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:2.8rem;
+    background: #F93B23;
+    text-align: center;
+    font-size: 1rem;
+    line-height:2.8rem;
+    color: #FFFFFF;
+    letter-spacing: 1.11px;
+}
+.add_new_star{background:url(/Public/Images/front/front_img/add_new_star.png)  no-repeat;background-size:3.2666rem 1.15rem}
+.icon_star_default{height:1.15rem;width:1.15rem;background-position:0 0;}
+.icon_star_full{height:1.15rem;width:1.15rem;background-position:-2.1166rem 0;}

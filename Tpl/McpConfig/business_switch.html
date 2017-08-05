@@ -1,0 +1,112 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpConfig/base_config.css" type="text/css" />
+<style type="text/css">
+.qr img{
+    /*margin-left: 80px;*/
+    border: 1px solid #e0e0e0;
+}
+
+.switch_btn{
+    font-size: 0;
+}
+.switch-checkbox:checked{
+    border-color: #04BE02;
+    background-color: #04BE02;
+}
+.switch-checkbox{
+    position: relative;
+    width: 62px;
+    height: 32px;
+    border: 1px solid #DFDFDF;
+    outline: 0;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: #DFDFDF;
+    -webkit-transition: background-color 0.1s, border 0.1s;
+    transition: background-color 0.1s, border 0.1s;
+}
+
+.switch-checkbox:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #FDFDFD;
+    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+    transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+    transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+    transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1), -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+}
+.switch-checkbox:after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+    transition: -webkit-transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+    transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+    transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35), -webkit-transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+}
+.switch-checkbox:checked:before{
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.switch-checkbox:checked:after{
+    transform: translateX(30px);
+}
+input {
+    -webkit-appearance: none;
+}
+</style>
+{/block}
+{block name="content"}
+<span ><font size="9" style=" ">关</font></span>
+<span class="switch_btn">
+    <input class="switch-checkbox" name="is_default" value="{$business_info.is_open}" type="checkbox" {if $business_info.is_open==1}checked{/if}>
+</span>
+<span ><font size="9" style=" ">开</font></span>
+{/block}
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+<script type="text/javascript">
+    {literal}
+    var change_open;
+	$(".switch-checkbox").on("click",function(){
+	    if($(this).attr("checked")){
+            change_open=1;
+	    }else{
+           change_open=0;//目前开店,点击关店
+	    }
+        console.log(change_open);
+        $.ajax({
+            url:'/McpConfig/business_switch',
+            type:'post',
+            data:{is_open:change_open},
+            success:function(data){
+                if(data=='no_item'){
+                    alert('您的商店没有商品,请添加商品后开店');
+                    $('.switch-checkbox').attr("checked",false);
+                }else if(data==1){
+                    alert('操作成功');
+                }else{
+                    alert('操作失败');
+                }
+            },
+        })
+	});
+    {/literal}
+</script>
+{/block}
+

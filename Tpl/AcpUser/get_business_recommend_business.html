@@ -1,0 +1,171 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<!--<div class="t-art" style="margin-bottom:10px;"><a href="/AcpSiteDeploy/add_site_deploy_facility" class="btn btn-blue"><i class="gicon-plus white"></i>添加设施</a>  </div>-->
+<div class="tablesWrap">
+    <div class="tables-searchbox">
+        <form name="form" action="" method="post">
+            <div class="t-list">
+                <span class="tbs-txt">商家名称：</span>
+                <input type="text" name="key_words" id="key_words" value="{$key_words}">
+                <span class="tbs-txt">联系人电话：</span>
+                <input type="text" name="mobile" id="mobile" value="{$mobile}">
+                <button class="btn" type="submit"><i class="gicon-search"></i>搜索</button>
+            </div>
+        </form>
+    </div>
+    <!-- end tables-searchbox -->
+    <table class="wxtables">
+        <colgroup>
+            <col width="10%">
+            <col width="10%">
+            <col width="10%">
+            <col width="10%">
+            <col width="10%">
+            <col width="10%">
+        </colgroup>
+        <thead>
+        <tr>
+            <td>商家名</td>
+            <td>联系人</td>
+            <td>联系人电话</td>
+            <td>让利比例</td>
+            <td>人均消费</td>
+            <td>行业</td>
+
+        </tr>
+        </thead>
+        <tbody>
+        {if $business_list}
+        {foreach from=$business_list item=this}
+        <tr>
+
+            <td>{$this.business_name}</td>
+            <td>{$this.contacts}</td>
+            <td class="serial">
+                {$this.contact_number}
+            </td>
+            <td>
+                {$this.rate*100}%
+            </td>
+            <td>{$this.consumption}</td>
+            <td>{if $this.industry_id==1}普通店铺{else}菜市场{/if}</td>
+        </tr>
+        {/foreach}
+        {else}
+        <tr>
+            <td colspan="7" class="center">暂无信息</td>
+        </tr>
+        {/if}
+        </tbody>
+    </table>
+    <!-- end wxtables -->
+    <div class="tables-btmctrl clearfix">
+        <!--<div class="fl">
+            <a href="javascript:Select()" class="btn btn-blue">全选</a>
+            <a href="javascript:Cancel()" class="btn btn-blue">取消</a>
+            <a href="javascript:;" onclick="Batch_delete_obj();" class="btn btn-blue">删除</a>
+        </div>-->
+        <div class="fr">
+            <div class="paginate">
+            </div>
+            <!-- end paginate -->
+        </div>
+    </div>
+    <!-- end tables-btmctrl -->
+</div>
+<!-- end tablesWrap -->
+{/block}
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+<script>
+    //全选
+    function Select(){
+        var sel=document.getElementsByName("a[]");
+        for(var i=0;i<sel.length;i++){
+            sel[i].checked=true;
+        }
+    }
+    //取消全选
+    function Cancel(){
+        var sel=document.getElementsByName("a[]");
+        for(var i=0;i<sel.length;i++){
+            sel[i].checked=false;
+        }
+    }
+</script>
+{literal}
+<script>
+    function delete_obj(obj_id) {
+        $.jPops.confirm(
+                {
+                    title: "提示",
+                    content: "您确定要删除这条数据吗？",
+                    okBtnTxt: "确定",
+                    cancelBtnTxt: "取消",
+                    callback: function (r) {
+                        if (r) {
+                            $.post('/AcpBusiness/del_business', {"obj_id": obj_id}, function (data, textStatus) {
+                                console.log(data);
+                                if (data == 'success') {
+                                    alert('恭喜您，删除成功！');
+                                    location.reload();
+                                }
+                                else {
+                                    alert('对不起，删除失败！');
+                                }
+                            });
+                        }
+                        return true;
+                    }
+                });
+    }
+
+
+    function Batch_delete_obj() {
+        $.jPops.confirm(
+                {
+                    title: "提示",
+                    content: "您确定要删除这些数据吗？",
+                    okBtnTxt: "确定",
+                    cancelBtnTxt: "取消",
+                    callback: function (r) {
+                        if (r) {
+                            var obj_ids = '';
+                            var count = 0;
+                            $('input[name="a[]"]:checked').each(function () {
+                                count++;
+                                obj_ids += $(this).val() + ',';
+                            });
+
+                            if (!count) {
+                                alert('对不起，请选择至少一项进行删除！');
+                                return;
+                            }
+
+                            obj_ids = obj_ids.substr(0, obj_ids.length - 1);
+                            $.post('/AcpBusiness/del_business', {"obj_id": obj_ids}, function (data, textStatus) {
+                                if (data == 'success') {
+                                    alert('恭喜您，删除成功！');
+                                    location.reload();
+                                }
+                                else {
+                                    alert('对不起，删除失败！');
+                                }
+                            });
+                        }
+                        return true;
+                    }
+                });
+    }
+
+
+</script>
+{/literal}
+
+
+
+{/block}
+

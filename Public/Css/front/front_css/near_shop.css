@@ -1,0 +1,233 @@
+/*-----附近店铺-----*/
+.near_shop{
+	width:100%;
+	background:#fff;
+	box-sizing:border-box;
+	padding:0 0.75rem;
+	margin-top:0.4rem;
+}
+.near_shop{
+	padding:0;
+}
+.near_shop .near_list_wrap{
+	width:100%;
+}
+.near_list_wrap .near_list{
+	display:block;
+	width:100%;
+	background: #FCFCFC;
+	margin-bottom:0.5rem;
+	box-sizing:border-box;
+	padding:0.55rem 0.75rem;
+}
+.near_list .pic{
+	border:0;
+	width:3.5rem;
+	height:3.5rem;
+}
+.near_list .near_info{
+	width:75%;
+	position:relative;
+}
+.near_info .info_head{
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+.info_head .near_name{
+	max-width:70%;
+	font-size: 0.7rem;
+	color: #333333;
+	line-height:1rem;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.info_head .near_distance{
+	font-size: 0.5rem;
+	color: #999999;
+}
+.near_info .near_address{
+	width:90%;
+	font-size: 0.6rem;
+	color: #666666;
+	line-height:0.85rem;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	margin:0.2rem 0 0.65rem;
+}
+.near_info .people_count{
+	position:absolute;
+	bottom:0;
+	right:0;
+	font-size: 0.6rem;
+	color: #2A2A2A;
+	line-height: 0.85rem;
+}
+.people_count .count_val{
+	color: #2A99EC;
+}
+.near_shop .near_more{
+	display: block;
+	width:100%;
+	height:2.4rem;
+	background: #FCFCFC;
+	font-size: 14px;
+	color: #999;
+	line-height:2.4rem;
+	text-align:center;
+}
+/*--推荐店铺--*/
+.recom_store,.best_seller{
+	width:100%;
+	background:#fff;
+	box-sizing:border-box;
+	padding-left:0.75rem;
+	margin-top:0.4rem;
+}
+.home_main_title{
+	width:100%;
+	height:2.9rem;
+	box-sizing:border-box;
+	padding-top:0.65rem;
+	position:relative;
+}
+.home_main_title .title_cont{
+	width:100%;
+	height:100%;
+	font-size:0.7rem;
+	color: #333333;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.title_cont .title_words{
+	line-height:1rem;
+	margin:0 0.5rem;
+}
+.recom_title .more{
+	font-size: 0.5rem;
+	color: #999999;
+	position:absolute;
+	right:15px;
+	bottom:0.7rem;
+}
+.recom_store .recom_cont{
+	width:100%;
+	box-sizing: border-box;
+	padding-right:0.75rem;
+}
+.recom_cont .recom_list{
+	display:block;
+	width:100%;
+	border-top: 1px solid #F1F4F7;
+	padding:1rem 0;
+	position:relative;
+}
+.recom_list .pic{
+	/*width:4rem;
+	height:4rem;*/
+	width:3rem;
+	height:3rem;
+	border:0;
+	margin-right:0.5rem;
+}
+.recom_list .info{
+	width:calc(100% - 3.5rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.recom_list .people_count{
+	position:absolute;
+	right:0;
+	bottom:1.2rem;
+    font-size: 0.6rem;
+    color: #2A2A2A;
+    line-height: 0.85rem;
+}
+.info .store_name{
+	width:100%;
+	font-size: 0.9rem;
+	line-height:1.25rem;
+	color: #333;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.info .info_mid{
+	width:100%;
+}
+.star li{
+	margin-right:0.25rem;
+}
+.info_mid .distance{
+	font-size: 0.5rem;
+	color: #999;
+	line-height:0.7rem;
+	max-width:4rem;
+}
+.info .tag{
+	width:100%;
+	display:flex;
+	flex-wrap:wrap;
+}
+.info .tag li{
+	font-size:10px;
+	color: #7DC8F7;
+	padding:0 0.35rem;
+	height:0.8rem;
+	display:flex;
+	align-items:center;  
+	border: 1px solid #7DC9F8;
+	border-radius: 12px;
+	margin-right:0.5rem;
+	margin-top:0.5rem;
+}
+/*-优惠-*/
+.recom_list .favor_wrap{ 
+	width:100%;
+	box-sizing:border-box;
+	padding-left:3.5rem;
+	margin-top:0.4rem;
+}
+ .favor{
+	width:100%;
+	border-top:1px solid #F1F4F7;
+}
+.recom_list .favor li{
+	width:100%;
+	margin-top:0.5rem;
+	display:flex;
+	align-items:center;
+	font-size: 0.7rem;
+	color: #999;
+}
+.favor .favor_words{
+	line-height:1rem;
+	margin-left:0.5rem;
+	max-width:80%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.hotel_address{
+	font-size: 0.5rem;
+	color: #999999;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items:center;
+}
+.hotel_address .add{
+	max-width:69%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-right:1%;
+}
+.hotel_address .distance{
+	max-width:30%;
+}

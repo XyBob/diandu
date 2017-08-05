@@ -1,0 +1,38 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/payment_success.css?version={$version}"/>
+<style></style>
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>申请提交成功</h1>
+</div>
+<div class="header_empty"></div>
+<div class="icon_add_person icon_fabuwc"></div>
+<p class="text-center tips_next">申请成功</p>
+<div class="two_word">
+    <span class="out_box">
+        <span>1、后台审核通过后，会通过消息通知您，请耐心等待</span><br/>
+    </span>
+</div>
+<div class="go_bind">返回我的店铺</div>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        window.location.href='/FrontMerchant/my_store';
+    });
+    $('.go_bind').on('click',function(){
+        window.location.href='/FrontMerchant/my_store';
+    });
+</script>
+{/literal}
+{/block}

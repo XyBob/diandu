@@ -1,0 +1,96 @@
+{extends file="../home.html"}
+{block name="title"}{$version}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/my_store.css?version={$version}"/>
+<style></style>
+{/literal}
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>我的店铺</h1>
+</div>
+<div class="header_empty"></div>
+<!--todo 店铺资料-->
+<div class="person_information">
+    <div class="person_data">
+        <div class="icon_add_person dianpu"></div>
+        <div class="two">
+            <p class="title">西北牛肉面</p>
+            <p class="start_number">
+                <span class="icon_pic1 icon_star_blank3x icon_star_full3x"></span>
+                <span class="icon_pic1 icon_star_blank3x"></span>
+                <span class="icon_pic1 icon_star_blank3x"></span>
+                <span class="icon_pic1 icon_star_blank3x"></span>
+                <span class="icon_pic1 icon_star_blank3x"></span>
+            </p>
+        </div>
+    </div>
+    <div class="money_detail">
+        <div class="one fl">
+            <span>¥100</span>
+            <span>余额</span>
+        </div>
+        <div class="two fl">
+            <span>¥100</span>
+            <span>消费余额</span>
+        </div>
+    </div>
+</div>
+<!--todo 列表展示-->
+<div class="store_related one">
+    <a class="native_go" href="/Index/store_data">
+        <div class="relate_list">
+            <span class="icon_add_person icon_shopping_edit"></span>
+            <span>店铺资料</span>
+        </div>
+    </a>
+    <a class="native_go" href="/Index/gathering_qr_code">
+        <div class="relate_list">
+            <span class="icon_add_person icon_shoukuan_orange"></span>
+            <span>收款二维码</span>
+        </div>
+    </a>
+    <a class="native_go" href="/Index/my_bank_card">
+        <div class="relate_list">
+            <span class="icon_add_person icon_bank_red"></span>
+            <span>银行账户</span>
+        </div>
+    </a>
+</div>
+<div class="store_related">
+    <a class="native_go" href="/Index/my_account">
+        <div class="relate_list">
+            <span class="icon_add_person icon_zhanghu_green"></span>
+            <span>账户管理</span>
+        </div>
+    </a>
+    <a class="native_go" href="/Index/data_statistics">
+        <div class="relate_list">
+            <span class="icon_add_person icon_shuju_blue"></span>
+            <span>数据统计</span>
+        </div>
+    </a>
+    <a class="native_go" href="/Index/financial_statistics">
+        <div class="relate_list">
+            <span class="icon_add_person icon_caiwu_green"></span>
+            <span>财务统计</span>
+        </div>
+    </a>
+</div>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+</script>
+{/literal}
+{/block}

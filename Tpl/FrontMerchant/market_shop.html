@@ -1,0 +1,160 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/front/home_flexslider.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/order_detail.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/front/market/take_out.css?version={$version}"/>
+<style type="text/css">
+	body{
+		background:#fff;
+	}
+	.flexslider .slides > li a{
+		display:flex;
+		display:-webkit-flex;
+	}
+	.modal{
+		z-index:99;
+	}
+	.out-shop-main {
+		height: calc(100% - 4.6rem);
+		top: 2.2rem;
+	}
+</style>
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+	<div class="left_header native_back" id="current_page_arrow">
+		<div class="icon_add_person icon_left_white"></div>
+	</div>
+	<h1>{$business_info.business_name}</h1>
+</div>
+<div class="out-shop-main clearfix">
+	<!--左侧菜单按钮-->
+	<div class="left-menu-wrap fl">
+		<ul class="left-menu">
+			<!--<li class="menu-name click-menu-name">
+                <span>热销</span>
+            </li>-->
+			{$i=0}
+			{foreach from=$class_list item=this key=key }
+			<li class="menu-name {if $i=='0'}click-menu-name{/if}" {$i++}>
+				<span>{$this.class_name}</span>
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+	<!--右侧商品-->
+	<div class="right-goods-wrap fl">
+		{foreach from=$class_list item=this key=key }
+		<div class="right-goods">
+
+			<h6>{$this.class_name}</h6>
+			<div class="goods-info-wrap">
+				{foreach from=$this.item_list item=this1}
+				<div class="goods-info" data-flag="{$this1.item_id}" stock="{$this1.stock}">
+					<a href="/FrontMerchant/item_detail/item_id/{$this1.item_id}" class="goods-link clearfix">
+						<img src="{$this1.base_pic}" class="fl goods-img"/>
+						<ul class="fr">
+							<li class="goods-name">{$this1.item_name}</li>
+							<li class="sale">销量{$this1.sales_num}</li>
+							<li class="price">¥<span>{$this1.mall_price}</span></li>
+						</ul>
+					</a>
+					{if $this1.has_sku==1}
+					<ul class="right-btn clearfix">
+						<li class="choose-type" item_id="{$this1.item_id}">选规格</li>
+					</ul>
+					{else}
+					<ul class="right-btn clearfix">
+						<li class="reduce" data-item_id="{$this1.item_id}" {if $this1.shopping_cart_number}style="display: list-item;"{/if}></li>
+						<li class="goods-num" {if $this1.shopping_cart_number}style="display: list-item;"{/if}>{if $this1.shopping_cart_number}{$this1.shopping_cart_number}{/if}</li>
+						<li class="add icon_market icon_add" data-item_id="{$this1.item_id}"></li>
+					</ul>
+					{/if}
+				</div>
+				{/foreach}
+			</div>
+		</div>
+		{/foreach}
+	</div>
+</div>
+<!--底部按钮-->
+<div class="out-foot {if $shopping_cart_list}car-have-goods{/if}">
+	<div class="shop-car-icon">
+		<span class="total-num">{if $shopping_cart_list}{$total_number}{/if}</span>
+	</div>
+	<div class="price-box">
+		<p class="goods-price">¥<span class="total-price-val">{if $total_price}{$total_price}{/if}</span></p>
+		<p class="deliver-price">配送费¥<span>{$business_info.delivery_fee}</span></p>
+	</div>
+	<p class="send-out-price">¥<span>{$business_info.start_delivery_fee}</span>起送</p>
+	<!--去结算按钮-->
+	<a href="/FrontOrder/submit_order/business_id/{$business_info.business_id}" class="go-count">去结算</a>
+	<!--底部提示信息          后台数据嵌套时，foot-info里的span可考虑删除，传值到前台做判断-->
+	<p class="foot-info" style="display:none;">
+		已满<span class="met-val">80</span>元可减<span class="favor-val">30</span>元
+	</p>
+</div>
+<!--购物车-->
+<div class="shop-car-outer hide">
+	<div class="shop-car-shape"></div>
+	<div class="shop-car-inner">
+		<h6 class="car-title clearfix">
+			<p class="shop-name fl">{$business_info.business_name}</p>
+			<span class="del-car fr">清空购物车</span>
+		</h6>
+		<ul class="shop-car-cont">
+			{foreach from=$shopping_cart_list item=this}
+			<li class="shop-list clearfix" data-flag="{$this.item_id}" data-sku_id="{$this.item_sku_price_id}"  stock="{$this.stock}">
+				<div class="goods-name fl">
+					<p>{$this.item_name}</p>
+					<p class="small-word">{$this.sku_value}</p>
+				</div>
+				<!--<p class="goods-name fl">{$this.item_name}</p>-->
+				<p class="goods-price fl">¥<span class="price-val">{$this.mall_price}</span></p>
+				<ul class="right-btn fr">
+					<li class="reduce"></li>
+					<li class="goods-num">{$this.number}</li>
+					<li class="add icon_market icon_add"></li>
+				</ul>
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+</div>
+<!--清除购物车弹窗-->
+<div class="modal modal_del">
+	<div class="modal_content">
+		<div class="tips_icon icon_warning"></div>
+		<p class="warning">确定要清空购物车？</p>
+		<div class="operation">
+			<div class="cancel">取消</div>
+			<div class="sure clear">清空</div>
+		</div>
+	</div>
+</div>
+{/block}
+{block name="js"}
+<script src="/Public/Js/front/jquery.flexslider.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Js/front/front_js/take_out_shop.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var business_id='{$business_info.business_id}';
+	var total_price='{$total_price}';
+	if(total_price){
+		showFoot();
+	};
+</script>
+{literal}
+<script type="text/javascript">
+	$('#current_page_arrow').on('click',function(){
+		history.go(-1);
+	});
+	$('.choose-type').on('click',function(){
+		var item_id=$(this).attr('item_id');
+		location.href='/FrontMerchant/item_detail/item_id/'+item_id
+	});
+</script>
+{/literal}
+{/block}

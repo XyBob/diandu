@@ -1,0 +1,48 @@
+/*---------我推荐的个人----------*/
+.person_list_wrap{
+	width:100%;
+	background:#fff;
+}
+.person_list_wrap .person_list{
+	width:100%;
+	box-sizing:border-box;
+	padding:0.5rem 0.6rem;
+	border-bottom:1px solid #EFEFF4;
+}
+.person_list .person_img{
+	display:block;
+	width:2.5rem;
+	height:2.5rem;
+	border:0;
+	border-radius:100%;
+}
+.person_list .peron_intro{
+	width:75%;
+	height:2.5rem;
+	margin-left:0.8rem;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+}
+.peron_intro .person_name{
+	width:100%;
+	font-size: 0.8rem;
+	color: #323232;
+	line-height:1.1rem;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.person_time{
+	width:100%;
+	display:flex;
+	align-items:center;
+	height:1rem;
+}
+.person_time .time{
+	font-size: 0.7rem;
+	color: #909090;
+	line-height:1rem;
+	height:1rem;
+	margin-left:0.35rem;
+}

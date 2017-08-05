@@ -1,0 +1,199 @@
+/*---设置---*/
+.list_wrap{
+	width:100%;
+}
+.list_wrap .list{
+	width:100%;
+}
+.list a{
+	display:flex;
+	width:100%;
+	height:2.2rem;
+	background:#fff;
+	box-sizing:border-box;
+	padding:0 0.6rem;
+	font-size: 0.8rem;
+	color: #323232;
+	align-items:center;
+	justify-content:space-between;
+}
+.mg_bot{
+	margin-bottom:0.5rem;
+}
+.bot_line{
+	border-bottom:1px solid #E1E1E1;;
+}
+/*-退出登录-*/
+.quit_btn{
+	display:block;
+	width:100%;
+	height:2.2rem;
+	text-align:center;
+	line-height:2.2rem;
+	font-size: 0.8rem;
+	color: #F93B23;
+	background:#fff;
+}
+/*-帮助详情-*/
+.detail_title{
+	width:100%;
+	font-size: 0.9rem;
+	color: #323232;
+	line-height:2.2rem;
+	text-align:center;
+}
+.detail_cont{
+	width:100%;
+	box-sizing:border-box;
+	padding:0 0.75rem;
+	font-size: 0.7rem;
+	color: #323232;
+}
+.detail_cont img{
+	max-width:100%;
+}
+/*--关于我们--*/
+.logo{
+	width:4rem;
+	height:4rem;
+	margin:1.5rem auto 1rem;
+}
+.logo img{
+	display:block;
+	width:100%;
+	height:100%;
+	border:0;
+}
+/*-弹出电话-*/
+.phone_bot_wrap{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	background:rgba(0,0,0,0.5);
+	display:none;
+	z-index:9;
+}
+.phone_bot_wrap a{
+	display:block;
+	width:100%;
+	height:2.2rem;
+	background:#fff;
+	color: #26B8F2;
+	font-size:0.8rem;
+	text-align:center;
+	line-height:2.2rem;
+	position:absolute;
+	left:0;
+	bottom:2.2rem;
+}
+.phone_bot_wrap .cancel{
+	display:block;
+	width:100%;
+	height:2.2rem;
+	text-align:center;
+	line-height:2.2rem;
+	color: #FF254C;
+	font-size:0.7rem;
+	position:absolute;
+	left:0;
+	bottom:0;
+	background:#fff;
+	border-top:1px solid #E1E1E1;
+}
+/*--意见反馈--*/
+.feedback{
+	resize:none;
+	width:100%;
+	min-height:11.5rem;
+	background:#fff;
+	box-sizing:border-box;
+	padding:0.35rem 0.35rem 0.35rem 0.6rem;
+	font-size: 0.8rem;
+	color:#323232;
+}
+.feedback::-webkit-input-placeholder{
+	color: #B4B8B9;;
+}
+.feedback_btn{
+	display:block;
+	width:92%;
+	height:2.2rem;
+	text-align:center;
+	line-height:2.2rem;
+	background: #F93B23;
+	border-radius: 4px;
+	font-size: 0.9rem;
+	color: #FFFFFF;
+	margin:1.5rem auto 0;
+}
+/*todo 是否保存的模态框的样式*/
+.modal_save{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	display: none;
+}
+.modal_save .main_content{
+	width: 10.75rem;
+	height: 6.25rem;
+	background: #fff;
+	text-align: center;
+	overflow: hidden;
+	border-radius: 0.2rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.main_icon{
+	margin: 0.75rem auto 0.6rem auto;
+}
+.modal_save .text_tips{
+	text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 0.7rem;
+	color: #000000;
+	margin-bottom: 0.6rem;
+}
+.modal_save .footer{
+	position:absolute;
+	bottom:0;
+	height: 2.2rem;
+	width:100%;
+	border-top:1px solid #EFEFF4;
+}
+.modal_save .footer .fl{
+	width:50%;
+	box-sizing: border-box;
+	text-align: center;
+	font-family: PingFangSC-Regular;
+	margin: 0 auto;
+	line-height: 2.2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.footer .red{
+	font-size: 0.8rem;
+	color: #909090;
+}
+.footer .grey{
+	font-size: 0.75rem;
+	color: #F93B23;
+	border-right:1px solid #EFEFF4;
+}
+
+
+
+
+
+
+

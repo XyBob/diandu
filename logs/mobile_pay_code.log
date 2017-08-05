@@ -1,0 +1,96 @@
+2017-07-03 18:00:00
+openid = owW85we5fp0JvR3rRYvatkJxevCc
+2017-07-03 18:00:00
+sign_string = appid=wx59c8d2bbd5a5d646&body=订单付款&limit_pay=no_credit&mch_id=1445151302&nonce_str=63vr38o7ut9rknlqzf4fy0edrrhb4t73&notify_url=http://www.diandu.com/Front/wxpay_app_response&out_trade_no=20170703060700_payorder_1527&spbill_create_ip=127.0.0.1&total_fee=1000&trade_type=APP&key=eb218be934ac22f715e6e25b72021b24
+2017-07-03 18:00:00
+sign = 00954AC14F2C3E59318773DDA0D0327D
+2017-07-03 18:00:00
+sign_string = appid=wx59c8d2bbd5a5d646&noncestr=u90os64szt6uvglxlf4spwzrttu5l11q&package=Sign=WXPay&partnerid=1445151302&prepayid=&timestamp=1499076000&key=eb218be934ac22f715e6e25b72021b24
+2017-07-03 18:00:00
+sign = 6EFB3AA5DA3830ACBB84AA78480FEC0D
+2017-07-13 16:33:17
+sign_string = appid=wx59c8d2bbd5a5d646&body=B2C电商服务平台-大关农贸市场消费&mch_id=1445151302&nonce_str=if1owdsyu3gxv1ftlq84zfm539ujcxh7&notify_url=http://www.diandu.com/Front/wxpay_response&openid=owW85we5fp0JvR3rRYvatkJxevCc&out_trade_no=20170713040717_payorder_1921&spbill_create_ip=127.0.0.1&total_fee=3400&trade_type=JSAPI&key=eb218be934ac22f715e6e25b72021b24
+2017-07-13 16:33:17
+sign = 3F6E4E392CAF9CDD4DA005AAAE288374
+2017-07-13 16:33:17
+sign_string = appId=wx59c8d2bbd5a5d646&nonceStr=ix24si20dteb6uh7fmroin521gfurtbv&package=prepay_id=wx20170713163310b67decbf2a0616429770&signType=MD5&timeStamp=1499934797&key=eb218be934ac22f715e6e25b72021b24
+2017-07-13 16:33:17
+sign = 9FD45B5E2B8E3CEFAC2302411E0E7572
+2017-07-13 16:33:54
+sign_string = appid=wx59c8d2bbd5a5d646&body=B2C电商服务平台-大关农贸市场消费&mch_id=1445151302&nonce_str=ba85t6a3dp6y2iqtuhc6ukrgvjfdx8i6&notify_url=http://www.diandu.com/Front/wxpay_response&openid=owW85we5fp0JvR3rRYvatkJxevCc&out_trade_no=20170713040754_payorder_1921&spbill_create_ip=127.0.0.1&total_fee=3400&trade_type=JSAPI&key=eb218be934ac22f715e6e25b72021b24
+2017-07-13 16:33:54
+sign = 57F96831CDEA265D325B17CB9092108B
+2017-07-13 16:33:54
+sign_string = appId=wx59c8d2bbd5a5d646&nonceStr=71ke08r0bvyxr7arfz5vhkdo8yn3rb81&package=prepay_id=wx20170713163348f1526daf380973720234&signType=MD5&timeStamp=1499934834&key=eb218be934ac22f715e6e25b72021b24
+2017-07-13 16:33:54
+sign = 39F3CCC984911F225B57DDE805037079
+2017-07-13 16:35:36
+openid = owW85we5fp0JvR3rRYvatkJxevCc
+2017-07-13 16:35:36
+sign_string = appid=wxe39acbcd78eea528&body=订单付款&limit_pay=no_credit&mch_id=1484705662&nonce_str=krwzubaersbxmpx41bqdn8esdtkg8h27&notify_url=http://www.diandu.com/Front/wxpay_app_response&out_trade_no=20170713040736_payorder_1921&spbill_create_ip=127.0.0.1&total_fee=3400&trade_type=APP&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-13 16:35:36
+sign = 3F998D8FAA80050EDB27793000A16E3E
+2017-07-13 16:35:36
+sign_string = appid=wxe39acbcd78eea528&noncestr=a2yvancg3p3u5ex9s0kgd5r0781cs7j9&package=Sign=WXPay&partnerid=1484705662&prepayid=wx2017071316353043bf1aacf70393265236&timestamp=1499934936&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-13 16:35:36
+sign = B916B1B7F49924B246136B524EB5852E
+2017-07-14 16:18:41
+openid = owW85we5fp0JvR3rRYvatkJxevCc
+2017-07-14 16:18:41
+sign_string = appid=wxe39acbcd78eea528&body=订单付款&limit_pay=no_credit&mch_id=1484705662&nonce_str=1slvc4yoec5q58hjc37gyjeds9vi4p9w&notify_url=http://www.diandu.com/Front/wxpay_app_response&out_trade_no=20170714040741_payorder_1954&spbill_create_ip=127.0.0.1&total_fee=300&trade_type=APP&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-14 16:18:41
+sign = 9319B3762B542F72DACBCE194722B8DE
+2017-07-14 16:18:42
+sign_string = appid=wxe39acbcd78eea528&noncestr=mmy837ozqcks7oy9er47532ooa7mxtru&package=Sign=WXPay&partnerid=1484705662&prepayid=wx2017071416183592e41faab00461591351&timestamp=1500020322&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-14 16:18:42
+sign = B5B907B718F1B7D5D42A3492330CCA69
+2017-07-14 16:19:23
+openid = owW85we5fp0JvR3rRYvatkJxevCc
+2017-07-14 16:19:23
+sign_string = appid=wxe39acbcd78eea528&body=订单付款&limit_pay=no_credit&mch_id=1484705662&nonce_str=cnurzvxucpxf44jihn8ve8odx0n5me4f&notify_url=http://www.diandu.com/Front/wxpay_app_response&out_trade_no=20170714040723_payorder_1954&spbill_create_ip=127.0.0.1&total_fee=300&trade_type=APP&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-14 16:19:23
+sign = C80DC3F7FB76BE867109566C69E3ACAE
+2017-07-14 16:19:23
+sign_string = appid=wxe39acbcd78eea528&noncestr=5o8aap8l15riady727jns7m0lqcw9kuj&package=Sign=WXPay&partnerid=1484705662&prepayid=wx201707141619161569c8f45e0314782055&timestamp=1500020363&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-14 16:19:23
+sign = EB03EE92991C6768DDFCE93AC0002A16
+2017-07-14 16:19:57
+openid = owW85we5fp0JvR3rRYvatkJxevCc
+2017-07-14 16:19:57
+sign_string = appid=wxe39acbcd78eea528&body=订单付款&limit_pay=no_credit&mch_id=1484705662&nonce_str=9bj3nnocgwuagsfklg6ix5rjwsb2myp8&notify_url=http://www.diandu.com/Front/wxpay_app_response&out_trade_no=20170714040757_payorder_1954&spbill_create_ip=127.0.0.1&total_fee=300&trade_type=APP&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-14 16:19:57
+sign = A7EBB011C3B3DE4FF3AEDFE3FC0B971B
+2017-07-14 16:19:57
+sign_string = appid=wxe39acbcd78eea528&noncestr=slwuvbcfhh706v9uluv88ct6fs6mknir&package=Sign=WXPay&partnerid=1484705662&prepayid=wx20170714161950908b6515e20202029008&timestamp=1500020397&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-14 16:19:57
+sign = E0E5044D7CF59FA497BB7851247C8CE1
+2017-07-17 16:50:53
+openid = owW85weBXaoQw-Hqe61VdDiSGv7A
+2017-07-17 16:50:53
+sign_string = appid=wxe39acbcd78eea528&body=订单付款&limit_pay=no_credit&mch_id=1484705662&nonce_str=15de45c9lv3hr5fdkyye3qq3batrhl94&notify_url=http://www.diandu.com/Front/wxpay_app_response&out_trade_no=20170717040753_payorder_2138&spbill_create_ip=127.0.0.1&total_fee=1&trade_type=APP&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-17 16:50:53
+sign = 6F0B89CEB0DFE02ACBDFF882A93F302E
+2017-07-17 16:50:53
+sign_string = appid=wxe39acbcd78eea528&noncestr=41nbpovw5tykt0r533sxlcpvl8i1gr7p&package=Sign=WXPay&partnerid=1484705662&prepayid=wx20170717165045b5aebf3f510389266126&timestamp=1500281453&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-17 16:50:53
+sign = 7BAC34BA256CC6E413B1D002E647BD13
+2017-07-17 16:51:28
+openid = owW85we5fp0JvR3rRYvatkJxevCc
+2017-07-17 16:51:28
+sign_string = appid=wxe39acbcd78eea528&body=订单付款&limit_pay=no_credit&mch_id=1484705662&nonce_str=se0hvnxaaggiwv2g66vd55ei9vsyzr9j&notify_url=http://www.diandu.com/Front/wxpay_app_response&out_trade_no=20170717040728_payorder_2139&spbill_create_ip=127.0.0.1&total_fee=10000&trade_type=APP&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-17 16:51:28
+sign = 7DE2036CF94CAA8808544240023B3AAC
+2017-07-17 16:51:28
+sign_string = appid=wxe39acbcd78eea528&noncestr=lrv01wnzp0so0v76zqgbghcwrgiyrlrs&package=Sign=WXPay&partnerid=1484705662&prepayid=wx20170717165120e48982e4fe0758493322&timestamp=1500281488&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-17 16:51:28
+sign = 4402A357E4C755C46D2C00AECD1962EF
+2017-07-17 17:16:11
+openid = owW85weBXaoQw-Hqe61VdDiSGv7A
+2017-07-17 17:16:11
+sign_string = appid=wxe39acbcd78eea528&body=订单付款&limit_pay=no_credit&mch_id=1484705662&nonce_str=42ngr95d12f88oscrtseyifs4y6orh1x&notify_url=http://www.diandu.com/Front/wxpay_app_response&out_trade_no=20170717050711_payorder_2141&spbill_create_ip=127.0.0.1&total_fee=10000&trade_type=APP&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-17 17:16:11
+sign = CD258DFFE65A625C2420081A1ED1E4A5
+2017-07-17 17:16:11
+sign_string = appid=wxe39acbcd78eea528&noncestr=aib2n2d801wt46zx0im0ee8b6a5k31qb&package=Sign=WXPay&partnerid=1484705662&prepayid=wx20170717171603ae662137850380906221&timestamp=1500282971&key=d1b9d3c0457bae9138ce991e17c88c24
+2017-07-17 17:16:11
+sign = 181F5B2345054407A39F00A568DAB6CA

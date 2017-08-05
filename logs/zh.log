@@ -1,0 +1,24 @@
+2017-07-05 09:23:08
+http://1h714543a4.iask.in:9000
+2017-07-05 09:23:08
+error:
+2017-07-05 09:23:08
+result1:<?xml version="1.0" encoding="GBK"?><CMBSDKPGK><INFO><ERRMSG>SDKM035 非法地址,禁止访问!</ERRMSG><RETCOD>-1</RETCOD></INFO></CMBSDKPGK>
+2017-07-05 09:23:08
+result2:{"INFO":{"ERRMSG":"SDKM035 \u975e\u6cd5\u5730\u5740,\u7981\u6b62\u8bbf\u95ee!","RETCOD":"-1"}}
+2017-07-05 11:11:07
+http://1h714543a4.iask.in:9000
+2017-07-05 11:11:07
+error:
+2017-07-05 11:11:07
+result1:<?xml version="1.0" encoding="GBK"?><CMBSDKPGK><INFO><ERRMSG>SDKM035 非法地址,禁止访问!</ERRMSG><RETCOD>-1</RETCOD></INFO></CMBSDKPGK>
+2017-07-05 11:11:07
+result2:{"INFO":{"ERRMSG":"SDKM035 \u975e\u6cd5\u5730\u5740,\u7981\u6b62\u8bbf\u95ee!","RETCOD":"-1"}}
+2017-07-25 09:21:30
+http://1h714543a4.iask.in:9000
+2017-07-25 09:21:30
+error:
+2017-07-25 09:21:30
+result1:<?xml version="1.0" encoding="GBK"?><CMBSDKPGK><INFO><ERRMSG>SDKM035 非法地址,禁止访问!</ERRMSG><RETCOD>-1</RETCOD></INFO></CMBSDKPGK>
+2017-07-25 09:21:30
+result2:{"INFO":{"ERRMSG":"SDKM035 \u975e\u6cd5\u5730\u5740,\u7981\u6b62\u8bbf\u95ee!","RETCOD":"-1"}}

@@ -1,0 +1,35 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/bind_success.css?version={$version}"/>
+<style></style>
+{/literal}
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>绑定完成</h1>
+</div>
+<div class="header_empty"></div>
+<div class="icon_add_person icon_fabuwc"></div>
+<p class="text-center tips_next">添加完成</p>
+<div class="go_back">回到首页</div>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    $('.go_back').on('click',function(){
+        window.location.href='/Index/person_center';
+    });
+</script>
+{/literal}
+{/block}

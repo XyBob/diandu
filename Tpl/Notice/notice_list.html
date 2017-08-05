@@ -1,0 +1,79 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+
+{block name="content"}
+<div class="comm-breadcrumbs">
+	<a href="/">网站首页</a>
+	<span class="comm-breadcrumbs-arrow"></span>
+	<a href="/Notice/notice_list">{$head_title}</a>
+</div>
+<!--end comm-breadcrumbs-->
+
+<div class="j-layout clearfix">
+	<div class="j-layout-col w190 mgr10">
+	{foreach from=$notice_category_list item=this}
+		<dl class="article-list-leftPanel">
+			<dt>
+				<h3 class="article-llp-title">
+					<a href="/Notice/notice_list/id/{$this.notice_sort_id}"{if $notice_sort_id eq $this.notice_sort_id} style="color: #ff7f00;"{/if}>{$this.notice_sort_name}</a>
+				</h3>
+			</dt>
+		</dl>
+	{/foreach}
+		<!--end notice-list-leftPanel-->
+	</div>
+	<!--end w190-->
+	<div class="j-layout-col w790">
+		<div class="article-list-rightPanel">
+			<div class="article-lrp-title">
+				<h2>
+					<i class="article-lrp-titleicon lf"></i>
+					<b>{if $notice_sort_name}{$notice_sort_name}{else}全部公告{/if}</b>
+					<i class="article-lrp-titleicon info"></i>
+				</h2>
+			</div>
+			<!--end notice-lrp-title-->
+			
+			<ul class="article-lrp-list">
+		{if $general_notice_list}
+			{foreach from=$general_notice_list item=this}
+				<li class="clearfix">
+					<div class="article-lrp-list-context fl">
+						<div class="article-lrp-lc-line pdb15 clearfix">
+							<h1 class="title fl">
+								<a href="/Notice/notice_display/sort_id/{$notice_sort_id}/id/{$this.notice_id}">{$this.title}</a>
+							</h1>
+							<span class="datetiem fr">{$this.addtime}</span>
+						</div>
+					</div>
+				</li>
+			{/foreach}
+		{else}
+			<li class="clearfix">
+				<div class="article-lrp-list-context fl">
+					<div class="article-lrp-lc-line pdb15 clearfix" style="text-align: center;">
+						暂无公告
+					</div>
+				</div>
+			</li>
+		{/if}
+			</ul>
+			 
+			<div class="article-lrp-paginate">
+				{$pagination}
+			</div>
+		</div>
+		<!--end notice-list-rightPanel-->
+	</div>
+	<!--end w790-->
+</div>
+<!-- end j-layout-->
+{/block}
+
+{block name="js"}
+
+{/block} 
+
+{block name="css"}
+<link rel="stylesheet" href="__COMMCSS__/article.css" />
+{/block}

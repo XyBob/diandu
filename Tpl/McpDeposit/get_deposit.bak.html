@@ -1,0 +1,69 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+
+{block name="content"}
+<form id="J_FormArticle" action="/McpDeposit/deposit_apply" method="post">
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>当前店铺余额：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge" name="left_money" readonly value="{$left_money}">
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>今日店内收入可提现：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge" name="sum" readonly  value="{$sum}">
+            <span class="fi-help-text" ><font style="color: red">注:今日因业额提现不能大于今日店内收入</font></span>
+        </div>
+    </div>
+
+<div class="formitems inline">
+    <label class="fi-name"><span class="colorRed">*</span>选择银行卡：</label>
+    <div class="form-controls">
+        <select name="bank_card_id">
+			{foreach from=$bank_card_list key=key item=bank_card}
+				<option value="{$bank_card.bank_card_id}">{$bank_card.bank_name}</option>
+			{/foreach}
+        </select>
+		<span class="fi-help-text hide"></span>
+    </div>
+</div>
+    <div class="formitems inline">
+        <label class="fi-name">提现类型：</label>
+        <div class="form-controls">
+            <div class="radio-group">
+                <label><input type="radio" name="is_today" value="1" {if $isuse != 0}checked="checked"{/if} />今日营业额提现</label>
+                <label><input type="radio" name="is_today" value="0" {if $isuse == 0}checked="checked"{/if}/>非今日营业额提现</label>
+            </div>
+        </div>
+    </div>
+<div class="formitems inline">
+    <label class="fi-name"><span class="colorRed">*</span>提现金额：</label>
+    <div class="form-controls">
+        <input type="text" placeholder="" class="xlarge" name="amount">
+		<span class="fi-help-text hide"></span>
+    </div>
+</div>
+<div class="formitems inline">
+    <label class="fi-name"><span class="colorRed">*</span>支付密码：</label>
+    <div class="form-controls">
+        <input type="password" placeholder="" class="xlarge" name="pay_password">
+		<span class="fi-help-text hide"></span>
+    </div>
+</div>
+<div class="formitems inline">
+    <label class="fi-name"></label>
+    <div class="form-controls">
+		<input type="hidden" name="act" value="submit" />
+        <button type="submit" class="btn btn-blue"><i class="gicon-check white"></i>保存</button>
+    </div>
+</div>
+</form>
+{/block} 
+
+{block name="js"}
+<script type="text/javascript">
+</script>
+{/block}

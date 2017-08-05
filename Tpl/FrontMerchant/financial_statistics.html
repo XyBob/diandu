@@ -1,0 +1,226 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/statistics.css?version={$version}"/>
+<style>
+    .img-control{
+        width:100%;
+        height:auto;
+    }
+</style>
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>月数据统计</h1>
+</div>
+<div class="header_empty"></div>
+<div id="income_container"></div>
+<div style="height: 20px;background: #e0e0e0"></div>
+<div id="income_num_container"></div>
+<div style="height: 20px;background: #e0e0e0"></div>
+<div id="income_extend_container"></div>
+<div style="height: 20px;background: #e0e0e0"></div>
+<div id="container"></div>
+<div id="container_none">暂时没有推荐数据</div>
+<!--<img src="/Public/Images/front/front_img/financial.png" class="img-control">-->
+{/block}
+{block name="js"}
+<script src="/Public/Js/highcharts.js"></script>
+{literal}
+<script type="text/javascript">
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+</script>
+{/literal}
+<script type="text/javascript">
+    var d = '{$date}';
+    var day_list = '{$day_num}';
+    var income_datas = [];
+    {foreach from=$recharge_amount_stat_list item=income}
+    income_datas.push({$income});
+    {/foreach}
+
+    var extra_income_datas = [];
+    {foreach from=$recharge_amount_extra_list item=income}
+    extra_income_datas.push({$income});
+    {/foreach}
+
+    var income_num_datas = [];
+    {foreach from=$new_order_list item=income}
+    income_num_datas.push({$income});
+    {/foreach}
+
+    var merchant_num = {$merchant_num};
+    var person_num = {$person_num};
+    var business_title = '商户 '+merchant_num+" 家";
+    var person_title = '个人 '+person_num+" 人";
+
+    //解决数据都为0时不显示的情况
+    if(merchant_num==0&&person_num==0){
+        merchant_num = 1;
+        person_num = 1;
+        business_title = '商户 0 家';
+        person_title = '用户 0 人';
+    }
+
+
+    $('#income_container').highcharts({
+        chart:{
+            type:'line',
+            color:"#eeffaa"
+        },
+        title: {
+            text: d +  ' 订单实际收入汇总'
+        },
+        xAxis: {
+            categories: eval(day_list)
+        },
+        yAxis: {
+            title: {
+                text: 'RMB(元)'
+            }
+        },
+        plotOptions: {
+            series: {
+                allowPointSelect: true,
+                color:"#f93b23"
+            }
+        },
+        series: [{
+            name: '消费收入',
+            data: income_datas
+        }]
+    });
+
+    $('#income_num_container').highcharts({
+        chart:{
+            type:'line',
+            color:"#eeffaa"
+        },
+        title: {
+            text: d +  ' 订单量汇总'
+        },
+        xAxis: {
+            categories: eval(day_list)
+        },
+        yAxis: {
+            title: {
+                text: '次'
+            }
+        },
+        plotOptions: {
+            series: {
+                allowPointSelect: true,
+                color:"#f93b23"
+            }
+        },
+        series: [{
+            name: '订单量',
+            data: income_num_datas,
+//            color:"#aacc32"
+        }]
+    });
+    $('#income_extend_container').highcharts({
+        chart:{
+            type:'line',
+            color:"#eeffaa"
+        },
+        title: {
+            text: d +  ' 推广收入汇总'
+        },
+        xAxis: {
+            categories: eval(day_list)
+        },
+        yAxis: {
+            title: {
+                text: 'RMB(元)'
+            }
+        },
+        plotOptions: {
+            series: {
+                allowPointSelect: true,
+                color:"#f93b23"
+            }
+        },
+        series: [{
+            name: '推广收入',
+            data: extra_income_datas,
+//            color:"#aacc32"
+        }]
+    });
+
+    {literal}
+    $('#container').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 0,
+            plotShadow: false
+        },
+        colors:[
+            '#F93B23',//第一个颜色，欢迎加入Highcharts学习交流群294191384
+            '#ffc073',
+        ],
+        title: {
+            text:d +  ' 推广数汇总',
+            align: 'center',
+            verticalAlign: 'middle',
+            y: -150
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+            percentageDecimals: 2 //百分比保留小数
+        },
+        plotOptions: {
+            pie: {
+                dataLabels: {
+//                    enabled: true,
+                    distance: -30,
+                    style: {
+//                        fontWeight: 'bold',
+                        color: 'white',
+//                        textShadow: '0px 1px 2px black'
+                    }
+                },
+                startAngle: 0,
+                endAngle: 360,
+                center: ['50%', '50%']
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: '占比',
+            size: '60%',
+            innerSize: '35%',
+            data: [
+                [business_title, merchant_num],
+                [person_title, person_num],
+//                ['Chrome', 12.8],
+//                ['Safari',    8.5],
+//                ['Opera',     6.2],
+//                {
+//                    name: '其他',
+//                    y: 0.7,
+//                    dataLabels: {
+//                        // 数据比较少，没有空间显示数据标签，所以将其关闭
+//                        enabled: false
+//                    }
+//                }
+            ]
+        }]
+    });
+    {/literal}
+</script>
+<style>
+    /*a{*/
+    /*text-align: left;*/
+    /*}*/
+</style>
+
+{/block}

@@ -1,0 +1,133 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<style type="text/css">
+	body{
+		background: #E5E5E5;
+	}
+	.packet-wrap{
+		width:15.9rem;
+		height:18.6rem;
+		background:url(/Public/Images/front/front_img/bg_hongbao3x.png) 0 0 no-repeat;
+		background-size:100% 100%;
+		margin:4.65rem auto 0;
+		padding-top:1.8rem;
+		position:relative;
+		display:none;
+		box-sizing:border-box;
+	}
+	.packet-info{
+		font-size: 0.9rem;
+		color: #FFFFFF;
+		line-height:1.25rem;
+		text-align:center;
+		width:70%;
+		margin:0 auto 1.4rem;
+	}
+	.packet-link{
+		display:block;
+		width:5rem;
+		height:5rem;
+		margin:0 auto;
+	}
+	.packet-ruler{
+		display:block;
+		text-align:center;
+		width:100%;
+		font-size: 0.7rem;
+		color: #FFFFFF;
+		line-height:1rem;
+		position:absolute;
+		bottom:2rem;
+		left:0;
+	}
+	/*--已领取状态--*/
+	.have-get{
+		padding-top:4.9rem;
+		background:url(/Public/Images/front/front_img/bg_hongbao_lq3x.png) 0 0 no-repeat;
+		background-size:100% 100%;
+	}
+	.packet-show{
+		display:block;
+	}
+	.have-get-word{
+		width:100%;
+		font-size: 0.9rem;
+		line-height:1.25rem;
+		text-align:center;
+		color: #FFFFFF;
+	}
+	.modal_alert{
+		left:0;
+	}
+</style>
+{/block}
+{block name="content"}
+	<!--待领取状态-->
+	<div class="packet-wrap packet-show" id="no_have" {if $is_have eq 1} style="display: none;" {/if}>
+		<p class="have-get-word">您有一张来自店都的优惠券可领取</p>
+		<span class="packet-link"></span>
+		<a herf="" class="packet-ruler">点此查看使用规则</a>
+	</div>
+	<!--已领取状态-->
+	<div class="packet-wrap have-get packet-show" id="have"  style="{if $is_have eq 0}display: none;{/if}" >
+		<p class="have-get-word" id="voucher_detail">红包已领取</p>
+	{if $voucher_info neq ''}
+		/<a href="/FrontUserCenter/my_coupons_details/user_coupon_id/{$voucher_info.user_vouchers_id}" class="packet-ruler" id="voucher_detail-link">点此查看我的红包</a>
+	{/if}
+<!--<a herf="/FrontUserCenter/my_coupons_details/user_coupon_id/108" class="packet-ruler">点此查看我的红包</a>-->
+<!--<a href="/FrontUserCenter/my_coupons_details/user_coupon_id/108" class="packet-ruler" >点此查看我的红包</a>-->
+	<div>
+
+{/block}
+{block name="js"}
+<script>
+	var order_id='{$order_id}';
+</script>
+{literal}
+<script type="text/javascript">
+	//var coupon_id='';
+//    $('#voucher_detail-link').on('click',function () {
+//        window.location.href="/FrontUserCenter/my_coupons";
+//	});
+	$('.packet-link').on('click',function () {
+		$.ajax({
+		   url:"/FrontUserCenter/get_share_vouchers",
+            type:"POST",
+            dataType:"json",
+            data:{
+                order_id:order_id,
+            },
+            success:function(d){
+		       console.log(d)
+                if(d.status=="success"){
+                    show_alert('领取成功！');
+                    $('#have').show();
+                    $('#no_have').hide();
+                    var html="<a href='/FrontUserCenter/my_coupons_details/user_coupon_id/"+d.user_voucher_id+"' class='packet-ruler' >点此查看详情</a>";
+                    $('#voucher_detail').append(html);
+//                    setTimeout(function(){
+//                        $('.modal_alert').hide();
+//                        $('.position_down').addClass('grey_color').html('已领取');
+//                        $(".position_down").unbind("click");
+//
+//                    },1000)
+                }
+                else if(d.status=="failed"){
+                    show_alert('已经领取过了！');
+                    $('#have').hide();
+                    $('#no_have').show();
+//                    setTimeout(function(){
+//                        $('.modal_alert').hide();
+//
+//                    },1000)
+                }
+            },
+            error:function(e){
+                console.log(e);
+            }
+		});
+    })
+</script>
+{/literal}
+{/block}

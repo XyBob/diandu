@@ -1,0 +1,425 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/new_goods_address.css?version={$version}"/>
+<style type="text/css">
+	.detail_address {
+	    padding-bottom: 0.5rem;
+	    line-height: 1.1rem;
+	}
+	.text_matter {
+	    display: block;
+	    min-height:30px;
+	    border-bottom: 1px solid #EFEFF4;
+	}
+	.edit-text{
+	    display: block;
+	    resize: none;
+	    width: calc(100% - 4.3rem);
+	    padding-left: 4.3rem;
+	    color: #333;
+	    font-size: 0.9rem;
+	    min-height: 50px;
+	}
+</style>
+{/literal}
+{/block}
+{block name="content"}
+<header>
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>新建收货地址</h1><!--todo 新建收获地址和修改收获地址-->
+</header>
+<div class="header_empty"></div>
+<!--todo 列表显示-->
+<form action="" class="base_data">
+    <div class="form_group">
+        <label for="person_name" class="label_style">姓名</label>
+        <input type="text" id="person_name" placeholder="请填写" class="input_matter" name='realname' value="{$user_address_info.realname}">
+    </div>
+    <div class="form_group">
+        <label for="phone" class="label_style">手机号</label>
+        <input type="number" id="phone" placeholder="请填写" class="input_matter" name="mobile" value="{$user_address_info.mobile}">
+    </div>
+ <!--   <div class="form_group" style="display:none;">
+        <label for="zip_code" class="label_style">邮编</label>
+        <input type="email" id="zip_code" placeholder="请填写" class="input_matter" name="zip_code" value="{$user_address_info.zip_code}">
+    </div>
+    <div class="base_data_list">
+        <label class="label_style">所在省</label>
+        <select class="select_matter" id="province_id" name="province_id">
+            <option value="0">请选择省份</option>
+            {foreach from=$province_list item=province}
+            <option value="{$province.province_id}" {if $user_address_info.province_id eq $province.province_id}selected{/if}>{$province.province_name}</option>
+            {/foreach}
+        </select>
+        <div class="right_choose">
+            <div class="icon_add_person icon_left_gray"></div>
+        </div>
+    </div>
+    <div class="base_data_list">
+        <label class="label_style">所在市</label>
+        <select class="select_matter" id="city_id" name="city_id">
+            <option value="0">请选择城市</option>
+            {foreach from=$city_list item=city}
+            <option value="{$city.city_id}" {if $user_address_info.city_id eq $city.city_id}selected{/if}>{$city.city_name}</option>
+            {/foreach}
+        </select>
+        <div class="right_choose">
+            <div class="icon_add_person icon_left_gray"></div>
+        </div>
+    </div>-->
+  <!--  <div class="base_data_list">
+        <label class="label_style">选择区</label>
+        <select class="select_matter" id="area_id" name="area_id">
+            <option value="0">请选择区或者县</option>
+            {foreach from=$area_list item=area}
+            <option value="{$area.area_id}" {if $user_address_info.area_id eq $area.area_id}selected{/if}>{$area.area_name}</option>
+            {/foreach}
+        </select>
+        <div class="right_choose">
+            <div class="icon_add_person icon_left_gray"></div>
+        </div>
+    </div>-->
+    <div class="detail_address">
+        <div class="left_control">
+            <label class="label_style">收货地</label><span>址</span>
+        </div>
+        <textarea placeholder="地图选择地址" class="text_matter" id="detail_address" name="detail_address" maxlength="60" data-longitude="{$local_longitude}"  data-latitude="{$local_latitude}" name="address" readonly>{$near_address_arr.name}</textarea>
+        <input type="hidden" name="longitude" id="longitude" value="{$local_longitude}">
+        <input type="hidden" name="latitude" id="latitude" value="{$local_latitude}">
+    </div>
+    <textarea class="edit-text" placeholder="详细地址" maxlength="30" name="address"></textarea>
+    <div style="padding-right:0.75rem;">
+        <div id="allmap"  style="height:  300px;width: 100%;" ></div>
+    </div>
+ <!--   <div class="whether_default">
+        <span class="icon_market icon_select_rect {if $user_address_info.is_default}icon_selected_rect{/if} default_check"></span>
+        <input type="hidden" name="is_default" id="is_default" value="{$user_address_info.is_default}">
+        <span>设为默认地址</span>
+    </div>-->
+    <div class="save" id="submit">保存</div>
+    <input type="hidden" id="whether_selected" value="">
+</form>
+<!--todo 添加成功-->
+<div class="modal modal_success">
+    <div class="modal_content">
+        <div class="tips_icon icon_success_b"></div>
+        <p class="text">添加成功</p>
+    </div>
+</div>
+<!--todo 添加失败-->
+<div class="modal modal_fail">
+    <div class="modal_content">
+        <div class="tips_icon icon_fail"></div>
+        <p class="text">添加失败</p>
+        <p class="tips">请确认地址后重新保存</p>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<!--<script src="/Public/Js/front/front_js/more_choose.js"></script>-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BQLHGlffjbXC30bFDcpIQkHIkaxKBBe6&services=true"></script>
+{literal}
+<!--todo 返回箭头的控制-->
+<script>
+    $('.default_check').on('click',function(){
+        console.log($('#is_default').val());
+        $('#is_default').val(Math.abs($('#is_default').val()-1));
+    });
+    $('#province_id').on('change',function(){
+        var province_id=$(this).val();
+        $.ajax({
+            url: "/FrontUserCenter/get_city", //URL
+            dataType: "json",
+            data: {"province_id":province_id},
+            type: "post",
+            success: function (data) {
+                var len=data.length;
+                var html=' <option value="0">请选择城市</option>';
+                for(var i=0;i<len;i++){
+                    html+='<option value="'+data[i].city_id+'">'+data[i].city_name+'</option>'
+                }
+                $('#city_id').html(html);
+                console.log(data);
+            }
+        });
+        console.log(province_id);
+    });
+    $('#city_id').on('change',function(){
+        var city_id=$(this).val();
+        $.ajax({
+            url: "/FrontUserCenter/get_area", //URL
+            dataType: "json",
+            data: {"city_id":city_id},
+            type: "post",
+            success: function (data) {
+                var len=data.length;
+                var html='<option value="0">选择区/县</option>';
+                for(var i=0;i<len;i++){
+                    html+='<option value="'+data[i].area_id+'">'+data[i].area_name+'</option>'
+                }
+                $('#area_id').html(html);
+                console.log(data);
+            }
+        });
+        console.log(province_id);
+    });
+
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    /*todo 是否同意按钮的切换*/
+    $('.whether_default .icon_select_rect').on('click',function(){
+        $(this).toggleClass('icon_selected_rect');
+        if($(this).hasClass('icon_selected_rect')){
+            $('#whether_selected').val(1);
+        }
+        else{
+            $('#whether_selected').val('');
+        }
+    })
+    $("#detail_address").keyup(function(){
+        var length=$(this).val().length;
+        if(length>60){
+            show_alert('无法再输入')
+        }
+    });
+    /*todo 地址信息高度控制函数*/
+    $(document).on("input propertychange", "#detail_address", function (e) {
+        var target = e.target;
+        // 保存初始高度，之后需要重新设置一下初始高度，避免只能增高不能减低。
+        var dh = $(target).attr('defaultHeight') || 0;
+        if (!dh) {
+            dh = target.clientHeight;
+            $(target).attr('defaultHeight', dh);
+        }
+        target.style.height = dh +'px';
+        var clientHeight = target.clientHeight;
+        var scrollHeight = target.scrollHeight;
+        if (clientHeight !== scrollHeight) { target.style.height = scrollHeight + 10 + "px";
+        }
+    });
+</script>
+<!--todo 底部按钮控制函数-->
+<script>
+    var height = $(window).height();
+    $(window).resize(function (){
+        var new_height = $(window).height();
+        if (new_height < height) {
+            $('#submit').hide();
+        } else {
+            $('#submit').show();
+        }
+    });
+</script>
+<!--todo 提交-->
+<script>
+    $('#submit').on('click',function(){
+        var whether_selected=Number($('#whether_selected').val());
+        var person_name=$('#person_name').val();
+        var shop_tel=$('#phone').val();
+        var zip_code=$('#zip_code').val();
+        var province_id = $('#province_id').html();
+        var city_id = $('#city_id').html();
+        var area_id = $('#area_id').html();
+        var detail_address = $('#detail_address').val();
+        var tel_reg = /^1[34578]\d{9}$/gi;
+        var email_reg=/^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+        if (!person_name){
+            show_alert('对不起，请填写姓名！');
+            setTimeout(function(){
+                $('.modal_alert').hide();
+                $('#person_name').focus();
+            },1000)
+            return false;
+        }
+        if(!shop_tel){
+            show_alert('对不起，请填写手机号码！');
+            setTimeout(function(){
+                $('.modal_alert').hide();
+                $('#phone').focus();
+            },1000)
+            return false;
+        }
+        if (!tel_reg.test(shop_tel)) {
+            show_alert('对不起，请填写正确的手机号码！');
+            setTimeout(function(){
+                $('.modal_alert').hide();
+                $('#phone').focus();
+            },1000)
+            return false;
+        }
+        /*
+        if(!zip_code){
+            show_alert('对不起，请填写邮编！');
+            setTimeout(function(){
+                $('.modal_alert').hide();
+                $('#zip_code').focus();
+            },1000)
+            return false;
+        }
+        */
+
+        if (province_id == '选择省份')
+        {
+            show_alert('对不起，请选择省份！');
+            return false;
+        }
+        if (city_id == '选择城市')
+        {
+            show_alert('对不起，请选择城市！');
+            return false;
+        }
+        if (area_id == '选择区/县')
+        {
+            show_alert('对不起，请选择区/县！');
+            return false;
+        }
+        if (!detail_address)
+        {
+            show_alert('对不起，请填写详细地址！');
+            $('#detail_address').focus();
+            return false;
+        }
+
+        $.ajax({
+            url: "/FrontUserCenter/add_new_goods_address", //URL
+            dataType: "json",
+            data: $('form').serialize(),
+            type: "post",
+            success: function (data) {
+                console.log(data.code);
+                if(data.code==1){
+                    $('.modal_success').show();
+                    location.href='/FrontUserCenter/delivery_address';
+                }else{
+                    $('.modal_fail').show();
+                    setTimeout(function(){
+                        $('.modal_fail').hide();
+                    },1000)
+                }
+
+            }
+        });
+    });
+</script>
+<!--todo 地图控制函数-->
+<script type="text/javascript">
+    //function getAddr() {
+    var myCity = new BMap.LocalCity();
+    myCity.get(myFun);
+    // }
+
+    function initMap(position) {
+        var map = new BMap.Map("allmap");    // 创建Map实例
+        //var point = new BMap.Point(116.331398,39.897445);
+        var icon = new BMap.Icon('/Public/Images/point.png', new BMap.Size(40, 40), {
+            anchor: new BMap.Size(longitude, latitude)});
+
+        var latitude = $("#detail_address").attr("data-latitude");
+        var longitude = $('#detail_address').attr("data-longitude");
+        var address =  $('#detail_address').val();
+        if(latitude!=""&&longitude!=""){
+            var point = new BMap.Point(longitude,latitude);
+            var marker = new BMap.Marker(point,{icon:icon});
+            //加上label提示
+//            var label = new window.BMap.Label(address, { offset: new window.BMap.Size(20, -10) });
+//            marker.setLabel(label);
+            map.addOverlay(marker);
+            map.centerAndZoom(point, 15);
+        }else{
+            var marker = new BMap.Marker(position,{icon:icon});
+            map.addOverlay(marker);
+            map.centerAndZoom(position, 15);
+        }
+
+        map.addControl(new BMap.NavigationControl());   //添加地图类型控件
+//        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+//        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        map.disableDoubleClickZoom()
+
+        var geoc = new BMap.Geocoder();
+        var p_x;
+        var p_y;
+
+        //记录第一次点击的坐标
+        map.addEventListener("touchstart",function(e){
+            p_x = e.jb.x;
+            p_y = e.jb.y;
+
+            //console.log(e.offsetY);
+        });
+//        map.addEventListener("touchend",function(e){
+//            console.log(e.jb.x);
+//            console.log(e.jb.x);
+//            //console.log(e);
+//            //console.log(e.offsetY);
+//        });
+        map.addEventListener("touchend", function (e) {
+            //手指进行拖动了就不设置标注
+            if(Math.abs(p_x - e.jb.x)>5||Math.abs(p_y - e.jb.y)>5){
+                return;
+            }
+
+            var pt = e.point;
+            map.clearOverlays();
+            var marker = new BMap.Marker(pt, {icon: icon});
+            var marker = new BMap.Marker(pt, {icon: icon});
+            map.addOverlay(marker);
+            geoc.getLocation(pt, function (rs) {
+                var addComp = rs.addressComponents;
+                console.log(addComp);
+                console.log(e.point.lng + "," + e.point.lat);
+
+                $('#longitude').val(e.point.lng);
+                $('#latitude').val(e.point.lat);
+                $('#detail_address').attr("data-longitude",e.point.lng);
+                $('#detail_address').attr("data-latitude",e.point.lat);
+                $('#detail_address').val('');
+                //$('#map_address').html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+                $('#detail_address').val(addComp.province + addComp.city  + addComp.district + addComp.street + addComp.streetNumber);
+
+            });
+        });
+    }
+
+    function myFun(result){
+        var cityName = result.name;
+        var geolocation = new BMap.Geolocation();
+        var gc = new BMap.Geocoder();
+        geolocation.getCurrentPosition(function(r){
+            if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                //alert('您的位置：'+r.point.lng+','+r.point.lat);
+                var pt = r.point;
+                initMap(pt);
+//                gc.getLocation(pt, function (rs) {
+//                    var addComp = rs.addressComponents;
+//
+//                    var province = addComp.province;
+//                    var city = addComp.city;
+//                    var area = addComp.district;
+//
+//                    if (province != "" && city != "" && area != "") {
+//                        // alert(province);
+//                        alert("当前定位城市:"+province+city+area);
+//                        window.location.href="/Index/home_index/area/"+area+"/lat/"+r.point.lat+"/lng/"+r.point.lng;
+//
+//                    }
+//                    //alert("当前定位城市:"+cityName);
+//                    //
+//                });
+            }
+            else {
+                alert('failed'+this.getStatus());
+            }
+        },{enableHighAccuracy: true})
+
+    }
+
+</script>
+{/literal}
+{/block}

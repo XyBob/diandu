@@ -1,0 +1,169 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+	<link rel="stylesheet" style="text/css" href="__PUBLIC__/Css/front/front_css/buy_bill.css?version={$version}">
+	<style type="text/css">
+		body{
+			background:#fff;
+		}
+		.layermcont{
+			text-align:center;
+			color:#323232;
+		}
+		.layermchild  .layermbtn span{
+			color:#323232;
+		}
+	</style>
+{/block}
+{block name="content"}
+	<!--顶部大图-->
+	<div class="buy_bill_head">
+		<img src="/Public/Images/testImg/test1.jpg" class="shop_pic"/>
+		<span class="shop_name_shade"></span>
+		<p class="shop_name">乐富海邦园店乐富海邦园店乐富海邦园店乐富</p>
+	</div>
+	<!--消费-->
+	<div class="total_expense_wrap">
+		<div class="total_expense">
+			<span class="label">消费总额：</span>
+			<div class="inp_wrap">
+				<span class="money_unit">¥</span>
+				<input type="number" class="inp"/>
+				<span class="inp_info">请询问服务员后输入</span>
+			</div>
+		</div>
+	</div>
+<!--todo 买单立享85折-->
+<div class="discount">
+	<span class="label">买单立享<span id="discount_number">85</span>折</span>
+	<span class="privilege_money">-<span id="discount_money"></span>元</span>
+</div>
+<!--todo 满减-->
+<div class="full_reduction">
+	<span class="label">满<span id="full">100</span>元减<span id="minus">8</span>元</span>
+	<span class="privilege_money">-<span id="full_minus_money"></span>元</span>
+</div>
+<!--todo 实付金额-->
+<div class="actual_expense">
+	<span class="label">实付金额</span>
+	<span class="actual_money"><span id="actual_money"></span>元</span>
+</div>
+<!--todo 付款方式-->
+<div class="pay_style">
+	<div class="label">付款方式：</div>
+	<div class="style_choose">
+		<span class="name">微信支付</span>
+		<span class="icon_add_person icon_left_gray"></span>
+	</div>
+</div>
+	<!--确认买单-->
+	<div class="sure_buy_wrap">
+		<a href="javascript:;" class="sure_buy_none sure_btn">确认买单</a>
+		<a href="/Index/pay_success" class="native_go sure_buy sure_btn">确认买单</a>
+		<p class="sure_info">买单仅限于到店支付，请确认金额后提交</p>
+	</div>
+<!--todo 选择支付方式-->
+<div class="modal_choose">
+	<div class="content">
+		<div class="title">请选择支付方式</div>
+		<div class="scroll_answer_list">
+			<ul class="answer_choose_list">
+				<li class="show_choose active">
+					<div class="name" data-id="" data-answ="">微信支付</div>
+					<div class="circle_out"><div class="circle_in"></div></div>
+				</li>
+				<li class="show_choose">
+					<div class="name" data-id="" data-answ="">余额支付</div>
+					<div class="circle_out"><div class="circle_in"></div></div>
+				</li>
+				<li class="show_choose">
+					<div class="name" data-id="" data-answ="">支付宝支付</div>
+					<div class="circle_out"><div class="circle_in"></div></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+		var reg = /^([1-9][\d]{0,3}|0)(\.[0-9][\d]{0,1})?$/;
+		var integerReg = /^([1-9][\d]{0,3}$)/;
+		var totalVal;
+		changeBtn();
+		document.getElementsByClassName("inp")[0].addEventListener("input",function(e){
+			e.preventDefault();
+			totalVal = Number($(".inp").val());
+			if(reg.test(totalVal)&&$(".inp").val()!=""){
+				$(".sure_buy_none").css("display","none");
+				$(".sure_buy").css("display","block");
+				var discount=100-Number($('#discount_number').text());
+				$('#discount_money').html(discount*totalVal/100);
+				var full_discount=parseInt(totalVal/Number($('#full').text()));
+				$('#full_minus_money').html(full_discount*Number($('#minus').text()));
+				var total_discount=totalVal-Number($('#discount_money').text())-Number($('#full_minus_money').text());
+				$('#actual_money').html(total_discount);
+			}else{
+				$(".sure_buy_none").css("display","block");
+				$(".sure_buy").css("display","none");
+			}
+			if($(".inp").val()==""){
+				$(".inp_info").show();
+				$(".money_unit").hide();
+				$('.privilege_money').hide();
+				$('.actual_expense .actual_money').hide();
+			}else{
+				$(".inp_info").hide();
+				$(".money_unit").show();
+				$('.privilege_money').show();
+				$('.actual_expense .actual_money').show();
+			}
+		});
+		$(".inp").on("focus",function(){
+			$(".money_unit").show();
+			$(".inp_info").hide();
+		});
+		$(".inp").on("keyup",function(){
+			if(!reg.test(totalVal)){
+				totalVal = "";
+				$(".inp").val(totalVal);
+				show_alert("请输入正确金额");
+			}
+		});
+		function changeBtn(){
+			totalVal = Number($(".inp").val());
+			if(totalVal==0){
+				$(".inp_info").show();
+				$(".money_unit").hide();
+				$(".sure_buy_none").css("display","block");
+				$(".sure_buy").css("display","none");
+			}else{
+				$(".inp_info").hide();
+				$(".money_unit").show();
+				$(".sure_buy_none").css("display","none");
+				$(".sure_buy").css("display","block");
+			}
+		}
+	</script>
+<script>
+	$('.pay_style').on('click',function(){
+		$('.modal_choose').show().css('display','flex');
+		$('body').css('overflow','hidden');
+	});
+	$('.modal_choose').on('click',function(){
+		$(this).hide();
+		$('body').css('overflow','scroll');
+	});
+	$('.modal_choose .content').on('click',function(){
+		event.stopPropagation();/*todo 阻止冒泡*/
+	});
+	$('.scroll_answer_list .show_choose').on('click',function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		$('.pay_style .style_choose .name').html($(this).find('.name').text());
+		$('.modal_choose').hide();
+		$('body').css('overflow','scroll');
+	});
+</script>
+{/literal}
+{/block}

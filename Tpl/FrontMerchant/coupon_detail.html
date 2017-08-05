@@ -1,0 +1,79 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/my_coupons_details.css?version={$version}"/>
+<style></style>
+{/literal}
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>优惠券详情</h1>
+    <div class="header_right"><!--<div class="person_page_img icon_more"></div>--></div>
+</div>
+<div class="img_header">
+    <img src="{$business_info.sign_pic}">
+    <p class="describe">{$business_info.business_name}</p>
+</div>
+<div class="content">
+    <p class="name">{$vouchers_info.title}</p>
+    <p class="address">{$business_info.address}</p>
+    <p class="three"><span class="style_name">金额：</span><span class="blue">¥</span><span class="money">{$vouchers_info.num}</span></p>
+    <p class="text time">适用时间：<span class="time"></span>{date('Y.m.d',$vouchers_info.start_time)}-{date('Y.m.d',$vouchers_info.end_time)}</p>
+    <p class="text">使用规则：<span class="time">{if $vouchers_info.amount_limit!=0}订单满{$vouchers_info.amount_limit}可以使用{/if},{if $vouchers_info.scope==1}仅限店内消费可以使用{else if $vouchers_info.scope==2}仅限外卖可以使用{else}本店通用{/if}</span></p>
+</div>
+
+<a id="touse" href="/Index/shop_detail/business_id/{$vouchers_info.merchant_id}" {if $vouchers_info.is_have eq 1} {else}style="display:none"{/if}><div class="to_use">去使用</div></a>
+<div class="to_use receive" {if $vouchers_info.is_have eq 0} {else}style="display:none"{/if}>领取</div>
+{/block}
+{block name="js"}
+<script>
+    vouchersid={$vouchers_info.vouchers_id};
+</script>
+{literal}
+<script type="text/javascript">
+    $('.receive').on('click',function () {
+        $.ajax(
+            {
+                url:"/Index/get_voucher",
+                type:"POST",
+                data:{
+                    voucherid:vouchersid
+                },
+                success:function(data){
+                    console.log(data);
+                    if(data=="receive"){
+                        $('.receive').hide();
+                        $('#touse').show();
+                        layer.open({
+                            content: '领取成功',
+                            title: false,
+                            btn: ['确定'],
+                        });
+                    }
+                    if(data=="received"){
+                        layer.open({
+                            content: '已经领取过了',
+                            title: false,
+                            btn: ['确定'],
+                        });
+                    }
+                    if(data=="login"){
+                        layer.open({
+                            content: '请先登录',
+                            title: false,
+                            btn: ['确定'],
+                        });
+                    }
+
+                }
+            });
+    })
+</script>
+{/literal}
+{/block}

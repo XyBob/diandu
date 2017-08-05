@@ -1,0 +1,59 @@
+.icon_pic1{
+	background:url(/Public/Images/front/front_img/icon_pic1.png)  no-repeat;
+	background-size: 14.883rem 3.533rem; 
+	display:inline-block;
+}
+
+.icon_locate3x{height:0.3rem;width:0.5rem;background-position: 0 0;}
+@mixin icon_back@3x{height:60px;width:33px;background-position: -57px 0;}
+.icon_location3x{height:0.8rem;width:0.6rem;background-position: -1.866rem 0;}
+.icon_star_blank3x{height:0.75rem;width:0.75rem;background-position: -2.8rem 0;}
+.icon_star_full3x{height:0.75rem;width:0.75rem;background-position: -3.867rem 0;}
+@mixin icon_paymini@3x{height:48px;width:48px;background-position: -304px 0;}
+.icon_password3x{height:0.9rem;width:0.85rem;background-position: -2.3rem -1.35rem;}
+@mixin icon_ticketmini@3x{height:48px;width:48px;background-position: -448px 0;}
+.icon_search3x{height:0.8rem;width:0.8rem;background-position: 0 -1.3rem;}
+.icon_phonenumber3x{height:1rem;width:0.85rem;background-position: -1.2rem -1.3rem;}
+.icon_code3x{height:0.95rem;width:0.85rem;background-position:0.01rem -2.55rem;}
+.icon_select3x{height:0.75rem;width:0.85rem;background-position: -1.06rem -2.53rem;}
+.Shape3x{height:0.9rem;width:0.85rem;background-position: -10.016rem 0;}
+.icon_splitline_right3x{height:0.32rem;width:0.85rem;background-position: -3.45rem -1.3rem;}
+.icon_splitline_left3x{height:0.32rem;width:0.85rem;background-position: -4.667rem -1.3rem;}
+.active.icon_order_s3x{height:0.95rem;width:0.85rem;background-position: -11.317rem 0;}
+.icon_detail_banner3x{height:0.8rem;width:0.9rem;background-position: -8.87rem -1.32rem;}
+.icon_ticket3x{height:1rem;width:1rem;background-position: -8.683rem 0;border-radius:50%;}
+.active.icon_home_s3x{height:1rem;width:1rem;background-position: -12.55rem 0;}
+.icon_home3x{height:1rem;width:1rem;background-position: -13.88rem 0;}
+.icon_pay3x{height:1rem;width:1rem;background-position: -6.13rem 0;border-radius:50%;}
+.active.icon_mine_s3x{height:1rem;width:1.1rem;background-position: -2.25rem -2.48rem;}
+.icon_mine3x{height:1rem;width:1.1rem;background-position: -3.55rem -2.48rem;}
+.icon_wechatpay3x{height:0.9rem;width:1.2rem;background-position: -12.06rem -1.35rem;}
+.icon_like3x{height:1rem;width:1.15rem;background-position: -5.85rem -1.33rem;}
+.icon_scan3x{height:1rem;width:1.1rem;background-position: -13.6rem -1.333rem;}
+.active.icon_like_selected3x{height:1rem;width:1.15rem;background-position: -7.35rem -1.33rem;}
+.icon_phone3x{height:1.2rem;width:1.25rem;background-position: -10.26rem -1.316rem;}
+
+
+.icon_market{background:url(/Public/Images/front/front_img/icon_market.png)  no-repeat;background-size: 20.6266rem 1rem}
+.icon_select{height:45px;width:51px;background-position:0 0;}
+.icon_select_rect{height:0.9rem;width:0.95rem;background-position:-1.6166rem 0;}
+.icon_edit{height:0.9rem;width:0.9rem;background-position:-3.35rem 0;}
+.icon_delete_1{height:0.9rem;width:0.9rem;background-position:-5.2rem 0;}
+.icon_selected_rect{height:0.9rem;width:0.95rem;background-position:-7.2rem 0;}
+.icon_select_default{height:1rem;width:1rem;background-position:-10.933rem 0;}
+.icon_selected_b{height:1rem;width:1rem;background-position:-9.066rem 0;}
+.icon_add{height:1rem;width:1rem;background-position:-13.05rem  0;border-radius:50%;}
+.icon_like_selected{height:60px;width:66px;background-position:-921px 0;}
+.icon_like{height:60px;width:66px;background-position:-1049px 0;}
+.icon_selected_b_irre{height:36px;width:69px;background-position:-1168px 0;}
+
+
+.tips_icon{background:url(/Public/Images/front/front_img/tips_icon.png)  no-repeat;background-size: 19.5833rem 2.8rem}
+.icon_store{height:1.1rem;width:1.2rem;background-position:0 0;}
+.icon_shoppingcart{height:81px;width:93px;background-position:-152px 0;}
+.icon_takeout{height:1.05rem;width:1.6rem;background-position:-5.066rem 0;}
+.icon_warning{height:2.8rem;width:2.8rem;background-position:-8.1333rem 0;}
+.icon_fail{height:2.8rem;width:2.8rem;background-position:-12.25rem 0;}
+.icon_success_b{height:2.8rem;width:2.8rem;background-position:-16.7833rem 0;}
+
+

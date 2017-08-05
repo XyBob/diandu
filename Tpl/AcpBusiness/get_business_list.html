@@ -1,0 +1,452 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<!--<div class="t-art" style="margin-bottom:10px;"><a href="/AcpSiteDeploy/add_site_deploy_facility" class="btn btn-blue"><i class="gicon-plus white"></i>添加设施</a>  </div>-->
+<div class="tablesWrap">
+    <div class="tables-searchbox">
+        <form name="form" action="" method="post">
+            <div class="t-list">
+                <span class="tbs-txt">商家名称：</span>
+                <input type="text" name="key_words" id="key_words" value="{$key_words}">
+                <span class="tbs-txt">联系人电话：</span>
+                <input type="text" name="contact_number" id="contact_number" value="{$contact_number}">
+                <button class="btn" type="submit"><i class="gicon-search"></i>搜索</button>
+            </div>
+        </form>
+    </div>
+    <!-- end tables-searchbox -->
+    <table class="wxtables">
+        <colgroup>
+            <col width="5%">
+            <col width="8%">
+            <col width="8%">
+            <col width="8%">
+            <col width="8%">
+            <col width="8%">
+            <col width="8%">
+            <col width="8%">
+            <col width="8%">
+            <col width="12%">
+            <col width="20%">
+        </colgroup>
+        <thead>
+        <tr>
+            <td>选择</td>
+            <td>商家名</td>
+            <td>联系人</td>
+            <td>联系人电话</td>
+            <td>推荐人</td>
+            <td>让利比例</td>
+            <td>人均消费</td>
+            <td>进件状态</td>
+            <td>店铺类型</td>
+            <td>付款二维码</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        {if $business_list}
+        {foreach from=$business_list item=this}
+        <tr>
+            <td class="_checkbox">
+                <input type="checkbox" class="checkbox" name="a[]" value="{$this.business_id}">
+            </td>
+            <td>{$this.business_name}</td>
+            <td>{$this.contacts}</td>
+
+            <td class="serial">
+                {$this.contact_number}
+            </td>
+            <td>{$this.second_agent_id}</td>
+            <td>
+                {$this.rate*100}%
+            </td>
+            <td>{$this.consumption}</td>
+            <td>{if $this.mch_status==1}通过{else if $this.mch_status==2}拒绝{else if $this.mch_status==3}审核中{else}未进件{/if}</td>
+            <td>{$this.industry_name}</td>
+            <td>
+                <a target="_blank" onclick="showQrcode('http://{$url}/FrontMerchantOrder/buy_bill/business_id/{$this.business_id}','{$this.sign_pic}?imageView2/1/w/100/h/100/q/100/')" class="btn" title="付款二维码">付款二维码</a>
+            </td>
+            <td>
+
+	    <a href="/AcpUser/get_all_user_list/user_id/{$this.user_id}" class="btn" title="查看个人资料">个人资料</a>
+	    <a onclick="editMch('{$this.business_id}')"  class="btn" title="修改进件信息">修改进件信息</a>
+                {if $examine==4||$this.out_status==2}
+                <a href="/AcpBusiness/examine_business_detail/business_id/{$this.business_id}" class="btn" title="编辑">查看详情</a>
+                {if $examine==4}
+                <a  onclick="examine({$this.business_id},true)" class="btn" title="通过审核">通过审核</a>
+                <a  onclick="examine({$this.business_id},false)" class="btn" title="拒绝审核">拒绝审核</a>
+                {elseif $this.out_status==2}
+                <a  onclick="examine_take_out({$this.business_id},true)" class="btn" title="通过审核">通过审核</a>
+                <a  onclick="examine_take_out({$this.business_id},false)" class="btn" title="拒绝审核">拒绝审核</a>
+                {/if}
+                {else if $examine==3}
+                <!--<a href="/AcpBusiness/edit_business/business_id/{$this.business_id}" class="btn" title="编辑"><i class="gicon-edit black"></i>编辑</a>-->
+                <a href="/AcpBusiness/freeze_business_detail/business_id/{$this.business_id}" class="btn" title="编辑">查看详情</a>
+                {else if $examine==2}
+                <a href="/AcpBusiness/no_pass_business_detail/business_id/{$this.business_id}" class="btn" title="编辑">查看详情</a>
+                {else if $examine==1}
+                <a href="/AcpBusiness/edit_business/business_id/{$this.business_id}" class="btn" title="编辑"><i class="gicon-edit black"></i>编辑</a>
+                {if $this.is_tpl==0&&$this.out_status==1}
+                <a href="javascript:;"  class="btn" title="设置为模板商家" onclick="set_to_tpl_business({$this.business_id})"></i>设置为模板商家</a>
+                {/if}
+                {/if}
+
+                {if $this.status==1&&($this.out_status==0||$this.out_status==1)}
+                <a href="javascript:;" onclick="is_use({$this.business_id},{$this.is_use});" class="btn" title="删除">{if $this.is_use==1}不显示{else}显示{/if}</a>
+                <a href="/AcpBusiness/get_business_recommend/user_id/{$this.user_id}/type/1"  class="btn" title="查看ta的推荐"></i>查看ta推荐的人</a>
+                <a href="/AcpBusiness/get_business_recommend/user_id/{$this.user_id}/type/2"  class="btn" title="查看ta的推荐"></i>查看ta推荐的店铺</a>
+		<!--<a href="/AcpUser/get_my_recommenders/user_id/{$this.user_id}/type/1"  class="btn" title="查看ta的推荐"></i>ta推荐的人</a>
+		<a href="/AcpUser/get_my_recommenders/user_id/{$this.user_id}/type/2"  class="btn" title="查看ta的推荐"></i>ta推荐的商家</a>-->
+                <a href="/AcpUser/edit_agent_shop/user_id/{$this.user_id}"  class="btn" title="修改他的商家推荐人"></i>修改他的商家推荐人</a>
+                {/if}
+
+                <a href="javascript:;" onclick="delete_obj({$this.business_id});" class="btn" title="删除"><i class="gicon-trash black"></i>删除</a>
+            </td>
+        </tr>
+        {/foreach}
+        {else}
+        <tr>
+            <td colspan="7" class="center">暂无信息</td>
+        </tr>
+        {/if}
+        </tbody>
+    </table>
+    <!-- end wxtables -->
+    <div class="tables-btmctrl clearfix">
+        <div class="fl">
+            <a href="javascript:Select()" class="btn btn-blue">全选</a>
+            <a href="javascript:Cancel()" class="btn btn-blue">取消</a>
+            <a href="javascript:;" onclick="Batch_delete_obj();" class="btn btn-blue">删除</a>
+        </div>
+        <div class="fr">
+            <div class="paginate">
+                {$page->show()}
+            </div>
+            <!-- end paginate -->
+        </div>
+    </div>
+    <!-- end tables-btmctrl -->
+</div>
+<!-- end tablesWrap -->
+{/block}
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+<script src="/Public/Plugins/qrcode/jquery.qrcode.js?version={$version}"></script>
+<script src="/Public/Plugins/qrcode/qrcode.js?version={$version}"></script>
+<script src="/Public/Plugins/qrcode/utf.js?version={$version}"></script>
+
+<script>
+    //全选
+    function Select(){
+        var sel=document.getElementsByName("a[]");
+        for(var i=0;i<sel.length;i++){
+            sel[i].checked=true;
+        }
+    }
+    var html='确定需要修改进件信息吗，这个操作将会导致重新审核';
+    function editMch(id){
+        $.jPops.confirm({
+            title:"警告",
+            content:html,
+            okBtnTxt:"确定",
+            cancelBtnTxt:"取消",
+            callback:function(r)
+            {
+                if(r)
+                {
+                    $.post("/AcpBusiness/do_updatemch",{ 'business_id':id },function(data){
+                        var info = JSON.parse(data);
+                        if(info.code == 0){
+                            alert(info.msg);
+                        }else{
+                            alert(info.msg);
+                        }
+                    })
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        });
+    }
+
+    //取消全选
+    function Cancel(){
+        var sel=document.getElementsByName("a[]");
+        for(var i=0;i<sel.length;i++){
+            sel[i].checked=false;
+        }
+    }
+    {literal}
+    function set_to_tpl_business(business_id)
+    {
+        var html='';
+
+        var html='<form id="deliver_form">' +
+                '<div class="formitems inline">'+
+                '<label class="fi-name"><span class="colorRed">*</span>店铺类型：</label>'+
+                '<div class="form-controls">'+
+                '<select class="small" name="business_classify_id" id="business_classify_id">'+
+        {/literal}
+        '<option value="">--选择店铺类型--</option>'+
+        {foreach from=$business_classify_list  item=this}
+        '<option value="{$this.business_classify_id}">{$this.business_classify_name}</option>'+
+        {/foreach}
+        '</select>'+
+        '<input type="hidden" name="tpl_business_id" value="'+business_id+'">'+
+        {literal}
+        '<span class="fi-help-text"> </span>'+
+        '</div>' +
+        '</div>'+
+        '</form>';
+
+        $.jPops.custom({
+            title:"设置模板店铺",
+            content:html,
+            okBtnTxt:"确定",
+            cancelBtnTxt:"取消",
+            callback:function(r)
+            {
+                if(r)
+                {
+
+                    $.validator.setDefaults(
+                            {
+                                //表单验证通过后的处理，异步提交表单
+                                submitHandler: function()
+                                {
+                                    $.post('/AcpBusiness/set_tpl_business',$('#deliver_form').serialize(),function(data)
+                                    {
+                                        if (data == 'success')
+                                        {
+                                            alert('恭喜您，操作成功');
+                                            location.reload();
+                                        }
+                                        else
+                                        {
+                                            alert('对不起，操作失败');
+                                        }
+                                    })
+                                    acp.batchDeliverFormStatus = true;
+                                }
+                            });
+
+                    //表单验证规则
+                    $("#deliver_form").validate(
+                            {
+                                rules:
+                                {
+
+                                    business_classify_id:
+                                    {
+                                        required: true,
+                                        digits: true
+                                    },
+                                },
+                                messages:
+                                {
+
+                                    business_classify_id:
+                                    {
+                                        required: "对不起，请选择店铺类型",
+                                   },
+                                },
+                                errorPlacement: acp.form_ShowError,//显示出错信息(这段代码必须加)
+                                success:acp.form_HideError//验证成功隐藏错误信息(这段代码必须加)
+                            });
+
+                    //模拟提交表单
+                    $("#deliver_form").submit();
+                    return acp.batchDeliverFormStatus;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        });
+    }
+    {/literal}
+</script>
+{literal}
+<script>
+    function is_use(business_id,flag){
+        if(flag){
+            var change_to=0;
+        }else{
+            var change_to=1;
+        }
+        $.jPops.confirm(
+                {
+                    title: "提示",
+                    content: "您确定这么做？",
+                    okBtnTxt: "确定",
+                    cancelBtnTxt: "取消",
+                    callback: function (r) {
+                        if (r) {
+                            $.post('/AcpBusiness/is_use', {"business_id": business_id,change_to:change_to}, function (data, textStatus) {
+                                console.log(data);
+                                if (data.code == 1) {
+                                    alert(data.msg);
+                                    location.reload();
+                                }
+                                else {
+                                    alert(data.msg);
+                                }
+                            },'json');
+                        }
+                        return true;
+                    }
+                });
+    }
+
+    function examine(business_id,flag){
+        $.jPops.confirm(
+            {
+                title: "提示",
+                content: "您确定这么做？",
+                okBtnTxt: "确定",
+                cancelBtnTxt: "取消",
+                callback: function (r) {
+                    if (r) {
+                        $.post('/AcpBusiness/examine', {"business_id": business_id,flag:flag}, function (data, textStatus) {
+                            console.log(data);
+                            if (data.code == 1) {
+                                alert(data.msg);
+                                location.href='/AcpBusiness/get_examine_business_list'
+                            }
+                            else {
+                                alert(data.msg);
+                            }
+                        },'json');
+                    }
+                    return true;
+                }
+            });
+    }
+    function examine_take_out(business_id,flag){
+        $.jPops.confirm(
+                {
+                    title: "提示",
+                    content: "您确定这么做？",
+                    okBtnTxt: "确定",
+                    cancelBtnTxt: "取消",
+                    callback: function (r) {
+                        if (r) {
+                            $.post('/AcpBusiness/examine_take_out', {"business_id": business_id,flag:flag}, function (data, textStatus) {
+                                console.log(data);
+                                if (data.code == 1) {
+                                    alert(data.msg);
+                                    location.href='/AcpBusiness/take_out_business_list'
+                                }
+                                else {
+                                    alert(data.msg);
+                                }
+                            },'json');
+                        }
+                        return true;
+                    }
+                });
+    }
+    function delete_obj(obj_id) {
+        $.jPops.confirm(
+                {
+                    title: "提示",
+                    content: "您确定要删除这条数据吗？",
+                    okBtnTxt: "确定",
+                    cancelBtnTxt: "取消",
+                    callback: function (r) {
+                        if (r) {
+                            $.post('/AcpBusiness/del_business', {"obj_id": obj_id}, function (data, textStatus) {
+                                console.log(data);
+                                if (data == 'success') {
+                                    alert('恭喜您，删除成功！');
+                                    location.reload();
+                                }
+                                else {
+                                    alert('对不起，删除失败！');
+                                }
+                            });
+                        }
+                        return true;
+                    }
+                });
+    }
+
+
+    function Batch_delete_obj() {
+        $.jPops.confirm(
+                {
+                    title: "提示",
+                    content: "您确定要删除这些数据吗？",
+                    okBtnTxt: "确定",
+                    cancelBtnTxt: "取消",
+                    callback: function (r) {
+                        if (r) {
+                            var obj_ids = '';
+                            var count = 0;
+                            $('input[name="a[]"]:checked').each(function () {
+                                count++;
+                                obj_ids += $(this).val() + ',';
+                            });
+
+                            if (!count) {
+                                alert('对不起，请选择至少一项进行删除！');
+                                return;
+                            }
+
+                            obj_ids = obj_ids.substr(0, obj_ids.length - 1);
+                            $.post('/AcpBusiness/del_business', {"obj_id": obj_ids}, function (data, textStatus) {
+                                if (data == 'success') {
+                                    alert('恭喜您，删除成功！');
+                                    location.reload();
+                                }
+                                else {
+                                    alert('对不起，删除失败！');
+                                }
+                            });
+                        }
+                        return true;
+                    }
+                });
+    }
+
+    function showQrcode(text,url){
+        layer.open({
+            title:"付款二维码,右击保存",
+            type: 1,
+            skin: 'layui-layer-rim', //加上边框
+            area: ['420px', '420px'], //宽高
+            content: '<div id="qrcodeCanvas" style="margin: 20px;"></div>'
+        });
+
+        getQrcodeImg(text,url);
+    }
+
+    function getQrcodeImg(text,url){
+        $('#qrcodeCanvas').qrcode({
+            render    : "canvas",
+            text    : text,
+            width : "200",               //二维码的宽度
+            height : "200",              //二维码的高度
+            background : "#ffffff",       //二维码的后景色
+            foreground : "#000000",        //二维码的前景色
+            src:url            //二维码中间的图片
+        });
+    }
+</script>
+{/literal}
+
+<style>
+    .layermcont{
+        overflow:auto;
+        line-height: 0px;
+    }
+</style>
+
+{/block}
+

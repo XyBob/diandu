@@ -1,0 +1,183 @@
+html,body{
+    width:100%;
+    background: #fff;
+    font-family: PingFangSC-Regular;
+    overflow-x:hidden;
+}
+.img-responsive{
+    width:100%;
+    height:100%;
+    display:block;
+}
+.switch_content{
+    width:100%;
+    background: #F1F4F7;
+    height:2.2rem;
+    margin-top:2.2rem;
+}
+.switch_content .fl{
+    width:50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    height:100%;
+}
+.switch_content .fl div{
+    width:5rem;
+    height:2.2rem;
+    line-height:2.2rem;
+    box-sizing:border-box;
+    font-size: 0.9rem;
+    color: #999999;
+    text-align: center;
+}
+.switch_content .fl.active div{
+    border-bottom:0.2rem solid #3D9FE9;
+    font-size: 0.9rem;
+    color: #3D9FE9;
+}
+/*todo 列表*/
+.content{
+    width:100%;
+    display: none;
+}
+.content.active{
+    display:block;
+}
+.content .list{
+    padding:0.75rem;
+    border: 1px solid #F1F4F7;
+}
+.content .list_top{
+    display: flex;
+    justify-content: space-between;
+}
+.content .list_top .img_info{
+    display: flex;
+    justify-content: flex-start;
+    width:100%;
+}
+.content .list_top .img_right{
+    font-size: 0.6rem;
+}
+.content .list_top .img_right.grey{
+    color: #999999;
+}
+.content .list_top .img_right.blue{
+    color: #3D9FE9;
+}
+.content .list_top .img_right.red{
+    color: #F93B23;
+}
+.content .list_top .img_info .img_left{
+    width:1.8rem;
+    height:1.8rem;
+    margin-right:0.5rem;
+}
+.content .list_top .img_info .img_middle{
+    width:calc(100% - 2.3rem);
+    overflow: hidden;
+}
+.content .list_top .img_info .img_middle .the_top{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:1.8rem;
+}
+.content .list_top .img_info .img_middle .the_top .top_state{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .list_top .img_info .img_middle .the_top .name{
+    font-size: 0.8rem;
+    color: #333333;
+}
+.content .list_top .img_info .img_middle .the_top .time{
+    font-size: 0.5rem;
+    color: #999999;
+}
+.content .list .describe{
+    font-size: 0.6rem;
+    color: #666666;
+    margin-top:0.5rem;
+    display: inline-flex;
+    align-items: center;
+    padding-left:2.3rem;
+    width:100%;
+    box-sizing: border-box;
+}
+.content .list .describe .describe_name{
+    text-overflow:ellipsis ;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    max-width:calc(100% - 3.2rem);
+}
+.content .list .money{
+    font-size: 0.8rem;
+    color: #333333;
+    padding-left:2.3rem;
+    width:100%;
+    box-sizing: border-box;
+}
+/*todo 订单消费*/
+.content .list_shop{
+    height:3.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0 0.75rem;
+    align-items:center;
+}
+.content .list_shop .list_left{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    overflow: hidden;
+}
+.content .list_shop .list_right{
+    font-size: 0.8rem;
+    color: #3D9FE9;
+}
+.content .list_shop .list_left .img_left_shop{
+    width:1.8rem;
+    height:1.8rem;
+    margin-right:0.5rem;
+}
+.content .list_shop .list_left .img_right_shop{
+    height:1.8rem;
+    display:inline-flex;
+    flex-direction:column;
+    justify-content:space-between;
+    width:calc(100% - 2.3rem);
+}
+.content .list_shop .list_left .img_right_shop .name{
+    font-size: 0.8rem;
+    color: #333333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.content .list_shop .list_left .img_right_shop .time{
+    font-size: 0.5rem;
+    color: #999999;
+}
+.content.consumption{
+    padding-top:0.25rem;
+}
+.no_content .no_order{
+    background: url(/Public/Images/front/front_img/blank_order@3x.png) no-repeat;
+    width:5rem;
+    height:4.9rem;
+    background-size: 100% 100%;
+    margin:3.45rem auto 1.05rem;
+}
+.no_content .text-center{
+    text-align: center;
+    font-size: 0.7rem;
+    color: #666666;
+}

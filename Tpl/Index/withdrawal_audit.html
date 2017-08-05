@@ -1,0 +1,39 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/withdrawal_audit.css?version={$version}"/>
+<style></style>
+{/literal}
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>已提交</h1>
+</div>
+<div class="header_empty"></div>
+<div class="icon_add_person icon_xuqiutijiao"></div>
+<p class="text-center progress_tips">需求已经提交</p>
+<p class="text-center effective_tips">
+    <span>我们的客服人员会在1-3个工作日内将提现的金</span><br/>
+    <span>额打到您的帐户，请注意查收</span>
+</p>
+<div class="tips_info" id="got_it">知道了</div>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    $('#got_it').on('click',function(){
+        window.location.href='/FrontUserCenter/my_account'
+    });
+</script>
+{/literal}
+{/block}

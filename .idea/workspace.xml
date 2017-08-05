@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/Lib/Action/AcpBusinessAction.class.php" line="1079" />
+    <bookmark url="file://$PROJECT_DIR$/Conf/acp_priv.php" line="561" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1bb7aa5b-ebb2-42b6-bb6b-0dff2d8c9a59" name="Default" comment="" />
+    <ignored path="diandu.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="diandu" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="FrontUserCenterAction.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lib/Action/FrontUserCenterAction.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="957" column="14" selection-start-line="957" selection-start-column="14" selection-end-line="957" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home_index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tpl/Index/home_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="607" column="56" selection-start-line="607" selection-start-column="36" selection-end-line="607" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FrontMerchantAction.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lib/Action/FrontMerchantAction.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3488372">
+              <caret line="996" column="25" selection-start-line="996" selection-start-column="25" selection-end-line="996" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexAction.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lib/Action/IndexAction.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="445" column="62" selection-start-line="445" selection-start-column="62" selection-end-line="445" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Tpl/FrontUserCenter/my_account.html" />
+        <option value="$PROJECT_DIR$/Lib/Model/AccountModel.class.php" />
+        <option value="$PROJECT_DIR$/Public/Plugins/native/native_event.js" />
+        <option value="$PROJECT_DIR$/Tpl/FrontMerchantOrder/buy_bill.html" />
+        <option value="$PROJECT_DIR$/Tpl/McpItem/edit_item.html" />
+        <option value="$PROJECT_DIR$/Public/Js/mcp/McpItem/add_item_step3.js" />
+        <option value="$PROJECT_DIR$/Tpl/McpItem/add_item.html" />
+        <option value="$PROJECT_DIR$/Tpl/FrontOrder/create_order_and_pay.html" />
+        <option value="$PROJECT_DIR$/frame/Extend/Vendor/alipay_mobile_pay/lib/alipay_rsa.php" />
+        <option value="$PROJECT_DIR$/frame/Extend/Vendor/alipay_mobile_pay/key/alipay_public_key.pem" />
+        <option value="$PROJECT_DIR$/db/diandu.sql" />
+        <option value="$PROJECT_DIR$/Tpl/AcpDeposit/get_deposit_apply_list.html" />
+        <option value="$PROJECT_DIR$/Lib/Action/AcpDepositAction.class.php" />
+        <option value="$PROJECT_DIR$/frame/Extend/Vendor/alipay_mobile_pay/key/rsa_private_key.pem" />
+        <option value="$PROJECT_DIR$/Tpl/Index/shop_detail.html" />
+        <option value="$PROJECT_DIR$/Lib/Model/BusinessModel.class.php" />
+        <option value="$PROJECT_DIR$/Lib/Action/AcpMessageAction.class.php" />
+        <option value="$PROJECT_DIR$/Lib/Model/PushModel.class.php" />
+        <option value="$PROJECT_DIR$/Lib/Model/WXPayModel.class.php" />
+        <option value="$PROJECT_DIR$/Tpl/FrontOrder/my_order_detail.html" />
+        <option value="$PROJECT_DIR$/Lib/Action/FrontOrderAction.class.php" />
+        <option value="$PROJECT_DIR$/Tpl/FrontMerchant/take_out_index.html" />
+        <option value="$PROJECT_DIR$/frame/Extend/Vendor/Wxin/WeiXin.php" />
+        <option value="$PROJECT_DIR$/Lib/Model/DepositApplyModel.class.php" />
+        <option value="$PROJECT_DIR$/Tpl/FrontUserCenter/withdrawal_normal.html" />
+        <option value="$PROJECT_DIR$/Lib/Action/FrontMerchantOrderAction.class.php" />
+        <option value="$PROJECT_DIR$/Lib/Action/AcpOrderAction.class.php" />
+        <option value="$PROJECT_DIR$/Common/common.php" />
+        <option value="$PROJECT_DIR$/Tpl/AcpBusiness/get_business_list.html" />
+        <option value="$PROJECT_DIR$/Lib/Action/AcpBusinessAction.class.php" />
+        <option value="$PROJECT_DIR$/Lib/Action/IndexAction.class.php" />
+        <option value="$PROJECT_DIR$/Conf/acp_priv.php" />
+        <option value="$PROJECT_DIR$/Tpl/AcpConfig/platform_withdraw.html" />
+        <option value="$PROJECT_DIR$/Tpl/AcpConfig/set_password.html" />
+        <option value="$PROJECT_DIR$/Tpl/AcpFinance/platform_withdraw.html" />
+        <option value="$PROJECT_DIR$/Lib/Action/AcpFinanceAction.class.php" />
+        <option value="$PROJECT_DIR$/logs/withdrawals.log" />
+        <option value="$PROJECT_DIR$/frame/Extend/Vendor/mspayapi.php" />
+        <option value="$PROJECT_DIR$/Lib/Model/MsPayModel.class.php" />
+        <option value="$PROJECT_DIR$/frame/Extend/Vendor/AlipaySDK/AopClient.php" />
+        <option value="$PROJECT_DIR$/Lib/Model/AlipayModel.class.php" />
+        <option value="$PROJECT_DIR$/Lib/Action/GlobalAction.class.php" />
+        <option value="$PROJECT_DIR$/Tpl/McpDeposit/get_deposit.html" />
+        <option value="$PROJECT_DIR$/Lib/Action/McpDepositAction.class.php" />
+        <option value="$PROJECT_DIR$/frame/Extend/Vendor/Wxin/WeiXinPush.php" />
+        <option value="$PROJECT_DIR$/Tpl/FrontUserCenter/person_center.html" />
+        <option value="$PROJECT_DIR$/Lib/Model/UserApiModel.class.php" />
+        <option value="$PROJECT_DIR$/Lib/Action/FrontUserCenterAction.class.php" />
+        <option value="$PROJECT_DIR$/Lib/Action/FrontAction.class.php" />
+        <option value="$PROJECT_DIR$/Tpl/Index/home_index.html" />
+        <option value="$PROJECT_DIR$/Lib/Action/FrontMerchantAction.class.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="433" />
+    <option name="y" value="107" />
+    <option name="width" value="1793" />
+    <option name="height" value="1138" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Extend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Extend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Extend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wxin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diandu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../oa" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="SearchEverywhereHistoryKey" value="FrontMerchant&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/FrontMerchantAction.class.php&#10;Index&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/IndexAction.class.php&#10;home_index&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/Index/home_index.html&#10;person_center&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/FrontUserCenter/person_center.html&#10;FrontUserCenter&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/FrontUserCenterAction.class.php&#10;phone_check&#9;FILE&#9;file://C:/wamp/www/diandu/Public/Js/front/front_js/phone_check.js&#10;User&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Model/UserApiModel.class.php&#10;my_qr_code&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/FrontUserCenter/my_qr_code.html&#10;Glo&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/GlobalAction.class.php&#10;Front&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/FrontAction.class.php&#10;get&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/McpDeposit/get_deposit.html&#10;get_deposit&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/McpDeposit/get_deposit.html&#10;McpDeposit&#9;null&#9;null&#10;Push&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Model/PushModel.class.php&#10;Wx&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Model/WXPayModel.class.php&#10;Frontm&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/FrontMerchantOrderAction.class.php&#10;Ali&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Model/AlipayModel.class.php&#10;ms&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Model/MsPayModel.class.php&#10;platform_withdraw&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/AcpFinance/platform_withdraw.html&#10;set_password&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/AcpConfig/set_password.html&#10;AcpFinance&#9;null&#9;null&#10;Area&#9;null&#9;null&#10;buy&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/FrontMerchantOrder/buy_bill.html&#10;.Gloa&#9;null&#9;null&#10;get_business_list&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/AcpBusiness/get_business_list.html&#10;G&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/GlobalAction.class.php&#10;FrontMerchantOrder&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/FrontMerchantOrderAction.class.php&#10;IndexAc&#9;null&#9;null&#10;com&#9;FILE&#9;file://C:/wamp/www/diandu/Common/common.php&#10;go_near_business&#9;null&#9;null&#10;AcpO&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/AcpOrderAction.class.php&#10;Acp&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/FrontMerchantOrderAction.class.php&#10;FrontM&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/FrontMerchantOrderAction.class.php&#10;create&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/FrontOrder/create_order_and_pay.html&#10;AcpBu&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/AcpBusinessAction.class.php&#10;withdrawal&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/FrontUserCenter/withdrawal_normal.html&#10;take_out_index&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/FrontMerchant/take_out_index.html&#10;AcpB&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Action/AcpBusinessAction.class.php&#10;MS&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Model/MsPayModel.class.php&#10;withdrawal_normal&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/FrontUserCenter/withdrawal_normal.html&#10;Ms&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Model/MsPayModel.class.php&#10;AcpOrder&#9;null&#9;null&#10;my_order_detail&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/FrontOrder/my_order_detail.html&#10;FrontOrder&#9;null&#9;null&#10;U ser&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Model/UserApiModel.class.php&#10; &#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Model/WXPayModel.class.php&#10;ali&#9;FILE&#9;file://C:/wamp/www/diandu/Lib/Model/AlipayModel.class.php&#10;UserApi&#9;null&#9;null&#10;AcpMessage&#9;null&#9;null&#10;shop_type_list&#9;FILE&#9;file://C:/wamp/www/diandu/Tpl/Index/shop_type_list.html" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\diandu\Tpl\FrontUserCenter" />
+      <recent name="C:\wamp\www\diandu\Public\Js\mcp" />
+      <recent name="C:\wamp\www\diandu\Lib" />
+      <recent name="C:\wamp\www\diandu\Public" />
+      <recent name="C:\wamp\www\diandu\Tpl\McpMessage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\diandu\Tpl\AcpFinance" />
+      <recent name="C:\wamp\www\diandu\Tpl\FrontUserCenter" />
+      <recent name="C:\wamp\www\diandu\frame\Extend\Vendor\AlipaySDK" />
+      <recent name="C:\wamp\www\diandu\Tpl\FrontMerchant" />
+      <recent name="C:\wamp\www\diandu\Lib\Action" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\xuyong\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1bb7aa5b-ebb2-42b6-bb6b-0dff2d8c9a59" name="Default" comment="" />
+      <created>1492480202722</created>
+      <option name="number" value="Default" />
+      <updated>1492480202722</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="433" y="107" width="1793" height="1138" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22562031" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32791957" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24930593" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32760364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Lib/Action/AcpBusinessAction.class.php</url>
+          <line>553</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Lib/Action/FrontUserCenterAction.class.php</url>
+          <line>294</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Common/common.php</url>
+          <line>920</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Common/common.php</url>
+          <line>816</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Common/common.php</url>
+          <line>760</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Lib/Action/McpItemAction.class.php</url>
+          <line>434</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Lib/Action/GlobalAction.class.php</url>
+          <line>2590</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Lib/Action/IndexAction.class.php</url>
+          <line>289</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Lib/Action/AcpFinanceAction.class.php</url>
+          <line>1023</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Tpl/AcpUser/get_my_recommenders.html</url>
+          <line>151</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Tpl/FrontUserCenter/bind_bank_card.html</url>
+          <line>124</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Tpl/FrontUserCenter/bind_bank_card.html</url>
+          <line>107</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Public/Js/front/front_js/my_recom_shop_list.js</url>
+          <line>42</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Tpl/Index/confirm_payment.html</url>
+          <line>76</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Tpl/FrontUserCenter/edit_goods_address.html</url>
+          <line>273</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Tpl/FrontMerchant/take_out_index.html</url>
+          <line>368</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="26" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Tpl/FrontUser/my_qr_code.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.354838">
+          <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/FrontOrder/create_order_and_pay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.208061">
+          <caret line="186" column="50" selection-start-line="186" selection-start-column="50" selection-end-line="186" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Action/AcpOrderAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6255814">
+          <caret line="196" column="13" selection-start-line="196" selection-start-column="13" selection-end-line="196" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2104" column="24" selection-start-line="2104" selection-start-column="9" selection-end-line="2104" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/FrontMerchant/take_out_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9858388">
+          <caret line="127" column="83" selection-start-line="127" selection-start-column="83" selection-end-line="127" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Conf/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2131324">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/AcpBusiness/get_business_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09472551">
+          <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Runtime/Logs/1497663950-17_06_17.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22083333">
+          <caret line="3606" column="73" selection-start-line="3606" selection-start-column="73" selection-end-line="3606" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Model/AreaModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8745247">
+          <caret line="452" column="0" selection-start-line="452" selection-start-column="0" selection-end-line="452" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/FrontMerchantOrder/buy_bill.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="564" column="0" selection-start-line="564" selection-start-column="0" selection-end-line="564" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/AcpConfig/set_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12547529">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/FrontUserCenter/withdrawal_normal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4391635">
+          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Action/AcpBusinessAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1099" column="21" selection-start-line="1099" selection-start-column="21" selection-end-line="1099" selection-end-column="21" />
+          <folding>
+            <marker date="1501484732544" expanded="true" signature="8982:8992" placeholder="..." />
+            <marker date="1501484732544" expanded="true" signature="9028:9038" placeholder="..." />
+            <marker date="1501484732544" expanded="true" signature="9259:9269" placeholder="..." />
+            <marker date="1501484732544" expanded="true" signature="9663:9673" placeholder="..." />
+            <marker date="1501484732544" expanded="true" signature="13326:13336" placeholder="..." />
+            <marker date="1501484732544" expanded="true" signature="13372:13382" placeholder="..." />
+            <marker date="1501484732544" expanded="true" signature="13579:13589" placeholder="..." />
+            <marker date="1501484732544" expanded="true" signature="13857:13867" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/AcpFinance/all_order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7072243">
+          <caret line="138" column="2" selection-start-line="138" selection-start-column="2" selection-end-line="138" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Action/AcpFinanceAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.556196">
+          <caret line="1175" column="18" selection-start-line="1175" selection-start-column="18" selection-end-line="1175" selection-end-column="18" />
+          <folding>
+            <element signature="n#check_remittance#0;n#AcpFinanceAction#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/balance.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8768657">
+          <caret line="444" column="0" selection-start-line="444" selection-start-column="0" selection-end-line="444" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame/Extend/Vendor/mspayapi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.67742">
+          <caret line="158" column="49" selection-start-line="158" selection-start-column="49" selection-end-line="158" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/AcpFinance/platform_withdraw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7096774">
+          <caret line="8" column="96" selection-start-line="8" selection-start-column="96" selection-end-line="8" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/diandu.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Conf/acp_priv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.021133525">
+          <caret line="337" column="52" selection-start-line="337" selection-start-column="52" selection-end-line="337" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame/Extend/Vendor/AlipaySDK/AlipayTradeRefundRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.193548">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Model/OrderModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="984" column="20" selection-start-line="984" selection-start-column="20" selection-end-line="984" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/openssl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3429395">
+          <caret line="733" column="9" selection-start-line="733" selection-start-column="9" selection-end-line="733" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame/Extend/Vendor/AlipaySDK/AopClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="673" column="28" selection-start-line="673" selection-start-column="28" selection-end-line="673" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Action/FrontMerchantOrderAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="476" column="38" selection-start-line="476" selection-start-column="38" selection-end-line="476" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame/Extend/Vendor/wxpay/WxPayPubHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="460" column="13" selection-start-line="460" selection-start-column="13" selection-end-line="460" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Model/WXPayModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.193548">
+          <caret line="383" column="38" selection-start-line="383" selection-start-column="38" selection-end-line="383" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Model/AlipayModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="827" column="0" selection-start-line="827" selection-start-column="0" selection-end-line="827" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Model/MsPayModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-622.3871">
+          <caret line="877" column="14" selection-start-line="877" selection-start-column="14" selection-end-line="877" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Model/BusinessModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34391534">
+          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/withdrawals.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63114756">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/McpDeposit/get_deposit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Model/PushModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="57" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Redis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.290322">
+          <caret line="318" column="56" selection-start-line="318" selection-start-column="56" selection-end-line="318" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Action/McpDepositAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="132" column="8" selection-start-line="132" selection-start-column="8" selection-end-line="138" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Action/GlobalAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.245902">
+          <caret line="488" column="35" selection-start-line="488" selection-start-column="35" selection-end-line="488" selection-end-column="35" />
+          <folding>
+            <marker date="1501722470652" expanded="true" signature="8979:9048" placeholder="SELECT * FRO..tp_template_model..." />
+            <marker date="1501722470652" expanded="true" signature="9172:9241" placeholder="SELECT * FRO..tp_template_model..." />
+            <marker date="1501722470652" expanded="true" signature="53483:54037" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="53493:53583" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="53598:53641" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="53656:54021" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="54826:55569" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="54836:54926" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="54941:54984" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="54999:55553" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="56631:57424" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="56642:56741" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="56757:56802" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="56818:57408" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="59635:59703" placeholder="UPDATE tp_ad..." />
+            <marker date="1501722470652" expanded="true" signature="59718:59782" placeholder="UPDATE tp_ad..." />
+            <marker date="1501722470652" expanded="true" signature="59797:59861" placeholder="UPDATE tp_ad..." />
+            <marker date="1501722470652" expanded="true" signature="60742:60780" placeholder="DELETE FROM ..." />
+            <marker date="1501722470652" expanded="true" signature="60965:61022" placeholder="DELETE FROM ..." />
+            <marker date="1501722470652" expanded="true" signature="62101:62316" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="62111:62203" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="62218:62300" placeholder="..." />
+            <marker date="1501722470652" expanded="true" signature="69974:70059" placeholder="update tp_or..." />
+            <marker date="1501722470652" expanded="true" signature="75899:75941" placeholder="select * fro..tp_business..." />
+            <marker date="1501722470652" expanded="true" signature="75899:75961" placeholder="select sum(m..." />
+            <marker date="1501722470652" expanded="true" signature="75899:75965" placeholder="select sum(m..tp_business..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Model/DepositApplyModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/FrontUserCenter/my_qr_code.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2653277">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame/Common/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1017" column="20" selection-start-line="1017" selection-start-column="9" selection-end-line="1017" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame/Extend/Vendor/Wxin/WeiXinPush.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.1374207">
+          <caret line="182" column="38" selection-start-line="182" selection-start-column="38" selection-end-line="182" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame/Extend/Vendor/Wxin/WeiXin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="810" column="18" selection-start-line="810" selection-start-column="18" selection-end-line="810" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/Index/phone_check.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Js/front/front_js/phone_check.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="113" column="40" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Model/UserModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34355178">
+          <caret line="180" column="20" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/FrontUserCenter/person_center.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="127" column="39" selection-start-line="127" selection-start-column="39" selection-end-line="127" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Model/UserApiModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="279" column="32" selection-start-line="279" selection-start-column="30" selection-end-line="279" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Action/FrontAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Action/IndexAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="445" column="62" selection-start-line="445" selection-start-column="62" selection-end-line="445" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Action/FrontUserCenterAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="957" column="14" selection-start-line="957" selection-start-column="14" selection-end-line="957" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tpl/Index/home_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="607" column="56" selection-start-line="607" selection-start-column="36" selection-end-line="607" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Action/FrontMerchantAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3488372">
+          <caret line="996" column="25" selection-start-line="996" selection-start-column="25" selection-end-line="996" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

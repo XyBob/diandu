@@ -1,0 +1,146 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<div class="t-a-wait-con">
+    <div class="tablesWrap">
+        <div class="tables-searchbox">
+            <div class="t-a-wait-top">
+                <form action="" method="post" id="rank_waiting">
+
+                    <!--<div class="t-a-wait-top-li"><span>手机号：</span><input type="text" placeholder="" value="{$mobile}" class="mini" name="mobile"> </div>-->
+                    <!--省市区-->
+
+
+                    <label class="fi-name"> 选择城市：</label>
+                    <select class="small" id="province_id" name="province_id">
+                        <option value="0">--选择省份--</option>
+                        {foreach from=$province_list item=province_info}
+                        <option value="{$province_info.province_id}" {if isset($province_id) && $province_id == $province_info.province_id}selected{/if}>{$province_info.province_name}</option>
+                        {/foreach}
+                    </select>
+                    <select class="small" id="city_id" name="city_id">
+                        <option value="0">--选择城市--</option>
+                    </select>
+                    <span id="div_area">
+			<select class="small" id="area_id" name="area_id">
+				<option value="0">--选择地区--</option>
+			</select>
+		</span>
+
+                    <!--时间-->
+                    <div class="t-a-wait-top-li" style="width:400px;">
+                        <div class="formitems inline">
+                            <label class="fi-name" style="width:70px; font-weight:normal;">下单时间：</label>
+                            <div class="form-controls" style="margin-left:80px;">
+                                <input type="text" style="width:120px;" autocomplete="off" class="Wdate" name="start_time" value="{if $start_time}{date('Y-m-d',$start_time)}{/if}" onclick="WdatePicker({ dateFmt:'yyyy-MM-dd'})">
+
+                                <span class="fi-text">-</span>
+
+                                <input type="text" style="width:120px;" autocomplete="off" class="Wdate" name="end_time" value="{if $end_time}{date('Y-m-d',$end_time)}{/if}" onclick="WdatePicker({ dateFmt:'yyyy-MM-dd'})">
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="submit" value="search" /><button class="btn"><i class="gicon-search"></i>搜索</button>
+                </form>
+            </div>
+        </div>
+        <table class="wxtables">
+            <colgroup>
+                <!--<col width="3%">-->
+                <!--<col width="7%">-->
+                <!--<col width="7%">-->
+                <!--<col width="7%">-->
+                <!--<col width="7%">-->
+                <!--<col width="7%">-->
+
+                <col width="33%">
+                <col width="33%">
+                <col width="33%">
+            </colgroup>
+            <thead>
+            <tr>
+                <td>地区</td>
+                <!--td>用户名</td>
+                <td>联系人</td>-->
+                <td>营业额</td>
+                <td>时间</td>
+                <!--<td>用户数量</td>-->
+                <!--<td>手机</td>-->
+                <!--<td>上级推荐人</td>-->
+                <!--<td>他推荐的人数</td>-->
+                <!--<td>推荐的商家数</td>-->
+                <!--td>所在地区</td-->
+                <!--<td>注册时间</td>-->
+                <!-- {if $opt == 'user'}<td>会员卡号</td> {/if}-->
+                <!--
+                <td>邮箱</td>
+                <td>QQ</td>
+                -->
+                <!--<td>操作</td>-->
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                {if $where==null }
+                <td>所有地区</td>
+                {else}
+                <td>{$where}</td>
+                {/if}
+                {if $turnover==null }
+                <td>暂无收益</td>
+                {else}
+                <td>{$turnover}</td>
+                {/if}
+                             <!--			<td><input type="checkbox" class="checkbox" value='{$user.user_id}' name="a[]"></td>-->
+                <!--
+                <td>{$user.username}</td>
+                <td>{$user.realname}</td>
+                <td>{$user.area_string}</td>
+                <td><span>{$user.email}</span></td>
+                <td><span>{$user.qq}</span></td>
+                -->
+                <td>{$start_time|date_format:"%Y-%m-%d %H:%M:%S"}--{$end_time|date_format:"%Y-%m-%d %H:%M:%S"}</td>
+                <!--<td>{$count_user}</td>-->
+                <!--{if $opt == 'user'}<td>{$user.rank_name}</td>{/if}-->
+
+            </tr>
+
+            <!--<tr><td colspan="11">该地区暂无数据</td></tr>-->
+
+            </tbody>
+        </table>
+        <!-- end wxtables -->
+        <!--<div class="tables-btmctrl clearfix">-->
+        <!--<div class="fl">-->
+        <!--<a href="javascript:;" class="btn btn-blue" onclick="Select()">全选</a>-->
+        <!--<a href="javascript:;" class="btn btn-blue" onclick="Cancel()">取消</a>-->
+        <!--<a href="javascript:;" onclick="delArticleBatch();" class="btn btn-blue">删除</a>-->
+        <!--</div>-->
+        <!--<div class="fr">-->
+        <!--<div class="paginate">-->
+        <!--{$show}-->
+        <!--</div>-->
+        <!--&lt;!&ndash; end paginate &ndash;&gt;-->
+        <!--</div>-->
+        <!--</div>-->
+        <!-- end tables-btmctrl -->
+    </div>
+    <!-- end tablesWrap -->
+</div>
+{/block}
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+<script>
+    var url = '{$url}';
+    {literal}
+</script>
+{/literal}
+{/block}
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpUser/audit_waiting.css" type="text/css" />
+{/block}

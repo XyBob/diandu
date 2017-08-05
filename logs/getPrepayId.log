@@ -1,0 +1,20 @@
+2017-07-03 18:00:00
+result = {"return_code":"FAIL","return_msg":"\u5546\u6237\u53f7\u8be5\u4ea7\u54c1\u6743\u9650\u672a\u5f00\u901a\uff0c\u8bf7\u524d\u5f80\u5546\u6237\u5e73\u53f0>\u4ea7\u54c1\u4e2d\u5fc3\u68c0\u67e5\u540e\u91cd\u8bd5"}
+2017-07-13 16:33:17
+result = {"return_code":"SUCCESS","return_msg":"OK","appid":"wx59c8d2bbd5a5d646","mch_id":"1445151302","nonce_str":"PEDADxwDJdymdvlE","sign":"EAFFFA03A8E3FADD86096466DDEA1767","result_code":"SUCCESS","prepay_id":"wx20170713163310b67decbf2a0616429770","trade_type":"JSAPI"}
+2017-07-13 16:33:54
+result = {"return_code":"SUCCESS","return_msg":"OK","appid":"wx59c8d2bbd5a5d646","mch_id":"1445151302","nonce_str":"78rUwNnLlih7ObHE","sign":"55B1F32D634755513B6D2D8C98649FE5","result_code":"SUCCESS","prepay_id":"wx20170713163348f1526daf380973720234","trade_type":"JSAPI"}
+2017-07-13 16:35:36
+result = {"return_code":"SUCCESS","return_msg":"OK","appid":"wxe39acbcd78eea528","mch_id":"1484705662","nonce_str":"0lwG6oVoqC9CKETT","sign":"F3A020EF4DFCF0A14A2906587E1909FC","result_code":"SUCCESS","prepay_id":"wx2017071316353043bf1aacf70393265236","trade_type":"APP"}
+2017-07-14 16:18:42
+result = {"return_code":"SUCCESS","return_msg":"OK","appid":"wxe39acbcd78eea528","mch_id":"1484705662","nonce_str":"w8j0MaiONgEDXO5r","sign":"AA5E774259891FB5258DEFC6893C1EB5","result_code":"SUCCESS","prepay_id":"wx2017071416183592e41faab00461591351","trade_type":"APP"}
+2017-07-14 16:19:23
+result = {"return_code":"SUCCESS","return_msg":"OK","appid":"wxe39acbcd78eea528","mch_id":"1484705662","nonce_str":"uW4ZtVjuFkowFYxu","sign":"394AEC694277B4B19DC6A2329454743D","result_code":"SUCCESS","prepay_id":"wx201707141619161569c8f45e0314782055","trade_type":"APP"}
+2017-07-14 16:19:57
+result = {"return_code":"SUCCESS","return_msg":"OK","appid":"wxe39acbcd78eea528","mch_id":"1484705662","nonce_str":"GnlyMIKRNvFhwNgE","sign":"4A44AFC549714A562601E49E245B79D4","result_code":"SUCCESS","prepay_id":"wx20170714161950908b6515e20202029008","trade_type":"APP"}
+2017-07-17 16:50:53
+result = {"return_code":"SUCCESS","return_msg":"OK","appid":"wxe39acbcd78eea528","mch_id":"1484705662","nonce_str":"hU5QB8u5e6v0ZNnA","sign":"02FE43B0FEDBFCA2F8100E61CECEC492","result_code":"SUCCESS","prepay_id":"wx20170717165045b5aebf3f510389266126","trade_type":"APP"}
+2017-07-17 16:51:28
+result = {"return_code":"SUCCESS","return_msg":"OK","appid":"wxe39acbcd78eea528","mch_id":"1484705662","nonce_str":"45Vjir05jCLx7Zjk","sign":"278CA6A3A88948244666C354B20661B4","result_code":"SUCCESS","prepay_id":"wx20170717165120e48982e4fe0758493322","trade_type":"APP"}
+2017-07-17 17:16:11
+result = {"return_code":"SUCCESS","return_msg":"OK","appid":"wxe39acbcd78eea528","mch_id":"1484705662","nonce_str":"7CxgiuWLVxQtrTnA","sign":"81B108C3B104F8108A696DDB9C034440","result_code":"SUCCESS","prepay_id":"wx20170717171603ae662137850380906221","trade_type":"APP"}

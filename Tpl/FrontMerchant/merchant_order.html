@@ -1,0 +1,159 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/loading.css?version={$version}">
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/my_order.css?version={$version}"/>
+<style>
+    #load_wrapper{
+        top:4.4rem;
+    }
+    .no_content{
+        display: none;
+    }
+</style>
+{/block}
+{block name="content"}
+<header>
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>订单</h1>
+</header>
+<div class="switch_content clearfix">
+    <div class="fl active" data-id="take_out">
+        <div class="take_out">外卖订单</div>
+    </div>
+    <div class="fl" data-id="shop_consume">
+        <div class="shop_consume">到店消费</div>
+    </div>
+</div>
+<div id="load_wrapper">
+    <div id="scroller"  style="padding-bottom: 2.4rem;">
+        <!--todo 外卖订单列表-->
+        <div id="take_out" class="content active">
+            <ul>
+                {foreach from=$order_list item=order}
+                <li class="list" onclick="location.href='/FrontOrder/my_order_detail/order_id/{$order.order_id}'">
+                    <div class="list_top">
+                        <div class="img_info">
+                            <div class="img_left"><img src="{$order.headimgurl}" class="img-responsive"></div>
+                            <div class="img_middle">
+                                <div class="the_top">
+                                    <div class="top_state">
+                                        <p class="name">{$order.nickname}</p>
+                                        <div class="img_right grey">{$order.status_str}</div>
+                                    </div>
+                                    <p class="time">{$order.addtime|date_format:"%Y-%m-%d %H:%M"}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="describe"><span class="describe_name">{$order.order_item_list[0]['item_name']}</span><span>等{$order.order_item_num}件商品</span></div>
+                    <div class="money">¥{$order.pay_amount}</div>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+        <!--todo 到店里消费-->
+        <div class="content consumption" id="shop_consume">
+            <ul>
+                {foreach from=$order_list_in_busi item=order}
+                <li class="list_shop">
+                    <div class="list_left">
+                        <div class="img_left_shop"><img src="{$order.headimgurl}" class="img-responsive"></div>
+                        <div class="img_right_shop">
+                            <span class="name">{if $order.user_id eq 0}支付宝付款 {else}{$order.nickname}{/if}</span>
+                            <span class="time">{$order.addtime}</span>
+                        </div>
+                    </div>
+                    <div class="list_right blue">¥{$order.pay_amount}</div>
+                </li>
+                {/foreach}
+
+            </ul>
+        </div>
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+        </div>
+    </div>
+</div>
+<div class="no_content no_take_out">
+    <div class="no_order"></div>
+    <p class="text-center">您还没相关的订单</p>
+</div>
+<div class="no_content no_shop_consume">
+    <div class="no_order"></div>
+    <p class="text-center">您还没相关的订单</p>
+</div>
+{/block}
+{block name="js"}
+<script type="text/javascript" src="/Public/Js/front/iscroll.js"></script>
+<script type="text/javascript" src="/Public/Js/front/front_js/merchant_order.js"></script>
+<script>
+    var TakeOutFirstRow=parseInt('{$take_firstrow}');
+    var InStoreFirstRow=parseInt('{$take_firstrow}');
+    var TakeOutOrderTotal=parseInt('{$total_out}');
+    var InStoreOrderTotal=parseInt('{$total_in}');
+    var InStoreNum = 1; //默认页面显示4条数据              num可变
+    var TakeOutNum = 1;
+</script>
+{literal}
+<script>
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+</script>
+
+<script type="text/javascript">
+    $('.switch_content .fl').on('click',function(){
+        $(this).addClass('active').siblings('.fl').removeClass('active');
+        var target=$(this).data('id');
+        $('#'+target).addClass('active').siblings('.content').removeClass('active');
+        setTimeout(function(){
+            myScroll.refresh();
+            $("#scroller").css({
+                "transform":"translate(0px, 0px)"
+            });
+        },500);
+
+        var index = $(this).index();
+        if(index==0){
+            if(TakeOutOrderTotal==0){
+                $("#pullUp").hide();
+            }else{
+                $("#pullUp").show();
+                if(TakeOutFirstRow*TakeOutNum>=TakeOutOrderTotal){
+                    $(".pullUpLabel").html("没有更多");
+                }else{
+                    $(".pullUpLabel").html("上拉加载更多");
+                }
+            }
+        }else{
+            if(InStoreOrderTotal==0){
+                $("#pullUp").hide();
+            }else{
+                $("#pullUp").show();
+                if(InStoreFirstRow*InStoreNum>=InStoreOrderTotal){
+                    $(".pullUpLabel").html("没有更多");
+                }else{
+                    $(".pullUpLabel").html("上拉加载更多");
+                }
+            }
+        }
+        if($('#take_out').hasClass('active')){
+            $('.no_content.no_shop_consume').hide();
+            if($('#take_out .list_content:hidden')[0]){
+                $('.no_content.no_take_out').show();
+            }
+        }
+        if($('#shop_consume').hasClass('active')){
+            $('.no_content.no_take_out').hide();
+            if($('#shop_consume .list_content:hidden')[0]){
+                $('.no_content.no_shop_consume').show();
+            }
+        }
+    });
+</script>
+{/literal}
+{/block}

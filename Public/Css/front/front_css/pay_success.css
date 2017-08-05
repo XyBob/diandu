@@ -1,0 +1,150 @@
+html,body{
+    width:100%;
+    height:100%;
+    background: #fff;
+}
+.header{
+    position:absolute;
+}
+.header_empty{
+    width:100%;
+    height:2.2rem;
+}
+.header_content{
+    padding-top:1rem;
+    text-align: center;
+    border-bottom:0.5rem solid #F1F4F7;
+}
+.store_img{
+    width:3rem;
+    height:3rem;
+    margin:0 auto;
+}
+.img-responsive{
+    width:100%;
+    height:100%;
+    display: block;
+}
+.header_content .name{
+    font-size: 0.8rem;
+    color: #333333;
+}
+.text-center{
+    text-align: center;
+    margin:0.6rem 0 0.1rem;
+}
+.header_content .blue{
+    font-size: 1.8rem;
+    color: #3D9FE9;
+}
+.detail_content{
+    border-bottom:0.5rem solid #F1F4F7;
+}
+.detail_content .label{
+    font-size: 16px;
+    color: #999999;
+}
+.detail_content .pay_style{
+    font-size: 0.8rem;
+    color: #333333;
+}
+.pay_info{
+    margin-left:0.75rem;
+    display: inline-flex;
+    border-bottom: 1px solid #F1F4F7;
+    height:2.1rem;
+    align-items: center;
+    width:calc(100% - 0.75rem);
+}
+.evaluation_link{
+    height:2.2rem;
+    display: flex;
+    align-items: center;
+    padding-left:0.75rem;
+}
+.coupons_show{
+    position:absolute;
+    bottom:2rem;
+    width:calc(100% - 1.5rem);
+    height:6.9rem;
+    background: url('/Public/Images/front/front_img/icon_discountcoupon@3x.png') no-repeat;
+    background-size: 100% 100%;
+    margin:1rem 0.75rem 0 0.75rem;
+    overflow: hidden;
+}
+.coupons_show .red{
+    background: #F93B23;
+    height:0.25rem;
+    width:100%;
+    margin-top:0.65rem;
+}
+.coupons_show .grey{
+    background: #D9D9D9;
+    height:0.25rem;
+    width:100%;
+}
+.coupons_show .line_down{
+    padding-left:1.7rem;
+    margin-top:0.6rem;
+    position:relative;
+}
+.coupons_show .money_number{
+    width:9.8rem;
+}
+.coupons_show .coupons_name{
+    font-size: 0.8rem;
+    color: #888888;
+    letter-spacing: 0;
+    margin-bottom:0.2rem;
+}
+.coupons_show .coupons_name_grey{
+    font-size: 0.8rem;
+    color: #CDCDCD;
+    letter-spacing: 0;
+    margin-bottom:0.2rem;
+}
+.coupons_show .coupons_valid_time{
+    font-size: 0.7rem;
+    color: #A7A4A1;
+    letter-spacing: 0;
+}
+.coupons_show .amount{
+    position:absolute;
+    right:1.1rem;
+    top:0;
+    font-size: 1.2rem;
+    color: #3D9FE9;
+    letter-spacing: 0;
+    height:3rem;
+    line-height:3rem;
+}
+.coupons_show .amount .money_value{
+    font-size: 2.1rem;
+}
+.coupons_show .position_down{
+    position:absolute;
+    width:100%;
+    bottom:0;
+    left:0;
+    height:1.725rem;
+    line-height:1.725rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #F93B23;
+}
+.coupons_show .position_down.grey_color{
+    color:#999;
+}
+.star{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.star_img{
+    background:url(/Public/Images/front/front_img/star_default.png) no-repeat;
+    width:0.75rem;
+    height:0.75rem;
+    background-size:100% 100%;
+    margin-right:0.25rem;
+}

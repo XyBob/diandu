@@ -1,0 +1,196 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/my_store.css?version={$version}"/>
+<style></style>
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>我的店铺</h1>
+</div>
+<div class="header_empty"></div>
+<!--todo 店铺资料-->
+<div class="person_information">
+    <div class="person_data">
+        <div class="dianpu">
+            <img src="{$business_info.sign_pic}?imageView2/1/w/100/h/100/q/100/">
+        </div>
+        <div class="two">
+            <p class="title">{$business_info.business_name}</p>
+            <p class="start_number">
+                {$a=5 - $business_info.star}
+                {while $business_info.star-->0}
+                <span class="icon_pic1 icon_star_blank3x icon_star_full3x"></span>
+                {/while}
+                {while $a-->0}
+                <span class="icon_pic1 icon_star_blank3x"></span>
+                {/while}
+
+            </p>
+        </div>
+    </div>
+    <div class="money_detail">
+        <div class="one fl">
+            <span>¥{if $total_profit}{$total_profit}{else}0.00{/if}</span>
+            <span>总收益</span>
+        </div>
+        <div class="two fl">
+            <span>¥{if $today_profit}{$today_profit}{else}0.00{/if}</span>
+            <span>今日收益</span>
+        </div>
+    </div>
+    <!--todo 商铺是否工作展示区域-->
+    {if $business_info.is_out eq 1}
+    <div class="rest_wrapper"  {if $business_info.is_open eq 1}style="display:none"{/if}>
+        <div class="rest_icon"></div>
+        <div class="right_bottom rest">
+            <div class="top_empty"></div>
+            <div class="text-center">休息中</div>
+        </div>
+    </div>
+    <div class="work_wrapper"  {if $business_info.is_open eq 0}style="display:none"{/if}>
+        <div class="work_icon"></div>
+        <div class="right_bottom work">
+            <div class="top_empty"></div>
+            <div class="text-center">营业中</div>
+        </div>
+    </div>
+    {/if}
+</div>
+<!--todo 列表展示-->
+<div class="store_related one">
+    <a class="native_go" href="/FrontMerchant/store_data/is_edit/1">
+        <div class="relate_list">
+            <span class="icon_add_person icon_shopping_edit"></span>
+            <span>店铺资料</span>
+        </div>
+    </a>
+    <a class="native_go" href="/FrontMerchant/gathering_qr_code">
+        <div class="relate_list">
+            <span class="icon_add_person icon_shoukuan_orange"></span>
+            <span>收款二维码</span>
+        </div>
+    </a>
+    <a class="native_go" href="/FrontUserCenter/my_bank_card">
+        <div class="relate_list">
+            <span class="icon_add_person icon_bank_red"></span>
+            <span>银行账户</span>
+        </div>
+    </a>
+    {if $business_info.out_status == 0}
+    <a class="native_go" href="/Index/apply_takeout_store">
+        <div class="relate_list">
+            <span class="person_page_img icon_waimai_11"></span>
+            <span>开通外卖</span>
+        </div>
+    </a>
+    {elseif $business_info.out_status == 2}
+    <a class="native_go" href="#">
+        <div class="relate_list">
+            <span class="person_page_img icon_waimai_11"></span>
+            <span>外卖审核中</span>
+        </div>
+    </a>
+    {elseif $business_info.out_status == 3}
+    <a class="native_go" href="/Index/apply_takeout_store">
+        <div class="relate_list">
+            <span class="person_page_img icon_waimai_11"></span>
+            <span>外卖未通过</span>
+        </div>
+    </a>
+    {/if}
+    <a class="native_go" href="/FrontMerchant/merchant_order">
+        <div class="relate_list">
+            <span class="person_page_img icon_roder_11"></span>
+            <span>我的订单</span>
+        </div>
+    </a>
+    <a class="native_go" href="/FrontMerchant/my_customer">
+        <div class="relate_list">
+            <span class="person_page_img icon_user"></span>
+            <span>我的客户</span>
+        </div>
+    </a>
+    <a class="native_go" href="/FrontUserCenter/my_account">
+        <div class="relate_list">
+            <span class="icon_add_person icon_zhanghu_green"></span>
+            <span>账户管理</span>
+        </div>
+    </a>
+    <a class="native_go" href="/FrontMerchant/data_statistics">
+        <div class="relate_list">
+            <span class="icon_add_person icon_shuju_blue"></span>
+            <span>数据日统计</span>
+        </div>
+    </a>
+    <a class="native_go" href="/FrontMerchant/financial_statistics">
+        <div class="relate_list">
+            <span class="icon_add_person icon_caiwu_green"></span>
+            <span>数据月统计</span>
+        </div>
+    </a>
+    <a class="native_go" href="/FrontHelp/help_detail/id/26">
+        <div class="relate_list">
+            <span class="store_icon icon_fabuyhquan"></span>
+            <span>发布优惠券</span>
+        </div>
+    </a>
+    <a class="native_go" href="/FrontHelp/help_detail/id/26">
+        <div class="relate_list">
+            <span class="store_icon icon_addgoods"></span>
+            <span>发布商品</span>
+        </div>
+    </a>
+</div>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    var rest=1;
+    var work=0;
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    /*todo 是否营业和休息*/
+    $('.rest_wrapper').on('click',function(){
+        $.ajax({
+            url:"/FrontMerchant/change_open",
+            type:"post",
+            data:{is_open:rest},
+            success:function (data) {
+            if(data==1){
+                $('.rest_wrapper').hide();
+                $('.work_wrapper').show();
+            }else{
+                alert('您的店铺没有商品,不能开店')
+            }
+
+            }
+        })
+
+    });
+    $('.work_wrapper').on('click',function(){
+        $.ajax({
+            url:"/FrontMerchant/change_open",
+            type:"post",
+            data:{
+                is_open:work
+            },
+            success:function (data) {
+            if(data==1){
+                $('.work_wrapper').hide();
+                $('.rest_wrapper').show();
+            }
+            }
+        })
+
+    });
+</script>
+{/literal}
+{/block}

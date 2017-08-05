@@ -1,0 +1,142 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+
+<div class="tablesWrap">  
+	<form action="" method="post" >
+    <div class="tables-searchbox">  
+        <div class="formitems inline" style="float:left;">  
+            <label class="fi-name" style="width:60px; font-weight:normal;">起始时间：</label>  
+            
+			<div class="form-controls" style="margin-left:80px;">
+                <input type="text" id="start_time" name="start_time" value="{$start_time}" autocomplete="off" class="Wdate" onclick="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm:ss'})">  
+                <span class="fi-text">-</span>  
+                <input type="text" id="end_time"name="end_time" value="{$end_time}" autocomplete="off" class="Wdate" onclick="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+
+
+            </div>
+
+
+
+			
+			
+        </div>     
+        <button class="btn" type="submit" style="float:left;"><i class="gicon-search"></i>搜索</button>
+        <label class="fi-name" style="float:right;width:60px; font-weight:normal;">￥</label>
+        <label class="fi-name" style="float:right; font-weight:normal;" value="0.00">{$earns}</label>
+        <label class="fi-name" style="float:right;width:60px; font-weight:normal;">总收益：</label>
+
+
+    </div>  
+	</form>
+    <!-- end tables-searchbox -->  
+    <table class="wxtables">  
+        <colgroup>  
+        <col width="10%">
+        <col width="15%">  
+        <col width="8%">  
+        <col width="5%">
+        <col width="5%">  
+        <col width="10%">  
+        <col width="22%">   
+        </colgroup>  
+        <thead>  
+            <tr>  
+                <td>流水号</td>
+                <td>时间</td>  
+                <td>类型</td> 
+                <td>收入</td>  
+                <td>支出</td>  
+                <td>当前预存款</td> 
+                <td>备注</td>  
+            </tr>  
+        </thead>  
+        <tbody> 
+
+			{foreach from=$changed_list key=key name=loop item=v}
+            <tr>  
+                <td>{$v.proof}</td>
+                <td>{$v.addtime|date_format:"%Y-%m-%d %H:%M:%S"}</td>  
+                <td>{$v.change_type}</td>  
+                <td>+{$v.amount_in}</td>  
+                <td>-{$v.amount_out}</td> 
+                <td>{$v.amount_after_pay}</td> 
+                <td>{$v.remark}</td> 
+            </tr>  
+			{foreachelse}
+			<tr>  
+                <td colspan="20" style="text-align:center">对不起,暂无您要查询的数据!</td>  
+            </tr>  
+			{/foreach}
+            
+        </tbody>  
+    </table>  
+    <!-- end wxtables -->  
+    <div class="tables-btmctrl clearfix">  
+        <div class="fl">  
+            <a href="javascript:;" class="btn btn-blue" onclick='copy_link()'>复制财务明细链接</a>
+        </div>  
+        <div class="fr">  
+            <div class="paginate">  
+                {$page}  
+            </div>  
+            <!-- end paginate -->  
+        </div>  
+    </div>  
+    <!-- end tables-btmctrl -->  
+</div>  
+<!-- end tablesWrap -->   
+{/block} 
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+<script src="__JS__/clipboard.min.js"></script>
+<script type="text/javascript">
+    //复制链接
+function copy_link()
+{
+    var link = 'http://' + document.domain + '/FrontUser/account_list';
+    $.jPops.custom({
+        title:"请复制链接",  
+        content:'<div>财务明细链接：' + link + '</div>',
+        okBtnTxt:"复制",  
+        cancelBtnTxt:"关闭",  
+        callback:function(r)
+        {
+            if(r)
+            {
+                text = link;
+                copy_text('jpops-btn-ok');
+            }
+            else
+            {
+                return true;  
+            }
+        }
+    });
+}
+function copy_text(id)
+    {
+        var clipboard = new Clipboard('#' + id, {
+            text: function() {
+                return text;
+            }
+        });
+
+        clipboard.on('success', function(e) {
+            console.log(e);
+            alert('复制成功');
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+            alert('复制失败，请手动复制');
+        });
+    }
+</script>
+{/block} 
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpFinance/user_list.css" type="text/css" />
+{/block} 

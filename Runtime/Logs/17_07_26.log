@@ -1,0 +1,13 @@
+[ 2017-07-26T10:20:18+08:00 ] 127.0.0.1 /acp
+DEBUG: ----REQUEST_METHOD----:GET
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.009854s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.010192s ]
+
+[ 2017-07-26T10:20:18+08:00 ] 127.0.0.1 /login/index/redirect/BXpXM1ZiXX4GLghqXWIGYlZgUy9QcwY7AXcHawY+.html
+DEBUG: ----REQUEST_METHOD----:GET
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.010683s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.010451s ]
+
+[ 2017-07-26T10:20:18+08:00 ] 127.0.0.1 /Public/verify/
+DEBUG: ----REQUEST_METHOD----:GET
+

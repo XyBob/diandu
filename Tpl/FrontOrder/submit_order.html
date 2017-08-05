@@ -1,0 +1,605 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/submit_order.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/submit_order_address.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/new_goods_address.css?version={$version}"/>
+<style type="text/css">
+	.base_data{
+		margin-bottom:0;
+		background:#fff;
+	}
+	.detail_address{
+		padding-bottom:0.5rem;
+		line-height:1.1rem;
+	}
+	.text_matter{
+		display:block;
+		min-height:30px;
+		border-bottom: 1px solid #EFEFF4;
+	}
+	.edit-text{
+		display:block;
+	    resize: none;
+	    width: calc(100% - 4.3rem);
+	    padding-left:4.3rem;
+	    color: #333;
+	    font-size: 0.9rem;
+	    min-height:50px;
+	}
+	.input_matter{
+		color:#323232;
+	}
+	.detail_address .left_control{
+		height:1.1rem;
+		line-height:1.1rem;
+	}
+	.goods-label-li{
+		height:auto;
+		padding:0.5rem 0.75rem 0.5rem 0;
+	}
+	.goods-label{
+		max-width:60%;
+		display:flex;
+		display:-webkit-flex;
+		flex-direction:column;
+		-webkit-flex-direction:column;
+		justify-content:center;
+		-webkit-justify-content:center;
+	}
+	.goods-label .label-type{
+		font-size:0.7rem;
+		color:#666;
+	}
+	.modal_choose .scroll_answer_list{
+		overflow:hidden;
+	}
+	.new-address-inner{
+		background:#fff;
+	}
+	.new-address-outer{
+		padding-top:0;
+	}
+</style>
+{/literal}
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<form action="/FrontOrder/create_order_and_pay/" id="myform" method="post">
+    <input type="hidden" name="business_id" value="{$business_info.business_id}">
+    <input type="hidden" name="pay_amount" value="{$sum_price}">
+    <input type="hidden" name="total_amount" value="{$total_amount}">
+    <input type="hidden" name="shop_discount_id" value="{$breakes.shop_discount_id}">
+    <input type="hidden" name="shop_discount_num" value="{$breakes.shop}">
+    <input type="hidden" name="coupon_id" value="{$breakes.coupon_id}">
+    <input type="hidden" name="coupon_num" value="{$breakes.coupon}">
+    <input type="hidden" name="platform_discount_id" value="{$breakes.platform_discount_id}">
+    <input type="hidden" name="platform_discount_num" value="{$breakes.platform}">
+
+    <div class="header">
+	    <div class="left_header native_back" onclick="history.go(-1)">
+	        <div class="icon_add_person icon_left_white"></div>
+	    </div>
+	    <h1>提交订单</h1>
+	</div>
+<div class="main_content">
+
+    <a href="javascript:;" class="address_link" {if $user_check_address_info }style="display:none;"{/if}>
+        <div class="address_left">
+            <span class="img_new_add_small icon_dingwei"></span>
+            <span class="text">请填写您的收货地址</span>
+        </div>
+        <div class="icon_add_person icon_left_gray"></div>
+    </a>
+    
+    <a class="address_link_modify" {if !$user_check_address_info }style="display:none;"{/if}>
+        <div class="address_detail_left" data-address-id="$user_check_address_info.user_address_id">
+            <input type="hidden" name="user_address_id" value="{$user_check_address_info.user_address_id}">
+            <div class="top"><span class="name">收货人：{$user_check_address_info.realname}</span><span class="tel">{$user_check_address_info.mobile}</span></div>
+            <div class="down">{$user_check_address_info.address}</div>
+        </div>
+        <div class="icon_add_person icon_left_gray"></div>
+    </a>
+</div>
+<div class="line"></div>
+<div class="send_time" id="choose_send_time">
+    <div class="label">选择送达时间</div>
+    <div class="choose_time_link" data-year="" data-time="">
+    	<span class="blue" id="time_text">立即送出</span>
+    	<span class="icon_add_person icon_left_gray"></span>
+    </div>
+</div>
+<div class="list_content">
+    <div class="name_content">
+        <span class="tips_icon icon_store"></span>
+        <span>{$business_info.business_name}</span>
+    </div>
+    <ul class="order_list">
+        {foreach from=$shop_list item=this}
+        <li class="order_list_detail goods-label-li">
+            <div class="label goods-label">
+            	<span class="label-name">
+            		{$this.item_name}
+            	</span>
+                {if $this.property_value_one neq '' || $this.property_value_two neq ''}
+            	<span class="label-type">{$this.property_value_one}{$this.property_value_two}</span>
+                {/if}
+            </div>
+            <div class="">
+            	<span class="grey_number">X{$this.number}</span>
+            	<span class="label">¥{$this.sum}</span>
+            </div>
+        </li>
+        {/foreach}
+        <!--<li class="order_list_detail">-->
+            <!--<div class="label">蜜汁猪扒饭</div>-->
+            <!--<div class=""><span class="grey_number">X5</span><span class="label">¥110</span></div>-->
+        <!--</li>-->
+        <li class="order_list_detail">
+            <div class="label_grey">餐盒费</div>
+            <div class=""><span class="label">¥{$box_fee}</span></div>
+        </li>
+        <li class="order_list_detail">
+            <div class="label_grey">配送费</div>
+            <div class=""><span class="label">¥{$business_info.delivery_fee}</span></div>
+        </li>
+        {if $breakes.shop neq 0}
+        <li class="privilege">
+            <div class="left_control"><i class="icon_pic1 icon_pay3x"></i><span>商家满减优惠</span></div>
+            <div class="money label">- ¥{$breakes.shop}</div>
+        </li>
+        {/if}
+        {if $breakes.platform neq 0}
+        <li class="privilege">
+            <div class="left_control"><i class="icon_pic1 icon_pay3x"></i><span>平台满减优惠</span></div>
+            <div class="money label">- ¥{$breakes.platform}</div>
+        </li>
+        {/if}
+        {if $breakes.coupon neq 0}
+        <li class="privilege">
+            <div class="left_control"><i class="icon_pic1 icon_ticket3x"></i><span>优惠券优惠</span></div>
+            <div class="money label">- ¥{$breakes.coupon}</div>
+        </li>
+        {/if}
+    </ul>
+</div>
+<textarea name="note" id="note" placeholder="备注"></textarea>
+<div class="footer_fixed">
+    <div class="privilege_info">¥{$sum_price}<span class="grey">（已优惠¥{$breakes.sum}）</span></div>
+    <div class="submit_order">提交订单</div>
+</div>
+<!--todo 选择送货的时间-->
+<div class="modal_choose">
+    <div class="content">
+        <div class="title">选择送达时间</div>
+        <div class="scroll_answer_list" id="scroll_answer_list">
+            <ul class="answer_choose_list" id="answer_choose_list">
+                <li class="show_choose active" data-flag="0">
+                    <input type="hidden" name="arrive_time" value="0">
+                    <div class="name" data-id="" data-answ="">立即送出</div>
+                    <div class="icon_market icon_select_default icon_selected_b"></div>
+                </li>
+                <!--
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">12:30</div>
+                    <div class="icon_market icon_select_default"></div>
+                </li>
+                -->
+            </ul>
+        </div>
+    </div>
+</div>
+</form>
+<!--收货地址列表-->
+<div class="choose-address-outer">
+	<ul class="address-scroll">
+		{foreach from=$user_address_list item=this}
+		<li class="address-list" data-address-id="{$this.user_address_id}">
+			<div class="list-head">
+            	<span class="name">{$this.realname}</span>
+            	<span class="tel">{$this.mobile}</span>
+        	</div>
+        	<div class="list-bot">
+				<span class="address-cont">{$this.address}</span>
+        	</div>
+		</li>
+		{/foreach}
+		<!--<li class="address-list">-->
+			<!--<div class="list-head">-->
+            	<!--<span class="name">总经理</span>-->
+            	<!--<span class="tel">787878999</span>-->
+        	<!--</div>-->
+        	<!--<div class="list-bot">-->
+        		<!--<span class="address-cont">浙江省杭州市江干区民心路</span>-->
+        	<!--</div>-->
+		<!--</li>-->
+	</ul>
+	<span class="new-address-btn">新建收货地址</span>
+</div>
+<!--新增收货地址-->
+<div class="new-address-outer">
+	<div class="new-address-inner">
+	<!--todo 列表显示-->
+	<h6 class="new-address-title">
+		新建收货地址
+		<span class="address-close"></span>
+	</h6>
+	<form action="" class="base_data">
+	    <div class="form_group">
+	        <label for="person_name" class="label_style">姓名</label>
+	        <input type="text" id="person_name" placeholder="请填写" class="input_matter" name='realname' value="{$user_address_info.realname}">
+	    </div>
+	    <div class="form_group">
+	        <label for="phone" class="label_style">手机号</label>
+	        <input type="number" id="phone" placeholder="请填写" class="input_matter" name="mobile" value="{$user_info.mobile}">
+	    </div>
+	    <!--
+	    <div class="base_data_list">
+	        <label class="label_style">所在省</label>
+	        <select class="select_matter" id="province_id" name="province_id">
+	            <option value="0">请选择省份</option>
+	            {foreach from=$province_list item=province}
+	            <option value="{$province.province_id}" {if $user_address_info.province_id eq $province.province_id}selected{/if}>{$province.province_name}</option>
+	            {/foreach}
+	        </select>
+	        <div class="right_choose">
+	            <div class="icon_add_person icon_left_gray"></div>
+	        </div>
+	    </div>
+	    -->
+	    <div class="detail_address">
+	        <div class="left_control">
+	            <label class="label_style">收货地址</label>
+	        </div>
+	        <textarea placeholder="省、市、区" class="text_matter" id="detail_address" maxlength="60" data-longitude="{$near_address_arr.point.x}"  data-latitude="{$near_address_arr.point.y}" name="address" readonly>{$near_address_arr.name}</textarea>
+	        <input type="hidden" name="longitude" id="longitude" value="{$near_address_arr.point.x}">
+	        <input type="hidden" name="latitude" id="latitude" value="{$near_address_arr.point.y}">
+	    </div>
+	    <textarea class="edit-text" placeholder="详细地址" maxlength="30"></textarea>
+	    <div style="padding-right:0.75rem;" class="map-wrapper">
+	        <div id="allmap"  style="height:300px;width: 100%;" ></div>
+	    </div>
+	   <!-- <div class="whether_default">
+	        <span class="icon_market icon_select_rect {if $user_address_info.is_default}icon_selected_rect{/if} default_check"></span>
+	        <input type="hidden" name="is_default" id="is_default" value="{$user_address_info.is_default}">
+	        <span>设为默认地址</span>
+	    </div>-->
+	    <input type="hidden" id="whether_selected" value="1">
+	</form>
+	<div class="save" id="submit">保存</div>
+	<!--todo 添加成功-->
+	<div class="modal modal_success">
+	    <div class="modal_content">
+	        <div class="tips_icon icon_success_b"></div>
+	        <p class="text">添加成功</p>
+	    </div>
+	</div>
+	<!--todo 添加失败-->
+	<div class="modal modal_fail">
+	    <div class="modal_content">
+	        <div class="tips_icon icon_fail"></div>
+	        <p class="text">添加失败</p>
+	        <p class="tips">请确认地址后重新保存</p>
+	    </div>
+	</div>
+	</div>
+
+</div>
+{/block}
+{block name="js"}
+<script type="text/javascript">
+        var delivery_fee='{$business_info.delivery_fee}';//配送费
+        var business_id={$business_info.business_id};
+        var pay_amount={$sum_price};
+        var total_amount={$total_amount};
+        var shop_discount_id={$breakes.shop_discount_id};
+        var shop_discount_num={$breakes.shop};
+        var coupon_id={$breakes.coupon_id};
+        var coupon_num={$breakes.coupon};
+        var platform_discount_id={$breakes.platform_discount_id};
+        var platform_discount_num={$breakes.platform};
+        var user_address_id='{$user_check_address_info.user_address_id}';
+        var box_fee='{$box_fee}';
+</script>
+
+<script>
+    var box_count={$box_count};
+    var timeType = {$business_type};//1:外卖;2:菜市场;
+    var range = '{$business_info.range}';
+    var delivery_fee_free = '{$business_info.delivery_fee_free}';//满免运费
+    var start_delivery_fee ='{$business_info.start_delivery_fee}';//起送
+
+	console.log(timeType);
+</script>
+
+{literal}
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BQLHGlffjbXC30bFDcpIQkHIkaxKBBe6&services=true"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/front/iscroll.js"></script>
+
+<script type="text/javascript">
+	var timeScroll = new iScroll("scroll_answer_list");
+	setTimeout(function(){
+		timeScroll.refresh();
+	},200);
+
+</script>
+
+<script type="text/javascript">
+	//deliverTime:配送时间;initTime:最早配送时间;endTime:最晚配送时间;sendInit:配送起始时间;
+	//var timeType = 1;//1:外卖;2:菜市场;
+	var deliverTime = 1;
+	var interval = 0.5;
+	var initTime,endTime,sendInit;
+	if(timeType==1){
+		initTime = 9.5;
+		endTime = 23.5;
+		sendInit = initTime;
+	}else{
+		initTime = 8;
+		endTime = 18;
+		sendInit = initTime;
+	}
+	//送达时间
+	var sendEnd = sendInit + deliverTime;
+</script>
+
+<script src="/Public/Js/front/front_js/choose_time.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Js/front/front_js/submit_order.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+	var arrive_time=0;
+    var user_remark='';
+    var is_submit=0;
+    $(".submit_order").on("click",function () {
+        if(box_count==0){
+            show_alert('订单列表暂无商品，请添加！');
+            setTimeout(function(){
+                $(".modal_alert").hide();
+            },1500);
+            return;
+        }
+        if(is_submit==1){
+            show_alert('订单已提交，请返回订单列表查看！');
+            setTimeout(function(){
+                $(".modal_alert").hide();
+            },1500);
+            return;
+        }
+        user_remark=$('#note').val();
+    	var addressShow = $(".address_link_modify").css("display");
+    	var nowHour = new Date().getHours();
+	    var nowMin = new Date().getMinutes()/60;
+	    var nowTime = nowHour + nowMin;
+		var getYearVal = $(".choose_time_link").attr("data-year");
+		var getTimeVal = $(".choose_time_link").attr("data-time");
+		if(getYearVal==''){
+			show_alert('请选择配送时间！');
+    		setTimeout(function(){
+    			$(".modal_alert").hide();
+    		},1500);
+    		return;
+		}
+        arrive_time=getYearVal+' '+getTimeVal;
+		getTimeVal = getTimeVal.split(":");
+    	if(addressShow!="none"){
+    		if(timeType==1){
+    			if(nowTime>endTime){
+	    			show_alert('抱歉，不在配送时间！');
+		    		setTimeout(function(){
+		    			$(".modal_alert").hide();
+		    		},1500);
+		    		return;
+	    		}
+    			if(nowHour>Number(getTimeVal[0])){
+    				show_alert('请选择正确配送时间！');
+		    		setTimeout(function(){
+		    			$(".modal_alert").hide();
+		    		},1500);
+		    		return;
+    			}else if(nowHour==Number(getTimeVal[0])){
+    				if(nowMin>Number(getTimeVal[1])){
+    					show_alert('抱歉，不在配送时间！');
+			    		setTimeout(function(){
+			    			$(".modal_alert").hide();
+			    		},1500);
+			    		return;
+    				}
+    			}
+    		}
+    		if(pay_amount<start_delivery_fee){
+                show_alert('低于起送价格！');
+                setTimeout(function(){
+                    $(".modal_alert").hide();
+                },1500);
+                return;
+            }
+            is_submit=1;
+    		$.ajax({
+	            url:"/FrontOrder/create_order",
+	            type:"POST",
+	            dataType:"json",
+	            data:{
+                    delivery_fee:delivery_fee,
+                    box_fee:box_fee,
+	                business_id:business_id,
+	                pay_amount:pay_amount,
+	                total_amount:total_amount,
+	                shop_discount_id:shop_discount_id,
+	                shop_discount_num:shop_discount_num,
+	                coupon_id:coupon_id,
+	                coupon_num:coupon_num,
+	                platform_discount_id:platform_discount_id,
+	                platform_discount_num:platform_discount_num,
+	                user_address_id:user_address_id,
+	                arrive_time:arrive_time,
+                    user_remark:user_remark
+
+	            },
+	            success:function(d){
+	                console.log(d);
+	                if(d.status=="success")
+	                {	
+	                	var url = "/FrontOrder/create_order_and_pay/order_id/"+d.order_id;
+						if(!is_wechat()){
+							var _json = JSON.stringify({
+					            event: "to_jump",
+					            params: {"url":url}
+					        });
+					        if(is_ios()){
+								window.webkit.messageHandlers.webviewEvent.postMessage(_json);
+							}else{
+								window.ResultAndroid.webviewEvent(_json);
+							}
+						}else{
+	                		location.href=url;
+						}
+
+	                }
+	                else if(d.status=="stock")
+	                {
+                        is_submit=0;
+	                    show_alert(d.detail);
+	                }else if(d.status=="distance"){
+                        is_submit=0;
+	                    show_alert("大于商家配送距离")
+                    }
+	                else{
+	                    show_alert("提交订单失败");
+	                }
+	
+	            },
+	            error:function(e){
+	                console.log(e);
+	            }
+	        });
+    	}else{
+    		show_alert('请填写收货地址！');
+    		setTimeout(function(){
+    			$(".modal_alert").hide();
+    		},1500);
+    	}
+    	
+        
+        
+    });
+	
+	/*---todo 地图控制函数---*/
+	//function getAddr() {
+//    var myCity = new BMap.LocalCity();
+//    myCity.get(myFun);
+    // }
+
+    function initMap(position) {
+        var map = new BMap.Map("allmap");    // 创建Map实例
+       // var point = new BMap.Point(116.331398,39.897445);
+        var icon = new BMap.Icon('/Public/Images/point.png', new BMap.Size(40, 40), {
+            anchor: new BMap.Size(20, 40)});
+
+        var latitude = $("#detail_address").attr("data-latitude");
+        var longitude = $('#detail_address').attr("data-longitude");
+        var address =  $('#detail_address').val();
+        if(latitude!=""&&longitude!=""){
+			console.log(longitude);
+			console.log(latitude);
+            var point = new BMap.Point(longitude,latitude);
+            var marker = new BMap.Marker(point,{icon:icon});
+            //加上label提示
+//            var label = new window.BMap.Label(address, { offset: new window.BMap.Size(20, -10) });
+//            marker.setLabel(label);
+            map.addOverlay(marker);
+            map.centerAndZoom(point, 15);
+        }else{
+            var marker = new BMap.Marker(position,{icon:icon});
+            map.addOverlay(marker);
+            map.centerAndZoom(position, 15);
+        }
+
+        map.addControl(new BMap.NavigationControl());   //添加地图类型控件
+//        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+//        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        map.disableDoubleClickZoom()
+
+        var geoc = new BMap.Geocoder();
+        var p_x;
+        var p_y;
+
+        //记录第一次点击的坐标
+        map.addEventListener("touchstart",function(e){
+            p_x = e.jb.x;
+            p_y = e.jb.y;
+
+            //console.log(e.offsetY);
+        });
+//        map.addEventListener("touchend",function(e){
+//            console.log(e.jb.x);
+//            console.log(e.jb.x);
+//            //console.log(e);
+//            //console.log(e.offsetY);
+//        });
+        map.addEventListener("touchend", function (e) {
+            //手指进行拖动了就不设置标注
+            if(Math.abs(p_x - e.jb.x)>5||Math.abs(p_y - e.jb.y)>5){
+                return;
+            }
+
+            var pt = e.point;
+            map.clearOverlays();
+            var marker = new BMap.Marker(pt, {icon: icon});
+            var marker = new BMap.Marker(pt, {icon: icon});
+            map.addOverlay(marker);
+            geoc.getLocation(pt, function (rs) {
+                var addComp = rs.addressComponents;
+                console.log(addComp);
+                console.log(e.point.lng + "," + e.point.lat);
+
+                $('#longitude').val(e.point.lng);
+                $('#latitude').val(e.point.lat);
+                $('#detail_address').attr("data-longitude",e.point.lng);
+                $('#detail_address').attr("data-latitude",e.point.lat);
+                $('#detail_address').val('');
+                //$('#map_address').html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+                $('#detail_address').val(addComp.province + addComp.city  + addComp.district + addComp.street + addComp.streetNumber);
+
+            });
+        });
+    }
+
+    function myFun(result){
+        var cityName = result.name;
+        var geolocation = new BMap.Geolocation();
+        var gc = new BMap.Geocoder();
+        geolocation.getCurrentPosition(function(r){
+            if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                //alert('您的位置：'+r.point.lng+','+r.point.lat);
+                var pt = r.point;
+                initMap(pt);
+//                gc.getLocation(pt, function (rs) {
+//                    var addComp = rs.addressComponents;
+//
+//                    var province = addComp.province;
+//                    var city = addComp.city;
+//                    var area = addComp.district;
+//
+//                    if (province != "" && city != "" && area != "") {
+//                        // alert(province);
+//                        alert("当前定位城市:"+province+city+area);
+//                        window.location.href="/Index/home_index/area/"+area+"/lat/"+r.point.lat+"/lng/"+r.point.lng;
+//
+//                    }
+//                    //alert("当前定位城市:"+cityName);
+//                    //
+//                });
+            }
+            else {
+                alert('failed'+this.getStatus());
+            }
+        },{enableHighAccuracy: true})
+
+    }
+
+</script>
+{/literal}
+{/block}

@@ -1,0 +1,133 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+	<link rel="stylesheet" style="text/css" href="__PUBLIC__/Css/front/front_css/buy_bill.css?version={$version}">
+	<style type="text/css">
+		body{
+			background:#fff;
+		}
+	</style>
+{/block}
+{block name="content"}
+	<div class="pay_detail_wrap">
+		<h3 class="pay_detail_title">支付订单</h3>
+		<ul class="pay_detail">
+			<li class="pay_money" id="amount" amount="{$amount}">￥{$amount}</li>
+			<li class="pay_shop">{$business_name}</li>
+			<li class="pay_order_number">买单订单号：{$order_sn}</li>
+		</ul>
+	</div>
+	<ul class="pay_type_wrap">
+		<li class="pay_type_list">
+			<i class="icon_pic1 icon_wechatpay3x"></i>
+			<div class="type_intro">
+				<p class="type_name">微信支付</p>
+				<p class="pay_intro">推荐安装微信5.0及以上版本的用户使用</p>
+			</div>
+			<i class="icon_pic1 icon_select3x type_select"></i>
+		</li>
+	</ul>
+	<!--确认支付-->
+	<a href="javascript:;" class="pay_bill_btn" onclick="pay()">确认支付</a>
+	<div class="pay_loading">
+		<i></i>
+		<span>正在加载...</span>
+	</div>
+{/block}
+{block name="js"}
+<script type="text/javascript">
+	var order_id="{$order_id}";
+</script>
+{literal}
+	<script type="text/javascript">
+		//点击选择支付方式
+		$(".pay_type_list").on("click",function(){
+			$(this).children(".type_select").removeClass("type_select_none");
+			$(this).siblings().children(".type_select").addClass("type_select_none");
+		});
+
+        function pay(){
+        	$(".pay_loading").show();
+            var coin_num = $('#amount').attr("amount");
+            if(coin_num>0){
+                recharge(coin_num,order_id);
+            }else{
+                show_alert('金额错误');
+            }
+            //支付加载消失，后台判断
+            setTimeout(function(){
+            	$(".pay_loading").hide();
+            },1000);
+        }
+
+        var jsApiParameters;
+		function recharge(coin_num,order_id)
+		{
+			//提交
+			$.ajax({
+				url:"/FrontMerchantOrder/get_wx_param",
+				type:"POST",
+                dataType:"json",
+				data:{
+					coin_num: coin_num,
+//					business_user_id:business_user_id
+					order_id:order_id,
+				},
+				timeout:30000,
+				success:function(d){
+					if(d.code==0)
+					{
+						//微信支付
+						jsApiParameters = d.msg;
+						callpay();
+					}else{
+						show_alert(d.msg);
+					}
+				},
+                error:function(e){
+                    console.log(e);
+                    //show_alert("error:"+e.msg);
+                }
+			});
+		}
+
+		function jsApiCall()
+		{
+           //alert(jsApiParameters);
+			WeixinJSBridge.invoke(
+					'getBrandWCPayRequest',
+					jQuery.parseJSON(jsApiParameters),
+					function(res)
+					{
+						if(res.err_msg == "get_brand_wcpay_request:ok" )
+						{
+							//后续操作
+							location.href = '/index/home_index';
+						}
+						else
+						{
+							//WeixinJSBridge.log(res.err_msg);
+							//show_alert(res.err_code);
+                            //show_alert(res.err_desc);
+                            //show_alert(res.err_msg);
+						}
+					}
+			);
+		}
+
+		function callpay()
+		{
+			if (typeof WeixinJSBridge == "undefined"){
+				if( document.addEventListener ){
+					document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+				}else if (document.attachEvent){
+					document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+					document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+				}
+			}else{
+				jsApiCall();
+			}
+		}
+	</script>
+{/literal}
+{/block}

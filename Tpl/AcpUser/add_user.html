@@ -1,0 +1,163 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<div class="tabs clearfix">
+    <a href="javascript:;" class="active tabs_a fl" data-origin="additem" data-index="1">{$AGENT_NAME}信息</a>
+    <!--<a href="javascript:;" class="tabs_a fl" data-origin="additem" data-index="2">{$ITEM_NAME}属性</a>
+    <a href="javascript:;" class="tabs_a fl" data-origin="additem" data-index="3">详细描述</a>-->
+</div>
+<!-- end tabs -->
+<div class="tabs-content" data-origin="additem">
+<form method="post" id="form_addAgent" enctype="multipart/form-data">
+
+<div class="tc" data-index="1">
+        <div class="formitems inline">
+            <label class="fi-name">
+                <span class="colorRed">*</span>姓名：</label>
+            <div class="form-controls">
+                <input type="text" placeholder="" class="small" name="realname">
+                <span class="fi-help-text"></span>
+            </div>
+        </div>
+
+        <!--<div class="formitems inline">
+            <label class="fi-name">
+                <span class="colorRed">*</span>加盟商名称：</label>
+            <div class="form-controls">
+                <input type="text" placeholder="" class="small" name="nickname">
+                <span class="fi-help-text error"></span>
+            </div>
+        </div>
+
+        <div class="formitems inline">
+            <label class="fi-name">
+                <span class="colorRed">*</span>联系人：</label>
+            <div class="form-controls">
+                <input type="text" placeholder="" class="small" name="realname">
+                <span class="fi-help-text error"></span>
+            </div>
+        </div>
+-->
+        <div class="formitems inline">
+            <label class="fi-name">
+                <span class="colorRed">*</span>手机号：</label>
+            <div class="form-controls">
+                <input type="text" placeholder="" class="small" name="mobile" value="{$mobile}">
+                <span class="fi-help-text error"></span>
+            </div>
+        </div>
+
+        <!-- <div class="formitems inline">
+            <label class="fi-name">
+                <span class="colorRed">*</span>收货地址：</label>
+            <div class="form-controls">
+                <input type="text" placeholder="" class="small" name="address" value="{$address}">
+                <span class="fi-help-text error"></span>
+            </div>
+        </div> -->
+
+        <!--<div class="formitems inline">
+            <label class="fi-name"><span class="colorRed">*</span>用户类型：</label>
+            <div class="form-controls">
+                <div class="radio-group">
+                    <label><input type="radio" name="user_type" value="0" {if $item.user_type == 0}checked {/if}>系统内用户</label>
+                    <label><input type="radio" name="user_type" value="1" {if $item.user_type == 1}checked {/if}>系统外用户</label>
+                </div>
+                <span class="fi-help-text error"></span>
+            </div>
+        </div>
+
+        <div class="formitems inline">
+            <label class="fi-name">
+                邮箱：</label>
+            <div class="form-controls">
+                <input type="text" placeholder="" class="small" name="email" value="{$email}">
+                <span class="fi-help-text error"></span>
+            </div>
+        </div>
+
+        <div class="formitems inline">
+            <label class="fi-name">
+                <span class="colorRed">*</span>QQ：</label>
+            <div class="form-controls">
+                <input type="text" placeholder="" class="small" name="qq" value="{$qq}">
+                <span class="fi-help-text error"></span>
+            </div>
+        </div>-->
+
+        <div class="formitems inline">
+            <label class="fi-name">
+                <span class="colorRed">*</span>门店：</label>
+            <div class="form-controls">
+                <select name="store_sn">
+                    <option value="0">--请选择--</option>
+                    {foreach from=$dept_list item=item}
+                    <option value="{$item.node_code}">{$item.node_name}</option>
+                    {/foreach}
+                </select>    
+                <span class="fi-help-text error"></span>
+            </div>
+        </div>
+
+        <!--<div class="formitems inline">
+            <label class="fi-name">
+                <span class="colorRed">*</span>大区：
+            </label>
+            <div class="form-controls">
+                <select name="big_area_id">
+                    <option value="0">--请选择--</option>
+                    {foreach from=$big_area_list item=item}
+                    <option value="{$item.big_area_id}">{$item.area_name}</option>
+                    {/foreach}
+                </select>
+                <span class="fi-help-text error"></span>
+            </div>
+        </div>
+
+        <div class="formitems inline">  
+            <label class="fi-name"><span class="colorRed">*</span> 选择城市：</label>  
+            <div class="form-controls">  
+                <select class="small" id="province_id" name="province_id">  
+                    <option value="0">--选择省份--</option>  
+                    {foreach from=$province_list item=province_info}
+                        <option value="{$province_info.province_id}" {if isset($province_id) && $province_id == $province_info.province_id}selected{/if}>{$province_info.province_name}</option>  
+                    {/foreach}
+                </select> 
+                <select class="small" id="city_id" name="city_id">  
+                    <option value="0">--选择城市--</option>  
+                </select> 
+                <span id="div_area">
+                    <select class="small" id="area_id" name="area_id">  
+                        <option value="0">--选择地区--</option>  
+                    </select> 
+                </span>
+                <span class="fi-help-text"></span>  
+            </div>  
+        </div> -->
+
+        <div class="formactions mgl180">
+            <input type="hidden" name="action" value="add">
+            <button class="btn btn-blue"><i class="gicon-ok white"></i>提交</button>
+        </div>
+</div>
+
+<!-- end 基本信息 -->
+</form>
+</div>
+{/block}
+{block name="css"}
+{literal}
+<style>
+    #jpops .fi-name{width:65px;}
+    #jpops .form-controls{margin-left:75px;}
+    #j-item-extend li{margin-bottom:10px;}
+    .edit_item_tip{font-size: 18px;color: #a0a0a0;background-color: inherit;text-decoration: none;margin: 20px 180px;}
+</style>
+{/literal}
+{/block}
+{block name="js"}
+<script type="text/javascript" src="__ACPJS__/AcpArticle/user_save.js?version={$version}"></script>
+<script src="__JS__/jquery/ajaxupload.3.5.js?version={$version}"></script>
+<script src="__ACPJS__/AcpItem/add_item_step1.js?version={$version}"></script>
+{/block}

@@ -1,0 +1,380 @@
+html,body{
+    width:100%;
+    font-family: PingFangSC-Regular;
+    background: #F4F4F4;
+}
+.header_right{
+    position:absolute;
+    right:0;
+    height:2.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top:0;
+    padding:0 0.75rem;
+    font-size:0.7rem;
+    color: #FFFFFF;
+}
+.bodyhide{
+   overflow: hidden;
+}
+.img-responsive{
+    width:100%;
+    height:100%;
+    display: block;
+}
+/*todo 头部*/
+.header{
+    top:0;
+    width:100%;
+    background: #F93B23;
+    text-align: center;
+    height:2.2rem;
+    position:absolute;
+    z-index:3;
+}
+.header h1{
+    width:100%;
+    height:100%;
+    line-height:2.2rem;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+}
+.header .left_header{
+    position:absolute;
+    left:0.75rem;
+    top:0;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height:2.2rem;
+}
+/*todo 联系相关*/
+.header_empty{
+    height:2.2rem;
+    width:100%;
+}
+.contact_relevant{
+    padding-left:0.75rem;
+    width:100%;
+    background: #fff;
+    box-sizing: border-box;
+    /*margin-top:0.5rem;*/
+}
+.base_data_list{
+    height:2.25rem;
+    box-sizing: border-box;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:relative;
+    border-bottom: 1px solid #EFEFF4;
+}
+.benefit_percent_list{
+    width:100%;
+    border-bottom: 1px solid #EFEFF4;
+}
+.benefit_header{
+    box-sizing: border-box;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+    padding-top:0.6rem;
+    padding-bottom:0.45rem;
+    align-items: center;
+}
+.benefit_header.benefit_input_left{
+    justify-content: flex-start;
+}
+.benefit_input_left.person_unit{
+    justify-content: flex-start;
+}
+.benefit_header.benefit_input_left #benefit_percent{
+    width:8rem;
+}
+.benefit_header.benefit_input_left #benefit_percent.active{
+    width:3rem;
+}
+#benefit_percent+.red{
+    color:#F93B23;
+    font-size:0.7rem;
+}
+.benefit_input_left #per_consume.active{
+    width:3rem;
+}
+#per_consume+.red{
+    color:#F93B23;
+    font-size:0.7rem;
+}
+.blue_tips{
+    padding-left:4.15rem;
+    font-size: 0.5rem;
+    color: #7DC9F8;
+    padding-bottom:0.45rem;
+}
+.contact_relevant .contact_tel{
+    border-bottom:none;
+}
+.label_style{
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #323232;
+    width:3.6rem;
+    text-align: justify;
+    text-align-last:justify;
+}
+.input_matter{
+    font-size: 0.7rem;
+    color:#666;
+    width:calc(100% - 3.6rem);
+    box-sizing: border-box;
+    padding-left:0.85rem;
+}
+.input_matter_min{
+    font-size: 0.7rem;
+    color:#666;
+    width:calc(100% - 3.2rem);
+    box-sizing: border-box;
+    padding-left:0.95rem;
+    padding-right:1.65rem;
+}
+.select_matter{
+    font-size: 0.7rem;
+    color: #B4B4B4;
+    width:calc(100% - 4.15rem);
+    box-sizing: border-box;
+    margin-left:0.95rem;
+}
+.select_matter.active{
+    color:#666;
+}
+.select_matter option{
+    width: 100% !important;
+}
+/*todo 店铺基本资料*/
+.title_name{
+    height:1.5rem;
+    width:100%;
+    line-height:1.5rem;
+    font-size: 0.7rem;
+    color: #909090;
+    padding-left:0.8rem;
+    box-sizing: border-box;
+}
+.base_data{
+    padding-left: 0.75rem;
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+}
+.base_data_list .right_choose{
+    position:absolute;
+    right:0.75rem;
+    top:50%;
+    margin-top:-0.35rem;
+}
+/*todo 店铺介绍*/
+.shop_introduce{
+    width:100%;
+    height:5rem;
+    box-sizing: border-box;
+    padding:0.65rem 0.75rem;
+    resize:none;
+    font-size: 0.7rem;
+    color: #666;
+    background: #fff;
+}
+/*todo 上传店招图片 环境图片 营业执照图片*/
+.ref_upload_photo{
+    height:4rem;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding-left:0.65rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.add_img_control{
+    width:2.5rem;
+    height:2.5rem;
+}
+.ref_upload_photo input[type="file"] {
+    height: 2.5rem !important;
+    margin: 0!important;
+    width: 2.5rem!important;
+    top:0.75rem!important;
+    left:-2.5rem!important;
+}
+/*.ref_upload_photo_down input[type="file"]{
+    left:-2.5rem!important;
+}*/
+.add_img{
+    width:2.5rem;
+    height:2.5rem;
+    position:relative;
+    margin-right:0.4rem;
+}
+.add_img .fl{
+    margin-right:0.25rem;
+}
+.del_img{
+    width: 2rem;
+    height: 1.5rem;
+    position: absolute;
+    top: -0.7rem;
+    right: -0.25rem;
+    text-align: -webkit-right;
+    text-align: right;
+}
+.del_img a{
+    display: inline-block;
+}
+/*todo  固定在底部的提交按钮*/
+/*.footer_empty{
+    height:3.75rem;
+    width:100%;
+}*/
+.footer_fixed{
+    height:5.75rem;
+    /*height:3.75rem;*/
+    width:100%;
+    background: #F4F4F4;
+    overflow:hidden;
+    box-sizing: border-box;
+    padding-left:0.75rem;
+}
+.footer_fixed .whether_agree{
+    font-size: 0.7rem;
+    color: #666666;
+    margin-top:0.95rem;
+    margin-bottom:0.75rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.footer_fixed .whether_agree .blue{
+    font-size: 0.6rem;
+    color: #3D9FE9;
+    line-height: 0.85rem;
+}
+.footer_fixed .whether_agree .icon_control_small{
+    margin-right:0.45rem;
+}
+.footer_fixed .submit{
+    height:2.2rem;
+    line-height:2.2rem;
+    background: #F93B23;
+    border-radius: 0.2rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+    width:calc(100% - 1.5rem);
+}
+/*todo input和textarea的placeholder样式*/
+input::-webkit-input-placeholder {
+    color: #B4B4B4;
+}
+input:-moz-placeholder {
+    color: #B4B4B4;
+}
+input::-moz-placeholder {
+    color: #B4B4B4;
+}
+input:-ms-input-placeholder {
+    color: #B4B4B4;
+
+}
+textarea::-webkit-input-placeholder {
+    color: #B4B4B4;
+    font-size: 0.7rem;
+}
+textarea:-moz-placeholder {
+    color: #B4B4B4;
+    font-size: 0.7rem;
+}
+textarea::-moz-placeholder {
+    color: #B4B4B4;
+    font-size: 0.7rem;
+}
+textarea:-ms-input-placeholder {
+    color: #B4B4B4;
+    font-size: 0.7rem;
+}
+/*todo 模态框提示*/
+.modal_tips{
+    position:fixed;
+    z-index:4;
+    top:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+/*.modal_content{
+    width:10.75rem;
+    height:8.5rem;
+    background: #fff;
+    margin:12.45rem auto 0 auto;
+    text-align: center;
+    overflow: hidden;
+    border-radius:0.2rem;
+}
+.modal_content .icon_shanchutishi{
+    margin:1rem auto 0.8rem;
+}
+.modal_content .text{
+    font-family: PingFangSC-Regular;
+    font-size: 0.7rem;
+    color: #323232;
+    margin-bottom:0.6rem;
+ }
+.modal_content .tips_text{
+    font-family: PingFangSC-Regular;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    background: #F93B23;
+    border-radius: 0.2rem;
+    width:6rem;
+    height:1.75rem;
+    margin:0 auto;
+    line-height:1.75rem;
+}*/
+.base_data_list.detail_address{
+    min-height:2.25rem;
+    padding-top:0.6rem;
+    padding-bottom:0.6rem;
+    align-items: flex-start;
+}
+textarea.input_matter_min{
+    /*height:0.9rem;*/
+    height:1.1rem;
+    line-height:1.1rem;
+    resize:none;
+    width: calc(100% - 4.85rem);
+    padding-right:1rem;
+    margin-right: 1.65rem;
+    color:#666;
+}
+
+
+.modal_map{
+    position:fixed;
+    z-index:20000;
+    top:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.map_content{
+    width: 80%;
+    height: 60%;
+    border: 1px solid #fff;
+}

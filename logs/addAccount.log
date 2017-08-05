@@ -1,0 +1,12 @@
+2017-07-03 13:36:52
+SELECT `left_money` FROM `tp_users` WHERE ( user_id = 62881 AND is_enable = 1 ) LIMIT 1  
+2017-07-03 13:39:58
+SELECT `left_money` FROM `tp_users` WHERE ( user_id = 62881 AND is_enable = 1 ) LIMIT 1  
+2017-07-05 10:13:52
+SELECT `left_money` FROM `tp_users` WHERE ( user_id = 62819 AND is_enable = 1 ) LIMIT 1  
+2017-07-05 10:13:54
+SELECT `left_money` FROM `tp_users` WHERE ( user_id = 62819 AND is_enable = 1 ) LIMIT 1  
+2017-07-05 10:27:19
+SELECT `left_money` FROM `tp_users` WHERE ( user_id = 62819 AND is_enable = 1 ) LIMIT 1  
+2017-07-05 10:31:07
+SELECT `left_money` FROM `tp_users` WHERE ( user_id = 62819 AND is_enable = 1 ) LIMIT 1  

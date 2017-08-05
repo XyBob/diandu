@@ -1,0 +1,81 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/my_info.css?version={$version}"/>
+<style></style>
+{/literal}
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>我的信息</h1>
+    <div class="header_right" id="del_info"><span>清空信息</span></div>
+</div>
+<!--todo 信息列表-->
+<ul class="list_content">
+    {foreach from=$message_list item=this}
+    {if $this.message_type==1}
+    <li class="list message" id="{$this.message_id}">
+        <h2>{$this.message_title}</h2>
+        <p class="describe">{$this.describe}</p>
+        <p class="text-right">{date('Y-m-d  H:i:s',$this.addtime)}</p>
+    </li>
+    {else if $this.message_type==3}
+    <li class="list message order_info" id="{$this.message_id}">
+        <h2>{$this.message_title}</h2>
+        <p class="describe">{$this.describe}</p>
+        <p class="text-right">{date('Y-m-d  H:i:s',$this.addtime)}</p>
+    </li>
+    {else if $this.message_type==2}
+    <li class="list add_message order_info">
+        <h2 class="label_tips"><span class="">新增订单</span><span class="times">{date('Y-m-d  H:i:s',$this.addtime)}</span></h2>
+        <p class="describe add">您有一份新增订单</p>
+        <div class="control"><div class="prompt_btn order" order_id="{$this.order_id}">立即处理</div></div>
+    </li>
+    {/if}
+    {/foreach}
+   <!-- <li class="list add_message">
+        <h2 class="label_tips"><span class="">新增订单</span><span class="times">2017-05-17  18:20:33</span></h2>
+        <p class="describe add">通知信息的具体内容，提现结果通知，商家站内信等。</p>
+        <div class="control"><div class="prompt_btn" onclick="location.href='/Index/my_order_detail'">立即处理</div></div>
+    </li>-->
+</ul>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    /*todo 头部返回控制*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    $('.message').on('click',function(){
+        var id=$(this).attr('id');
+        var url='/FrontUserCenter/message_detail/message_id/'+id;
+        location.href=url;
+    });
+    $('.order').on('click',function(){
+        var order_id=$(this).attr('order_id');
+        var url='/FrontOrder/my_order_detail/order_id/'+order_id;
+        location.href=url;
+    });
+    /*todo 清除信息*/
+    $('#del_info').on('click',function(){
+        $.ajax({
+            url:'/FrontUserCenter/clear_message',
+            data:'',
+            type:'post',
+            dataType:'json',
+            success:function(){
+            console.log();
+            }
+        });
+        $('.order_info').remove();
+    });
+</script>
+{/literal}
+{/block}

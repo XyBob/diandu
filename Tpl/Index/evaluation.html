@@ -1,0 +1,80 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/evaluation.css?version={$version}"/>
+<style></style>
+{/literal}
+{/block}
+{block name="content"}
+<header>
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>评价</h1>
+</header>
+<div class="header_empty"></div>
+<!--todo -->
+<div class="evaluation_content">
+    <div class="info_detail">
+        <div class="img_wrapper"><img src="/Public/Images/front/data/item4.jpg" class="img-responsive"></div>
+        <div class="info_show">
+            <div class="store_info"><span class="name">黯然销魂饭名字（仓前店）</span><span class="grey">销量666</span></div>
+            <div class="order_info"><span class="money">¥22</span><span class="grey">2017-05-17 13:40</span></div>
+        </div>
+    </div>
+    <div class="star">
+        <div class="label">我的评分</div>
+        <div class="star_number">
+            <span class="add_new_star icon_star_default"></span>
+            <span class="add_new_star icon_star_default"></span>
+            <span class="add_new_star icon_star_default"></span>
+            <span class="add_new_star icon_star_default"></span>
+            <span class="add_new_star icon_star_default"></span>
+        </div>
+        <input type="hidden" id="start_value" value="0">
+    </div>
+</div>
+<div class="submit">提交</div>
+{/block}
+{block name="js"}
+
+{literal}
+<!--todo 顶部返回按钮的控制-->
+<script>
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+</script>
+<script type="text/javascript">
+    /*todo 评论的小星星控制*/
+    $('.star_number .add_new_star').click(function(){
+        var length=$('.star_number .add_new_star').length;
+        var index=$(this).index();
+        $('#start_value').val(index+1);
+        for(var i=0;i<=index;i++){
+            $('.star_number .add_new_star:eq('+i+')').addClass('icon_star_full');
+        }
+        for(var i=index;i<length;i++){
+            $('.star_number .add_new_star:eq('+(i+1)+')').removeClass('icon_star_full');
+        }
+    });
+</script>
+<script>
+    $('.submit').on('click',function(){
+        if($('#start_value').val()=='0'){
+            show_alert('请选择星星级别！');
+            return false;
+        }
+        else{
+            show_alert('提交成功！');
+            setTimeout(function(){
+                $('.modal_alert').hide();
+            },1000)
+        }
+    });
+
+</script>
+{/literal}
+{/block}

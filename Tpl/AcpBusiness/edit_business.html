@@ -1,0 +1,468 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<!--<script src="/Public/Plugins/native/native_event.js?version={$version}"></script>-->
+<form id="J_FormNotice" action="" method="post">
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>商店全名：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge" name="full_name" id="full_name" value="{$business_info.full_name}">
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>商店简称：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge" name="business_name" id="business_name" value="{$business_info.business_name}">
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>联系人：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge" name="contacts" id="contacts" value="{$business_info.contacts}">
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>联系电话：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge" name="contact_number" id="contact_number" value="{$business_info.contact_number}">
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>店铺分类：</label>
+        <div class="form-controls">
+            <!--<input type="text" placeholder="" class="xlarge" readonly  value="{$business_info.business_classify}">-->
+            <!--<span class="fi-help-text hide"></span>-->
+            <select class="select_matter" id="business_classify_id" name="business_classify_id">
+                <option value="0">点击选择店铺类型</option>
+                {foreach from=$business_classify_list item=classify}
+                <option value="{$classify.business_classify_id}" {if $business_info.business_classify_id eq $classify.business_classify_id}selected{/if}>{$classify.business_classify_name}</option>
+                {/foreach}
+            </select>
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>营业类型：</label>
+        <div class="form-controls">
+            <!--<input type="text" placeholder="" class="xlarge" readonly  value="{$business_info.business_classify}">-->
+            <!--<span class="fi-help-text hide"></span>-->
+            <select class="select_matter" id="category_id" name="category_id">
+                    <option value="0">点击营业类型</option>
+                    <option value="2016062900190371" {if $business_info.category_id=='2016062900190371'}selected{/if}>政府/社会组织</option>
+                    <option value="2016062900190337" {if $business_info.category_id=='2016062900190337'}selected{/if}>专业销售/批发</option>
+                    <option value="2016062900190296" {if $business_info.category_id=='2016062900190296'}selected{/if}>医疗健康</option>
+                    <option value="2016062900190124" {if $business_info.category_id=='2016062900190124'}selected{/if}>爱车</option>
+                    <option value="2016042200000148" {if $business_info.category_id=='2016042200000148'}selected{/if}>教育培训</option>
+                    <option value="2015091000052157" {if $business_info.category_id=='2015091000052157'}selected{/if}>超市便利店</option>
+                    <option value="2015080600000001" {if $business_info.category_id=='2015080600000001'}selected{/if}>航旅</option>
+                    <option value="2015063000020189" {if $business_info.category_id=='2015063000020189'}selected{/if}>生活服务</option>
+                    <option value="2015062600004525" {if $business_info.category_id=='2015062600004525'}selected{/if}>休闲娱乐</option>
+                    <option value="2015062600002758" {if $business_info.category_id=='2015062600002758'}selected{/if}>购物</option>
+                    <option value="2015050700000000" {if $business_info.category_id=='2015050700000000'}selected{/if}>美食</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="formitems inline">
+    <label class="fi-name"><span class="colorRed">*</span>邮箱：</label>
+    <div class="form-controls">
+        <input type="text" placeholder="" class="xlarge" name="mail" id="mail" value="{$business_info.mail}">
+        <span class="fi-help-text hide"></span>
+    </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>让利比例：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="small" name="rate" id="rate" value="{$business_info.rate*100}" id="rate">%
+            <span class="fi-help-text hide"></span>
+        </div>
+
+        <input type="hidden" name="old_rate" value="{$business_info.rate}">
+
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>人均消费：</label>
+        <div class="form-controls">
+            <input type="number" placeholder="" class="small" name="consumption" id="consumption" value="{$business_info.consumption}">元
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>起购价格：</label>
+        <div class="form-controls">
+            <input type="number" placeholder="" class="small" name="range" id="range" value="{$business_info.range}">元
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+
+   <!-- <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>省：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge"  value="{$business_info.province}" >
+            <span class="fi-help-text hide"></span>
+        </div>
+        <label class="fi-name"><span class="colorRed">*</span>市：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge"  value="{$business_info.city}">
+            <span class="fi-help-text hide"></span>
+        </div>
+        <label class="fi-name"><span class="colorRed">*</span>区：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge"  value="{$business_info.area}">
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>-->
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>请选择省市区：</label>
+
+        <div class="form-controls">
+            省：<select name="province_id" id="province_id" style="width: 120px">
+            <option value="">-请选择-</option>
+            {foreach from=$province_list item=province}
+            <option value="{$province.province_id}" {if $province.province_id==$business_info.province_id}selected{/if}>{$province.province_name}</option>
+            {/foreach}
+        </select>
+            市：<select name="city_id" id="city_id" style="width: 120px">
+            <option value="">-请先选择省-</option>
+             {foreach from=$city_list item=city}
+             <option value="{$city.city_id}" {if $city.city_id==$business_info.city_id}selected{/if}>{$city.city_name}</option>
+             {/foreach}
+        </select>
+            区:&nbsp;<select name="area_id" id="area_id" style="width: 120px">
+            <option value="">-请先选择市-</option>
+             {foreach from=$area_list item=area}
+             <option value="{$area.area_id}" {if $area.area_id==$business_info.area_id}selected{/if}>{$area.area_name}</option>
+             {/foreach}
+        </select>
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+    <!-----地图部分------>
+    <div class="map_container" id="map_container" style="width:800px;height:500px;margin-left: 180px"></div><br>
+    <div class="formitems inline">
+        <label class="fi-name">搜索：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge" name="suggestId" id="suggestId" value="">
+            <div id="searchResultPanel" class="xlarge" style="border:1px solid #C0C0C0;height:auto; display:none;"></div>
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>店铺地址：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge" name="address" id="address" value="{$business_info.address1}">
+            <span class="fi-help-text hide"></span>
+        </div>
+        <label class="fi-name"><span class="colorRed">*</span>详细地址：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge" name="address_detail" id="address_detail" value="{$business_info.address2}">
+            <span class="fi-help-text hide"></span>
+        </div>
+        <label class="fi-name"><span class="colorRed"></span>经度：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge" readonly="readonly" name="longitude" id="longitude" value="{$business_info.longitude}">
+        </div>
+        <label class="fi-name"><span class="colorRed"></span>纬度：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge"  readonly="readonly" name="latitude" id="latitude" value="{$business_info.latitude}">
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>店铺介绍：</label>
+        <div class="form-controls">
+            <textarea name="desc">{$business_info.desc}</textarea>
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+
+    {upload_image_widget($sign_pic)}
+    {upload_image_widget($evn_pic)}
+    {upload_image_widget($license_pic)}
+
+
+    <div class="formitems inline">
+        <div class="form-controls" >
+            <span>下面是店铺绑定银行卡信息部分</span>
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>银行卡持卡人：</label>
+        <div class="form-controls">
+            <input  placeholder="" class="small" name="realname" id="realname" value="{$bank_card_info.realname}">
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>银行：</label>
+        <div class="form-controls">
+            <select name="bank_id" id="bank_id"  style="width: 120px">
+                <option value="0" selected>请选择银行</option>
+                {foreach from=$bank_list item=this}
+                <option value="{$this.bank_id}" {if $this.bank_id==$bank_card_info.bank_id}selected{/if}>{$this.bank_name}</option>
+                {/foreach}
+            </select>
+        </div>
+    </div>
+
+
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>开户行：</label>
+        <div class="form-controls">
+            <input  placeholder="" class="small" name="bank_branch" id="bank_branch" value="{$bank_card_info.opening_bank}">
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>卡号：</label>
+        <div class="form-controls">
+            <input type="number" placeholder="" class="small" name="card_number" id="card_number" value="{$bank_card_info.account}">
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>身份证号：</label>
+        <div class="form-controls">
+            <input type="number" placeholder="" class="small" name="id_card" id="id_card" value="{$bank_card_info.id_card_no}">
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+    <input type="hidden" name="bank_card_data_id" value="{$bank_card_info.bank_card_id}">
+    <div class="formitems inline">
+        <label class="fi-name"></label>
+        <div class="form-controls">
+            <input type="hidden" name="business_id" value="{$business_info.business_id}">
+            <button type="submit" class="btn btn-blue"><i class="gicon-check white"></i>保存</button>
+            <a  href="javascript:Select()" class="btn btn-blue" onclick="examine({$business_info.business_id},false)">冻结商家</a>
+        </div>
+
+    </div>
+</form>
+{/block}
+
+{block name="js"}
+<!-- 编辑器 -->
+<!--<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>-->
+<script type="text/javascript" src="__JS__/jquery/ajaxupload.3.5.js?version={$version}"></script>
+<!--<script type="text/javascript" src="__ACPJS__/AcpNotice/notice_save.js?version={$version}"></script>-->
+<script>
+    var old_rate='{$business_info.rate}';
+    var lat = '{$business_info.latitude}' || '28.1255940';
+    var lng = '{$business_info.longitude}' || '120.9820840';
+</script>
+<!--<script type="text/javascript" src="__JS__/jquery/jquery.min.js"></script>-->
+{literal}
+<script>
+    $('#province').change(function () {
+        var province_id = $("#province").find('option:selected').val();
+        // console.log(province_id);
+        $.ajax({
+            type: 'post',
+            url: '/AcpBusiness/get_city',
+            data: {province_id: province_id},
+            dataType: 'json',
+            success: function (data) {
+                var len = data.length;
+                var i = 0;
+                var html = ' <option value="">-请选择-</option>';
+                for (i = 0; i < len; i++) {
+                    html += ' <option value="' + data[i].city_id + '">' + data[i].city_name + '</option>';
+                }
+                $("#city").html(html);
+                $("#area").html('<option value="">-请选择-</option>');
+            }
+        });
+    });
+
+    $('#city').change(function () {
+        var city_id = $("#city").find('option:selected').val();
+        $.ajax({
+            type: 'post',
+            url: '/AcpBusiness/get_area',
+            data: {city_id: city_id},
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                var len = data.length;
+                var i = 1;
+                var html = ' <option value="">-请选择-</option>';
+                for (i = 1; i < len; i++) {
+
+                    html += ' <option value="' + data[i].area_id + '">' + data[i].area_name + '</option>';
+                }
+                $("#area").html(html);
+            }
+        });
+    });
+
+</script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BQLHGlffjbXC30bFDcpIQkHIkaxKBBe6"></script>
+<script>
+
+    {literal}
+    var map;
+    map = new BMap.Map("map_container");
+    map.addControl(new BMap.NavigationControl()); //初始化地图控件
+    map.addControl(new BMap.ScaleControl());
+    map.addControl(new BMap.OverviewMapControl());
+    //MapTypeControl：地图类型控件，默认位于地图右上方。
+    map.addControl(new BMap.MapTypeControl());
+
+    map.setDefaultCursor("url('bird.cur')");  //设置地图默认的鼠标指针样式
+    map.enableScrollWheelZoom();        //启用滚轮放大缩小，默认禁用。
+
+    //console.log("lng:"+lng+",lat:"+lat);
+    var point = new BMap.Point(lng, lat);
+    map.centerAndZoom(point,14);         //初始化地图中心点
+
+    var marker = new BMap.Marker(point); //初始化地图标记
+    var gc = new BMap.Geocoder();//地址解析类
+    marker.enableDragging();             //标记开启拖拽
+    map.addOverlay(marker);              //将标记添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+    marker.addEventListener("dragend",dragend);
+    //添加标记拖拽监听
+    /*marker.addEventListener("dragend", function(e){
+     //获取地址信息
+     //经度
+     window.parent.document.getElementById("center_lng").value=e.point.lng;
+     //维度
+     window.parent.document.getElementById("center_lat").value=e.point.lat;
+     gc.getLocation(e.point, function(rs){
+     showLocationInfo(e.point, rs);
+     });
+     });*/
+    var geoc = new BMap.Geocoder();
+    map.addEventListener("onclick", function (e) {
+        var pt = e.point;
+        map.clearOverlays();
+        var marker = new BMap.Marker(pt);
+
+        map.addOverlay(marker);
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+        geoc.getLocation(pt, function (rs) {
+            var addComp = rs.addressComponents;
+            console.log(addComp);
+            console.log(e.point.lng + "," + e.point.lat);
+//
+            $('#longitude').val(e.point.lng);
+            $('#latitude').val(e.point.lat);
+            //$('#address').attr("latitude",e.point.lat);
+            $('#address').val('');
+            //$('#map_address').html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+            $('#address').val(addComp.province + addComp.city  + addComp.district + addComp.street + addComp.streetNumber);
+
+        });
+    });
+
+
+
+    function dragend(e){
+        window.parent.document.getElementById("center_lng").value=e.point.lng;
+        //维度
+        window.parent.document.getElementById("center_lat").value=e.point.lat;
+        gc.getLocation(e.point, function(rs){
+            showLocationInfo(e.point, rs);
+        });
+    }
+
+    function G(id) {
+        return document.getElementById(id);
+    }
+    var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
+            {"input" : "suggestId"
+                ,"location" : map
+            });
+
+    ac.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
+        var str = "";
+        var _value = e.fromitem.value;
+        var value = "";
+        if (e.fromitem.index > -1) {
+            value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+        }
+        str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+
+        value = "";
+        if (e.toitem.index > -1) {
+            _value = e.toitem.value;
+            value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+        }
+        str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+        G("searchResultPanel").innerHTML = str;
+    });
+
+    var myValue;
+    ac.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+        var _value = e.item.value;
+        myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+        G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+
+        setPlace();
+    });
+
+
+
+    function setPlace(){
+        map.clearOverlays();    //清除地图上所有覆盖物
+        function myFun(){
+            var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+            map.centerAndZoom(pp, 18);
+            marker = new BMap.Marker(pp);
+            marker.enableDragging();
+            map.addOverlay(marker);    //添加标注
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+            marker.addEventListener("dragend",dragend);
+
+            $('#longitude').val(pp.lng);
+            $('#latitude').val(pp.lat);
+        }
+        var local = new BMap.LocalSearch(map, { //智能搜索
+            onSearchComplete: myFun
+        });
+        local.search(myValue);
+    }
+    {/literal}
+</script>
+<script>
+    function examine(business_id,flag){
+        $.jPops.confirm(
+            {
+                title: "提示",
+                content: "您确定这么做？",
+                okBtnTxt: "确定",
+                cancelBtnTxt: "取消",
+                callback: function (r) {
+                    if (r) {
+                        $.post('/AcpBusiness/freeze_business', {"business_id": business_id,flag:flag}, function (data, textStatus) {
+                            console.log(data);
+                            if (data.code == 1) {
+                                alert(data.msg);
+                                location.href='/AcpBusiness/get_business_list'
+                            }
+                            else {
+                                alert(data.msg);
+                            }
+                        },'json');
+                    }
+                    return true;
+                }
+            });
+    }
+</script>
+{/literal}
+<!--<script type="text/javascript" src="__JS__/jquery/jquery.min.js"></script>-->
+{/block}
+
+{block name="css"}
+<link rel="stylesheet" href="__KD__/themes/default/default.css"/>
+<link rel="stylesheet" href="/Public/Css/acp/AcpNotice/add_notice.css" type="text/css"/>
+{/block}
+
+

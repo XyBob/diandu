@@ -1,0 +1,208 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/personal_data.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/DateSelector.css?rev=@@hash&version={$version}"/>
+<style>
+
+</style>
+{/literal}
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>个人资料</h1>
+</div>
+<div class="header_empty"></div>
+<input type="hidden" id="whether_save" value="0">
+<div class="style_show"></div>
+<!--todo 主要内容列表-->
+<ul class="list_content">
+    <li class="show_list list_head">
+        <div class="left_word">头像</div>
+        <div class="ref_upload_photo">
+            <a href="javascript:;" class="right_word" title="上传环境图片" id="add_upload">
+                <div class="img-control">
+                    <img src="/Public/Images/front/front_img/touxiang_01@3x.png" class="img-responsive" id="img_choose">
+                </div>
+                <div class="icon_add_person icon_left_gray"></div>
+            </a>
+            <input type="hidden" name="img_url " class="img_url" id="img_url" />
+        </div>
+    </li>
+    <li class="show_list" id="nick_name">
+        <div class="left_word">昵称</div>
+        <div class="right_word">
+            <div id="nick_name_update" class="text_left">今年一定好运来</div>
+            <div class="icon_add_person icon_left_gray"></div>
+        </div>
+        <input type="hidden" id="pre_nick" value="今年一定好运来">
+    </li>
+    <li class="show_list" id="real_name">
+        <div class="left_word">姓名</div>
+        <div class="right_word">
+            <div id="name_real" class="text_left">阳光</div>
+            <div class="icon_add_person icon_left_gray"></div>
+        </div>
+        <input type="hidden" id="pre_name" value="阳光">
+    </li>
+    <li class="show_list birth_control">
+        <div class="left_word">生日</div>
+        <div class="right_word" id="birth_control">
+            <div id="birth_time">
+                1990-01-01
+            </div>
+            <div class="icon_add_person icon_left_gray" id="birth_arrow"></div>
+        </div>
+        <input type="hidden" id="birth" value="1990-01-01">
+    </li>
+    <li class="show_list">
+        <div class="left_word">手机号</div>
+        <div class="right_word">15158131340</div>
+    </li>
+</ul>
+<div class="save" id="save_btn">保存</div>
+<!--todo 出生日期-->
+<div id="targetContainer"></div>
+<!--todo 姓名模态框-->
+<div class="modal_name modal">
+    <div class="header">
+        <div class="left_header">
+            <div class="icon_add_person icon_left_white"></div>
+        </div>
+        <h1>修改名字</h1>
+    </div>
+    <div class="header_empty"></div>
+    <input type="text" value="阳光" id="update_name" class="update_name" maxlength="10">
+</div>
+<div class="modal_nickname modal">
+    <div class="header">
+        <div class="left_header">
+            <div class="icon_add_person icon_left_white"></div>
+        </div>
+        <h1>修改昵称</h1>
+    </div>
+    <div class="header_empty"></div>
+    <input type="text" value="今年一定好运来" id="update_nick_name" class="update_name" maxlength="10">
+</div>
+{/block}
+{block name="js"}
+<script src="/Public/Js/front/front_js/DateSelector.js"></script>
+<script src="/Public/Js/jquery/ajaxupload.3.5.js"></script>
+{literal}
+<script type="text/javascript">
+    $(function(){
+        // todo 上传店招图片
+        new AjaxUpload("#add_upload", {
+            action: "/Front/uploadHandler",
+            name: "upfile",
+            responseType: "json",
+            onSubmit: function(){
+                /*  alert('正在上传');*/
+            },
+            onChange: function(file, extension){
+                if (extension && /^(jpg|png|jpeg|gif)$/.test(extension)) {
+                    return true;
+                }
+                else {
+                    show_alert('暂不支持该图片格式！');
+                    return false;
+                }
+            },
+            onComplete: function(file, response){
+                if (response.status === 0) {
+                    show_alert(response.msg);
+                }
+                else if (response.status === 1) {
+                    $('#img_choose').attr('src',response.img_url);
+                    $('#img_url').val(response.img_url);
+                }
+            }
+        });
+        var old_name=$('#name_real').html();
+        var old_birth=$('#birth_time').html();
+        //---------------------函数调用开始---------------------
+        new DateSelector({
+            input : 'birth_control',//点击触发插件的input框的id
+            container : 'targetContainer',//插件插入的容器id
+            type : 0,
+            //0：不需要tab切换，自定义滑动内容，建议小于三个；
+            //1：需要tab切换，【年月日】【时分】完全展示，固定死，可设置开始年份和结束年份
+            param : [1,1,1,0,0],
+            //设置['year','month','day','hour','minute'],1为需要，0为不需要,需要连续的1
+            beginTime : [1920,01,01],//如空数组默认设置成1970年1月1日0时0分开始，如需要设置开始时间点，数组的值对应param参数的对应值。
+            endTime : [],//如空数组默认设置成次年12月31日23时59分结束，如需要设置结束时间点，数组的值对应param参数的对应值。
+            recentTime : [1997,06,13],//如不需要设置当前时间，被为空数组，如需要设置的开始的时间点，数组的值对应param参数的对应值。
+            success : function(arr){
+                /*todo 出生日期的显示*/
+                $('#birth_time').html(arr[0]+'-'+arr[1]+'-'+arr[2]);
+            }//回调
+        });
+        /*todo 修改姓名*/
+        $('#real_name').on('click',function(){
+            $('.modal_name').show();
+        });
+        /*todo 昵称*/
+        $('#nick_name').on('click',function(){
+            $('.modal_nickname').show();
+        });
+        /*todo 姓名模态框的返回按钮*/
+        $('.modal_name .icon_left_white').on('click',function(){
+            $('.modal_name').hide();
+            $('#name_real').html($('#update_name').val());
+        });
+        /*todo 昵称模态框的返回按钮*/
+        $('.modal_nickname .icon_left_white').on('click',function(){
+            $('.modal_nickname').hide();
+            $('#nick_name_update').html($('#update_nick_name').val());
+        });
+        /*todo 当前页面的返回按钮*/
+        $('#current_page_arrow').on('click',function(){
+            var pre_nick=$('#pre_nick').val();
+            var nick=$('#nick_name_update').html();
+            var pre_name=$('#pre_name').val();
+            var name=$('#name_real').html();
+            var pre_birth=$('#birth').val();
+            var birth=$('#birth_time').html();
+            if((pre_nick==nick)&&(pre_name==name)&&(pre_birth==birth)){
+                history.go(-1);
+            }
+            else{
+                show_alert('请先保存');
+            }
+        });
+        $('#save_btn').on('click',function(){
+            $.ajax({
+                url:"",
+                type:"POST",
+                data:{
+                    new_nickname:$('#nick_name_update').html(),
+                    new_name: $('#name_real').html(),
+                    new_birth:$('#birth_time').html()
+                },
+                timeout:10000,
+                success:function(d){
+                    if(d) {
+                        if(d != 'failure')
+                        {
+                            show_alert('保存成功！');
+                            $('#whether_save').val(1);
+                            window.location.href='/Index/person_center'
+                        }
+                        else
+                        {
+                            show_alert('对不起，请重新保存！');
+                        }
+                    }
+                }
+            });
+        });
+    });
+</script>
+{/literal}
+{/block}

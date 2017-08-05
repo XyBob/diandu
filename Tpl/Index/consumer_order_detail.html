@@ -1,0 +1,276 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/consumer_order_detail.css?version={$version}"/>
+<style></style>
+{/literal}
+{/block}
+{block name="content"}
+<header>
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>订单详情</h1>
+</header>
+<div class="content">
+    <div class="list_top">
+        <div class="img_info">
+            <div class="img_left"><img src="/Public/Images/front/data/item4.jpg" class="img-responsive"></div>
+            <div class="img_middle">
+                <div class="the_top">
+                    <div class="top_state">
+                        <p class="name">谢天真</p>
+                        <div class="img_right red">已取消</div>
+                        <!--<div class="img_right red">等待送达</div>
+                        <div class="img_right red">待评价</div>
+                        <div class="img_right red">未付款</div>
+                        <div class="img_right red">已完成</div>
+                        <div class="img_right red">已付款</div>-->
+                    </div>
+                    <p class="time">2017-05-17 13:40</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--todo 待处理信息是否展示-->
+    <div class="no_deal_with" style="display: none">
+        <p class="because"><span class="name">事项：</span><span>申请退款</span></p>
+        <p class="because"><span class="name">原因：</span><span>定错了，重拍</span></p>
+        <p class="customer_message"><span class="name">客户留言：</span><span>无</span></p>
+    </div>
+    <!--todo 外卖订单列表展示-->
+    <ul class="list_show">
+        <li class="clearfix">
+            <span class="fl dishes">黯然销魂饭</span>
+            <p class="clearfix fr"><span class="fl number">X5</span><span class="fr money">¥110</span></p>
+        </li>
+        <li class="clearfix">
+            <span class="fl dishes">黯然销魂饭</span>
+            <p class="clearfix fr"><span class="fl number">X5</span><span class="fr money">¥110</span></p>
+        </li>
+        <li class="clearfix">
+            <span class="fl dishes">黯然销魂饭</span>
+            <p class="clearfix fr"><span class="fl number">X5</span><span class="fr money">¥110</span></p>
+        </li>
+        <li class="clearfix">
+            <span class="fl dishes">黯然销魂饭</span>
+            <p class="clearfix fr"><span class="fl number">X5</span><span class="fr money">¥110</span></p>
+        </li>
+        <li class="privilege full">
+            <div class="left_control"><i class="icon_pic1 icon_pay3x"></i><span>满减优惠</span></div>
+            <div class="money">- ¥30</div>
+        </li>
+        <li class="privilege">
+            <div class="left_control"><i class="icon_pic1 icon_ticket3x"></i><span>优惠券优惠</span></div>
+            <div class="money">- ¥30</div>
+        </li>
+    </ul>
+</div>
+<div class="total_money">实付：¥195</div>
+<!--todo 已取消状态->删除订单-->
+<div class="follow_operation_delete operation_state_control">
+    <div class="first grey ask_merchants">联系商家</div>
+    <div class="first red delete">删除订单</div>
+</div>
+<!--todo 等待送达->联系商家-->
+<div class="follow_operation_send operation_state_control">
+    <div class="first grey ask_merchants">联系商家</div>
+    <div class="first red goods_sure">确认收货</div>
+</div>
+<!--todo 待评价->评价-->
+<div class="follow_operation_payment operation_state_control">
+    <div class="first grey ask_merchants">联系商家</div>
+    <div class="first red">评价</div>
+</div>
+<!--todo 未付款->付款-->
+<div class="follow_operation_processed operation_state_control">
+    <div class="first grey ask_customer">取消</div>
+    <div class="first red agreed_refund">付款</div>
+</div>
+<!--todo　已经完成-->
+<div class="have_finished operation_state_control">
+    <div class="first grey ask_merchants">联系商家</div>
+    <div class="delete first red">删除</div>
+</div>
+<!--todo 已经付款-->
+<div class="have_payment operation_state_control">
+    <div class="first grey ask_merchants">联系商家</div>
+    <div class="cancel_order first red">取消订单</div>
+</div>
+<!--todo 配送信息-->
+<div class="shipping_information">
+    <p class="send_info">配送信息</p>
+    <p class="send_limit"><span class="send_time">送达时间</span><span>尽快送达</span></p>
+    <div class="shipping_details send_limit">
+        <div class="address">收货地址</div>
+        <ul class="address_info">
+            <li>谢天真</li>
+            <li>13733242777</li>
+            <li>浙江省杭州市余杭区仓前街道乐富海邦园88幢8楼808杭州盈软科技有限公司</li>
+        </ul>
+    </div>
+</div>
+<!--todo 订单信息-->
+<div class="order_information">
+    <p class="order_info">订单信息</p>
+    <p class="order_control"><span class="order_left">订单号：</span><span>81975387679087493827807</span></p>
+    <p class="order_control"><span class="order_left">下单时间</span><span>2017-05-17  13:40</span></p>
+    <p class="order_control pay_style"><span class="order_left">支付方式</span><span>微信支付</span></p>
+</div>
+<!--todo 删除订单提示-->
+<div class="modal modal_del">
+    <div class="modal_content">
+        <div class="tips_icon icon_warning"></div>
+        <p class="warning">确定要删除该订单？</p>
+        <div class="operation">
+            <div class="cancel">取消</div>
+            <div class="sure">删除</div>
+        </div>
+    </div>
+</div>
+<!--todo　联系商家-->
+<div class="phone_bot_wrap modal">
+    <a href="tel:4004000">呼叫400400</a>
+    <span class="cancel">取消</span>
+</div>
+<!--todo 收货成功-->
+<div class="modal_success">
+    <div class="modal_content">
+        <div class="tips_icon icon_success_b"></div>
+        <p class="text">确认收货成功</p>
+    </div>
+</div>
+<!--todo 取消订单-->
+<div class="modal_choose cancel modal">
+    <div class="content">
+        <div class="title">取消订单？</div>
+        <div class="scroll_answer_list">
+            <ul class="answer_choose_list">
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">不想买了</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">拍错了，取消重拍</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">原因1</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">原因2</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">原因3</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">不想买了</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">拍错了，取消重拍</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">原因1</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">原因2</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+                <li class="show_choose">
+                    <div class="name" data-id="" data-answ="">原因3</div>
+                    <div class="circle_out"><div class="circle_in"></div></div>
+                </li>
+            </ul>
+        </div>
+        <div class="modal_fixed clearfix">
+            <div class="fl text-center">
+                <div class="modal_confirm">确认</div>
+            </div>
+            <div class="fl text-center">
+                <div class="cancel">取消</div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+{literal}
+<!--todo 公用的弹框控制-->
+<script>
+    /*todo 模态框通用的控制*/
+    $('.modal').on('click',function(){
+        $(this).hide();
+        $('body').css('overflow','scroll');
+    });
+    /*todo 删除弹框的控制*/
+    $('.modal .modal_content').on('click',function(){
+        event.stopPropagation();/*todo 阻止冒泡*/
+    });
+    /*todo 点击弹框中的取消按钮*/
+    $('.modal .cancel').on('click',function(){
+        $('.modal').hide();
+        $('body').css('overflow','scroll');
+    });
+</script>
+<script>
+    /*todo 删除订单*/
+    $('.operation_state_control .delete').on('click',function(){
+        $('.modal_del').show();
+        $('body').css('overflow','hidden');
+    });
+    $('.modal_del .sure').on('click',function(){
+
+    });
+</script>
+<script>
+    /*todo 联系商家*/
+    $('.ask_merchants').on('click',function(){
+        $('.phone_bot_wrap').show();
+        $('body').css('overflow','hidden');
+    });
+</script>
+<script>
+    /*todo　确认收货*/
+    $('.goods_sure').on('click',function(){
+        $('.modal_success').show();
+        $('body').css('overflow','hidden');
+        setTimeout(function(){
+            $('.modal_success').hide();
+        },1000)
+    });
+</script>
+<script>
+    /*todo 付款*/
+    $('.agreed_refund').on('click',function(){
+
+    });
+</script>
+<script>
+    /*todo 取消订单*/
+    $('.have_payment .cancel_order').on('click',function(){
+        $('.modal_choose.cancel').show().css('display','flex');
+        $('body').css('overflow','hidden');
+    });
+    $('.scroll_answer_list .show_choose').on('click',function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    /*todo 删除弹框的控制*/
+    $('.modal_choose.cancel .content').on('click',function(){
+        event.stopPropagation();/*todo 阻止冒泡*/
+    });
+</script>
+
+<script>
+
+</script>
+{/literal}
+{/block}

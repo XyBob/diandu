@@ -1,0 +1,122 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+ <div class="tables-searchbox"> 
+        <a href="/AcpAgent/add_agent" class="btn btn-blue"><i class="gicon-plus white"></i>开通新城市</a>  
+    </div>
+<div class="tablesWrap">  
+    <table class="wxtables">  
+        <colgroup>  
+        <col width="6%">  
+        <col width="6%">  
+        <col width="12%">  
+        <col width="5%">  
+        <col width="8%">  
+        <col width="10%">  
+        <col width="12%">  
+        <col width="10%">  
+        <col width="12%">  
+        <col width="8%">  
+        <col width="10%">  
+        </colgroup>
+        <thead>  
+            <tr>
+                <td>城市名称</td>
+                <td>所属省份</td>
+                <td>开通时间</td>
+                <td>联系人</td>
+                <td>联系人手机号</td>
+                <td>登录用户名</td>
+                <td>身份证号</td>
+                <td>银行账号</td>
+                <td>开户行</td>
+                <td>预留手机号</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody>
+			{foreach from=$city_list item=city}
+				<tr>
+					<td>{$city.city_name}</td>
+					<td>{$city.province_name}</td>
+					<td>{$city.addtime|date_format:"%Y-%m-%d %H:%M:%S"}</td>
+					<td>{$city.realname}</td>
+					<td>{$city.mobile}</td>
+					<td>{$city.username}</td>
+					<td>{$city.id}</td>
+					<td>{$city.bank_account}</td>
+					<td>{$city.openning_bank}</td>
+					<td>{$city.bank_mobile}</td>
+					<td>
+						{if $city.is_open}
+						<a href="/AcpAgent/edit_agent/province_id/{$city.province_id}/city_id/{$city.city_id}" class="btn" title="修改账户信息">修改账户信息</a>
+						<a href="javascript:;" class="btn" title="关闭" onclick="return closeCity({$city.city_id});">关闭</a>
+						{else}
+						<a href="/AcpAgent/add_agent/city_id_id/{$city.city_id}" class="btn" title="开通">开通</a>
+						{/if}
+					</td>
+				</tr>
+			{foreachelse}
+				<tr><td colspan="12">没有符合条件的记录</td></tr>
+			{/foreach}
+        </tbody>
+    </table>  
+    <!-- end wxtables -->  
+    <div class="tables-btmctrl clearfix">  
+        <div class="fr">  
+            <div class="paginate">  
+				{$show}
+            </div>  
+            <!-- end paginate -->  
+        </div>  
+    </div>  
+    <!-- end tables-btmctrl -->  
+</div>  
+<!-- end tablesWrap -->   
+{/block} 
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+<script>
+{literal}
+function closeCity(city_id)
+{
+	$.jPops.confirm(
+	{  
+		 title:"提示",  
+		 content:"您确定要关闭该城市吗？",  
+		 okBtnTxt:"确定",  
+		 cancelBtnTxt:"取消",  
+		 callback:function(r)
+		 {  
+			 if(r)
+			 {
+				 $.post('/AcpAgent/closeCity', {"city_id":city_id}, function(data, textStatus) 
+				 {
+					if (data.code == 0)
+					{
+						alert('恭喜您，城市关闭成功');
+						location.reload();
+					}
+					else
+					{
+						alert(data.msg);
+					}
+				}, 'json');
+			 }  
+			 else{  
+				 // console.log("我是confirm的回调,false");  
+			 }  
+			 return true;  
+		 }  
+	 });  	
+}
+
+</script>
+{/literal}
+{/block} 
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/AcpRole/list_role.css" type="text/css" />
+{/block}

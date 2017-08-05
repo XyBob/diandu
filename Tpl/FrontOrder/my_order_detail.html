@@ -1,0 +1,538 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/order_detail.css?version={$version}"/>
+<style type="text/css">
+	.order_list_detail{
+	    border-bottom: 1px solid #F1F4F7;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+    	padding: 0.5rem 0.75rem 1rem 2rem;
+    	position:relative;
+	}
+	.order_list_detail img{
+		display:block;
+		border:0;
+		width:1.8rem;
+		height:1.8rem;
+		position:absolute;
+		left:0;
+		top:0.5rem;
+	}
+	.order_list .goods-label{
+	    max-width: 60%;
+	    display: flex;
+	    display: -webkit-flex;
+	    flex-direction: column;
+	    -webkit-flex-direction: column;
+	    justify-content: center;
+	    -webkit-justify-content: center;
+	    font-size: 0.9rem;
+	    color: #333333;
+	}
+	.order_list .grey_number {
+	    font-size: 0.6rem;
+	    color: #999999;
+	    margin-right: 2.5rem;
+	}
+	.order_list .label {
+	    font-size: 0.9rem;
+	    color: #333333;
+	}
+</style>
+{/literal}
+{/block}
+{block name="content"}
+<header>
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>订单详情</h1>
+</header>
+<div class="content">
+    <div class="list_top">
+        <div class="img_info">
+            <div class="img_left"><img src="{$user_info.headimgurl}" class="img-responsive"></div>
+            <div class="img_middle">
+                <div class="the_top">
+                    <div class="top_state">
+                        <p class="name">{$user_info.nickname}</p>
+                        <div class="img_right red">{if $order_info.is_evaluate eq 0 && $order_info.order_status eq 3}未评价{elseif $order_info.is_evaluate eq 1}已评价{else}{$order_info.order_status_name}{/if}</div>
+                        <!--<div class="img_right red">派送中</div>
+                        <div class="img_right red">已付款</div>
+                        <div class="img_right red">待处理</div>-->
+                    </div>
+                    <p class="time">{$order_info.addtime|date_format:"%Y-%m-%d %H:%M"}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--todo 待处理信息是否展示-->
+    <div class="no_deal_with" >
+        {if $order_info.order_status eq 5}
+        <p class="because"><span class="name">事项：</span><span>申请退款</span></p>
+        <p class="because"><span class="name">原因：</span><span>{$order_info.cancel_reason}</span></p>
+        {/if}
+        <p class="customer_message"><span class="name">客户留言：</span><span>{$order_info.user_remark}</span></p>
+    </div>
+    <!--todo 外卖订单列表展示-->
+    <ul class="list_show order_list">
+        {foreach from=$commodity_detail item=this}
+        
+        <li class="order_list_detail goods-label-li" {if $this.property_value_one neq '' || $this.property_value_two neq ''}style="padding-bottom:0.5rem;"{/if} >
+        	<img src="{$this.base_pic}"/>
+            <div class="label goods-label">
+            	<span class="label-name">{$this.item_name}</span>
+            	{if $this.property_value_one neq '' || $this.property_value_two neq ''}
+            	<span class="label-type">{$this.property_value_one}{$this.property_value_two}</span>
+             	{/if}
+            </div>
+            <div class="">
+            	<span class="grey_number">X{$this.number}</span>
+            	<span class="label goods-price">¥{$this.commodity_price_sum}</span>
+            </div>
+        </li>
+        
+        <!--<li class="clearfix">
+        	<div class="goods-label fl">
+        		<span class="dishes">{$this.item_name}</span>
+	            <sapn class="dishes-type">
+	                {$this.property_value_one}{$this.property_value_two}
+	            </sapn>
+        	</div>
+            <p class="clearfix">
+            	<span class="fl number">X{$this.number}</span>
+            	<span class="fr money">¥{$this.commodity_price_sum}</span>
+            </p>
+        </li>-->
+        {/foreach}
+        {if $order_info.box_fee}
+        <li class="clearfix make-box">
+            <span class="fl dishes">餐盒费</span>
+            <p class="clearfix fr"><span class="fr money">¥{$order_info.box_fee}</span></p>
+        </li>
+        {/if}
+        {if $order_info.delivery_fee}
+        <li class="clearfix send-box">
+            <span class="fl dishes">配送费</span>
+            <p class="clearfix fr"><span class="fr money">¥{$order_info.delivery_fee}</span></p>
+        </li>
+        {/if}
+        <!--<li class="clearfix">-->
+            <!--<span class="fl dishes">黯然销魂饭</span>-->
+            <!--<p class="clearfix fr"><span class="fl number">X5</span><span class="fr money">¥110</span></p>-->
+        <!--</li>-->
+        <!--<li class="clearfix">-->
+            <!--<span class="fl dishes">黯然销魂饭</span>-->
+            <!--<p class="clearfix fr"><span class="fl number">X5</span><span class="fr money">¥110</span></p>-->
+        <!--</li>-->
+        {if $order_info.discount_mins_id neq 0}
+        <li class="privilege full merchant-favor">
+            <div class="left_control"><i class="icon_pic1 icon_pay3x"></i><span>商家满减优惠</span></div>
+            <div class="money">- ¥{$order_info.discount_mins_num}</div>
+        </li>
+        {/if}
+        {if $order_info.platform_discount_id neq 0}
+        <li class="privilege full platform-favor">
+            <div class="left_control"><i class="icon_pic1 icon_pay3x"></i><span>平台满减优惠</span></div>
+            <div class="money">- ¥{$order_info.platform_discounts}</div>
+        </li>
+        {/if}
+        {if $order_info.coupon_id neq 0}
+        <li class="privilege ticket-favor">
+            <div class="left_control"><i class="icon_pic1 icon_ticket3x"></i><span>优惠券优惠</span></div>
+            <div class="money">- ¥{$order_info.coupon_amount}</div>
+        </li>
+        {/if}
+    </ul>
+</div>
+<div class="total_money">实付：¥{$order_info.pay_amount}</div>
+<!--todo 取消状态->删除订单-->
+<div class="follow_operation_delete" {if $order_info.order_status eq 3}{else}style="display:none"{/if}>
+    <div class="first red">删除订单</div>
+</div>
+<!--todo 派送中状态->联系客户-->
+<div class="follow_operation_send" {if $order_info.order_status eq 2}{else}style="display:none"{/if}>
+    <div class="first grey ask_customer">联系客户</div>
+</div>
+<!--todo 已付款状态->打印小票  发货-->
+<div class="follow_operation_payment" {if $order_info.order_status eq 1}{else}style="display:none"{/if}>
+    <div class="first grey ask_customer">联系客户</div>
+    <div class="second red goods">发货</div>
+</div>
+<!--todo 待处理状态->联系客户 同意退款-->
+<div class="follow_operation_processed" {if $order_info.order_status eq 5}{else}style="display:none"{/if}>
+    <div class="first grey ask_customer">联系客户</div>
+    <div class="refused_refund second red">拒绝退款</div>
+    <div class="first blue agreed_refund">同意退款</div>
+</div>
+<div class="follow_operation_payment">
+	<div class="first blue print">打印小票</div>
+</div>
+<!--todo 配送信息-->
+<div class="shipping_information">
+    <p class="send_info">配送信息</p>
+    <p class="send_limit"><span class="send_time">送达时间</span><span>{$order_info.arrive_time|date_format:"%Y-%m-%d %H:%M"}</span></p>
+    <div class="shipping_details send_limit">
+        <div class="address">收货地址</div>
+        <ul class="address_info">
+            <li>{$user_address.realname}</li>
+            <li>{$user_address.mobile}</li>
+            <li>{$user_address.address}</li>
+        </ul>
+    </div>
+</div>
+<!--todo 订单信息-->
+<div class="order_information">
+    <p class="order_info">订单信息</p>
+    <p class="order_control"><span class="order_left">订单号：</span><span>{$order_info.order_sn}</span></p>
+    <p class="order_control"><span class="order_left">下单时间</span><span>{$order_info.addtime|date_format:"%Y-%m-%d %H:%M:%S"}</span></p>
+    <p class="order_control pay_style"><span class="order_left">支付方式</span><span>{$order_info.payway_name}</span></p>
+</div>
+<!--todo 删除地址提示-->
+<div class="modal modal_del">
+    <div class="modal_content">
+        <div class="tips_icon icon_warning"></div>
+        <p class="warning">确定要删除该地址？</p>
+        <div class="operation">
+            <div class="cancel">取消</div>
+            <div class="sure">删除</div>
+        </div>
+    </div>
+</div>
+<!--todo　联系客户-->
+<div class="phone_bot_wrap modal">
+    <a href="tel:{$user_address.mobile}">呼叫{$user_address.mobile}</a>
+    <span class="cancel">取消</span>
+</div>
+<!--todo 发票打印中-->
+<div class="modal_success">
+    <div class="modal_content">
+        <div class="tips_icon icon_success_b"></div>
+        <p class="text">小票打印中</p>
+    </div>
+</div>
+<!--todo　发货-->
+<div class="modal modal_goods">
+    <div class="modal_content">
+        <div class="tips_icon icon_warning"></div>
+        <p class="warning">外卖是否已经准备完善？</p>
+        <div class="operation">
+            <div class="cancel">等等发货</div>
+            <div class="sure">立马发货</div>
+        </div>
+    </div>
+</div>
+<!--todo 同意退款-->
+<div class="modal modal_refund">
+    <div class="modal_content">
+        <div class="tips_icon icon_warning"></div>
+        <p class="warning">是否同意退款？</p>
+        <div class="operation">
+            <div class="cancel">取消</div>
+            <div class="sure">确定</div>
+        </div>
+    </div>
+</div>
+<!--todo 拒绝退款-->
+<div class="modal modal_no_refund">
+    <div class="modal_content">
+        <div class="tips_icon icon_warning"></div>
+        <p class="warning">是否拒绝退款？</p>
+        <div class="operation">
+            <div class="cancel">取消</div>
+            <div class="sure">确定</div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    var order_id={$order_info.order_id};
+    var order_sn = '{$order_info.order_sn}';
+</script>
+{literal}
+<!--todo 公用的弹框控制-->
+<script>
+	$("#current_page_arrow").on("click",function(){
+		history.go(-1);
+	});
+    /*todo 模态框通用的控制*/
+    $('.modal').on('click',function(){
+        $(this).hide();
+        $('body').css('overflow','scroll');
+    });
+    /*todo 删除弹框的控制*/
+    $('.modal .modal_content').on('click',function(){
+        event.stopPropagation();/*todo 阻止冒泡*/
+    });
+    /*todo 点击弹框中的取消按钮*/
+    $('.modal .cancel').on('click',function(){
+        $('.modal').hide();
+        $('body').css('overflow','scroll');
+    });
+</script>
+<script>
+    /*todo 删除订单*/
+    $('.follow_operation_delete').on('click',function(){
+        $('.modal_del').show();
+        $('body').css('overflow','hidden');
+    });
+    $('.modal_del .sure').on('click',function(){
+
+    });
+</script>
+<script>
+    /*todo 联系客户*/
+    $('.ask_customer').on('click',function(){
+        $('.phone_bot_wrap').show();
+        $('body').css('overflow','hidden');
+    });
+</script>
+<script>
+	//打印数据
+	function printContInfo(){
+		var printCont = {
+			'userInfo':'',
+			'goodsInfo':'',
+			'sendInfo':'',
+			'orderInfo':''
+		};
+		//个人信息
+		var userInfo = {
+			'userName':'',
+			'userImg':'',
+			'userOrderTime':'',
+			'userNote':''
+		};
+		userInfo.userName = $(".list_top .name").text();
+		userInfo.userImg = $(".list_top .img-responsive").attr("src");
+		userInfo.userOrderTime = $(".list_top .time").text();
+		userInfo.userNote = $(".customer_message .name").text();
+		//商品信息、餐盒费、配送费、商家满减优惠、平台满减优惠、优惠券优惠、实付
+		var goodsInfo = {
+			'goodsList':'',
+			'priceInfo':{
+				'makeBoxPrice':'',
+				'sendPrice':'',
+				'merchantFavor':'',
+				'platformFavor':'',
+				'ticketFavor':'',
+				'totalPrice':'',
+			}
+		};
+		var goodsList = [];
+		if($(".order_list .make-box")){
+			goodsInfo.priceInfo.makeBoxPrice = $(".make-box .money").text();
+		}
+		if($(".order_list .send-box")){
+			goodsInfo.priceInfo.sendPrice = $(".send-box .money").text();
+		}
+		if($(".order_list .merchant-favor")){
+			goodsInfo.priceInfo.merchantFavor = $(".merchant-favor .money").text();
+		}
+		if($(".order_list .platform-favor")){
+			goodsInfo.priceInfo.platformFavor = $(".platform-favor .money").text();
+		}
+		if($(".order_list .ticket-favor")){
+			goodsInfo.priceInfo.ticketFavor = $(".ticket-favor .money").text();
+		}
+		goodsInfo.priceInfo.totalPrice = $(".total_money").text();
+		$(".order_list .order_list_detail").each(function(){
+			var listInfo = {
+				'goodsImg':$(this).find("img").attr("src"),
+				'goodsName':$(this).find(".label-name").text(),
+				'goodsType':'',
+				'goodsNum':$(this).find(".grey_number").text(),
+				'goodsPrice':$(this).find(".goods-price").text(),
+			};
+			if($(this).find(".label-type")){
+				listInfo.goodsType = $(this).find(".label-type").text();
+			}
+			goodsList.push(listInfo);
+		});
+		goodsInfo.goodsList = goodsList;
+		//配送信息
+		var sendInfo = {
+			'sendTime':$(".shipping_information .send_limit").find("span").eq(1).text(),
+			'addressUserName':$(".address_info li").eq(0).text(),
+			'addressUserTel':$(".address_info li").eq(1).text(),
+			'addressName':$(".address_info li").eq(2).text()
+		};
+		//订单信息
+		var orderInfo = {
+			'orderNum':$(".order_information .order_control").eq(0).find('span').eq(1).text(),
+			'orderTime':$(".order_information .order_control").eq(1).find('span').eq(1).text(),
+			'orderPayType':$(".order_information .order_control").eq(2).find('span').eq(1).text(),
+		};
+		//printCont.userInfo = userInfo;
+		//printCont.goodsInfo = goodsInfo;
+		//printCont.sendInfo = sendInfo;
+		//printCont.orderInfo = orderInfo;
+		//printCont = JSON.stringify(printCont);
+
+        printCont = {
+            'userInfo':userInfo,
+            'goodsInfo':goodsInfo,
+            'sendInfo':sendInfo,
+            'orderInfo':orderInfo
+        };
+
+		return printCont;
+	}
+    /*todo　打印小票*/
+    $('.print').on('click',function(){
+//        $('.modal_success').show();
+//        $('body').css('overflow','hidden');
+//        setTimeout(function(){
+//            $('.modal_success').hide();
+//        },1000)
+		
+		
+		var content = printContInfo();
+		console.log(content);
+        native_listen('print_order',{
+            "content":content,
+            "order_sn":order_sn
+        })
+
+    });
+</script>
+<script type="text/javascript">
+    /*todo 发货*/
+    $('.goods').on('click',function(){
+        $('.modal_goods').show();
+        $('body').css('overflow','hidden');
+    });
+    $('.modal_goods .sure').on('click',function(){
+        $.ajax({
+            url:"/FrontOrder/deliver_goods",
+            type:"POST",
+            dataType:"text",
+            data:{
+                order_id:order_id,
+            },
+            success:function(d){
+                if(d=="success"){
+                    //show_alert('发货成功！');
+                        $('.follow_operation_payment').hide();
+                        $('.modal_goods').hide();
+                        $('.follow_operation_send').show();
+                        $('.img_right').html('已发货');
+                        //window.location.href="/FrontUserCenter/my_order";
+
+                }
+                else if(d=="order_is_change"){
+                    show_alert('订单状态已改变，请刷新！');
+                    setTimeout(function(){
+                        $('.modal_content').hide();
+
+                    },1000)
+                }else{
+                    show_alert('失败！');
+                    setTimeout(function(){
+                        $('.modal_content').hide();
+
+                    },1000)
+                }
+            },
+            error:function(e){
+                console.log(e);
+            }
+        })
+    });
+</script>
+<script>
+    /*todo 同意退款*/
+    $('.agreed_refund').on('click',function(){
+        $('.modal_refund').show();
+        $('body').css('overflow','hidden');
+    });
+    $('.modal_refund .sure').on('click',function(){
+        $.ajax({
+            url:"/FrontOrder/agree_cancel",
+            type:"POST",
+            dataType:"text",
+            data:{
+                order_id:order_id,
+            },
+            success:function(d){
+                console.log($.trim(d));
+                if($.trim(d)=="success"){
+                    console.log('come in');
+                    show_alert('已退款！');
+                    setTimeout(function(){
+                        $('.modal_refund').hide();
+                        $('.follow_operation_processed').hide();
+                        $('.img_right').html('已退款');
+                        //window.location.href="/FrontUserCenter/my_order";
+
+
+                    },1000)
+                }
+                else{
+                    console.log('come oo');
+                    show_alert('同意退款失败，请联系客服！');
+
+                    setTimeout(function(){
+                        $('.modal_content').hide();
+
+                    },1000)
+                }
+            },
+            error:function(e){
+                console.log(e);
+            }
+        })
+    });
+</script>
+<script>
+    /*todo 拒绝退款*/
+    $('.refused_refund').on('click',function(){
+        $('.modal_no_refund').show();
+        $('body').css('overflow','hidden');
+    });
+    $('.modal_no_refund .sure').on('click',function(){
+        $.ajax({
+            url:"/FrontOrder/refuse_cancel",
+            type:"POST",
+            dataType:"text",
+            data:{
+                order_id:order_id,
+            },
+            success:function(d){
+                if(d=="success"){
+                    //show_alert('拒绝！');
+                    setTimeout(function(){
+                        $('.modal_refund').hide();
+                        $('.follow_operation_processed').hide();
+                        $('.modal_no_refund').hide();
+                        $('.img_right').html('总后台介入');
+                        //window.location.href="/FrontUserCenter/my_order";
+
+
+                    },1000)
+                }
+                else{
+                    show_alert('失败！');
+                    setTimeout(function(){
+                        $('.modal_content').hide();
+
+                    },1000)
+                }
+            },
+            error:function(e){
+                console.log(e);
+            }
+        })
+    });
+</script>
+
+<script>
+
+</script>
+{/literal}
+{/block}

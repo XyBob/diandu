@@ -1,0 +1,219 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" style="text/css" href="__PUBLIC__/Css/front/front_css/buy_bill.css?version={$version}">
+<style type="text/css">
+    body {
+        background: #fff;
+    }
+    .pay_detail_title{
+    	padding-left:2.6rem;
+    }
+    /*--顶部返回按钮--*/
+	#current_page_arrow{
+		width:1.2rem;
+		height:1.2rem;
+		position:absolute;
+		left:0.5rem;
+		top:0.5rem;
+		display:flex;
+		display:-webkit-flex;
+		align-items:center;
+		-webkit-align-items:center;
+		justify-content:center;
+		-webkit-justify-content:center;
+		background:rgba(0,0,0,0.5);
+		z-index:999;
+		border-radius:50%;
+	}
+</style>
+{/block}
+{block name="content"}
+<div class="pay_detail_wrap">
+	<div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h3 class="pay_detail_title">支付订单</h3>
+    <ul class="pay_detail">
+        <li class="pay_money" id="amount" amount="0.01">¥{$order_info.pay_amount}</li>
+        <li class="pay_shop">{$business_name}</li>
+        <li class="pay_order_number">买单订单号：{$order_info.order_sn}</li>
+    </ul>
+</div>
+<ul class="pay_type_wrap">
+    <li class="pay_type_list" pay_way="wx">
+        <i class="icon_pic1 icon_wechatpay3x"></i>
+
+        <div class="type_intro">
+            <p class="type_name">微信支付</p>
+
+            <p class="pay_intro">推荐安装微信5.0及以上版本的用户使用</p>
+        </div>
+        <i class="icon_pic1 icon_select3x type_select"></i>
+    </li>
+   <!-- <li class="pay_type_list" pay_way="wallet">
+        <i class="person_page_img icon_yuezhif"></i>
+
+        <div class="type_intro">
+            <p class="type_name">余额支付</p>
+
+            <p class="pay_intro">推荐使用</p>
+        </div>
+        <i class="icon_pic1 icon_select3x type_select type_select_none"></i>
+    </li>-->
+    {if $ua!='Wx'}
+    <li class="pay_type_list" pay_way="ali">
+        <i class="person_page_img icon_yuezhif"></i>
+
+        <div class="type_intro">
+            <p class="type_name">支付宝支付</p>
+
+            <p class="pay_intro">推荐使用</p>
+        </div>
+        <i class="icon_pic1 icon_select3x type_select type_select_none"></i>
+    </li>
+    {/if}
+</ul>
+<!--确认支付-->
+<a href="javascript:;" class="pay_bill_btn" onclick="pay()">确认支付</a>
+{/block}
+{block name="js"}
+<script>
+    var order_id = '{$order_id}';
+    var ua = '{$ua}';
+    var business_id = '{$business_id}';
+</script>
+{literal}
+<script type="text/javascript">
+	//顶部返回按钮
+	if(!is_wechat()){
+		$(".index_header").css("paddingLeft","2rem");
+	}else{
+		$("#current_page_arrow").hide();
+	}
+	$("#current_page_arrow").on("click",function(){
+		history.go(-1);
+	});
+    var pay_way = 'wx';
+    //点击选择支付方式
+    $(".pay_type_list").on("click", function () {
+        pay_way = $(this).attr('pay_way');
+        $(this).children(".type_select").removeClass("type_select_none");
+        $(this).siblings().children(".type_select").addClass("type_select_none");
+    });
+
+    function pay() {
+        var url = '/FrontMerchantOrder/get_wx_param';
+        var coin_num = $('#amount').attr("amount");
+        if (coin_num > 0) {//获取微信支付参数
+            if (pay_way == 'wx') {
+                if(ua=='Wx'){
+                    url = "/FrontMerchantOrder/get_wx_param";//用微信打开+微信支付
+                }else{
+                    url = "/FrontMerchantOrder/get_mobile_wxpay_param";//用app打开+微信支付
+                }
+            } else if(pay_way == 'ali'){
+               // url = "/FrontMerchantOrder/wallet_pay";//钱包支付
+                url = "/FrontMerchantOrder/get_mobile_alipay_param";
+            }
+            $.ajax({
+                url: url,
+                type: "POST",
+                dataType: "json",
+                data: {
+                    coin_num: coin_num,
+                    order_id: order_id,
+                    business_id:business_id,
+                },
+                timeout: 10000,
+                success: function (d) {
+                    console.log(d);
+                    if (pay_way == 'wx') {
+                        if(ua=='Wx'){//用微信打开+微信支付
+                            if (d.code == 0) {
+                                //微信支付
+                                jsApiParameters = d.msg;
+                                callpay();
+                            } else {
+                                show_alert(d.msg);
+                            }
+
+
+                        }else{//用app打开+微信支付
+                            if (d) {
+                                var pay_param = d;
+                                native_listen('wx_pay',{
+                                    parameter : pay_param,
+                                });
+                            } else {
+                                show_alert(d.msg);
+                            }
+                        }
+
+                    }else if(pay_way == 'ali'){
+                        if(d)
+                        {
+                            console.log(111);
+                            var pay_param = d;
+                            native_listen('ali_pay',{
+                                parameter : pay_param,
+                            });
+                        }else{
+                            show_alert("支付失败");
+                        }
+                        $(".pay_loading").hide();
+                    }else if(pay_way=='wallet'){
+                        if(d.code==1) {
+                            show_alert(d.msg);
+                            location.href = '/FrontOrder/pay_success/order_id/' + order_id;
+                        }else{
+                            show_alert(d.msg);
+                        }
+                        $(".pay_loading").hide();
+                    }
+                    $(".pay_loading").hide();
+                },
+                error: function (e) {
+                    console.log(e);
+                    $(".pay_loading").hide();
+                    show_alert("error:" + e.msg);
+                }
+            });
+        } else {
+            show_alert('金额错误');
+        }
+    }
+    function callpay() {
+        if (typeof WeixinJSBridge == "undefined") {
+            if (document.addEventListener) {
+                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+            } else if (document.attachEvent) {
+                document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+            }
+        } else {
+            jsApiCall();
+        }
+    }
+
+
+    function jsApiCall() {
+        //alert(jsApiParameters);
+        WeixinJSBridge.invoke(
+                'getBrandWCPayRequest',
+                jQuery.parseJSON(jsApiParameters),
+                function (res) {
+                    if (res.err_msg == "get_brand_wcpay_request:ok") {
+                        //后续操作
+                        location.href = '/FrontOrder/pay_success/order_id/' + order_id;
+                    }
+                    else {
+                    }
+                }
+        );
+    }
+
+
+</script>
+{/literal}
+{/block}

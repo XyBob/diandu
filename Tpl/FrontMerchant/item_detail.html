@@ -1,0 +1,190 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/order_detail.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/front/market/take_out.css?version={$version}"/>
+<style type="text/css">
+	body{
+		background:#fff;
+		padding-bottom:4rem;
+	}
+	.gray-area{
+		width:100%;
+		height:0.5rem;
+		background: #F1F4F7;
+	}
+	.modal {
+	    z-index: 99;
+	}
+	/*--顶部返回按钮--*/
+	#current_page_arrow{
+		width:1.5rem;
+		height:1.5rem;
+		position:absolute;
+		left:0.5rem;
+		top:0.5rem;
+		display:flex;
+		display:-webkit-flex;
+		align-items:center;
+		-webkit-align-items:center;
+		justify-content:center;
+		-webkit-justify-content:center;
+		background:rgba(0,0,0,0.5);
+		z-index:999;
+		border-radius:50%;
+	}
+</style>
+{/block}
+{block name="content"}
+<div class="left_header native_back" id="current_page_arrow">
+    <div class="icon_add_person icon_left_white"></div>
+</div>
+<img src="{$item_info.base_pic}" class="goods-detail-img"/>
+<div class="details-wrap">
+	<h6 class="goods-detail-name">{$item_info.item_name}</h6>
+	<div class="details-mid clearfix">
+		<!--菜市场详情,"月售"改为"销量"-->
+		<p class="fl stock-box">库存：<span class="stock-val">{$item_info.stock}</span></p>
+		<span class="fl sale-num">月售：{$month_num}</span>
+
+	</div>
+	<div class="details-bot clearfix" stock="{$item_info.stock}">
+		<p class="goods-price fl">¥<span class="sku_price">{$item_info.mall_price}</span></p>
+		<span class="join-car fr"{if $this_item_num}style="display: none;"{/if}>加入购物车</span>
+		<ul class="right-btn fr" {if $this_item_num}style="display: flex;"{/if}>
+			<li class="reduce"></li>
+			<li class="goods-num">{if $this_item_num}{$this_item_num}{else}1{/if}</li>
+			<li class="add"></li>
+		</ul>
+	</div>
+</div>
+<div class="gray-area"></div>
+<!--规格-->
+<!--库存为0:none-type-list;选中:active-type-list;-->
+<div class="type-area">
+	{foreach from=$sku_data item=this key=key}
+	<ul class="type-cont clearfix">
+		<li class="type-name fl"><span>{$this.property_name}</span>：</li>
+		{foreach from=$this.prop_value item=this1}
+		<li class="type-list fl  sku{$key+1}" data-property_id="{$this1.property_value_id}">{$this1.property_value}</li>
+		{/foreach}
+	</ul>
+	{/foreach}
+<!--	<ul class="type-cont clearfix">
+		<li class="type-name fl"><span>分类</span>：</li>
+		<li class="type-list fl" none-type-list data-flag2="1">叶厚</li>
+		<li class="type-list fl" data-flag2="2">叶薄</li>
+	</ul>-->
+</div>
+<div class="gray-area"></div>
+<!--更多信息-->
+<div class="more_detail">
+	<h6 class="more_detail_title">更多信息</h6>
+	<ul class="more_detail_list" style="font-size: 0.8rem;color: #666666;line-height: 1.1rem;">
+		{$content}
+		<!--<li>
+			<i></i>
+			<span>{$item_info.item_desc}</span>
+		</li>-->
+	</ul>
+</div>
+
+<!--底部按钮-->
+<div class="out-foot {if $shopping_cart_list}car-have-goods{/if}">
+	<div class="shop-car-icon">
+		<span class="total-num">{if $shopping_cart_list}{$total_number}{/if}</span>
+	</div>
+	<div class="price-box">
+		<p class="goods-price">¥<span class="total-price-val">{if $total_price}{$total_price}{/if}</span></p>
+		<p class="deliver-price">配送费¥<span>{$business_info.delivery_fee}</span></p>
+	</div>
+	<p class="send-out-price">¥<span>{$business_info.start_delivery_fee}</span>起送</p>
+	<!--去结算按钮-->
+	<a href="/FrontOrder/submit_order/business_id/{$business_info.business_id}" class="go-count">去结算</a>
+	<!--底部提示信息          后台数据嵌套时，foot-info里的span可考虑删除，传值到前台做判断-->
+	<p class="foot-info" style="display:none;">
+		已满<span class="met-val">80</span>元可减<span class="favor-val">30</span>元
+	</p>
+</div>
+<!--购物车-->
+<div class="shop-car-outer hide">
+	<div class="shop-car-shape"></div>
+	<div class="shop-car-inner">
+		<h6 class="car-title clearfix">
+			<p class="shop-name fl">{$business_info.business_name}</p>
+			<span class="del-car fr">清空购物车</span>
+		</h6>
+		<ul class="shop-car-cont">
+			{foreach from=$shopping_cart_list item=this}
+			<li class="shop-list clearfix" data-flag="{$this.item_id}" data-sku_id="{$this.item_sku_price_id}" stock="{$this.stock}">
+				<div class="goods-name fl">
+					<p>{$this.item_name}</p>
+					{if {$this.sku_value}}
+					<p class="small-word">{$this.sku_value}</p>
+					{/if}
+				</div>
+				<!--<p class="goods-name fl">{$this.item_name}</p>-->
+				<p class="goods-price fl">¥<span class="price-val">{$this.mall_price}</span></p>
+				<ul class="right-btn fr">
+					<li class="reduce"></li>
+					<li class="goods-num">{$this.number}</li>
+					<li class="add"></li>
+				</ul>
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+</div>
+<!--弹窗-->
+<div class="pop-up">请选择规格</div>
+<!--清除购物车弹窗-->
+<div class="modal modal_del">
+    <div class="modal_content">
+        <div class="tips_icon icon_warning"></div>
+        <p class="warning">确定要清空购物车？</p>
+        <div class="operation">
+            <div class="cancel">取消</div>
+            <div class="sure clear">清空</div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<!--<script src="/Public/Js/front/front_js/out_goods_details1.js" type="text/javascript" charset="utf-8"></script>-->
+
+<script type="text/javascript">
+var sku_num=Number('{count($sku_data)}');//sku规格的个数
+var item_id='{$item_info.item_id}';
+var business_id='{$item_info.business_id}';
+var item_sku_price_id='';//sku的id
+</script>
+<script src="/Public/Js/front/front_js/out_goods_details.js" type="text/javascript" charset="utf-8"></script>
+{literal}
+<script type="text/javascript">
+	//顶部返回按钮
+	if(!is_wechat()){
+		$(".index_header").css("paddingLeft","2rem");
+	}else{
+		$("#current_page_arrow").hide();
+	}
+	$("#current_page_arrow").on("click",function(){
+        //self.location=document.referrer;
+        var url = '/FrontMerchant/take_out_shop/business_id/'+business_id;
+        if(!is_wechat()){
+			var _json = JSON.stringify({
+	            event: "back",
+	            params: {"":""}
+	        });
+	        if(is_ios()){
+				window.webkit.messageHandlers.webviewEvent.postMessage(_json);
+			}else{
+				window.ResultAndroid.webviewEvent(_json);
+			}
+		}else{
+        	location.href= url;
+		}
+
+	});
+</script>
+{/literal}
+{/block}

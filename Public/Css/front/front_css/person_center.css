@@ -1,0 +1,311 @@
+html,body{
+    width:100%;
+    height:100%;
+    font-family: PingFangSC-Regular;
+    background: #F3F3F3;
+}
+.bodyhide{
+    overflow: hidden;
+}
+/*todo 头部*/
+.header_separate{
+    width:100%;
+    opacity: 1;
+    background: #F93B23;
+    text-align: center;
+    height:2.2rem;
+    position:static;
+    top:0;
+    z-index:3;
+}
+.header_separate .left_header{
+    position:absolute;
+    left:0;
+    top:0;
+    height:2.2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 0.75rem;
+}
+.header_empty{
+    width:100%;
+    height:2.2rem;
+}
+.header_separate h1{
+    width:100%;
+    height:100%;
+    line-height:2.2rem;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+}
+.header_right{
+    position:absolute;
+    right:0.75rem;
+    top:0;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height:2.2rem;
+}
+.header_right .one{
+    margin-right:0.45rem;
+    font-size: 0.7rem;
+    color: #F5F5F5;
+}
+/*todo 个人资料*/
+.person_information{
+    /*opacity: 0.9;*/
+    background: #F93B23;
+}
+.person_data{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    opacity: 0.9;
+    background: #F93B23;
+    height:4.25rem;
+}
+.head_portrait{
+    width:3rem;
+    height:3rem;
+    margin-right:0.5rem;
+    border-radius:50%;
+    overflow: hidden;
+}
+.head_portrait>img{
+    border-radius:50%;
+}
+.img-responsive{
+    width:100%;
+    height:100%;
+    display: block;
+}
+.person_data .icon_whiteright{
+    margin-right:0.6rem;
+}
+.date_exhibition{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left:0.75rem;
+    width:calc(100% - 3rem);
+}
+.date_exhibition .signature{
+    font-family: PingFangSC-Medium;
+    font-size: 0.75rem;
+    color: #FFFFFF;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:50%;
+    height:1.5rem;
+    line-height:1.5rem;
+}
+.money_detail{
+    width:100%;
+    height:2.2rem;
+    background: rgba(255,255,255,0.2);
+    font-size: 0.65rem;
+    color:#fff;
+}
+.money_detail .fl{
+    width:50%;
+    height:100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+    padding:0.225rem 0;
+    align-items: center;
+    text-align: center;
+    font-weight:200;
+}
+.money_detail .one.fl{
+    border-right:1px solid #F93B23;
+}
+/*todo 资料列表*/
+.data_list{
+    padding-top:0.5rem;
+}
+.data_list .common{
+    height:2.25rem;
+    display: flex;
+    justify-content: space-between;
+    background:#fff;
+    align-items: center;
+}
+.data_list .common.my_shop{
+
+}
+.data_list .list_img{
+    width:2.5rem;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.data_list .list_show_content{
+    width:calc(100% - 2.5rem);
+    height:100%;
+    border-bottom: 1px solid #EFEFF4;
+    box-sizing: border-box;
+}
+.data_list  .common:last-child .list_show_content{
+    border-bottom: none;
+}
+.data_list .list_show{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100%;
+    box-sizing: border-box;
+    width:100%;
+    padding-right:0.75rem;
+}
+.data_list .list_show .list_name{
+    font-size: 0.8rem;
+    color: #323232;
+}
+.data_list .my_account{
+   margin-bottom:0.5rem;
+}
+.data_list .my_account .list_show_content{
+    border-bottom:none;
+}
+/*todo 申请成为商家*/
+.apply_in_merchants{
+    width:9rem;
+    height:2.2rem;
+    background: #FFFFFF;
+    border: 1px solid #7DC9F8;
+    border-radius: 0.2rem;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top:0.75rem;
+}
+.apply_in_merchants .blue_text{
+    font-family: PingFangSC-Regular;
+    font-size: 0.8rem;
+    color: #7DC9F8;
+    margin-left:0.4rem;
+}
+/*todo 底部固定*/
+.footer_empty{
+    height:3rem;
+    width:100%;
+}
+.footer_fixed{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:2.45rem;
+    background: #F5F7F9;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer_fixed .three_show{
+    width:2.2rem;
+    height:100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.5rem;
+    color: #999999;
+}
+/*todo 模态框*/
+.modal{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:200%;
+    background: rgba(0,0,0,0.5);
+    z-index:1000;
+    display: none;
+}
+.tips_btn{
+    position:absolute;
+    border: 1px solid #FFFFFF;
+    border-radius: 0.5rem;
+    width:calc(100% - 6.75rem);
+    left:3.4rem;
+    height:2.5rem;
+    line-height: 2.5rem;
+    top:1.5rem;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+.tips_arrrow{
+    position:absolute;
+    top:0.9rem;
+    right:0.84rem;
+}
+.modal .content{
+    width:calc(100% - 2.5rem);
+    min-height:22.3rem;
+    margin:4.5rem auto 0 auto;
+    background: #fff;
+}
+.modal_content{
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background:#fff;
+    border-radius: 0.2rem;
+    position:relative;
+}
+.del{
+    width:1rem;
+    height:1rem;
+    background:url(/Public/Images/front/front_img/icon_guanbi@3x.png)  no-repeat;
+    background-size:100% 100%;
+    position:absolute;
+    top:0.5rem;
+    right:0.5rem;
+}
+.img-control{
+    width:4rem;
+    height:4rem;
+    margin:1rem auto 0.55rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.text-center{
+    text-align: center;
+}
+.modal_content .name{
+    font-size: 16px;
+    color: #323232;
+    letter-spacing: 0;
+    margin-bottom:0.45rem;
+}
+.modal_content .qr{
+    width:200px;
+    height:200px;
+    margin:0 auto;
+    margin-bottom:1rem;
+}
+.content_control.modal_content{
+    margin:0 auto;
+}
+.text_control{
+    width:200px;
+    font-size: 12px;
+    color: #858B8E;
+    margin:0 auto;
+    text-align: left;
+}
+.text_control.last_p{
+   margin-bottom:2.5rem;
+}

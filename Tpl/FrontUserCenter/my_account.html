@@ -1,0 +1,102 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/my_account.css?version={$version}"/>
+<style></style>
+
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>我的账户</h1>
+</div>
+<div class="header_empty"></div>
+<div class="money_show">
+    <div class="number">{if $left_money}{$left_money}{else}0{/if}</div>
+    <div class="name">钱包总额</div>
+</div>
+<!--todo 列表展示-->
+<ul class="data_list">
+   <!-- <a class="native_go" href="/FrontUserCenter/recharge/">
+        <li class="my_account common">
+                <div class="list_img">
+                    <div class="icon_add_person icon_chongzhi18x18"></div>
+                </div>
+                <div class="list_show_content">
+                    <div class="list_show">
+                        <span class="list_name">充值</span>
+                        <span class="icon_add_person icon_left_gray"></span>
+                    </div>
+                </div>
+        </li>
+    </a>-->
+   <a class="native_go" href="/FrontUserCenter/withdrawal">
+        <li class="reflect common">
+            <div class="list_img">
+                <div class="icon_add_person icon_tixian18x18"></div>
+            </div>
+            <div class="list_show_content">
+                <div class="list_show">
+                    <span class="list_name">提现</span>
+                    <span class="icon_add_person icon_left_gray"></span>
+                </div>
+            </div>
+        </li>
+    </a>
+    <a class="native_go" href="/FrontUserCenter/withdrawal_records">
+        <li class="reflect_records common">
+            <div class="list_img">
+                <div class="reflect_records_img"></div>
+            </div>
+            <div class="list_show_content">
+                <div class="list_show">
+                    <span class="list_name">提现记录</span>
+                    <span class="icon_add_person icon_left_gray"></span>
+                </div>
+            </div>
+        </li>
+    </a>
+    <a href="/FrontUserCenter/my_bank_card" class="native_go">
+        <li class="top_up common">
+            <div class="list_img">
+                <div class="icon_add_person icon_yinhangka18x18"></div>
+            </div>
+            <div class="list_show_content">
+                <div class="list_show">
+                    <span class="list_name">银行卡</span>
+                    <span class="icon_add_person icon_left_gray"></span>
+                </div>
+            </div>
+        </li>
+    </a>
+    <a href="/FrontUserCenter/account_list" class="native_go">
+        <li class="my_qr_code common">
+            <div class="list_img">
+                <div class="icon_add_person icon_mingxi18x18"></div>
+            </div>
+            <div class="list_show_content">
+                <div class="list_show">
+                    <span class="list_name">帐户明细</span>
+                    <span class="icon_add_person icon_left_gray"></span>
+                </div>
+            </div>
+        </li>
+    </a>
+</ul>
+
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        window.location.href='/FrontUserCenter/person_center'
+    });
+</script>
+{/literal}
+{/block}

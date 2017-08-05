@@ -1,0 +1,197 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" href="__PUBLIC__/Css/front/front_css/pay_success.css?version={$version}">
+<style type="text/css">
+	/*todo 模态框*/
+	.modal{
+	    position:fixed;
+	    top:0;
+	    width:100%;
+	    height:200%;
+	    background: rgba(0,0,0,0.5);
+	    z-index:1000;
+	}
+	.tips_btn{
+	    position:absolute;
+	    border: 1px solid #FFFFFF;
+	    border-radius: 0.5rem;
+	    width:calc(100% - 6.75rem);
+	    left:3.4rem;
+	    height:2.5rem;
+	    line-height: 2.5rem;
+	    top:1.5rem;
+	    font-size: 0.8rem;
+	    color: #FFFFFF;
+	    text-align: center;
+	}
+	.tips_arrrow{
+	    position:absolute;
+	    top:0.9rem;
+	    right:0.84rem;
+	}
+	.coupons_valid_time{
+		width:100%;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	}
+	.discount{
+	    font-size: 0.8rem;
+	    color: #888888;
+	    letter-spacing: 0;
+	}
+	/*--客户端分享按钮--*/
+	.share-btn{
+		display:block;
+		width:1rem;
+		height:2.2rem;
+		position:absolute;
+		top:0;
+		right:0.75rem;
+		background:url(/Public/Images/front/front_img/icon_share@3x.png) center no-repeat;
+		background-size:1rem 1rem;
+	}
+	/*--返回首页--*/
+	.go-home{
+		display:block;
+		width:92%;
+		height:2.2rem;
+		font-size: 0.9rem;
+		color: #FFFFFF;
+		letter-spacing: 1px;
+		line-height:2.2rem;
+		background: #F93B23;
+		border-radius: 4px;
+		text-align:center;
+		margin:2rem auto 0;
+	}
+</style>
+{/block}
+{block name="content"}
+<!--todo APP头部开始-->
+<div class="header">
+	<div class="left_header native_back" id="current_page_arrow">
+		<div class="icon_add_person icon_left_white"></div>
+	</div>
+	<h1>支付成功</h1>
+	<!--分享-->
+	<i class="share-btn"></i>
+</div>
+<div class="header_empty"></div>
+<!--todo APP头部结尾-->
+<div class="header_content">
+	<div class="store_img">
+		<img src="/Public/Images/testImg/test3.jpg" class="img-responsive">
+	</div>
+	<p class="text-center name">{$business_info.business_name}</p>
+	<span class="blue">¥{$order_info.pay_amount}</span>
+</div>
+<div class="detail_content fixed_footer">
+	<div class="pay_info">
+		<span class="label">付款信息：</span>
+		<span class="pay_style">{$order_info.payway_name}</span>
+	</div>
+	<div class="evaluation_link" {if $order_info.type==2}style="display: none"{/if}  onclick="location.href='/FrontUserCenter/evaluation/order_id/{$order_info.order_id}'">
+		<div class="label">立即评价：</div>
+		<ul class="star">
+			<li class="star_img"></li>
+			<li class="star_img"></li>
+			<li class="star_img"></li>
+			<li class="star_img"></li>
+			<li class="star_img"></li>
+		</ul>
+	</div>
+</div>
+<!--返回首页-->
+<a href="/Index/home_index" class="go-home">返回首页</a>
+<!--<div class="coupons_show">
+	<div class="red"></div>
+	<div class="line_down clearfix" id="jump">
+		<div class="fl money_number">
+			<p class="coupons_name">{$business_voucher_info.business_name}</p>
+			<p class="discount">满¥{$vouchers_info.amount_limit}减</p>
+			<p class="coupons_valid_time">{$business_voucher_info.address}</p>
+		</div>
+		<p class="amount">¥<span class="money_value">{$vouchers_info.num}</span></p>
+	</div>
+	{if $vouchers_info.is_have eq 0}
+	<p class="position_down">点此领取</p>
+	{/if}
+	{if $vouchers_info.is_have eq 1}
+	<p class="grey_color" style="position: absolute;width: 100%;bottom: 0;left: 0;height: 1.725rem;line-height: 1.725rem;text-align: center;font-size: 0.8rem;">已领取</p>
+	{/if}
+</div>-->
+<!--todo 邀请朋友分享的模态框-->
+<!--<div class="modal" id="share">
+    <div class="content">
+        <div class="tips_btn">点击更多，分享红包给好友哦</div>
+        <div class="tips_arrrow icon_add_person icon_jiantou_white"></div>
+    </div>
+</div>-->
+{/block}
+{block name="js"}
+<script>
+	vouchers_id={$vouchers_info.vouchers_id};
+	//console.log(vouchers_id);
+	order_id={$order_info.order_id};
+</script>
+{literal}
+<script type="text/javascript">
+	//微信端隐藏分享按钮
+	if(is_wechat()){
+		$(".header .share-btn").hide();
+	}
+	var jump="";
+	$('#jump').on('click',function () {
+	    if(jump!=""){
+            location.href=jump;
+		}
+    })
+	//分享
+	$("#share").on("click",function(){
+		$(this).hide();
+	});
+    $(".position_down grey_color").unbind("click");
+	/*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    $('.position_down').on('click',function(){
+        $.ajax({
+            url:"/FrontUserCenter/get_vouchers",
+            type:"POST",
+            dataType:"json",
+            data:{
+                vouchers_id:vouchers_id,
+				order_id:order_id,
+            },
+            success:function(d){
+                if(d.code!=-1){
+                    jump='/FrontUserCenter/my_coupons_details/user_coupon_id/'+d.code;
+                    show_alert(d.msg);
+                    setTimeout(function(){
+                        $('.modal_alert').hide();
+                        $('.position_down').addClass('grey_color').html('已领取');
+                        $(".position_down").unbind("click");
+
+                    },1000)
+				}
+               else{
+                    show_alert(d.msg);
+                    setTimeout(function(){
+                        $('.modal_alert').hide();
+
+                    },1000)
+				}
+            },
+            error:function(e){
+                console.log(e);
+            }
+        });
+
+    });
+</script>
+{/literal}
+{/block}

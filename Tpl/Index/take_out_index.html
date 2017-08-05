@@ -1,0 +1,139 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/front/front_css/refresh_load.css?version={$version}"/>
+<link rel="stylesheet" style="text/css" href="__PUBLIC__/Css/front/front_css/home_index.css?version={$version}">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/front/market/take_out.css?version={$version}"/>
+<style type="text/css">
+	body{
+		background:#fff;
+		padding-top:2.2rem;
+	}
+	.index_header{
+		position:static;
+	}
+	.fix_head{
+		position:fixed;
+		top:0;
+		left:0;
+		z-index:9;
+		display:none;
+	}
+	#load_wrapper{
+		top:0;
+		height:calc(100% - 2.4rem);
+		height:-webkit-calc(100% -2.4rem);
+	}
+</style>
+{/block}
+{block name="content"}
+<div class="index_header fix_head">
+	<a href="" class="native_go head_left">
+		<span class="locate_name">{$area_name}</span>
+		<i class="icon_pic1 icon_locate3x"></i>
+	</a>
+	<a href="/Index/search_shop" class="native_go head_mid" {if $is_wechat==1}style="width: 80%"{/if}>
+		<span class="search_words">黄焖鸡米饭</span>
+		<i class="icon_pic1 icon_search3x"></i>
+	</a>
+	<a href="javascript:;" class="saoma icon_pic1 icon_scan3x" {if $is_wechat==1}style="display: none"{/if}></a>
+</div>
+<div id="load_wrapper">
+	<div id="scroller">
+		<div class="index_header scroll_head">
+			<a href="" class="native_go head_left">
+				<span class="locate_name">{$area_name}</span>
+				<i class="icon_pic1 icon_locate3x"></i>
+			</a>
+			<a href="/Index/search_shop" class="native_go head_mid" {if $is_wechat==1}style="width: 80%"{/if}>
+				<span class="search_words">黄焖鸡米饭</span>
+				<i class="icon_pic1 icon_search3x"></i>
+			</a>
+			<a href="javascript:;" class="saoma icon_pic1 icon_scan3x" {if $is_wechat==1}style="display: none"{/if}></a>
+	</div>
+		<!--外卖商家列表-->
+		<div class="take_out_wrap">
+			<a href="" class="take_out_list">
+				<div class="shop-info clearfix">
+					<img src="/Public/Images/testImg/test3.jpg" class="fl shop-img"/>
+					<div class="info fr">
+						<h6 class="shop-name">黄焖鸡米饭（乐富海邦园店）</h6>
+						<div class="info-mid clearfix">
+							<ul class="star fl">
+								<li class="fl icon_pic1 icon_star_full3x"></li>
+								<li class="fl icon_pic1 icon_star_full3x"></li>
+								<li class="fl icon_pic1 icon_star_full3x"></li>
+								<li class="fl icon_pic1 icon_star_full3x"></li>
+								<li class="fl icon_pic1 icon_star_full3x"></li>
+							</ul>
+							<span class="delivery-time fr">约30分钟送达</span>
+						</div>
+						<div class="info-bot clearfix">
+							<div class="right fl">
+								<span class="send-price">起送 ¥15&nbsp;|&nbsp;</span>
+								<span class="person-price">人均 ¥15</span>
+							</div>
+							<div class="left fr">
+								<span class="distance fr"><&nbsp;199.34Km</span>
+								<p class="address fr">武林门某某某某路333号</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--优惠信息-->
+				<div class="favor_wrap">
+					<ul class="favor">
+						<li>
+							<i class="icon_pic1 icon_pay3x"></i>
+							<p class="favor_words">买单立享85折</p>
+						</li>
+						<li>
+							<i class="icon_pic1 icon_ticket3x"></i>
+							<p class="favor_words">领券立减8元</p>
+						</li>
+					</ul>
+				</div>
+			</a>
+		</div>
+		<div id="pullUp">
+			<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+		</div>
+	</div>
+</div>
+<!--底部导航栏-->
+<ul class="foot_nav">
+	<li class="active">
+		<a href="/Index/home_index" class="native_go">
+			<i class="icon_pic1 icon_home3x icon_home_s3x active"></i>
+			<span class="nav_name">首页</span>
+		</a>
+	</li>
+	<li id="take_out">
+		<a href="/Index/take_out_index" class="native_go">
+			<i class="img_new_add_small icon_waimai icon_waimai_s"></i>
+			<span class="nav_name">外 卖</span>
+		</a>
+	</li>
+	<li>
+		<a href="/FrontUserCenter/consum_order_list" class="native_go">
+			<i class="icon_pic1 Shape3x icon_order_s3x"></i>
+			<span class="nav_name">订单</span>
+		</a>
+	</li>
+	<li>
+		<a href="/FrontUserCenter/person_center" class="native_go">
+			<i class="icon_pic1 icon_mine3x icon_mine_s3x"></i>
+			<span class="nav_name">我的</span>
+		</a>
+	</li>
+</ul>
+{/block}
+{block name="js"}
+<script type="text/javascript" src="__PUBLIC__/Js/front/iscroll.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/front/front_js/take_out_list.js"></script>
+{literal}
+<script type="text/javascript">
+	
+</script>
+{/literal}
+{/block}

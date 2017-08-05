@@ -1,0 +1,135 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/loading.css?version={$version}">
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/list_style.css?version={$version}">
+<style>
+    #load_wrapper{
+        top:2.2rem;
+    }
+</style>
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<header>
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>提现记录</h1>
+</header>
+<div id="load_wrapper">
+    <div id="scroller" style="padding-bottom: 2.4rem;">
+        <ul class="main" id="new_list">
+            <li>
+                <div class="header clearfix">
+                    <p class="fl">2016-06-13 17:13:48</p>
+                    <span class="fr">提现申请</span>
+                </div>
+                <div class="cont">
+                    <h1>&yen;30.00</h1>
+                    <div class="cont_top clearfix">
+                        <p class="fl">变动前金额:</p>
+                        <span class="fl">19.00</span>
+                    </div>
+                    <div class="cont_top clearfix">
+                        <p class="fl">变动后金额:</p>
+                        <span class="fl">41.00</span>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footer_cont">
+                        <p>订单号:</p>
+                        <span>20170105991</span>
+                    </div>
+                    <div class="footer_cont">
+                        <p>操作人:</p>
+                        <span>小凤</span>
+                    </div>
+                    <div class="footer_cont">
+                        <p>备注:</p>
+                        <span>提现申请</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="header clearfix">
+                    <p class="fl">2016-06-13 17:13:48</p>
+                    <span class="fr">提现失败</span>
+                </div>
+                <div class="cont">
+                    <h1>&yen;30.00</h1>
+                    <div class="cont_top clearfix">
+                        <p class="fl">变动前金额:</p>
+                        <span class="fl">19.00</span>
+                    </div>
+                    <div class="cont_top clearfix">
+                        <p class="fl">变动后金额:</p>
+                        <span class="fl">41.00</span>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footer_cont">
+                        <p>订单号:</p>
+                        <span>20170105991</span>
+                    </div>
+                    <div class="footer_cont">
+                        <p>操作人:</p>
+                        <span>小凤</span>
+                    </div>
+                    <div class="footer_cont">
+                        <p>备注:</p>
+                        <span>拒绝提现申请</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="header clearfix">
+                    <p class="fl">2016-06-13 17:13:48</p>
+                    <span class="fr">提现成功</span>
+                </div>
+                <div class="cont">
+                    <h1>&yen;30.00</h1>
+                    <div class="cont_top clearfix">
+                        <p class="fl">变动前金额:</p>
+                        <span class="fl">19.00</span>
+                    </div>
+                    <div class="cont_top clearfix">
+                        <p class="fl">变动后金额:</p>
+                        <span class="fl">41.00</span>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footer_cont">
+                        <p>订单号:</p>
+                        <span>20170105991</span>
+                    </div>
+                    <div class="footer_cont">
+                        <p>操作人:</p>
+                        <span>小凤</span>
+                    </div>
+                    <div class="footer_cont">
+                        <p>备注:</p>
+                        <span>金额提现</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div id="pullUp">
+            <span class="pullUpLabel">上拉加载...</span>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script type="text/javascript" src="/Public/Js/front/iscroll.js"></script>
+<script type="text/javascript" src="/Public/Js/front/front_js/item_list_withdrawal.js"></script>
+{literal}
+<script>
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+</script>
+{/literal}
+{/block}

@@ -1,0 +1,43 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/my_qr_code.css?version={$version}"/>
+<style></style>
+<script src="__JS__/front/jquery.qrcode.min.js?version={$version}"></script>
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>收款二维码</h1>
+</div>
+<div class="header_empty"></div>
+<div class="content">
+    <div class="img-control">
+        <img src="{$business_info.sign_pic}?imageView2/1/w/100/h/100/q/100/" class="img-responsive">
+    </div>
+    <p class="name text-center">{$business_info.business_name}</p>
+    <div class="qr" id="qrcode">
+        <img   src="http://qr.topscan.com/api.php?&bg=ffffff&fg=000000&text=http://{$url}/FrontMerchantOrder/buy_bill/business_id/{$business_info.business_id}&logo={$business_info.sign_pic}?imageView2/1/w/100/h/100/q/100/" class="img-responsive">
+    </div>
+</div>
+<div class="footer"></div>
+{/block}
+{block name="js"}
+{literal}
+<script type="text/javascript">
+    /*todo 当前页面的返回按钮*/
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+
+
+</script>
+{/literal}
+<script type="text/javascript">
+    //$('#qrcode').qrcode("http://"+ '{$url}' +"/FrontMerchantOrder/buy_bill/business_id/{$business_info.business_id}");
+</script>
+{/block}

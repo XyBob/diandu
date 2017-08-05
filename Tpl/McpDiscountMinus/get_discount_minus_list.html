@@ -1,0 +1,183 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<div class="t-a-wait-con">
+    <div class="tablesWrap">
+        <div class="tables-searchbox">
+            <div class="t-a-wait-top">
+                <form action="" method="post" id="rank_waiting">
+                    <div class="t-a-wait-top-li" style="width:400px;">
+                        <div class="formitems inline">
+                            <label class="fi-name" style="width:70px; font-weight:normal;">活动时间：</label>
+
+                            <div class="form-controls" style="margin-left:80px;">
+                                <input type="text" style="width:120px;" autocomplete="off" class="Wdate"
+                                       name="start_time" value="{if $start_time}{date('Y-m-d',$start_time)}{/if}"
+                                       onclick="WdatePicker({ dateFmt:'yyyy-MM-dd'})">
+
+                                <span class="fi-text">-</span>
+
+                                <input type="text" style="width:120px;" autocomplete="off" class="Wdate" name="end_time"
+                                       value="{if $end_time}{date('Y-m-d',$end_time)}{/if}"
+                                       onclick="WdatePicker({ dateFmt:'yyyy-MM-dd'})">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="t-a-wait-top-li" style=""><input type="hidden" name="submit" value="search"/>
+                        <button class="btn"><i class="gicon-search"></i>搜索</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <table class="wxtables">
+            <colgroup>
+                <col width="10%">
+                <col width="10%">
+                <col width="10%">
+                <col width="10%">
+                <col width="10%">
+                <col width="10%">
+            </colgroup>
+            <thead>
+            <tr>
+                <!--<td>选择</td>-->
+                <!--  <td>商家</td>-->
+                <td><a class="{$amount_limit_sort_order}" href="{$amount_limit_sort_url}">订单金额</a></td>
+                <td><a class="{$num_sort_order}" href="{$num_sort_url}">减免额度</a></td>
+                <td>状态</td>
+                <td>活动时间</td>
+                <td>操作</td>
+            </tr>
+            </thead>
+            {foreach from=$discount_list item=discount_item}
+            <tbody class="combo-tbody">
+            <tr>
+                <!-- <td><input type="checkbox" class="checkbox" value='{$discount_item.discount_minus_id}' name="a[]"></td> -->
+                <!--<td>{$discount_item.shop_name}</td>-->
+                <td>{$discount_item.amount_limit}</td>
+                <td>{$discount_item.num}</td>
+                <td>{if $discount_item.isuse==1}启用{else}关闭{/if}</td>
+                <td>{$discount_item.start_time|date_format:"%Y-%m-%d"} --
+                    {$discount_item.end_time|date_format:"%Y-%m-%d"}
+                </td>
+                <td>
+                    <a href="/McpDiscountMinus/edit_discount_minus/discount_id/{$discount_item.discount_minus_id}" class="btn" title="查看活动明细">编辑</a>
+                    <a href="javascript:;" class="btn" title="删除" onclick="del_obj({$discount_item.discount_minus_id})">删除</a>
+                    <a href="javascript:;" class="btn" title="下架" onclick="off_shelf({$discount_item.discount_minus_id},{$discount_item.isuse})">{if $discount_item.isuse==1}下架{else}上架{/if}</a>
+                    <a href="/McpDiscountMinus/get_discount_minus_detail/discount_id/{$discount_item.discount_minus_id}"
+                       class="btn" title="查看活动明细">查看活动明细</a>
+                </td>
+            </tr>
+            </tbody>
+            {foreachelse}
+            <tbody>
+            <tr>
+                <td colspan="7">
+                    没有符合条件的记录
+                </td>
+            <tr>
+            </tbody>
+            {/foreach}
+        </table>
+        <!-- end wxtables -->
+        <div class="tables-btmctrl clearfix">
+            <!--
+                <div class="fl">
+                    <a href="javascript:;" class="btn btn-blue" onclick="Select()">全选</a>
+                    <a href="javascript:;" class="btn btn-blue" onclick="Cancel()">取消</a>
+                </div>
+                -->
+            <div class="fr">
+                <div class="paginate">
+                    {$show}
+                </div>
+                <!-- end paginate -->
+            </div>
+        </div>
+        <!-- end tables-btmctrl -->
+    </div>
+    <!-- end tablesWrap -->
+</div>
+{/block}
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+{literal}
+<script>
+    //全选
+    function Select() {
+        var sel = document.getElementsByName("a[]");
+        for (var i = 0; i < sel.length; i++) {
+            sel[i].checked = true;
+        }
+    }
+    //取消全选
+    function Cancel() {
+        var sel = document.getElementsByName("a[]");
+        for (var i = 0; i < sel.length; i++) {
+            sel[i].checked = false;
+        }
+    }
+
+    function del_obj(id) {
+        $.jPops.confirm(
+                {
+                    title: "提示",
+                    content: "您确定要执行删除吗？",
+                    okBtnTxt: "确定",
+                    cancelBtnTxt: "取消",
+                    callback: function (r) {
+                        if (r) {
+                            $.post('/McpDiscountMinus/del_discount', {
+                                "discount_minus_id": id,
+                            }, function (data, textStatus) {
+                                if (data == 'success') {
+                                    alert('恭喜您，删除成功！');
+                                    location.reload();
+                                }
+                                else {
+                                    alert('对不起，删除失败');
+                                }
+                            });
+                        }
+                        return true;
+                    }
+                });
+    }
+
+    function off_shelf(id,is_enable) {
+        opt = (is_enable == 1) ? '下架' : '上架';
+        $.jPops.confirm(
+                {
+                    title: "提示",
+                    content: "您确定要执行这些操作吗？",
+                    okBtnTxt: "确定",
+                    cancelBtnTxt: "取消",
+                    callback: function (r) {
+                        if (r) {
+
+                            $.post('/McpDiscountMinus/off_shelf', {
+                                "discount_minus_id": id,
+                            }, function (data, textStatus) {
+                                if (data == 'success') {
+                                    alert('恭喜您，' + opt + '成功！');
+                                    location.reload();
+                                }
+                                else {
+                                    alert('对不起，' + opt + '失败');
+                                }
+                            });
+                        }
+                        return true;
+                    }
+                });
+    }
+</script>
+{/literal}
+{/block}
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpUser/audit_waiting.css" type="text/css"/>
+{/block}

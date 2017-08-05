@@ -1,0 +1,129 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+
+<div class="t-detail-goods">
+    <div class="t-detail-goods-tit mag">基本信息：</div>
+    <div class="t-detail-goods-con t-buser">
+        <table class="wxtables tables-form">
+            <colgroup>
+                <col width="10%">
+                <col width="90%">
+            </colgroup>
+            <tbody>
+            <!-- <tr>
+                <td class="tables-form-title">微信头像：</td>
+                <td><img src="{$user_info.headimgurl}" style="width:50px;"></td>
+            </tr> -->
+            <tr>
+                <td class="tables-form-title">商家名字：</td>
+                <td>{$business_info.business_name}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">联系人：</td>
+                <td>{$business_info.contacts}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">联系人电话：</td>
+                <td>{if $business_info.contact_number}{$business_info.contact_number}{else}--{/if}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">店铺分类：</td>
+                <td>{if $business_info.business_classify}{$business_info.business_classify}{else}--{/if}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">行业：</td>
+                <td>{if  $business_info.industry_id==1}普通商店{else}菜市场{/if}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">让利：</td>
+                <td>{if $business_info.rate}{$business_info.rate}%{else}--{/if}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">人均消费：</td>
+                <td>{if $business_info.consumption}{$business_info.consumption}{else}--{/if}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">省：</td>
+                <td>{if $business_info.province}{$business_info.province}{else}--{/if}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">市：</td>
+                <td>{if $business_info.city}{$business_info.city}{else}--{/if}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">县：</td>
+                <td>{if $business_info.area}{$business_info.area}{else}--{/if}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">详细地址：</td>
+                <td>{if $business_info.address}{$business_info.address}{else}--{/if}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">简介：</td>
+                <td>{if $business_info.desc}{$business_info.desc}{else}--{/if}</td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">店招图片：</td>
+                <td><img src="{$business_info.sign_pic}" width="10%" ></td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">环境图片：</td>
+                <td>
+                    {foreach from=$evn_pic item=this}
+                    <img src="{$this}" width="10%" >
+                    {/foreach}
+                </td>
+            </tr>
+            <tr>
+                <td class="tables-form-title">营业执照：</td>
+                <td><img src="{$business_info.license_pic} " width="10%"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="fl">
+        <a href="javascript:Select()" class="btn btn-blue" onclick="examine({$business_info.business_id},false)">解除商家冻结状态</a>
+    </div>
+</div>
+{/block}
+
+{block name="js"}
+{literal}
+<script>
+    function examine(business_id,flag){
+        $.jPops.confirm(
+            {
+                title: "提示",
+                content: "您确定这么做？",
+                okBtnTxt: "确定",
+                cancelBtnTxt: "取消",
+                callback: function (r) {
+                    if (r) {
+                        $.post('/AcpBusiness/freeze', {"business_id": business_id,flag:flag}, function (data, textStatus) {
+                            console.log(data);
+                            if (data.code == 1) {
+                                alert(data.msg);
+                                location.href='/AcpBusiness/freeze_business_list'
+                            }
+                            else {
+                                alert(data.msg);
+                            }
+                        },'json');
+                    }
+                    return true;
+                }
+            });
+    }
+</script>
+<style>
+    #jpops .fi-name{width:100px;}
+    #jpops .form-controls{margin-left:100px;}
+</style>
+{/literal}
+{/block}
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpOrder/order_detail.css" type="text/css" />
+{/block}

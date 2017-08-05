@@ -1,0 +1,73 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+{if $is_bind neq 1}
+<form id='base_config' action='' method='POST'>
+<div class="formitems inline">  
+    <label class="fi-name"><span class="colorRed">*</span> 银行卡卡号：</label>
+    <div class="form-controls">  
+        <input type="number" name='account' value='{$bank_card_info.account}' placeholder="">
+        <span class="fi-help-text"></span>  
+    </div>  
+</div>
+
+<div class="formitems inline">  
+    <label class="fi-name"><span class="colorRed">*</span> 持卡人姓名：</label>
+    <div class="form-controls">  
+        <input type="text" name='realname' required value='{$bank_card_info.realname}' placeholder="">
+        <span class="fi-help-text"></span>  
+    </div>  
+</div>
+
+<div class="formitems inline">  
+    <label class="fi-name"><span class="colorRed">*</span> 银行名称：</label>
+    <div class="form-controls">  
+        <!--<input type="text" name='bank_name' required value='{$bank_card_info.bank_name}' placeholder="">-->
+        <!--<span class="fi-help-text"></span>  -->
+        <select name="bank_id" id="bank_id">
+            {foreach from=$bank_list item=bank}
+            <option value="{$bank.bank_id}" {if $bank.bank_id eq $bank_card_info.bank_id}selected{/if}>{$bank.bank_name}</option>
+            {/foreach}
+        </select>
+    </div>  
+</div>
+
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span> 开户行：</label>
+        <div class="form-controls">
+            <input type="text" name='opening_bank' required value='{$bank_card_info.opening_bank}' placeholder="">
+            <span class="fi-help-text"></span>
+
+        </div>
+    </div>
+
+    <!--<div class="formitems inline">-->
+        <!--<label class="fi-name"><span class="colorRed">*</span> 预留手机号码：</label>-->
+        <!--<div class="form-controls">-->
+            <!--<input type="number" name='bank_mobile' required value='{$bank_card_info.bank_mobile}' placeholder="">-->
+            <!--<span class="fi-help-text"></span>-->
+        <!--</div>-->
+    <!--</div>-->
+
+<div class="formitems inline">  
+    <label class="fi-name"></label>  
+    <div class="form-controls">
+    	<input type='hidden' name='act' value='save' />
+        <button type="submit" class="btn btn-blue"><i class="gicon-check white"></i>绑定</button>
+    </div>  
+</div>
+</form>
+{else}
+<label class="fi-help-text" style="color:red;">已完成绑定</label><br />
+<a href="/UcpFinance/edit_bank_info/bank_card_id/{$bank_card_id}" class="btn btn-blue" title="编辑银行卡信息">编辑银行卡信息</a>
+{/if}
+{/block} 
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+{/block} 
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpConfig/base_config.css" type="text/css" />
+{/block}

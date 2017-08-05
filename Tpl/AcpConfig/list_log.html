@@ -1,0 +1,76 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<div class="tablesWrap">  
+    <div class="tables-searchbox">  
+       <!--<form action='' method='post'>-->
+        <!--<span class="tbs-txt">联系人：</span>  -->
+        <!--<input type="text" name='linkman' value='{$s_linkman}' /> -->
+        <!--<span class="tbs-txt">角色：</span>-->
+        <!--<select name="group" class="mini"> -->
+            <!--<option value="0" selected="">全部</option>-->
+            <!--{section name=row loop=$group_list}  -->
+            <!--<option value='{$group_list[row].group_id}' {if $s_group_id == $group_list[row].group_id}selected{/if}>{$group_list[row].group_name}</option>	-->
+            <!--{/section}-->
+        <!--</select>-->
+        	<!--<input type='hidden' name='submit' value='search' />-->
+            <!--<button class="btn"><i class="gicon-search"></i>查询</button>-->
+      <!--</form>  -->
+    </div> 
+
+    <!-- end tables-searchbox -->  
+    <table class="wxtables">  
+        <colgroup>  
+        <col width="15%">
+        <col width="15%">  
+        <col width="20%">  
+        <col width="25%">  
+        <col width="25%">    
+        </colgroup>  
+        <thead>  
+            <tr>  
+                <td>登录编号</td>
+                <td>ip</td>
+                <td>ip地址</td>
+                <td>创建时间</td>    
+                <td>操作</td>  
+            </tr>  
+        </thead>  
+        <tbody> 
+        {if $log_list}
+        {foreach from=$log_list item=one}
+            <tr>  
+                <td>{$one.login_log_id}</td>
+                <td>{$one.ip}</td>
+                <td>{$one.ip_address}</td>
+                <td>{$one.login_time|date_format:"%Y-%m-%d %H:%M:%S"}</td>
+                <td>  
+                    <!--<a href="" class="btn" title="修改">&#45;&#45;</a>-->
+                    --
+                </td>  
+            </tr> 
+         {/foreach}
+         {else}
+         	<tr><td colspan=5>未找到符合条件的记录</td></tr>
+         {/if}  
+        </tbody>  
+    </table>  
+    <!-- end wxtables -->  
+    <div class="tables-btmctrl clearfix">    
+        <div class="fr">  
+            <div class="paginate">  
+                {$page_str}
+            </div>  
+            <!-- end paginate -->  
+        </div>  
+    </div>  
+    <!-- end tables-btmctrl -->  
+</div>  
+<!-- end tablesWrap -->   
+<!-- end tablesWrap -->   
+{/block} 
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+{/block} 

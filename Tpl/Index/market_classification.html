@@ -1,0 +1,75 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/market_classification.css?version={$version}"/>
+<style>
+    #scrollobj{
+        white-space:nowrap;
+        overflow:hidden;
+        width:100%;
+        background: #333;
+        height:1.25rem;
+        font-size: 0.6rem;
+        color: #FFFFFF;
+        line-height:1.25rem;
+    }
+</style>
+{/literal}
+{/block}
+{block name="content"}
+<div class="index_header fix_head">
+    <span class="icon_add_person icon_left_white native_go" onclick="history.go(-1)"></span>
+    <a href="" class="native_go head_mid">
+        <span class="search_words">输入商品关键词搜索</span>
+        <i class="icon_pic1 icon_search3x"></i>
+    </a>
+</div>
+<p id="scrollobj" onmouseover="stop()" onmouseout="start()"><span style="padding-left: 50%;">通知栏信息，类似轮播图，不可操作。显示店铺的优惠信息及公告</span></p>
+<div class="content_show">
+    <div class="img_control" onclick="location.href='/Index/market_shop'">
+        <img src="/Public/Images/front/front_img/vegetables.png" class="img-responsive">
+        <a class="img-describe" href=""><span>田园时蔬</span><span class="icon_add_person icon_whiteright"></span></a>
+    </div>
+    <div class="img_control" onclick="location.href='/Index/market_shop'">
+        <img src="/Public/Images/front/front_img/vegetables.png" class="img-responsive">
+        <a class="img-describe" href=""><span>田园时蔬</span><span class="icon_add_person icon_whiteright"></span></a>
+    </div>
+    <div class="img_control" onclick="location.href='/Index/market_shop'">
+        <img src="/Public/Images/front/front_img/vegetables.png" class="img-responsive">
+        <a class="img-describe" href=""><span>田园时蔬</span><span class="icon_add_person icon_whiteright"></span></a>
+    </div>
+    <div class="img_control" onclick="location.href='/Index/market_shop'">
+        <img src="/Public/Images/front/front_img/vegetables.png" class="img-responsive">
+        <a class="img-describe" href=""><span>田园时蔬</span><span class="icon_add_person icon_whiteright"></span></a>
+    </div>
+    <div class="img_control" onclick="location.href='/Index/market_shop'">
+        <img src="/Public/Images/front/front_img/vegetables.png" class="img-responsive">
+        <a class="img-describe" href=""><span>田园时蔬</span><span class="icon_add_person icon_whiteright"></span></a>
+    </div>
+    <div class="img_control" onclick="location.href='/Index/market_shop'">
+        <img src="/Public/Images/front/front_img/vegetables.png" class="img-responsive">
+        <a class="img-describe" href=""><span>田园时蔬</span><span class="icon_add_person icon_whiteright"></span></a>
+    </div>
+</div>
+{/block}
+{block name="js"}
+{literal}
+<script>
+    function scroll(obj) {
+        var tmp = (obj.scrollLeft)++;
+        //当滚动条到达右边顶端时
+        if (obj.scrollLeft==tmp) obj.innerHTML += obj.innerHTML;
+        //当滚动条滚动了初始内容的宽度时滚动条回到最左端
+        if (obj.scrollLeft>=obj.firstChild.offsetWidth) obj.scrollLeft=0;
+    }
+    var a =    setInterval("scroll(document.getElementById('scrollobj'))",20);
+    function stop(){
+        clearInterval(a);
+    }
+    function start(){
+        a=setInterval("scroll(document.getElementById('scrollobj'))",30);
+    }
+</script>
+{/literal}
+{/block}

@@ -1,0 +1,50 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<form action='' method='post' id='add_admin'>
+
+    <div class="formitems inline">
+        <label class="fi-name"><span class='colorRed'>*</span>行业名称：</label>
+        <div class="form-controls">
+            <input type="text" name='industry_name' value="{$industry_info.industry_name}" id='title' placeholder="" class="small">
+            <span class="fi-help-text"></span>
+        </div>
+    </div>
+
+    <div class="formitems inline">
+        <label class="fi-name"><span class='colorRed'>*</span>行业抽成比例：</label>
+        <div class="form-controls">
+            <input type="text" name='rate'  value="{$industry_info.rate}" placeholder="" class="small">
+            <span class="fi-help-text">如：1% 填写 0.01</span>
+        </div>
+    </div>
+
+    <div class="formitems inline">
+        <label class="fi-name">是否启用：</label>
+        <div class="form-controls">
+            <div class="radio-group">
+                <label><input type="radio" name="isuse" class="j-skupanelCtrl" value="1" {if $industry_info.isuse == 1}checked{/if}>是</label>
+                <label><input type="radio" name="isuse" class="j-skupanelCtrl" value="0" {if $industry_info.isuse == 0}checked{/if}>否</label>
+            </div>
+        </div>
+    </div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class='colorRed'>*</span>排序号：</label>
+        <div class="form-controls">
+            <input type="text" name='serial'  id='serial' value='{$industry_info.serial}' class="small">
+            <span class="fi-help-text"></span>
+        </div>
+    </div>
+
+
+    <div class="formitems inline">
+        <label class="fi-name"></label>
+        <div class="form-controls">
+            <input type='hidden' name='submit' value='submit' />
+            <button type="submit" class="btn btn-blue"><i class="gicon-ok white"></i>添加</button>
+            <button type="reset" class="btn"><i class="gicon-repeat"></i>重置</button>
+        </div>
+    </div>
+</form>
+{/block}

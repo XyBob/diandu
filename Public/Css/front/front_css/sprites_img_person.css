@@ -1,0 +1,87 @@
+.icon_add_person{
+    background:url(/Public/Images/front/front_img/icon_add_person.png)  no-repeat;
+    background-size:17.1833rem  20.91666rem;
+}
+.icon_whiteright{height:0.7rem;width:0.7rem;background-position:0 0;}
+.icon_left_gray{height:0.7rem;width:0.4rem;background-position:-0.7833rem 0;}
+.icon_shanchu_red{height:0.5rem;width:0.5rem;background-position:-1.7333rem 0;}
+.icon_left_white{height:0.9rem;width:0.5rem;background-position:-2.9333rem 0;}
+.shijian{height:0.6rem;width:0.6rem;background-position:-4rem 0;}
+.icon_down_gray{height:0.4rem;width:0.7rem;background-position:-5.2rem 0;}
+.icon_orderform{height:0.8rem;width:0.7rem;background-position:0 -1.3166rem;}
+.icon_me_person{height:0.8rem;width:0.8rem;background-position:-1.2166rem -1.333rem;}
+.icon_me_shop_blue{height:0.75rem;width:0.8rem;background-position:-2.5166rem -1.333rem;}
+.icon_me_shop{height:0.7rem;width:0.8rem;background-position:-3.9833rem -1.333rem;}
+.icon_me_money{height:0.75rem;width:0.8rem;background-position:-5.2rem -1.3166rem;}
+.icon_shangjia_blue{height:45px;width:48px;background-position:0 -170px;}
+.icon_fenxiang_orange{height:0.8rem;width:0.8rem;background-position:-1.1666rem -2.8166rem;}
+.icon_qrcode{height:0.8rem;width:0.8rem;background-position:-2.5rem -2.8333rem;}
+.icon_order{height:0.9rem;width:0.85rem;background-position:-3.9666rem -2.8333rem;}
+.icon_yinhangka18x18{height:0.7rem;width:0.9rem;background-position:-5.18333rem -2.8rem;}
+.icon_tixian18x18{height:0.8rem;width:0.9rem;background-position:-6.5166rem -2.85rem;}
+.icon_mingxi18x18{height:0.9rem;width:0.9rem;background-position:0 -4rem;}
+.icon_ceclet18x18{height:0.9rem;width:0.9rem;background-position:-1.4666rem -4rem;}
+.icon_chongzhi18x18{height:0.9rem;width:0.9rem;background-position:-2.9333rem -4rem;}
+.icon_map_blue{height:1.1rem;width:0.9rem;background-position:-4.5333rem -4rem;}
+.icon_dingdan_gray{height:60px;width:54px;background-position:-360px -240px;}
+.icon_mine_s{height:1rem;width:1rem;background-position:-7.48333rem -4rem;}
+.icon_wo_orange{height:60px;width:60px;background-position:0 -360px;}
+.icon_home{height:1rem;width:1rem;background-position:-1.6rem -6rem;}
+.icon_shouye_gary{height:60px;width:60px;background-position:-191px -360px;}
+.icon_set_white{height:1.1rem;width:1.1rem;background-position:-4.95rem -6rem;}
+.icon_shanchutishi{height:1.1rem;width:1.1rem;background-position:-6.666rem -6rem;}
+.icon_zhanghu_green{height:1rem;width:1.2rem;background-position:-8.3666rem -6rem;}
+.icon_bank_red{height:1rem;width:1.2rem;background-position:0 -8.58333rem;}
+.icon_caiwu_green{height:1.2rem;width:1.2rem;background-position:-1.88333rem -8.58333rem;}
+.icon_shopping_edit{height:1.1rem;width:1.2rem;background-position:-3.75rem -8.58333rem;}
+.icon_shuju_blue{height:1.2rem;width:1.2rem;background-position:-5.7333rem -8.58333rem;}
+.icon_shoukuan_orange{height:1.2rem;width:1.2rem;background-position:-7.98333rem -8.58333rem;}
+.icon_jiantou_white{height:2.3rem;width:1.8rem;background-position:0 -11.5666rem;}
+.icon_fabuwc{height:2.5rem;width:2.5rem;background-position:-2.5166rem -11.5666rem;}
+.icon_tianjia_pic{height:2.5rem;width:2.5rem;background-position:-5.866rem -11.5666rem;}
+.dianpu{height:3.2rem;width:3.2rem;background-position:-9.05rem -11.5666rem;}
+.logo{height:240px;width:240px;background-position:-791px -694px;}
+.icon_xuqiutijiao{height:5.3rem;width:5.25rem;background-position:0 -15.6166rem;}
+.icon_shanchu_red {
+    background-size: 25.775rem 31.375rem;
+    height: 0.75rem;
+    width: 0.75rem;
+    background-position: -2.59995rem 0;
+}
+
+.new_add_icon_img{
+    background:url(/Public/Images/front/front_img/new_add_icon_img.png)  no-repeat;
+    background-size: 2.3666rem 0.9rem;
+}
+.icon_tixianjilu{height:0.9rem;width:0.8rem;background-position:0 0;}
+.icon_tianjia{height:0.9rem;width:0.9rem;background-position:-1.4666rem 0;}
+
+/*todo 新增的三个小图标*/
+.img_new_add_small{
+    background:url(/Public/Images/front/front_img/img_new_small.png)  no-repeat;
+    background-size: 5.9rem 0.9rem;
+}
+.icon_dingwei{height:0.9rem;width:0.7rem;background-position:0 0;}
+.icon_tongzhi{height:0.7rem;width:0.8rem;background-position:-1.333rem 0;}
+.icon_waimai{height:0.85rem;width:1.1rem;background-position:-4.8rem 0;}
+.icon_waimai_s{height:0.85rem;width:1.1rem;background-position:-2.9333rem 0;}
+/*todo 个人增加*/
+.person_page_img{background:url(/Public/Images/front/front_img/person_page_img.png)  no-repeat;background-size: 19.0333rem 3.45rem;display: inline-block}
+.icon_whiteright{height:0.7rem;width:0.4rem;background-position:0 0;}
+.icon_orderform1{height:0.8rem;width:0.7rem;background-position:-73px 0;}
+.icon_selected{height:0.75rem;width:0.75rem;background-position:-2.8rem 0;}
+.Shape{height:54px;width:51px;background-position:-273px 0;}
+.icon_select{height:0.75rem;width:0.85rem;background-position:-6.266rem 0;}
+/*.icon_tianjia{height:54px;width:54px;background-position:-489px 0;}*/
+.icon_yuezhif{height:1rem;width:1rem;background-position:-12.0166rem 0;}
+.icon_mine_s{height:60px;width:60px;background-position:-1082px 0;}
+.icon_alipay{height:1rem;width:1rem;background-position:-14.133rem 0;}
+.icon_more{height:0.3rem;width:1.05rem;background-position:-9.866rem 0;}
+.icon_wechatpay{height:0.9rem;width:1.1rem;background-position:-16.15rem 0;}
+.icon_user{height:0.9rem;width:0.9rem;background-position:0 -1.98333rem;}
+.icon_roder_11{height:1.15rem;width:1.2rem;background-position:-2.95rem -1.9833rem;}
+.icon_waimai_11{height:0.95rem;width:1.25rem;background-position:-5.75rem -2.016rem;}
+.icon_xuanzhong_red{height:1.45rem;width:2.5rem;background-position:-8.6833rem -2rem;}
+
+
+

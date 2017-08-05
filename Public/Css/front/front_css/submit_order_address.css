@@ -1,0 +1,111 @@
+/*-----------确认订单页-----------*/
+/*---选择收货地址列表---*/
+.choose-address-outer{
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:4;
+	display:none;
+}
+.choose-address-outer .address-scroll{
+	background:#fff;
+    width: 100%;
+    max-height:75%;
+    overflow: scroll;
+    position: absolute;
+    left: 0;
+    bottom: 2.8rem;
+}
+.address-scroll .address-list{
+	width:100%;
+    box-sizing: border-box;
+    padding:0.6rem 0.75rem;
+    border-top: 1px solid #EFEFEF;
+    font-size:0.7rem;
+    color:#333;
+}
+
+.address-scroll .address-list .list-head{
+	height:1.4rem;
+	display:flex;
+	display:-webkit-flex;
+	align-items: center;
+	-webkit-align-items:center;
+	justify-content:space-between;
+	-webkit-justify-content:space-between;
+}
+.address-scroll .address-list .list-bot{
+    line-height:1.2rem;
+    word-wrap: break-word;
+}
+.address-list .list-bot .default-word{
+	color:#DF241D;
+}
+/*---新增收货地址---*/
+.new-address-outer{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:4;
+	background:rgba(0,0,0,0.5);
+	display:none;
+	padding-top:25%;
+	box-sizing:border-box;
+}
+.new-address-inner{
+	width:100%;
+	height:100%;
+	overflow:scroll;
+	position:relative;
+	box-sizing:border-box;
+	padding-bottom:2.8rem;
+}
+.new-address-title{
+	width:100%;
+	text-align:center;
+	color:#fff;
+	font-size:0.8rem;
+	line-height:2.2rem;
+	background:#F93B23;
+	position:relative;
+}
+.new-address-title .address-close{
+	display:block;
+	width:2.2rem;
+	height:2.2rem;
+	background:url(/Public/Images/front/front_img/add_close2x.png) center no-repeat;
+	background-size:0.85rem 0.9rem;
+	position:absolute;
+	top:0;
+	right:0.5rem;
+}
+
+/*.address-scroll .address-list .header{
+    margin: 0.6rem 0 0.2rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    color: #333333;
+    padding: 0 0.75rem;
+}*/
+
+
+.new-address-btn{
+	display:block;
+	width:100%;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    background: #F93B23;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    text-align: center;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:5;
+}

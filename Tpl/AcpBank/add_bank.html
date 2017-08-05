@@ -1,0 +1,79 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+
+{block name="content"}
+<!-- end tabs -->
+<div class="tabs-content">
+
+<form method="post" id="bank_form">
+
+    <div class="formitems inline">
+        <label class="fi-name">
+            <span class="colorRed">*</span>银行名称：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="请输入银行名称" class="xxlarge" name="bank_name" value="{$bank_info.bank_name}">
+            <span class="fi-help-text error"></span>
+        </div>
+    </div>
+
+    {upload_image_widget($base_pic_data)}
+
+	<div class="formitems inline">  
+		<label class="fi-name"><span class="colorRed">*</span>收款行行号：</label>  
+		<div class="form-controls">  
+			<input type="text" placeholder="" class="xlarge" name="cdtbrd" id="cdtbrd" value="{$info.cdtbrd}">  
+			<span class="fi-help-text hide">招商银行转账接口需要用到的收款行行号</span>
+		</div>  
+	</div> 
+
+    <div class="formitems inline">
+        <label class="fi-name">描述：</label>
+        <div class="form-controls">
+			<textarea placeholder="请填写描述" name="description">{$bank_info.description}</textarea>
+            <span class="fi-help-text"></span>
+        </div>
+    </div>
+
+    <div class="formitems inline">
+        <label class="fi-name">启用：</label>
+        <div class="form-controls">
+            <div class="radio-group">
+                <label><input type="radio" name="isuse" value="1"{if !$bank_info || $bank_info.isuse eq 1} checked="checked"{/if} />是</label>
+                <label><input type="radio" name="isuse" value="0"{if $bank_info && $bank_info.isuse eq 0} checked="checked"{/if} />否</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="formactions mgl180">
+        <button class="btn btn-blue"><i class="gicon-ok white"></i>提交</button>
+    </div>
+<!-- end 基本信息 -->
+</form>
+</div>
+{/block}
+
+{block name="css"}
+{literal}
+<style>
+    #jpops .fi-name{width:65px;}
+    #jpops .form-controls{margin-left:75px;}
+    #j-item-extend li{margin-bottom:10px;}
+    .edit_item_tip{font-size: 18px;color: #a0a0a0;background-color: inherit;text-decoration: none;margin: 20px 180px;}
+</style>
+{/literal}
+{/block}
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+<script>
+    $('#bank_form').submit(function(){
+        var _data = $(this).serialize();
+        Ta.ajaxSubmit({
+            data : _data
+        });
+        return false;
+    });
+
+</script>
+{/block}

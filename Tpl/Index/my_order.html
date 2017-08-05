@@ -1,0 +1,183 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/loading.css?version={$version}">
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/my_order.css?version={$version}"/>
+<style>
+    #load_wrapper{
+        top:4.4rem;
+    }
+    .no_content{
+        display: none;
+    }
+</style>
+{/block}
+{block name="content"}
+<header>
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>我的订单</h1>
+</header>
+<div class="switch_content clearfix">
+    <div class="fl active" data-id="take_out">
+        <div class="take_out">外卖订单</div>
+    </div>
+    <div class="fl" data-id="shop_consume">
+        <div class="shop_consume">到店消费</div>
+    </div>
+</div>
+<div id="load_wrapper">
+    <div id="scroller"  style="padding-bottom: 2.4rem;">
+        <!--todo 外卖订单列表-->
+        <div id="take_out" class="content active">
+            <ul class="list_content" style="display: none">
+                <li class="list" onclick="location.href='/Index/my_order_detail'">
+                    <div class="list_top">
+                        <div class="img_info">
+                            <div class="img_left"><img src="/Public/Images/front/data/item4.jpg" class="img-responsive"></div>
+                            <div class="img_middle">
+                                <div class="the_top">
+                                    <div class="top_state">
+                                        <p class="name">谢天真</p>
+                                        <div class="img_right grey">已取消</div>
+                                    </div>
+                                    <p class="time">2017-05-17 13:40</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="describe"><span class="describe_name">黯然销魂饭</span><span>等10件商品</span></div>
+                    <div class="money">¥220.00</div>
+                </li>
+                <li class="list">
+                    <div class="list_top">
+                        <div class="img_info">
+                            <div class="img_left"><img src="/Public/Images/front/data/item4.jpg" class="img-responsive"></div>
+                            <div class="img_middle">
+                                <div class="the_top">
+                                    <div class="top_state">
+                                        <p class="name">谢天真</p>
+                                        <div class="img_right blue">等待送达</div>
+                                    </div>
+                                    <p class="time">2017-05-17 13:40</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="describe"><span class="describe_name">超级无敌长的名字啊还能这么长黯然销魂饭黯然销魂饭</span><span>等10件商品</span></div>
+                    <div class="money">¥220.00</div>
+                </li>
+                <li class="list">
+                    <div class="list_top">
+                        <div class="img_info">
+                            <div class="img_left"><img src="/Public/Images/front/data/item4.jpg" class="img-responsive"></div>
+                            <div class="img_middle">
+                                <div class="the_top">
+                                    <div class="top_state">
+                                        <p class="name">谢天真</p>
+                                        <div class="img_right blue">已完成</div>
+                                    </div>
+                                    <p class="time">2017-05-17 13:40</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="describe"><span class="describe_name">黯然销魂饭黯然销魂饭</span><span>等10件商品</span></div>
+                    <div class="money">¥220.00</div>
+                </li>
+                <li class="list">
+                    <div class="list_top">
+                        <div class="img_info">
+                            <div class="img_left"><img src="/Public/Images/front/data/item4.jpg" class="img-responsive"></div>
+                            <div class="img_middle">
+                                <div class="the_top">
+                                    <div class="top_state">
+                                        <p class="name">谢天真</p>
+                                        <div class="img_right red">待付款</div>
+                                    </div>
+                                    <p class="time">2017-05-17 13:40</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="describe"><span class="describe_name">黯然销魂饭</span><span>等10件商品</span></div>
+                    <div class="money">¥220.00</div>
+                </li>
+            </ul>
+            <div id="pullUp" style="display: none" >
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+        </div>
+        <!--todo 到店里消费-->
+        <div class="content consumption" id="shop_consume">
+            <ul class="list_content" >
+                <li class="list_shop">
+                    <div class="list_left">
+                        <div class="img_left_shop"><img src="/Public/Images/front/data/item4.jpg" class="img-responsive"></div>
+                        <div class="img_right_shop">
+                            <span class="name">谢天真</span>
+                            <span class="time">2017-05-17 13:40</span>
+                        </div>
+                    </div>
+                    <div class="list_right blue">¥220.00</div>
+                </li>
+                <li class="list_shop">
+                    <div class="list_left">
+                        <div class="img_left_shop"><img src="/Public/Images/front/data/item4.jpg" class="img-responsive"></div>
+                        <div class="img_right_shop">
+                            <span class="name">谢天真</span>
+                            <span class="time">2017-05-17 13:40</span>
+                        </div>
+                    </div>
+                    <div class="list_right blue">¥220.00</div>
+                </li>
+            </ul>
+            <div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="no_content no_take_out">
+    <div class="no_order"></div>
+    <p class="text-center">您还没相关的订单</p>
+</div>
+<div class="no_content no_shop_consume">
+    <div class="no_order"></div>
+    <p class="text-center">您还没相关的订单</p>
+</div>
+{/block}
+{block name="js"}
+<script type="text/javascript" src="/Public/Js/front/iscroll.js"></script>
+<script type="text/javascript" src="/Public/Js/front/front_js/my_order_list.js"></script>
+{literal}
+<script>
+
+</script>
+<script type="text/javascript">
+    $('.switch_content .fl').on('click',function(){
+        $(this).addClass('active').siblings('.fl').removeClass('active');
+        var target=$(this).data('id');
+        $('#'+target).addClass('active').siblings('.content').removeClass('active');
+        myScroll.refresh();
+        if($('#take_out').hasClass('active')){
+            $('.no_content.no_shop_consume').hide();
+            if($('#take_out .list_content:hidden')[0]){
+                $('.no_content.no_take_out').show();
+            }
+        }
+        if($('#shop_consume').hasClass('active')){
+            $('.no_content.no_take_out').hide();
+            if($('#shop_consume .list_content:hidden')[0]){
+                $('.no_content.no_shop_consume').show();
+            }
+        }
+    });
+</script>
+{/literal}
+{/block}

@@ -1,0 +1,44 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<form id='base_config' action='' method='POST'>
+<!--<div class="formitems inline">  -->
+    <!--<label class="fi-name"><span class="colorRed">*</span> 当前搜索范围：</label>-->
+    <!--<div class="form-controls">  -->
+        <!--<input type="text" name='old_range' disabled="disabled" value='{$old_range}' placeholder="">-->
+        <!--<span class="fi-help-text">单位：km</span>-->
+    <!--</div>  -->
+<!--</div>-->
+
+<div class="formitems inline">  
+    <label class="fi-name"><span class="colorRed">*</span> 搜索范围：</label>
+    <div class="form-controls">  
+        <input type="text" name='new_range' value='{$old_range}' placeholder="">
+        <span class="fi-help-text">单位：km</span>
+    </div>  
+</div>
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span> 每次加载条目数：</label>
+        <div class="form-controls">
+            <input type="text" name='pre_near_num' value='{$config.PRE_NEAR_NUM}' placeholder="">
+            <span class="fi-help-text">单位：条</span>
+        </div>
+    </div>
+<div class="formitems inline">  
+    <label class="fi-name"></label>  
+    <div class="form-controls">
+    	<input type='hidden' name='act' value='save' />
+        <button type="submit" class="btn btn-blue"><i class="gicon-check white"></i>确定修改</button>
+    </div>  
+</div>
+</form> 
+{/block} 
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+{/block} 
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpConfig/base_config.css" type="text/css" />
+{/block}

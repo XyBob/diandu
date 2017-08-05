@@ -1,0 +1,29 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<form action='' method='post' id='add_admin'>
+
+    <div class="formitems inline">
+        <label class="fi-name"><span class='colorRed'>*</span>商家推荐人id：</label>
+        <div class="form-controls">
+            <input type="text" name='user_id' value='{$user_id}' id='title' placeholder="" class="small" >
+
+        </div>
+    </div>
+
+    <div class="formitems inline">
+        <label class="fi-name"></label>
+        <div class="form-controls">
+            <!--<input type='hidden' name='user_id' value='{$user_id}' />-->
+            <!--<input type="hidden" name="agent_tye" id='agent_tye' value="province" />-->
+            <button type="submit" class="btn btn-blue"><i class="gicon-ok white"></i>保存</button>
+        </div>
+    </div>
+</form>
+{/block}
+{block name="js"}
+{literal}
+
+{/literal}
+{/block}

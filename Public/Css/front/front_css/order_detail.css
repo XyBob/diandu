@@ -1,0 +1,395 @@
+html,body{
+    width:100%;
+    background: #F3F3F3;
+    font-family: PingFangSC-Regular;
+    overflow-x:hidden;
+    height:100%;
+}
+.img-responsive{
+    width:100%;
+    height:100%;
+    display:block;
+}
+.content{
+    width:100%;
+    margin-top:2.2rem;
+    background: #fff;
+    box-sizing: border-box;
+    padding:0.75rem 0 0 0;
+}
+.content .list_top{
+    display: flex;
+    justify-content: space-between;
+    padding-right:0.75rem;
+    border-bottom: 1px solid #F1F4F7;
+    padding-bottom:0.75rem;
+    flex-wrap:wrap;
+    margin-left: 0.75rem;
+}
+.content .list_top .img_info{
+    display: flex;
+    justify-content: flex-start;
+    width:100%;
+}
+.content .list_top .img_right{
+    font-size: 0.8rem;
+}
+.content .list_top .img_right.grey{
+    color: #999999;
+}
+.content .list_top .img_right.blue{
+    color: #3D9FE9;
+}
+.content .list_top .img_right.red{
+    color: #F93B23;
+}
+.content .list_top .img_info .img_left{
+    width:1.8rem;
+    height:1.8rem;
+    margin-right:0.5rem;
+}
+.content .list_top .img_info .img_middle{
+    width:calc(100% - 2.3rem);
+    overflow: hidden;
+}
+.content .list_top .img_info .img_middle .the_top{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:1.8rem;
+}
+.content .list_top .img_info .img_middle .the_top .top_state{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .list_top .img_info .img_middle .the_top .name{
+    font-size: 0.8rem;
+    color: #333333;
+}
+.content .list_top .img_info .img_middle .the_top .time{
+    font-size: 0.5rem;
+    color: #999999;
+}
+.list_show{
+    padding-left:0.75rem;
+}
+.list_show li.clearfix{
+    padding:0.6rem 0.75rem 0.6rem 0;
+    border-bottom:1px solid #F1F4F7;
+}
+.list_show .dishes{
+    font-size: 0.7rem;
+    color: #666666;
+}
+.list_show .number{
+    font-size: 0.6rem;
+    color: #999999;
+    margin-right:1.15rem;
+}
+.list_show .money{
+    font-size: 0.7rem;
+    color: #666666;
+}
+.privilege{
+    display: flex;
+    justify-content: space-between;
+    height:2.2rem;
+    align-items:center;
+    padding-right:0.75rem;
+}
+.privilege.full{
+    border-bottom:1px solid #F1F4F7;
+}
+.privilege .left_control{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.privilege .left_control span{
+    font-size: 0.7rem;
+    color: #999999;
+    margin-left:0.5rem;
+}
+.privilege .money{
+    font-size: 0.7rem;
+    color: #666666;
+}
+.total_money{
+    height:3.1rem;
+    line-height:3.1rem;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #3D9FE9;
+    border-top: 1px solid #F1F4F7;
+    margin-bottom:0.5rem;
+    background: #fff;
+    padding-right:0.75rem;
+}
+/*todo 配送信息*/
+.shipping_information{
+    margin:0.5rem auto;
+    background: #fff;
+}
+.shipping_information p{
+    margin-left:0.75rem;
+    height:2.2rem;
+    line-height:2.2rem;
+    border-bottom: 1px solid #F1F4F7;
+}
+.shipping_information .send_info{
+    font-size: 0.8rem;
+    color: #666666;
+}
+.shipping_information .send_limit{
+    font-size: 0.7rem;
+    color: #666666;
+}
+.shipping_details{
+    display: flex;
+    padding:0.65rem 0.75rem 0.6rem 0.75rem;
+}
+.shipping_details .address{
+    width:3.8rem;
+}
+.shipping_details .address_info{
+   width:calc(100% - 3.8rem);
+}
+.shipping_details .address_info li{
+    line-height:1rem;
+}
+.shipping_information .send_time{
+    width:3.8rem;
+    display: inline-block;
+}
+/*todo 订单信息*/
+.order_information{
+    background: #fff;
+    padding-bottom:0.6rem;
+}
+.order_information .order_info{
+    font-size: 0.8rem;
+    color: #666666;
+    margin-left: 0.75rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    border-bottom: 1px solid #F1F4F7;
+}
+.order_information .order_control{
+    font-size: 0.7rem;
+    color: #666666;
+    margin-left: 0.75rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    border-bottom: 1px solid #F1F4F7;
+}
+.order_information .order_control.pay_style{
+    border-bottom: none;
+}
+.order_information .order_control .order_left{
+    display: inline-block;
+    width:3.8rem;
+}
+/*todo 待处理上面的信息展示*/
+.no_deal_with{
+    padding:0.75rem 0 0.75rem 0.75rem;
+    border-bottom:0.5rem solid #F3F3F3;
+}
+.no_deal_with span{
+    font-size: 0.9rem;
+    color: #333333;
+}
+.no_deal_with .name{
+    font-size: 0.9rem;
+    color: #999999;
+}
+.no_deal_with .because{
+    margin-bottom:0.5rem;
+}
+/*todo 不同状态下的不同操作*/
+.follow_operation_delete{
+    display:flex;
+    justify-content:flex-end;
+    height:3.1rem;
+    background:#fff;
+    align-items:center;
+}
+.follow_operation_send{
+    display:flex;
+    justify-content:flex-end;
+    height:3.1rem;
+    background:#fff;
+    align-items:center;
+}
+.follow_operation_payment{
+    display:flex;
+    justify-content:flex-end;
+    height:3.1rem;
+    background:#fff;
+    align-items:center;
+}
+.follow_operation_processed{
+    display:flex;
+    justify-content:flex-end;
+    height:3.1rem;
+    background:#fff;
+    align-items:center;
+}
+.have_finished{
+    display:flex;
+    justify-content:flex-end;
+    height:3.1rem;
+    background:#fff;
+    align-items:center;
+}
+.first,.second{
+    width:5rem;
+    height:1.6rem;
+    line-height:1.6rem;
+    text-align: center;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+}
+.first.red{
+    border: 1px solid #F93B23;
+    color: #F93B23;
+    margin-right:0.75rem;
+}
+.first.grey{
+    border: 1px solid #979797;
+    color: #999999;
+    margin-right:1rem;
+}
+.first.blue{
+    border: 1px solid #3D9FE9;
+    color: #3D9FE9;
+    margin-right:0.75rem;
+}
+.second.red{
+    border: 1px solid #F93B23;
+    color: #F93B23;
+    margin-right:0.75rem;
+}
+.follow_operation_send .first.grey{
+    margin-right:0.75rem;
+}
+/*todo 删除弹框*/
+.modal{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    z-index:4;
+}
+.modal .modal_content{
+    width:12.45rem;
+    height:8.2rem;
+    background: #F6F6F6;
+    box-shadow: 0 0.15rem 0.4rem 0 rgba(0,0,0,0.50);
+    border-radius: 0.2rem;
+    margin:10rem auto 0;
+    overflow:hidden;
+}
+.modal .modal_content .icon_warning{
+    margin:0.7rem auto 0.6rem;
+    display: block;
+}
+.modal .modal_content .warning{
+    text-align: center;
+    font-size: 0.8rem;
+    color: #333333;
+    margin-bottom:0.8rem;
+}
+.modal .operation{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    height:1.4rem;
+    width:100%;
+    box-sizing: border-box;
+    padding:0 1.5rem;
+}
+.modal .cancel{
+    border: 1px solid #3D9FE9;
+    border-radius: 4px;
+    width:3.7rem;
+    height:1.4rem;
+    line-height:1.4rem;
+    text-align: center;
+    color:#3D9FE9;
+    font-size: 0.8rem;
+}
+.modal .sure{
+    border: 1px solid #DF241D;
+    border-radius: 4px;
+    width:3.7rem;
+    height:1.4rem;
+    line-height:1.4rem;
+    text-align: center;
+    color:#DF241D;
+    font-size: 0.8rem;
+}
+/*-弹出电话-*/
+.phone_bot_wrap{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.5);
+    display:none;
+    z-index:4;
+}
+.phone_bot_wrap a{
+    display:block;
+    width:100%;
+    height:2.2rem;
+    background:#fff;
+    color: #26B8F2;
+    font-size:0.8rem;
+    text-align:center;
+    line-height:2.2rem;
+    position:absolute;
+    left:0;
+    bottom:2.2rem;
+}
+.phone_bot_wrap .cancel{
+    display:block;
+    width:100%;
+    height:2.2rem;
+    text-align:center;
+    line-height:2.2rem;
+    color: #FF254C;
+    font-size:0.7rem;
+    position:absolute;
+    left:0;
+    bottom:0;
+    background:#fff;
+    border:none;
+    border-radius:0;
+    border-top:1px solid #E1E1E1;
+}
+.modal_success{
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    width:100%;
+    height:100%;
+    top:0;
+    display: none;
+}
+.modal_success .modal_content{
+    width:12.45rem;
+    height:9rem;
+    background: #fff;
+}
+.modal_success .modal_content .tips_icon{
+    margin:1.9rem auto 0.7rem;
+}
+.modal_success .modal_content .text{
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666666;
+}

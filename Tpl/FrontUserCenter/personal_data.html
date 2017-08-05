@@ -1,0 +1,243 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/personal_data.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/DateSelector.css?rev=@@hash&version={$version}"/>
+<style>
+
+</style>
+{/block}
+{block name="content"}
+<!--todo 头部-->
+<div class="header">
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>个人资料</h1>
+</div>
+<div class="header_empty"></div>
+<input type="hidden" id="whether_save" value="0">
+<div class="style_show"></div>
+<!--todo 主要内容列表-->
+<ul class="list_content">
+    <form>
+    <li class="show_list list_head">
+        <div class="left_word">头像</div>
+        <div class="ref_upload_photo">
+            <a href="javascript:;" class="right_word" title="上传头像" id="add_upload">
+                <div class="img-control">
+                    <img src="{$user_info.headimgurl}" class="img-responsive" id="img_choose">
+                </div>
+                <div class="icon_add_person icon_left_gray"></div>
+            </a>
+            <input id="dynamic_img_uploader" name="file" style="display:none" type="file" onchange="upload_image();"/>
+			<input type="hidden" name="uptoken" id="uptoken" value="{$up_token}" />
+        	<input type="hidden" name="image_domain" id="image_domain" value="{$image_domain}" />
+            <input type="hidden" name="headimgurl" class="img_url" id="img_url" value="{$user_info.headimgurl}"/>
+        </div>
+    </li>
+    <li class="show_list" id="nick_name">
+        <div class="left_word">昵称</div>
+        <div class="right_word control_range">
+            <div id="nick_name_update" class="text_left">{$user_info.nickname}</div>
+            <div class="icon_add_person icon_left_gray"></div>
+        </div>
+        <input type="hidden" id="pre_nick" name="nickname" value="{$user_info.nickname}" >
+    </li>
+    <li class="show_list" id="real_name">
+        <div class="left_word">姓名</div>
+        <div class="right_word control_range">
+            <div id="name_real" class="text_left">{$user_info.realname}</div>
+            <div class="icon_add_person icon_left_gray"></div>
+        </div>
+        <input type="hidden" id="pre_name" name="realname" value="{$user_info.realname}">
+    </li>
+ <!--   <li class="show_list birth_control">
+        <div class="left_word">生日</div>
+        <div class="right_word" id="birth_time">{$user_info.birthday}</div>
+        <div class="icon_add_person icon_left_gray" id="birth_arrow"></div>
+        <input type="hidden" id="birth"  name="birthday" value="{if $user_info.birthday}{$user_info.birthday}{else}请选择{/if}">
+    </li>-->
+    <li class="show_list">
+        <div class="left_word">手机号</div>
+        <div class="right_word">{$user_info.username}</div>
+    </li>
+        <li class="show_list">
+            <div class="left_word">用户ID</div>
+            <div class="right_word">{$user_info.user_id}</div>
+        </li>
+        </form>
+</ul>
+<div class="save" id="save_btn">保存</div>
+<!--todo 出生日期-->
+<div id="targetContainer"></div>
+<!--todo 姓名模态框-->
+<div class="modal_name modal">
+    <div class="header">
+        <div class="left_header">
+            <div class="icon_add_person icon_left_white"></div>
+        </div>
+        <h1>修改名字</h1>
+    </div>
+    <div class="header_empty"></div>
+    <input type="text" value="{$user_info.realname}" id="update_name" class="update_name" maxlength="10">
+</div>
+<div class="modal_nickname modal">
+    <div class="header">
+        <div class="left_header">
+            <div class="icon_add_person icon_left_white"></div>
+        </div>
+        <h1>修改昵称</h1>
+    </div>
+    <div class="header_empty"></div>
+    <input type="text" value="{$user_info.nickname}" id="update_nick_name" class="update_name" maxlength="10">
+</div>
+{/block}
+{block name="js"}
+<script src="/Public/Js/front/front_js/DateSelector.js"></script>
+<script src="/Public/Js/front/front_js/upload_img.js" type="text/javascript"></script>
+<!--<script src="/Public/Js/jquery/ajaxupload.3.5.js"></script>-->
+<script>
+    var birth_year=parseInt('{date('Y',strtotime($user_info.birthday))}');
+    var birth_month=parseInt('{date('m',strtotime($user_info.birthday))}');
+    var birth_day=parseInt('{date('d',strtotime($user_info.birthday))}');
+</script>
+{literal}
+<script type="text/javascript">
+	if(!is_ios()){
+		$("file").attr({
+			'capture':'camera',
+			'accept':'image/*'
+		});
+	}
+    $(function(){
+        // todo 上传个人头像
+//      new AjaxUpload("#add_upload", {
+//          action: "/Front/uploadHandler",
+//          name: "upfile",
+//          responseType: "json",
+//          onSubmit: function(){
+//              /*  alert('正在上传');*/
+//          },
+//          onChange: function(file, extension){
+//              if (extension && /^(jpg|png|jpeg|gif)$/.test(extension)) {
+//                  return true;
+//              }
+//              else {
+//                  show_alert('暂不支持该图片格式！');
+//                  return false;
+//              }
+//          },
+//          onComplete: function(file, response){
+//              if (response.status === 0) {
+//                  show_alert(response.msg);
+//              }
+//              else if (response.status === 1) {
+//                  $('#img_choose').attr('src',response.img_url);
+//                  $('#img_url').val(response.img_url);
+//              }
+//          }
+//      });
+		
+		
+		
+		
+		
+		
+        var old_name=$('#name_real').html();
+//        var old_birth=$('#birth_time').html();
+//        //---------------------函数调用开始---------------------
+//        new DateSelector({
+//            input : 'birth_time',//点击触发插件的input框的id
+//            container : 'targetContainer',//插件插入的容器id
+//            type : 0,
+//            //0：不需要tab切换，自定义滑动内容，建议小于三个；
+//            //1：需要tab切换，【年月日】【时分】完全展示，固定死，可设置开始年份和结束年份
+//            param : [1,1,1,0,0],
+//            //设置['year','month','day','hour','minute'],1为需要，0为不需要,需要连续的1
+//            beginTime : [1970,1,1],//如空数组默认设置成1970年1月1日0时0分开始，如需要设置开始时间点，数组的值对应param参数的对应值。
+//            endTime : [],//如空数组默认设置成次年12月31日23时59分结束，如需要设置结束时间点，数组的值对应param参数的对应值。
+//            recentTime : [birth_year,birth_month,birth_day],//如不需要设置当前时间，被为空数组，如需要设置的开始的时间点，数组的值对应param参数的对应值。
+//            success : function(arr){
+//                /*todo 出生日期的显示*/
+//                $('#birth_time').html(arr[0]+'-'+arr[1]+'-'+arr[2]);
+//            }//回调
+//        });
+        /*todo 修改姓名*/
+        $('#real_name .control_range').on('click',function(){
+            $('.modal_name').show();
+        });
+        /*todo 昵称*/
+        $('#nick_name .control_range').on('click',function(){
+            $('.modal_nickname').show();
+        });
+        /*todo 姓名模态框的返回按钮*/
+        $('.modal_name .icon_left_white').on('click',function(){
+            $('.modal_name').hide();
+            $('#name_real').html($('#update_name').val());
+        });
+        /*todo 昵称模态框的返回按钮*/
+        $('.modal_nickname .icon_left_white').on('click',function(){
+            $('.modal_nickname').hide();
+            $('#nick_name_update').html($('#update_nick_name').val());
+        });
+        /*todo 当前页面的返回按钮*/
+        $('#current_page_arrow').on('click',function(){
+            var pre_nick=$('#pre_nick').val();
+            var nick=$('#nick_name_update').html();
+            var pre_name=$('#pre_name').val();
+            var name=$('#name_real').html();
+//            var pre_birth=$('#birth').val();
+//            var birth=$('#birth_time').html();
+            if((pre_nick==nick)&&(pre_name==name)){
+                history.go(-1);
+            }
+            else{
+                show_alert('请先保存');
+            }
+        });
+        $('#save_btn').on('click',function(){
+//           var birthday= $('#birth_time').html();
+//            if(birthday=='请选择'){
+//                birthday='1970-01-01';
+//            }
+            $.ajax({
+                url:"/FrontUserCenter/personal_data",
+                type:"POST",
+                data:{
+                    headimgurl:$('#img_url').val(),
+                    nickname:$('#nick_name_update').html(),
+                    realname: $('#name_real').html(),
+//                    birthday:birthday
+                },
+                dataType:'json',
+                timeout:10000,
+                success:function(data){
+                    if(data) {
+                        if(data.code != -1)
+                        {
+                            show_alert(data.msg);
+                           // $('#whether_save').val(1);
+                            if(is_ios||is_android()){
+                                native_back();
+                            }else{
+                                setTimeout(function(){
+                                    window.location.href='/FrontUserCenter/person_center'
+                                },1000);
+                            }
+
+                        }
+                        else
+                        {
+                            show_alert(data.msg);
+                        }
+                    }
+                }
+            });
+        });
+
+    });
+</script>
+{/literal}
+{/block}

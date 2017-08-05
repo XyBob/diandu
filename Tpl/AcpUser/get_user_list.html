@@ -1,0 +1,433 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<div class="t-a-wait-con">
+    <div class="tablesWrap"> 
+    	<div class="tables-searchbox">
+            <div class="t-a-wait-top">
+                <form action="" method="post" id="rank_waiting">
+                    {if $opt == 'user'}<div class="t-a-wait-top-li"><span>用户昵称：</span><input type="text" placeholder="" value="{$username}" class="mini" name="nickname"> </div>
+                <!--div class="t-a-wait-top-li"><span>加盟商名称：</span><input type="text" placeholder="" value="{$nickname}" class="mini" name="nickname"> </div-->
+                <!--<div class="t-a-wait-top-li"><span>联系人：</span><input type="text" placeholder="" value="{$realname}" class="mini" name="realname"> </div>{/if}-->
+                <div class="t-a-wait-top-li"><span>ID：</span><input type="text" placeholder="" value="{$user_id}" class="mini" name="user_id"> </div>
+                <div class="t-a-wait-top-li"><span>手机号：</span><input type="text" placeholder="" value="{$mobile}" class="mini" name="mobile"> </div>
+                <!--div class="t-a-wait-top-li"><span>QQ：</span><input type="text" placeholder="" value="{$qq}" class="mini" name="qq"> </div-->
+                <!--div class="t-a-wait-top-li"><span>邮箱：</span><input type="text" placeholder="" value="{$email}" class="mini" name="email"> </div-->
+                <!--div class="t-a-wait-top-li"><span>门店编号：</span><input type="text" placeholder="" value="{$store_sn}" class="mini" name="store_sn"> </div-->
+                    <!--
+                <div class="t-a-wait-top-li">
+                <select class="small" name="big_area_id">
+                    <option value="0" >大区</option>
+                    {section name=row loop=$big_area_list}
+                    <option value="{$big_area_list[row].big_area_id}" {if $big_area_list[row].big_area_id == $big_area_id}selected{/if} >{$big_area_list[row].area_name}</option>
+                    {/section}
+                </select>
+                </div>
+                    -->
+
+              <!--  <div class="t-a-wait-top-li">
+                <select class="small" name="user_rank_id">
+                    <option value="0" >用户等级</option>
+                    {section name=row loop=$rank_list}
+                    <option value="{$rank_list[row].user_rank_id}" {if $rank_list[row].user_rank_id == $user_rank_id}selected{/if} >{$rank_list[row].rank_name}</option>
+                    {/section}
+                </select>
+                </div>-->
+
+                <div class="t-a-wait-top-li" style="width:400px;">
+                    <div class="formitems inline">  
+                        <label class="fi-name" style="width:70px; font-weight:normal;">注册时间：</label>  
+                        <div class="form-controls" style="margin-left:80px;">  
+				            <input type="text" style="width:120px;" autocomplete="off" class="Wdate" name="start_time" value="{if $start_time}{date('Y-m-d',$start_time)}{/if}" onclick="WdatePicker({ dateFmt:'yyyy-MM-dd'})">  
+
+                            <span class="fi-text">-</span>  
+                            
+                            <input type="text" style="width:120px;" autocomplete="off" class="Wdate" name="end_time" value="{if $end_time}{date('Y-m-d',$end_time)}{/if}" onclick="WdatePicker({ dateFmt:'yyyy-MM-dd'})">  
+                        </div>  
+                    </div> 
+                </div>
+
+                <div class="t-a-wait-top-li" style=""><input type="hidden" name="submit" value="search" /><button class="btn"><i class="gicon-search"></i>搜索</button> </div>
+              </form>
+            </div>        
+        </div> 
+        <table class="wxtables">  
+            <colgroup>  
+            <col width="3%">
+            <col width="7%">
+            <col width="7%">
+            <col width="7%">
+            <col width="7%">  
+            <col width="7%">  
+            <col width="7%">
+            <col width="7%">
+            <col width="7%">
+            <col width="20%">
+            </colgroup>  
+            <thead>  
+                <tr>  
+                    <td>选择</td>  
+                    <!--td>用户名</td>
+                    <td>联系人</td>-->
+                    <td>头像</td>
+                    <td>用户id</td>
+                    <td>昵称</td>
+                    <td>手机</td>
+                    <td>地区</td>
+                    <td>上级推荐人</td>
+                    <td>推荐的人数</td>
+                    <td>推荐的商家数</td>
+                    <!--td>所在地区</td-->
+                    <td>注册时间</td>
+                   <!-- {if $opt == 'user'}<td>会员卡号</td> {/if}-->
+                    <!--
+                    <td>邮箱</td>
+                    <td>QQ</td>
+                    -->
+                    <td>操作</td>  
+                </tr>  
+            </thead>  
+            <tbody>
+				{foreach from=$user_list item=user}
+                <tr>
+					<td class="_checkbox">
+						<input type="checkbox" class="checkbox" name="a[]" value="{$user.user_id}">
+					</td>
+                    <td ><div style="width: 3rem;height: 3rem;border-radius: 50%;overflow: hidden;"><img style="width: 100%;height: 100%;" src = "{$user.headimgurl}"></div></td>
+		<!--			<td><input type="checkbox" class="checkbox" value='{$user.user_id}' name="a[]"></td>-->
+                    <!--
+                    <td>{$user.username}</td>  
+                    <td>{$user.realname}</td>
+                    <td>{$user.area_string}</td>
+                    <td><span>{$user.email}</span></td>  
+                    <td><span>{$user.qq}</span></td>  
+                    -->
+                    <td>{$user.user_id}</td>
+                    <td>{$user.nickname}</td>  
+                    <!--{if $opt == 'user'}<td>{$user.rank_name}</td>{/if}-->
+                    <td>{if $user.mobile}{$user.mobile}{else}--{/if}</td>
+                    <td>{$user.province}{$user.city}</td>
+                    <td>{$user.first_agent_id}</td>
+                    <td>{$user.num_people}</td>
+                    <td>{$user.num_shop}</td>
+                    <td>{$user.reg_time|date_format:"%Y-%m-%d %H:%M:%S"}</td>
+                    <td>  
+                        {if $user.role_type == 6}
+                            <a href="/AcpUser/edit_dept_user/user_id/{$user.user_id}" class="btn" title="修改用户信息">修改</a>   
+                        {/if}
+                        {if $user.is_extend_user== 1}
+                        <a href="/AcpUser/extend_user/user_id/{$user.user_id}" class="btn" title="查看推广列表">查看推广列表</a>   
+                        {/if}
+						{if $user.is_enable == 1}
+							<a href="javascript:;" class="btn" onclick="set_is_enable({$user.user_id}, 2)" title="禁用该用户">禁用</a>   
+						{elseif $user.is_enable == 2}
+							<a href="javascript:;" class="btn" onclick="set_is_enable({$user.user_id}, 1)" title="激活该用户">激活</a>   
+						{/if}
+						<a href="/AcpUser/get_my_recommenders/user_id/{$user.user_id}/type/1"  class="btn" title="查看ta的推荐"></i>ta推荐的人</a>
+                        <a href="/AcpUser/get_my_recommenders/user_id/{$user.user_id}/type/2"  class="btn" title="查看ta的推荐"></i>ta推荐的商家</a>
+                        {if $user.role_type!=4}
+						<a href="/AcpUser/set_agent/user_id/{$user.user_id}"  class="btn" title="设置成为代理"></i>设置成为代理</a>
+						{/if}
+						<a href="/AcpUser/edit_agent/user_id/{$user.user_id}" class="btn" title="修改ta的推荐人">修改ta的推荐人</a>
+                        {if $user.is_merchant==1}
+                        <a href="/AcpUser/edit_agent_shop/user_id/{$user.user_id}" class="btn" title="修改ta的商家推荐人">修改ta的商家推荐人</a>
+                        {/if}
+                        <a href="/AcpUser/user_detail/user_id/{$user.user_id}" class="btn" title="查看用户详情">详情</a>
+						<a href="javascript:;" onclick="delUser({$user.user_id}, this);" class="btn" title="删除"><i class="gicon-trash black"></i>删除</a>
+                        
+                    </td>  
+                </tr>
+                {foreachelse}
+					<tr><td colspan="11">没有符合条件的用户</td></tr>
+                {/foreach}
+            </tbody>  
+        </table>  
+        <!-- end wxtables -->  
+        <div class="tables-btmctrl clearfix">  
+            <div class="fl">  
+				<a href="javascript:;" class="btn btn-blue" onclick="Select()">全选</a>  
+				<a href="javascript:;" class="btn btn-blue" onclick="Cancel()">取消</a>
+				<a href="javascript:;" onclick="delArticleBatch();" class="btn btn-blue">删除</a>
+			</div>
+            <div class="fr">  
+                <div class="paginate">  
+                    {$show}
+                </div>  
+                <!-- end paginate -->  
+            </div>  
+        </div>  
+        <!-- end tables-btmctrl -->  
+    </div>  
+    <!-- end tablesWrap --> 
+</div>
+{/block} 
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+<script>
+    var url = '{$url}';
+//全选
+function Select(){
+	var sel=document.getElementsByName("a[]");
+	for(var i=0;i<sel.length;i++){
+		sel[i].checked=true;
+	}
+}
+//取消全选
+function Cancel(){
+	var sel=document.getElementsByName("a[]");
+	for(var i=0;i<sel.length;i++){
+		sel[i].checked=false;
+	}
+}
+
+{literal} 
+function set_is_enable(id, is_enable)
+{
+	opt = (is_enable == 1) ? '激活' : '禁用';
+	$.jPops.confirm(
+	{  
+		 title:"提示",  
+		 content:"您确定要执行该操作吗？",  
+		 okBtnTxt:"确定",  
+		 cancelBtnTxt:"取消",  
+		 callback:function(r)
+		 {  
+			 if(r)
+			 {
+				 $.post('/AcpUserAjax/set_user_is_enable', {"user_id":id, "is_enable":is_enable}, function(data, textStatus) 
+				 {
+					if (data == 'success')
+					{
+						alert('恭喜您，' + opt + '成功！');
+						location.reload();
+					}
+					else
+					{
+						alert('对不起，' + opt + '失败');
+					}
+				});
+			 }  
+			 return true;  
+		 }
+	 });  	
+}
+
+function batch_set_is_enable(is_enable)
+{
+	opt = (is_enable == 1) ? '激活' : '禁用';
+	$.jPops.confirm(
+	{  
+		 title:"提示",  
+		 content:"您确定要执行这些操作吗？",  
+		 okBtnTxt:"确定",  
+		 cancelBtnTxt:"取消",  
+		 callback:function(r)
+		 {  
+			 if(r)
+			 {
+				 var ids = '';
+				 var count = 0;
+				 $('input[name="a[]"]:checked').each(function(){
+					 count ++;
+					 ids += $(this).val() + ',';
+				 });
+
+				 if (!count)
+				 {
+					 alert('对不起，请选择至少一项进行操作！');
+					 return;
+				 }
+
+				 ids = ids.substr(0, ids.length - 1);
+
+				 $.post('/AcpUserAjax/batch_set_user_is_enable', {"user_ids":ids, "is_enable":is_enable}, function(data, textStatus) 
+				 {
+					if (data == 'success')
+					{
+						alert('恭喜您，' + opt + '成功！');
+						location.reload();
+					}
+					else
+					{
+						alert('对不起，' + opt + '失败');
+					}
+				});
+			 }  
+			 return true;  
+		 }
+	 });
+}
+
+
+
+function delUser(_id, _this){
+	$.jPops.confirm({
+		title:"提示",
+		content:'您确定要删除这条数据吗？',
+		okBtnTxt:"确定",
+		cancelBtnTxt:"取消",
+		callback:function(r){
+			if(r){
+				$.ajax({
+					url: '/AcpUser/ajax_del_user',
+					data: {id: _id},
+					success: function(data){
+                        var msg = '';
+						if(data == 'success'){
+                            msg ="删除成功";
+                        } else {
+                            msg ="删除失败";
+                        }
+                        $.jPops.alert({
+                            title:"提示",
+                            content: msg,
+                            okBtnTxt:"确定",
+                            callback:function(){
+                                location.href="/AcpUser/get_all_user_list?r=" + Math.random();
+                                return true;
+                            }
+                        });
+					}
+				});
+			}
+			return true;
+		}
+	});
+}
+
+function general_code(id)
+{
+    if (!id) {
+        alert('出错啦');
+    }
+    var url_link = url + '?register_p=' + id;
+    $.jPops.custom({
+		title:"二维码链接地址",  
+		content:url_link,
+		okBtnTxt:"确定",  
+        cancelBtnTxt:"取消",  
+        callback:function(r)
+        {
+            return true;
+        } 
+    });
+
+}
+
+
+    //复制链接
+function copy_link()
+{
+    var link = 'http://' + document.domain + '/FrontUser/personal_center';
+    $.jPops.custom({
+        title:"请复制链接",  
+        content:'<div>个人中心链接：' + link + '</div>',
+        okBtnTxt:"复制",  
+        cancelBtnTxt:"关闭",  
+        callback:function(r)
+        {
+            if(r)
+            {
+                text = link;
+                copy_text('jpops-btn-ok');
+            }
+            else
+            {
+                return true;  
+            }
+        }
+    });
+}
+function copy_text(id)
+    {
+        var clipboard = new Clipboard('#' + id, {
+            text: function() {
+                return text;
+            }
+        });
+
+        clipboard.on('success', function(e) {
+            console.log(e);
+            alert('复制成功');
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+            alert('复制失败，请手动复制');
+        });
+    }
+
+	function delArticleBatch(){
+		var _ids = '';
+		var count = 0;
+		$('input[name="a[]"]:checked').each(function () {
+			count++;
+			_ids += $(this).val() + ',';
+		});
+		if(_ids.length === 0){
+			$.jPops.alert({
+				title:"提示",
+				content:'对不起，请选择要删除项！',
+				okBtnTxt:"确定",
+				callback:function(){
+					return true;
+				}
+			});
+			return false;
+		}
+		console.log(_ids);
+		$.jPops.confirm({
+			title:"提示",
+			content:'您确定要删除这些数据吗？',
+			okBtnTxt:"确定",
+			cancelBtnTxt:"取消",
+			callback:function(r){
+				if(r){
+					$.ajax({
+						url: '/AcpUser/del_users',
+						data: {id: _ids},
+						type:'post',
+						dataType: 'json',
+						beforeSend: function(){
+							$.jPops.showLoading();
+						},
+						success: function(data){
+							//	console.log(data);
+							$.jPops.hideLoading();
+							if(data.type === 1){
+								$.jPops.alert({
+									title:"提示",
+									content:data.meesage,
+									okBtnTxt:"确定",
+									callback:function(){
+										return true;
+									}
+								});
+								location.reload();
+							}else{
+								$.jPops.alert({
+									title:"提示",
+									content:data.meesage,
+									okBtnTxt:"确定",
+									callback:function(){
+										return true;
+									}
+								});
+							}
+
+						}
+					});
+				}
+				return true;
+			}
+		});
+	}
+</script>
+{/literal} 
+{/block} 
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpUser/audit_waiting.css" type="text/css" />
+{/block}

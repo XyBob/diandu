@@ -1,0 +1,55 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+
+{block name="content"}
+<form id="J_FormArticle" action="/McpDeposit/deposit_apply" method="post">
+    <div class="formitems inline">
+        <label class="fi-name"><span class="colorRed">*</span>当前店铺余额：</label>
+        <div class="form-controls">
+            <input type="text" placeholder="" class="xlarge" name="left_money" readonly value="{$left_money}">
+            <span class="fi-help-text hide"></span>
+        </div>
+    </div>
+<!--<div class="formitems inline">
+    <label class="fi-name"><span class="colorRed">*</span>选择银行卡：</label>
+    <div class="form-controls">
+        <select name="bank_card_id">
+			{foreach from=$bank_card_list key=key item=bank_card}
+				<option value="{$bank_card.bank_card_id}">{$bank_card.bank_name}</option>
+			{/foreach}
+        </select>
+		<span class="fi-help-text hide"></span>
+    </div>
+</div>-->
+
+<div class="formitems inline">
+    <label class="fi-name"><span class="colorRed">*</span>提现金额：</label>
+    <div class="form-controls">
+        <input type="text" placeholder="" class="xlarge" name="amount">
+		<span class="fi-help-text hide"></span>
+    </div>
+</div>
+<div class="formitems inline">
+    <label class="fi-name"><span class="colorRed">*</span>支付密码：</label>
+    <div class="form-controls">
+        <input type="password" placeholder="" class="xlarge" name="pay_password">
+        <br>
+		<span class="fi-help-text hide"></span>
+        支付密码为登录密码,最低提现1元，最高50000,不满1000提现扣除0.5元提现手续费，满1000提现不收提现手续费
+    </div>
+</div>
+<div class="formitems inline">
+    <label class="fi-name"></label>
+    <div class="form-controls">
+		<input type="hidden" name="act" value="submit" />
+        <button type="submit" class="btn btn-blue"><i class="gicon-check white"></i>保存</button>
+    </div>
+</div>
+</form>
+{/block} 
+
+{block name="js"}
+<script type="text/javascript">
+</script>
+{/block}

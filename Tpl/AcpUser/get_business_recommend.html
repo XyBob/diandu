@@ -1,0 +1,302 @@
+{extends file="../acp.html"}
+
+{block name="title"}{$head_title}{/block}
+{block name="content"}
+<div class="t-a-wait-con">
+    <div class="tablesWrap">
+        <div class="tables-searchbox">
+            <div class="t-a-wait-top">
+                <form action="" method="post" id="rank_waiting">
+                    <div class="t-a-wait-top-li"><span>用户昵称：</span><input type="text" placeholder="" value="{$username}" class="mini" name="nickname"> </div>
+
+                    <div class="t-a-wait-top-li"><span>手机号：</span><input type="text" placeholder="" value="{$mobile}" class="mini" name="mobile"> </div>
+
+
+                    <div class="t-a-wait-top-li" style="width:400px;">
+                        <div class="formitems inline">
+                            <label class="fi-name" style="width:70px; font-weight:normal;">注册时间：</label>
+                            <div class="form-controls" style="margin-left:80px;">
+                                <input type="text" style="width:120px;" autocomplete="off" class="Wdate" name="start_time" value="{if $start_time}{date('Y-m-d',$start_time)}{/if}" onclick="WdatePicker({ dateFmt:'yyyy-MM-dd'})">
+
+                                <span class="fi-text">-</span>
+
+                                <input type="text" style="width:120px;" autocomplete="off" class="Wdate" name="end_time" value="{if $end_time}{date('Y-m-d',$end_time)}{/if}" onclick="WdatePicker({ dateFmt:'yyyy-MM-dd'})">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="t-a-wait-top-li" style=""><input type="hidden" name="submit" value="search" /><button class="btn"><i class="gicon-search"></i>搜索</button> </div>
+                </form>
+            </div>
+        </div>
+        <table class="wxtables">
+            <colgroup>
+                <col width="5%">
+                <col width="7%">
+                {if $opt == 'user'}<col width="7%">  {/if}
+                <col width="7%">
+                <col width="7%">
+                {if $opt == 'user'}<col width="7%"> {/if}
+                <col width="15%">
+            </colgroup>
+            <thead>
+            <tr>
+                <td>选择</td>
+                <!--td>用户名</td>
+                <td>联系人</td>-->
+                <td>昵称</td>
+                <td>手机</td>
+                <!--td>所在地区</td-->
+                <td>注册时间</td>
+                <!-- {if $opt == 'user'}<td>会员卡号</td> {/if}-->
+                <!--
+                <td>邮箱</td>
+                <td>QQ</td>
+                -->
+
+            </tr>
+            </thead>
+            <tbody>
+            {foreach from=$user_list item=user}
+            <tr>
+                <td><input type="checkbox" class="checkbox" value='{$user.user_id}' name="a[]"></td>
+                <!--
+                <td>{$user.username}</td>
+                <td>{$user.realname}</td>
+                <td>{$user.area_string}</td>
+                <td><span>{$user.email}</span></td>
+                <td><span>{$user.qq}</span></td>
+                -->
+                <td>{$user.nickname}</td>
+                <!--{if $opt == 'user'}<td>{$user.rank_name}</td>{/if}-->
+                <td>{if $user.mobile}{$user.mobile}{else}--{/if}</td>
+                <td>{$user.reg_time|date_format:"%Y-%m-%d %H:%M:%S"}</td>
+
+            </tr>
+            {foreachelse}
+            <tr><td colspan="11">没有符合条件的用户</td></tr>
+            {/foreach}
+            </tbody>
+        </table>
+        <!-- end wxtables -->
+        <div class="tables-btmctrl clearfix">
+            <!--<div class="fl">
+                <a href="javascript:;" class="btn btn-blue" onclick="Select()">全选</a>
+                <a href="javascript:;" class="btn btn-blue" onclick="Cancel()">取消</a>
+            </div>-->
+            <div class="fr">
+                <div class="paginate">
+                    {$show}
+                </div>
+                <!-- end paginate -->
+            </div>
+        </div>
+        <!-- end tables-btmctrl -->
+    </div>
+    <!-- end tablesWrap -->
+</div>
+{/block}
+
+{block name="js"}
+<script src="/Public/Plugins/My97DatePicker/WdatePicker.js?version={$version}"></script>
+<script>
+    var url = '{$url}';
+    //全选
+    function Select(){
+        var sel=document.getElementsByName("a[]");
+        for(var i=0;i<sel.length;i++){
+            sel[i].checked=true;
+        }
+    }
+    //取消全选
+    function Cancel(){
+        var sel=document.getElementsByName("a[]");
+        for(var i=0;i<sel.length;i++){
+            sel[i].checked=false;
+        }
+    }
+
+    {literal}
+    function set_is_enable(id, is_enable)
+    {
+        opt = (is_enable == 1) ? '激活' : '禁用';
+        $.jPops.confirm(
+                {
+                    title:"提示",
+                    content:"您确定要执行该操作吗？",
+                    okBtnTxt:"确定",
+                    cancelBtnTxt:"取消",
+                    callback:function(r)
+                    {
+                        if(r)
+                        {
+                            $.post('/AcpUserAjax/set_user_is_enable', {"user_id":id, "is_enable":is_enable}, function(data, textStatus)
+                            {
+                                if (data == 'success')
+                                {
+                                    alert('恭喜您，' + opt + '成功！');
+                                    location.reload();
+                                }
+                                else
+                                {
+                                    alert('对不起，' + opt + '失败');
+                                }
+                            });
+                        }
+                        return true;
+                    }
+                });
+    }
+
+    function batch_set_is_enable(is_enable)
+    {
+        opt = (is_enable == 1) ? '激活' : '禁用';
+        $.jPops.confirm(
+                {
+                    title:"提示",
+                    content:"您确定要执行这些操作吗？",
+                    okBtnTxt:"确定",
+                    cancelBtnTxt:"取消",
+                    callback:function(r)
+                    {
+                        if(r)
+                        {
+                            var ids = '';
+                            var count = 0;
+                            $('input[name="a[]"]:checked').each(function(){
+                                count ++;
+                                ids += $(this).val() + ',';
+                            });
+
+                            if (!count)
+                            {
+                                alert('对不起，请选择至少一项进行操作！');
+                                return;
+                            }
+
+                            ids = ids.substr(0, ids.length - 1);
+
+                            $.post('/AcpUserAjax/batch_set_user_is_enable', {"user_ids":ids, "is_enable":is_enable}, function(data, textStatus)
+                            {
+                                if (data == 'success')
+                                {
+                                    alert('恭喜您，' + opt + '成功！');
+                                    location.reload();
+                                }
+                                else
+                                {
+                                    alert('对不起，' + opt + '失败');
+                                }
+                            });
+                        }
+                        return true;
+                    }
+                });
+    }
+
+
+
+
+    function delUser(_id, _this){
+        $.jPops.confirm({
+            title:"提示",
+            content:'您确定要删除这条数据吗？',
+            okBtnTxt:"确定",
+            cancelBtnTxt:"取消",
+            callback:function(r){
+                if(r){
+                    $.ajax({
+                        url: '/AcpUser/ajax_del_user',
+                        data: {id: _id},
+                        success: function(data){
+                            var msg = '';
+                            if(data == 'success'){
+                                msg ="删除成功";
+                            } else {
+                                msg ="删除失败";
+                            }
+                            $.jPops.alert({
+                                title:"提示",
+                                content: msg,
+                                okBtnTxt:"确定",
+                                callback:function(){
+                                    location.href="/AcpUser/get_all_user_list?r=" + Math.random();
+                                    return true;
+                                }
+                            });
+                        }
+                    });
+                }
+                return true;
+            }
+        });
+    }
+
+    function general_code(id)
+    {
+        if (!id) {
+            alert('出错啦');
+        }
+        var url_link = url + '?register_p=' + id;
+        $.jPops.custom({
+            title:"二维码链接地址",
+            content:url_link,
+            okBtnTxt:"确定",
+            cancelBtnTxt:"取消",
+            callback:function(r)
+            {
+                return true;
+            }
+        });
+
+    }
+
+
+    //复制链接
+    function copy_link()
+    {
+        var link = 'http://' + document.domain + '/FrontUser/personal_center';
+        $.jPops.custom({
+            title:"请复制链接",
+            content:'<div>个人中心链接：' + link + '</div>',
+            okBtnTxt:"复制",
+            cancelBtnTxt:"关闭",
+            callback:function(r)
+            {
+                if(r)
+                {
+                    text = link;
+                    copy_text('jpops-btn-ok');
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        });
+    }
+    function copy_text(id)
+    {
+        var clipboard = new Clipboard('#' + id, {
+            text: function() {
+                return text;
+            }
+        });
+
+        clipboard.on('success', function(e) {
+            console.log(e);
+            alert('复制成功');
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+            alert('复制失败，请手动复制');
+        });
+    }
+</script>
+{/literal}
+{/block}
+
+{block name="css"}
+<link rel="stylesheet" href="/Public/Css/acp/AcpUser/audit_waiting.css" type="text/css" />
+{/block}

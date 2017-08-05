@@ -1,0 +1,166 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+{literal}
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/header1.css?version={$version}"/>
+<link rel="stylesheet" type="text/css" href="/Public/Css/front/front_css/goods_address.css?version={$version}"/>
+<style>
+
+</style>
+{/literal}
+{/block}
+{block name="content"}
+<header>
+    <div class="left_header native_back" id="current_page_arrow">
+        <div class="icon_add_person icon_left_white"></div>
+    </div>
+    <h1>收货地址</h1>
+</header>
+<div class="header_empty"></div>
+<div class="no_address" style="display:none">
+    <div class="blank_address"></div>
+    <p class="address_tips">暂无收货地址</p>
+    <p class="more_tips">您可以新增收货地址以便收货</p>
+</div>
+<ul class="have_address">
+    <li class="address_list">
+        <div class="header clearfix">
+            <span class="fl">谢天真</span><span class="fr">13733242777</span>
+        </div>
+        <div class="describe">浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）</div>
+        <div class="edit_control">
+            <div class="left_control">
+                <span class="icon_market icon_select_default"></span>
+                <span>默认地址</span>
+            </div>
+            <div class="right_control">
+                <div class="edit_switch" onclick="location.href='/Index/new_goods_address'">
+                    <span class="icon_market icon_edit"></span>
+                    <span>编辑</span>
+                </div>
+                <div class="del">
+                    <span class="icon_market icon_delete_1"></span>
+                    <span>删除</span>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="address_list">
+        <div class="header clearfix">
+            <span class="fl">谢天真</span><span class="fr">13733242777</span>
+        </div>
+        <div class="describe">浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）</div>
+        <div class="edit_control">
+            <div class="left_control">
+                <span class="icon_market icon_select_default"></span>
+                <span>默认地址</span>
+            </div>
+            <div class="right_control">
+                <div class="edit_switch">
+                    <span class="icon_market icon_edit"></span>
+                    <span>编辑</span>
+                </div>
+                <div class="del">
+                    <span class="icon_market icon_delete_1"></span>
+                    <span>删除</span>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="address_list">
+        <div class="header clearfix">
+            <span class="fl">谢天真</span><span class="fr">13733242777</span>
+        </div>
+        <div class="describe">浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）</div>
+        <div class="edit_control">
+            <div class="left_control">
+                <span class="icon_market icon_select_default"></span>
+                <span>默认地址</span>
+            </div>
+            <div class="right_control">
+                <div class="edit_switch">
+                    <span class="icon_market icon_edit"></span>
+                    <span>编辑</span>
+                </div>
+                <div class="del">
+                    <span class="icon_market icon_delete_1"></span>
+                    <span>删除</span>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="address_list">
+        <div class="header clearfix">
+            <span class="fl">谢天真</span><span class="fr">13733242777</span>
+        </div>
+        <div class="describe">浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）</div>
+        <div class="edit_control">
+            <div class="left_control">
+                <span class="icon_market icon_select_default"></span>
+                <span>默认地址</span>
+            </div>
+            <div class="right_control">
+                <div class="edit_switch">
+                    <span class="icon_market icon_edit"></span>
+                    <span>编辑</span>
+                </div>
+                <div class="del">
+                    <span class="icon_market icon_delete_1"></span>
+                    <span>删除</span>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="address_list">
+        <div class="header clearfix">
+            <span class="fl">谢天真</span><span class="fr">13733242777</span>
+        </div>
+        <div class="describe">浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）浙江省杭州市余杭区仓前街道某某街某某路乐富海邦园88幢8楼808杭州盈软科技有限公司（最长显示三行）</div>
+        <div class="edit_control">
+            <div class="left_control">
+                <span class="icon_market icon_select_default"></span>
+                <span>默认地址</span>
+            </div>
+            <div class="right_control">
+                <div class="edit_switch">
+                    <span class="icon_market icon_edit"></span>
+                    <span>编辑</span>
+                </div>
+                <div class="del">
+                    <span class="icon_market icon_delete_1"></span>
+                    <span>删除</span>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+<div class="fixed_footer" onclick="location.href='/Index/new_goods_address'">新建收货地址</div>
+<!--todo 删除地址提示-->
+<div class="modal_del">
+    <div class="modal_content">
+        <div class="tips_icon icon_warning"></div>
+        <p class="warning">确定要删除该地址？</p>
+        <div class="operation">
+            <div class="cancel">取消</div>
+            <div class="sure_del">删除</div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script src="/Public/Js/front/front_js/goods_address_control.js"></script>
+{literal}
+<!--todo 返回箭头的控制-->
+<script>
+    $('#current_page_arrow').on('click',function(){
+        history.go(-1);
+    });
+    $(function(){
+        if($('.have_address:visible')[0]){
+            $('.have_address .address_list:eq(0)').find('.left_control').addClass('active');
+            $('.have_address .address_list:eq(0)').find('.left_control .icon_market').addClass('icon_selected_b');
+        }
+    });
+</script>
+{/literal}
+{/block}

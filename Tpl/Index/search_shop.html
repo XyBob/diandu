@@ -1,0 +1,249 @@
+{extends file="../home.html"}
+{block name="title"}{$head_title}{/block}
+{block name="css"}
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/front/front_css/refresh_load.css?version={$version}"/>
+	<link rel="stylesheet" style="text/css" href="__PUBLIC__/Css/front/front_css/shop_type_list.css?version={$version}">
+	<link rel="stylesheet" style="text/css" href="__PUBLIC__/Css/front/front_css/near_shop.css?version={$version}">
+	<style type="text/css">
+		body{
+			background:#fff;
+		}
+		/*-头部搜索框-*/
+		.index_header .head_mid{
+			height:1.4rem;
+			width:100%;
+			position:relative;
+		}
+		.head_mid .search_words{
+			color:#fff;
+			opacity:1 !important;
+			font-size:0.75rem;
+			height:1.4rem;
+		}
+		.search_words::-webkit-input-placeholder{
+			color:#fff;
+			opacity:0.5;
+		}
+		.search_btn{
+			display:block;
+			width:2.1rem;
+			height:100%;
+			position:absolute;
+			top:0;
+			right:0;
+			background:none !important;
+		}
+		/*-搜索结果列表-*/
+		.recom_cont{
+			background:#fff;
+		}
+		.recom_cont .recom_list{
+			border-top:0;
+			border-bottom: 1px solid #F1F4F7;
+		}
+		.recom_store{
+			margin-top:0;
+		}
+		/*-上拉-*/
+		#load_wrapper{
+			top:2.2rem;
+			height:calc(100% - 2.2rem);
+			height:-webkit-calc(100% - 2.2rem);
+			height:-moz-calc(100% - 2.2rem);
+		}
+		/*-没有搜索结果-*/
+		.search_none{
+			width:100%;
+			text-align:center;
+			/*line-height:10rem;*/
+			background:#fff;
+			color:#666;
+			font-size:0.9rem;
+			position:absolute;
+			top:2.2rem;
+			left:0;
+		}
+		.search_none .no_results{
+			width:5.5rem;
+			height:4.95rem;
+			background: url(/Public/Images/front/front_img/blank_01_03@3x.png) no-repeat;
+			background-size:100% 100%;
+			margin:3.75rem auto 0.85rem;
+		}
+		.search_form{
+			width:100%;
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+		}
+		.default_content{
+			padding:2.2rem 0 0 0.75rem;
+		}
+		.default_content .label_name{
+			height:2.2rem;
+			line-height:2.2rem;
+			font-size: 0.7rem;
+			color: #999999;
+			border-bottom: 1px solid #E1E1E1;
+			margin-right:0.75rem;
+		}
+		.default_content .content_list{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			flex-wrap:wrap;
+			padding-top:1rem;
+		}
+		.default_content .content_list .list_name{
+			padding:0.3rem 0.4rem;
+			font-size: 0.65rem;
+			color: #3D9FE9;
+			border: 1px solid #3D9FE9;
+			border-radius: 0.3rem;
+			margin-right:0.5rem;
+			margin-bottom:0.75rem;
+			max-width:100%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			box-sizing: border-box;
+		}
+		/*--顶部返回按钮--*/
+		#current_page_arrow{
+			width:2rem;
+			height:100%;
+			position:absolute;
+			left:0;
+			top:0;
+			display:flex;
+			display:-webkit-flex;
+			align-items:center;
+			-webkit-align-items:center;
+			justify-content:center;
+			-webkit-justify-content:center;
+		}
+	</style>
+{/block}
+{block name="content"}
+	<!--头部-->
+	<div class="index_header">
+		<div class="left_header native_back" id="current_page_arrow">
+	        <div class="icon_add_person icon_left_white"></div>
+	    </div>
+		<a href="javascript:;" class="head_left" style="display:none;">
+			<span class="locate_name">{$area_name}</span>
+			<i class="icon_pic1 icon_locate3x"></i>
+		</a>
+		<div class="head_mid">
+			<input class="search_words" name="key_words" placeholder="搜索商家、店铺" value="{$key_words}">
+			<i class="icon_pic1 icon_search3x"></i>
+			<input type="button" class="search_btn"/>
+		</div>
+	</div>
+	<!--搜索结果列表-->
+	<!--todo 未输入状态  默认展示 店都二期-->
+{if !$ok}
+	<div class="default_content">
+		<div class="label_name">热门搜索</div>
+		<div class="content_list">
+			{foreach from=$hot_search_list item=this}
+			<div class="list_name key_words" >{$this.hot_search_words}</div>
+			{/foreach}
+		</div>
+	</div>
+{/if}
+
+	<!--有结果-->
+	<div id="load_wrapper" {if !$business_list}style="display: none"{/if}>
+		<div id="scroller">
+			<div class="recom_store">
+				<div class="recom_cont">
+					{foreach from=$business_list item=one}
+					<a href="/Index/shop_detail/business_id/{$one.business_id}" class="recom_list native_go">
+						<div class="shop_info clearfix">
+							<img src="{$one.sign_pic}" class="pic fl"/>
+							<div class="info fl">
+								<h6 class="shop_name">{$one.business_name}</h6>
+								<div class="info_mid clearfix">
+									<ul class="star fl">
+										{$star_surplus=5 - $one.star}
+										{while $one.star-->0}
+										<li class="fl icon_pic1 icon_star_full3x"></li>
+										{/while}
+										{while $star_surplus-->0}
+										<li class="fl icon_pic1 icon_star_blank3x"></li>
+										{/while}
+									</ul>
+									<!--todo 店都一期-->
+									<p class="distance fr">{if $one.distance>99.9}>{else}<{/if}&nbsp;{$one.distance}Km</p>
+								</div>
+								<!--todo 店都一期第三行展示-->
+								<ul class="tag">
+									<li>{$one.business_classify_name}</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+
+					<!--无结果-->
+
+					{/foreach}
+				</div>
+			</div>
+			{if $business_list}
+			<div id="pullUp">
+			    <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载...</span>
+			</div>
+			{/if}
+		</div>
+	</div>
+{if !$business_list&&$ok}
+<div class="search_none" style="">
+	<div class="no_results"></div>
+	<span>换个关键词试试吧</span>
+</div>
+{/if}
+
+{/block}
+{block name="js"}
+	<script>
+        var firstRow={$firstRow};
+        var total={$total};
+        var key_words='{$key_words}';
+	</script>
+{literal}
+	<script type="text/javascript" src="__PUBLIC__/Js/front/iscroll.js"></script>
+ 	<script type="text/javascript" src="__PUBLIC__/Js/front/front_js/search_shop_list.js"></script>
+	<script type="text/javascript">
+		//顶部返回按钮
+		if(!is_wechat()){
+			$(".index_header").css("paddingLeft","2rem");
+		}else{
+			$("#current_page_arrow").hide();
+		}
+		$("#current_page_arrow").on("click",function(){
+			history.go(-1);
+		});
+		$('.content_list').on("click",".key_words",function(){
+			var key_words=$(this).text();
+			console.log("key_words=="+key_words);
+			var url='/Index/search_shop/key_words/'+key_words;
+			location.href=url;
+		});
+		$('.search_btn').on('click',function(){
+			var key_words = $(".search_words").val();
+			var url='/Index/search_shop/key_words/'+key_words;
+			location.href=url;
+		});
+		$(".search_words").on("keypress",function(e){
+			var keyCode = e.keyCode;
+			console.log(keyCode);
+			if(keyCode=="13"){
+				var key_words = $(".search_words").val();
+				var url='/Index/search_shop/key_words/'+key_words;
+				location.href=url;
+			}
+		});
+	</script>
+{/literal}
+{/block}
